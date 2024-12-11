@@ -1,4 +1,6 @@
 import React from "react";
+import { motion } from "framer-motion";
+import ScrollToTopButton from "./ScrollTop";
 
 const ContactForm = () => {
   return (
@@ -7,7 +9,7 @@ const ContactForm = () => {
         <div className="flex flex-col lg:flex-row">
           {/* Left Column */}
           <div className="lg:w-1/2 px-4 mb-12 lg:mb-0">
-            <h3 className="text-4xl font-light text-[#372d1f] mb-4">
+            <h3 className="text-4xl font-light text-yellow-400 mb-4">
               Free Consultation
             </h3>
             <p className="text-lg text-black mb-6">
@@ -36,7 +38,13 @@ const ContactForm = () => {
           </div>
 
           {/* Right Column (Contact Form) */}
-          <div className="lg:w-1/2 px-4">
+          <motion.div
+            className="lg:w-1/2 px-4"
+            initial={{ opacity: 0, x: 50 }} // Initial state: hidden and moved right
+            whileInView={{ opacity: 1, x: 0 }} // Animates to visible and center position
+            viewport={{ once: true }} // Animation triggers once when in the viewport
+            transition={{ duration: 1 }} // Transition duration for animation
+          >
             <form className="space-y-6">
               <div className="space-y-4">
                 <input
@@ -44,21 +52,21 @@ const ContactForm = () => {
                   name="your-name"
                   placeholder="Full Name*"
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-[#071b35] focus:ring-2 text-lg"
+                  className="w-full px-4 py-3 border text-black bg-white placeholder:text-gray-600 border-gray-300 rounded-md focus:outline-none focus:ring-[#294160] focus:ring-2 text-lg"
                 />
                 <input
                   type="email"
                   name="your-email"
                   placeholder="Email*"
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#071b35] text-lg"
+                  className="w-full px-4 py-3 border text-black bg-white placeholder:text-gray-600 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#294160] text-lg"
                 />
                 <input
                   type="text"
                   name="your-subject"
                   placeholder="Subject*"
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#071b35] text-lg"
+                  className="w-full px-4 py-3 border text-black bg-white placeholder:text-gray-600 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#294160] text-lg"
                 />
               </div>
 
@@ -67,7 +75,7 @@ const ContactForm = () => {
                 placeholder="Message*"
                 required
                 rows="6"
-                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#071b35] text-lg"
+                className="w-full px-4 py-3 border text-black bg-white placeholder:text-gray-600 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#294160] text-lg"
               ></textarea>
 
               <button
@@ -77,7 +85,7 @@ const ContactForm = () => {
                 Submit Now
               </button>
             </form>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

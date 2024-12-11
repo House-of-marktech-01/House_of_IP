@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -8,17 +9,17 @@ const Footer = () => {
           {/* Logo and Text */}
           <div className="flex flex-col items-start mb-6 md:mb-0">
             <div className="fs-logo">
-              <a href="https://lawfirmsites.com" aria-label="Law Firm Sites">
+              <a href="https://www.houseofmarktech.com" aria-label="HOUSE OF IP">
                 <img
-                  src="https://lawfirmsites.com/wp-content/uploads/2022/05/lfs-logo-2022-v2.svg"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUhQJ-44yDYIuo8Hj-L1ezQSKAkkK4CqlecQ&s"
                   width="290"
                   height="37"
                   alt="Law Firm Sites Logo"
                   className="mb-2"
                 />
               </a>
-              <p className="text-sm">
-                At <strong>Law Firm Sites</strong>, we are dedicated to helping
+              <p className="text-sm w-2/3 mt-4">
+                At <strong>HOUSE OF IP</strong>, we are dedicated to helping
                 you get more cases through stunning website design and SEO.
               </p>
             </div>
@@ -30,16 +31,18 @@ const Footer = () => {
                 target="_blank"
                 className="flex items-center"
               >
-                <div className="desc text-sm font-semibold">
-                  Happy With Your Service? Leave us a review on Google
-                </div>
-                <div className="ml-2">
-                  <img
-                    src="https://lawfirmsites.com/wp-content/themes/lfs2022/images/icon-googlereview.png"
-                    width="103"
-                    height="51"
-                    alt="Google Review Icon"
-                  />
+                <div className="flex flex-col mt-4">
+                  <div className="desc text-sm font-semibold mb-2">
+                    Happy With Your Service? Leave us a review on Google
+                  </div>
+                  <div>
+                    <img
+                      src="https://lawfirmsites.com/wp-content/themes/lfs2022/images/icon-googlereview.png"
+                      width="103"
+                      height="51"
+                      alt="Google Review Icon"
+                    />
+                  </div>
                 </div>
               </a>
             </div>
@@ -51,60 +54,36 @@ const Footer = () => {
             <nav aria-label="Footer Menu">
               <ul className="menu space-y-2">
                 <li>
-                  <a
-                    href="https://lawfirmsites.com/websites/"
-                    className="hover:text-gray-400"
-                  >
-                    Websites
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://lawfirmsites.com/marketing/"
-                    className="hover:text-gray-400"
-                  >
-                    Marketing
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://lawfirmsites.com/clients/"
-                    className="hover:text-gray-400"
-                  >
-                    Portfolio
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://lawfirmsites.com/testimonials/"
-                    className="hover:text-gray-400"
-                  >
-                    Testimonials
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://lawfirmsites.com/about/"
+                  <NavLink
+                    to="/about"
                     className="hover:text-gray-400"
                   >
                     About
-                  </a>
+                  </NavLink>
                 </li>
                 <li>
-                  <a
-                    href="https://lawfirmsites.com/resources/"
+                <NavLink
+                    to="/service"
                     className="hover:text-gray-400"
                   >
-                    Resources
-                  </a>
+                    Sevice
+                  </NavLink>
                 </li>
                 <li>
-                  <a
-                    href="https://lawfirmsites.com/contact/"
+                <NavLink
+                    to="/practice"
+                    className="hover:text-gray-400"
+                  >
+                    Practice Areas
+                  </NavLink>
+                </li>
+                <li>
+                <NavLink
+                    to="/contact"
                     className="hover:text-gray-400"
                   >
                     Contact
-                  </a>
+                  </NavLink>
                 </li>
               </ul>
             </nav>
@@ -124,7 +103,7 @@ const Footer = () => {
           </div>
 
           {/* Social Links */}
-          <div className="fs-social mb-6 md:mb-0 flex space-x-4">
+          <div className="fs-social mb-6 md:mb-0 flex flex-col space-y-4">
             <a
               href="https://www.facebook.com/Law-Firm-Sites-456889295533/"
               className="text-white hover:text-gray-400"
@@ -161,7 +140,7 @@ const Footer = () => {
         {/* Copyright Section */}
         <div className="fs-copy mt-8 text-center text-sm">
           <p>
-            © 2001-2024 Law Firm Sites, Inc. All rights reserved. |{" "}
+            © 2001-2024 House of Ip, Inc. All rights reserved. |{" "}
             <a
               href="https://lawfirmsites.com/privacy-policy"
               className="hover:text-gray-400"

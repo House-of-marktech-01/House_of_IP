@@ -5,8 +5,11 @@ import { useInView } from "react-intersection-observer";
 const Hero = () => {
   const { ref, inView } = useInView({
     triggerOnce: true, // Trigger animation once
-    threshold: 0.2,    // Trigger when 20% of the image is visible
+    threshold: 0.2, // Trigger when 20% of the image is visible
   });
+  const handleClick = () => {
+    window.open("https://calendly.com/omnathganapure9981/30min");
+  };
 
   return (
     <div className="hero bg-slate-900 min-h-[60vh] sm:min-h-screen px-4 sm:px-8">
@@ -18,8 +21,8 @@ const Hero = () => {
           transition={{ duration: 0.5 }} // Duration of the animation
         >
           <img
-            src="https://justispherexlegal.com/wp-content/uploads/2024/09/Image_-_Law_Firm_Website_.jpeg.jpg"
-            className="max-w-full sm:max-w-xl rounded-lg shadow-2xl"
+            src="https://media.istockphoto.com/id/956243400/photo/close-up-lawyer-businessman-working-or-reading-lawbook-in-office-workplace-for-consultant.jpg?s=612x612&w=0&k=20&c=4kefBJNk1H0Y3hDUU_MmAEkqcJavLPlB6IhVB5C7UVk= "
+            className=" sm:w-full rounded-lg shadow-2xl w-3/4"
           />
         </motion.div>
 
@@ -32,7 +35,10 @@ const Hero = () => {
             services in intellectual property and matrimonial law. We’re here to
             provide tailored solutions for individuals and businesses alike.
           </p>
-          <button className="btn text-black bg-yellow-500 hover:bg-yellow-200">
+          <button
+            className="btn text-black bg-yellow-500 hover:bg-yellow-200"
+            onClick={handleClick}
+          >
             Book An Appointment
           </button>
         </div>
