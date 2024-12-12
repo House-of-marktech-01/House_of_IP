@@ -56,8 +56,8 @@ const Navbar = () => {
 
           {/* Hamburger Menu Overlay */}
           <div
-            className={`fixed top-0 right-0 w-1/2 h-full bg-slate-800 text-white transform transition-transform duration-300 z-40 ${
-              isMenuOpen ? "translate-x-0" : "translate-x-full"
+            className={`fixed top-0 left-0 w-1/2 h-full bg-slate-800 text-white transform transition-transform duration-300 z-40 ${
+              isMenuOpen ? "translate-x-0" : "-translate-x-full"
             }`}
           >
             <button
