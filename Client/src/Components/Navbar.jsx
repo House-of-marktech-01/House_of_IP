@@ -29,7 +29,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`sticky top-0 px-4 py-4 flex justify-between items-center bg-slate-900 z-10 transition-all duration-300 ${
+      className={`px-4 py-4 flex justify-between items-center bg-slate-900 z-10 transition-all duration-300 ${
         isScrolled ? "backdrop-blur-lg" : ""
       }`}
     >
