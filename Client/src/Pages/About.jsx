@@ -37,7 +37,7 @@ const About = () => {
           <div>
             <div className="text-black text-base sm:text-lg text-justify">
               <p className="pt-3 sm:pt-4">
-                <strong>House of marktech</strong> is a leading national law
+                <strong>House of IP</strong> is a leading national law
                 firm in India with over 600 professionals operating out of 7
                 offices located in: Ahmedabad, Bengaluru, Chennai, Gurugram,
                 Hyderabad, Mumbai, and New Delhi.
