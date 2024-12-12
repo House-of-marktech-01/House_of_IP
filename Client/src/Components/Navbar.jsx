@@ -1,158 +1,245 @@
 import React, { useState, useEffect } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
-  // Handle scroll event to toggle the navbar style
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleScroll = () => {
+    if (window.scrollY > 50) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  };
+
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    // Add event listener for scroll
+    // Add scroll event listener
     window.addEventListener("scroll", handleScroll);
 
-    // Clean up event listener on component unmount
+    // Cleanup event listener on unmount
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   return (
-    <div
-      className={`navbar bg-slate-900 h-28 sticky top-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-opacity-70 backdrop-blur-lg shadow-lg"
-          : "bg-opacity-100 backdrop-blur-none"
+    <nav
+      className={`sticky top-0 px-4 py-4 flex justify-between items-center bg-slate-900 z-10 transition-all duration-300 ${
+        isScrolled ? "backdrop-blur-lg" : ""
       }`}
     >
-      <div className="navbar-start">
-        <div className="lg:hidden">
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="btn btn-ghost"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </button>
+      <NavLink className="text-3xl font-bold leading-none" to="/">
+        <img
+          className="w-32"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUhQJ-44yDYIuo8Hj-L1ezQSKAkkK4CqlecQ&s"
+          alt=""
+        />
+      </NavLink>
 
-          {/* Hamburger Menu Overlay */}
-          <div
-            className={`fixed top-0 left-0 w-1/2 h-full bg-slate-800 text-white transform transition-transform duration-300 z-40 ${
-              isMenuOpen ? "translate-x-0" : "-translate-x-full"
-            }`}
+      {/* Desktop Navigation Links */}
+      <ul className="hidden lg:flex lg:items-center lg:w-auto lg:space-x-6 justify-center z-20">
+        <li>
+          <NavLink
+            className="text-sm text-gray-400 hover:text-gray-500 font-bold"
+            to="/"
           >
-            <button
-              onClick={() => setIsMenuOpen(false)}
-              className="absolute top-4 right-4 text-white text-2xl"
-            >
-              &times;
-            </button>
-            <ul className="flex flex-col items-center justify-center h-3/4 space-y-6 text-lg">
-              <li>
-                <Link to="/about" onClick={() => setIsMenuOpen(false)}>
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link to="/practice" onClick={() => setIsMenuOpen(false)}>
-                  Practice Areas
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
-                  Contact Us
-                </Link>
-              </li>
-              <li>
-                <Link to="/appointment" onClick={() => setIsMenuOpen(false)}>
-                  Appointment
-                </Link>
-              </li>
-            </ul>
+            Home
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            className="text-sm text-gray-400 hover:text-gray-500 font-bold"
+            to="/about"
+          >
+            About Us
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            className="text-sm text-gray-400 hover:text-gray-500 font-bold"
+            to="/practice"
+          >
+            Practice Areas
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            className="text-sm text-gray-400 hover:text-gray-500 font-bold"
+            to="/contact"
+          >
+            Contact
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            className="text-sm text-gray-400 hover:text-gray-500 font-bold"
+            to="/appointment"
+          >
+            Book an Appointment
+          </NavLink>
+        </li>
+      </ul>
 
-            {/* Social Media Links */}
-            <div className="absolute bottom-8 w-full flex justify-around text-xl">
-              <a href="/i" className="text-gray-300 hover:text-white">
-                <i className="fa-brands fa-instagram"></i>
+      {/* Social Media Links (Desktop) */}
+      <div className="hidden lg:flex space-x-4 ml-4">
+        <a
+          href="https://twitter.com"
+          className="text-gray-400 hover:text-gray-500"
+        >
+          <i
+            className="fa-brands fa-facebook fa-xl"
+            style={{ color: "#1c71d8" }}
+          ></i>
+        </a>
+        <a
+          href="https://instagram.com"
+          className="text-gray-400 hover:text-gray-500"
+        >
+          <i
+            className="fa-brands fa-instagram fa-xl"
+            style={{ color: "yellow" }}
+          ></i>
+        </a>
+        <a
+          href="mailto:someone@example.com"
+          className="text-gray-400 hover:text-gray-500"
+        >
+          <i
+            className="fa-regular fa-envelope fa-xl"
+            style={{ color: "#ee2a7b", width: "20px" }}
+          ></i>
+        </a>
+      </div>
+
+      {/* Hamburger Menu */}
+      <button
+        className="lg:hidden flex items-center justify-center p-2 text-gray-300"
+        onClick={toggleMenu}
+      >
+        <svg
+          className={`w-6 h-6 ${isMenuOpen ? "hidden" : "block"}`}
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          ></path>
+        </svg>
+        <svg
+          className={`w-6 h-6 ${isMenuOpen ? "block" : "hidden"}`}
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M6 18L18 6M6 6l12 12"
+          ></path>
+        </svg>
+      </button>
+
+      {/* Mobile Navigation Links */}
+      <div
+        className={`${
+          isMenuOpen ? "block" : "hidden"
+        } fixed top-0 left-0 w-full h-full bg-slate-900 bg-opacity-75 z-10`}
+        onClick={toggleMenu}
+      >
+        <div className="flex justify-center items-center h-full">
+          <ul className="space-y-6 text-center">
+            <li>
+              <NavLink
+                className="text-sm text-white hover:text-gray-400"
+                to="/"
+                onClick={toggleMenu}
+              >
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className="text-sm text-blue-600 font-bold hover:text-gray-400"
+                to="/about"
+                onClick={toggleMenu}
+              >
+                About Us
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className="text-sm text-white hover:text-gray-400"
+                to="/practice"
+                onClick={toggleMenu}
+              >
+                Practice Areas
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className="text-sm text-white hover:text-gray-400"
+                to="/contact"
+                onClick={toggleMenu}
+              >
+                Contact
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className="text-sm text-white hover:text-gray-400"
+                to="/appointment"
+                onClick={toggleMenu}
+              >
+                Book an Appointment
+              </NavLink>
+            </li>
+
+            {/* Social Media Links (Mobile) */}
+            <div className="flex justify-center space-x-4 mt-8">
+              <a
+                href="https://twitter.com"
+                className="text-gray-400 hover:text-gray-500"
+              >
+                <i
+                  className="fa-brands fa-facebook fa-xl"
+                  style={{ color: "#1c71d8" }}
+                ></i>
               </a>
-              <a href="/" className="text-gray-300 hover:text-white">
-                <i className="fa-brands fa-linkedin"></i>
+              <a
+                href="https://instagram.com"
+                className="text-gray-400 hover:text-gray-500"
+              >
+                <i
+                  className="fa-brands fa-instagram fa-xl"
+                  style={{ color: "yellow" }}
+                ></i>
               </a>
-              <a href="/" className="text-gray-300 hover:text-white">
-                <i className="fa-regular fa-envelope"></i>
+              <a
+                href="mailto:someone@example.com"
+                className="text-gray-400 hover:text-gray-500"
+              >
+                <i
+                  className="fa-regular fa-envelope fa-xl"
+                  style={{ color: "#ee2a7b", width: "20px" }}
+                ></i>
               </a>
             </div>
-          </div>
+          </ul>
         </div>
-
-        <NavLink to="/" aria-label="HOUSE OF IP">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUhQJ-44yDYIuo8Hj-L1ezQSKAkkK4CqlecQ&s"
-            width="290"
-            height="37"
-            alt="House of ip Logo"
-            className="mb-2 p-12"
-          />
-        </NavLink>
       </div>
-
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/practice">Practice Areas</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
-          <li>
-            <Link to="/appointment">Book an Appointment</Link>
-          </li>
-        </ul>
-      </div>
-
-      <div className="navbar-end flex space-x-4 mr-5">
-        <a href="/">
-          <i
-            className="fa-brands fa-instagram"
-            style={{ color: "#e01b24", fontSize: "1.5rem" }}
-          ></i>
-        </a>
-        <a href="/">
-          <i
-            className="fa-brands fa-linkedin"
-            style={{ color: "#1a5fb4", fontSize: "1.5rem" }}
-          ></i>
-        </a>
-        <a href="/">
-          <i
-            className="fa-regular fa-envelope"
-            style={{ color: "#8ff0a4", fontSize: "1.5rem" }}
-          ></i>
-        </a>
-      </div>
-    </div>
+    </nav>
   );
 };
 
