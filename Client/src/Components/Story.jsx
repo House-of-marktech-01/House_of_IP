@@ -2,9 +2,18 @@ import React from "react";
 
 const OurStory = () => {
   return (
-    <div className=" p-6 bg-slate-900">
+    <div className="p-6 bg-slate-900">
       <div className="flex flex-col lg:flex-row">
-        {/* Left Column */}
+        {/* Right Column for Image */}
+        <div className="lg:w-1/2 p-6 flex justify-center lg:order-last">
+          <img
+            src="https://www.jusip.in/wp-content/uploads/2024/03/Lawyer-team-india.png"
+            alt="Lawyer Team"
+            className="w-full max-w-sm lg:max-w-full rounded-lg shadow-lg"
+          />
+        </div>
+
+        {/* Left Column for Content */}
         <div className="lg:w-1/2 p-6">
           {/* Divider */}
           <div className="flex items-center">
@@ -16,14 +25,14 @@ const OurStory = () => {
             <span className="text-xs font-semibold text-yellow-400 tracking-wide uppercase">
               Our Expertise
             </span>
-            <h3 className="text-4xl font-light text-yellow-400 mt-2">
+            <h3 className="text-2xl lg:text-4xl font-light text-yellow-400 mt-2">
               Our Story
               <span className="border-b-2 border-[#8c6f46] ml-2"></span>
             </h3>
           </div>
 
           {/* Text Content */}
-          <div className="mt-8 text-lg">
+          <div className="mt-8 text-base lg:text-lg">
             <p className="mb-4 font-montserrat font-extralight">
               At <strong className="font-bold">HOUSE OF IP</strong>, we strive to achieve intelligent
               and innovative solutions for every client, delivered through a
@@ -51,17 +60,6 @@ const OurStory = () => {
               experience where legal complexities get resolved seamlessly. We
               take pride in making ‘Legal Simple’ for our clients.
             </p>
-          </div>
-        </div>
-
-        {/* Right Column */}
-        <div className="lg:w-1/2 p-6 mt-12 lg:mt-0">
-          <div className="flex justify-center align-middle mt-32">
-            <img
-              src="https://www.jusip.in/wp-content/uploads/2024/03/Lawyer-team-india.png"
-              alt="Lawyer Team"
-              className="max-w-full h-auto rounded-lg shadow-lg"
-            />
           </div>
         </div>
       </div>

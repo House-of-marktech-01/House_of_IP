@@ -1,25 +1,41 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Suspense, lazy } from 'react';
 import Navbar from './Components/Navbar';
-import About from './Pages/About';
-import Contact from './Pages/Contact';
-import Home from './Pages/Home';
-import Practice from './Pages/Practice';
 import Footer from './Components/Footer';
 import ScrollToTopButton from './Components/ScrollTop';
+import Chatbot from './Components/Chatbot';
+
+// Lazy load the page components
+const Home = lazy(() => import('./Pages/Home'));
+const About = lazy(() => import('./Pages/About'));
+const Contact = lazy(() => import('./Pages/Contact'));
+const Practice = lazy(() => import('./Pages/Practice'));
+const Appointment = lazy(() => import('./Pages/Appointment'));
 
 function App() {
   return (
     <Router>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/practice" element={<Practice />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-      <ScrollToTopButton/>
-      <Footer/>
+      {/* Suspense component to handle loading state */}
+      <Suspense
+        fallback={
+          <div className="flex justify-center items-center min-h-screen">
+            <span className="loading loading-infinity loading-lg"></span>
+          </div>
+        }
+      >
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/practice" element={<Practice />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/appointment" element={<Appointment />} />
+        </Routes>
+      </Suspense>
+      <ScrollToTopButton />
+      <Chatbot />
+      <Footer />
     </Router>
   );
 }

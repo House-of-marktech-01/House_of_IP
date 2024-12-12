@@ -4,7 +4,7 @@ import ScrollToTopButton from "./ScrollTop";
 
 const ContactForm = () => {
   return (
-    <div id="consult" className="py-20 md:py-28 bg-[#fcf7f0]">
+    <div id="consult" className="py-20 md:py-28 bg-slate-100">
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex flex-col lg:flex-row">
           {/* Left Column */}
