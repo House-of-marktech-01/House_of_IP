@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { cn } from "../../lib/utils";
+import { NavLink } from "react-router-dom";
 
 export const Card = React.memo(
   ({
@@ -22,21 +23,20 @@ export const Card = React.memo(
         hovered !== null && hovered !== index && "blur-sm scale-[0.98]"
       )}
     >
-      <img
-        src={card.src}
-        alt={card.title}
-        className="object-cover absolute inset-0"
-      />
-      <div
-        className={cn(
-          "absolute inset-0 bg-black/50 flex items-end py-8 px-4 transition-opacity duration-300",
-          hovered === index ? "opacity-100" : "opacity-0"
-        )}
-      >
-        <div className="text-xl md:text-2xl font-medium bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-200">
-          {card.title}
+      <NavLink to={`/${card.link}`} className="block h-full w-full">
+        {" "}
+        {/* Wrap content with NavLink */}
+        <img
+          src={card.src}
+          alt={card.title}
+          className="object-cover absolute inset-0"
+        />
+        <div className="absolute inset-0 bg-black/50 flex items-end py-8 px-4">
+          <div className="text-xl md:text-2xl font-medium bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-200">
+            {card.title}
+          </div>
         </div>
-      </div>
+      </NavLink>
     </div>
   )
 );
@@ -46,13 +46,14 @@ Card.displayName = "Card";
 type Card = {
   title: string;
   src: string;
+  link:string;
 };
 
 export function FocusCards({ cards }: { cards: Card[] }) {
   const [hovered, setHovered] = useState<number | null>(null);
 
   return (
-    <div className="grid grid-cols-1 bg-white  md:grid-cols-3 gap-10 mx-auto md:px-8 w-full pt-8 pb-8">
+    <div className="grid grid-cols-1 bg-white md:grid-cols-2 xl:grid-cols-2 gap-10 mx-auto md:px-8 w-full pt-8 pb-8">
       {cards.map((card, index) => (
         <Card
           key={card.title}

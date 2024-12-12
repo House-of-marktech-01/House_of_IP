@@ -3,28 +3,24 @@ import { FocusCards } from "../Components/utils/focus-cards";
 export function FocusCardsDemo() {
   const cards = [
     {
-      title: "Forest Adventure",
+      title: "Copy Right",
       src: "https://www.jusip.in/wp-content/uploads/2024/02/Patents-India-filling-enforcement.jpg",
+      link: "copyright",
     },
     {
-      title: "Valley of life",
+      title: "Design",
       src: "https://www.jusip.in/wp-content/uploads/2024/02/Copyright-protection-enforcement-india.jpg",
+      link: "design",
     },
     {
-      title: "Sala behta hi jayega",
+      title: "Patent",
       src: "https://www.jusip.in/wp-content/uploads/2024/02/Trademark-filing-enforcement-India.jpg",
+      link: "patent",
     },
     {
-      title: "Camping is for pros",
+      title: "Trademark",
       src: "https://www.jusip.in/wp-content/uploads/2024/02/civil-criminal-general-litigation-lawyer.jpg",
-    },
-    {
-      title: "The road not taken",
-      src: "https://www.jusip.in/wp-content/uploads/2024/02/Insurance-lawyer.jpg",
-    },
-    {
-      title: "The First Rule",
-      src: "https://www.jusip.in/wp-content/uploads/2024/02/insolvency-bankruptcy.jpg",
+      link: "trademark",
     },
   ];
 

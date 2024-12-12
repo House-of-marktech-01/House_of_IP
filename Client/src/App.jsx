@@ -12,6 +12,10 @@ const About = lazy(() => import('./Pages/About'));
 const Contact = lazy(() => import('./Pages/Contact'));
 const Practice = lazy(() => import('./Pages/Practice'));
 const Appointment = lazy(() => import('./Pages/Appointment'));
+const Copyright = lazy(() => import('./Pages/Copyright'));
+const Patent = lazy(() => import('./Pages/Patent'));
+const Design = lazy(() => import('./Pages/Design'));
+const Trademark = lazy(() => import('./Pages/Trademark'));
 
 function App() {
   return (
@@ -31,6 +35,10 @@ function App() {
           <Route path="/practice" element={<Practice />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/appointment" element={<Appointment />} />
+          <Route path="/copyright" element={<Copyright />} />
+          <Route path="/design" element={<Design />} />
+          <Route path="/patent" element={<Patent />} />
+          <Route path="/trademark" element={<Trademark />} />
         </Routes>
       </Suspense>
       <ScrollToTopButton />
