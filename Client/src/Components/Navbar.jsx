@@ -1,242 +1,170 @@
-import React, { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import React, { useState } from "react";
+import { FiMenu, FiX, FiPlus, FiMinus } from "react-icons/fi";
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  const handleScroll = () => {
-    if (window.scrollY > 50) {
-      setIsScrolled(true);
-    } else {
-      setIsScrolled(false);
-    }
-  };
-
-  useEffect(() => {
-    // Add scroll event listener
-    window.addEventListener("scroll", handleScroll);
-
-    // Cleanup event listener on unmount
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  const [isOpen, setIsOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   return (
-    <nav
-      className={`px-4 py-4 flex justify-between items-center bg-slate-900 z-10 transition-all duration-300 ${
-        isScrolled ? "backdrop-blur-lg" : ""
-      }`}
-    >
-      <NavLink className="text-3xl font-bold leading-none" to="/">
-        <img
-          className="w-32"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUhQJ-44yDYIuo8Hj-L1ezQSKAkkK4CqlecQ&s"
-          alt=""
-        />
-      </NavLink>
+    <nav className="bg-white shadow-md fixed w-full z-50">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          {/* Mobile Menu Button (Left Aligned) */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-gray-700 focus:outline-none"
+            >
+              {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+            </button>
+          </div>
 
-      {/* Desktop Navigation Links */}
-      <ul className="hidden lg:flex lg:items-center lg:w-auto lg:space-x-6 justify-center z-20">
-        <li>
-          <NavLink
-            className="text-sm text-gray-400 hover:text-gray-500 font-bold"
-            to="/"
-          >
-            Home
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            className="text-sm text-gray-400 hover:text-gray-500 font-bold"
-            to="/about"
-          >
-            About Us
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            className="text-sm text-gray-400 hover:text-gray-500 font-bold"
-            to="/practice"
-          >
-            Practice Areas
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            className="text-sm text-gray-400 hover:text-gray-500 font-bold"
-            to="/contact"
-          >
-            Contact
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            className="text-sm text-gray-400 hover:text-gray-500 font-bold"
-            to="/appointment"
-          >
-            Book an Appointment
-          </NavLink>
-        </li>
-      </ul>
+          {/* Logo */}
+          <div className="flex items-center">
+            <a href="/" className="text-2xl font-bold text-blue-600">
+              House of IP
+            </a>
+          </div>
 
-      {/* Social Media Links (Desktop) */}
-      <div className="hidden lg:flex space-x-4 ml-4">
-        <a
-          href="https://twitter.com"
-          className="text-gray-400 hover:text-gray-500"
-        >
-          <i
-            className="fa-brands fa-facebook fa-xl"
-            style={{ color: "#1c71d8" }}
-          ></i>
-        </a>
-        <a
-          href="https://instagram.com"
-          className="text-gray-400 hover:text-gray-500"
-        >
-          <i
-            className="fa-brands fa-instagram fa-xl"
-            style={{ color: "yellow" }}
-          ></i>
-        </a>
-        <a
-          href="mailto:someone@example.com"
-          className="text-gray-400 hover:text-gray-500"
-        >
-          <i
-            className="fa-regular fa-envelope fa-xl"
-            style={{ color: "#ee2a7b", width: "20px" }}
-          ></i>
-        </a>
+          {/* Desktop Menu */}
+          <div className="hidden md:flex space-x-8 items-center">
+            <a
+              href="/"
+              className="text-gray-700 hover:text-blue-600 font-medium"
+            >
+              Home
+            </a>
+            <a
+              href="/about"
+              className="text-gray-700 hover:text-blue-600 font-medium"
+            >
+              About
+            </a>
+            <div className="relative group">
+              <button className="text-gray-700 hover:text-blue-600 font-medium">
+                Services
+              </button>
+              {/* Dropdown */}
+              <div className="absolute left-0 mt-2 bg-white shadow-lg rounded-lg w-48 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none group-hover:pointer-events-auto">
+                <a
+                  href="/service1"
+                  className="block px-4 py-2 hover:bg-blue-50 text-gray-700"
+                >
+                  Service 1
+                </a>
+                <a
+                  href="/service2"
+                  className="block px-4 py-2 hover:bg-blue-50 text-gray-700"
+                >
+                  Service 2
+                </a>
+                <a
+                  href="/service3"
+                  className="block px-4 py-2 hover:bg-blue-50 text-gray-700"
+                >
+                  Service 3
+                </a>
+              </div>
+            </div>
+            <a
+              href="/contact"
+              className="text-gray-700 hover:text-blue-600 font-medium"
+            >
+              Contact
+            </a>
+            <a
+              href="/appointment"
+              className="text-gray-700 hover:text-blue-600 font-medium"
+            >
+              Book an Appointment
+            </a>
+            <a
+              href="/login"
+              className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
+            >
+              Login
+            </a>
+          </div>
+        </div>
       </div>
 
-      {/* Hamburger Menu */}
-      <button
-        className="lg:hidden flex items-center justify-center p-2 text-gray-300"
-        onClick={toggleMenu}
-      >
-        <svg
-          className={`w-6 h-6 ${isMenuOpen ? "hidden" : "block"}`}
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M4 6h16M4 12h16M4 18h16"
-          ></path>
-        </svg>
-        <svg
-          className={`w-6 h-6 ${isMenuOpen ? "block" : "hidden"}`}
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M6 18L18 6M6 6l12 12"
-          ></path>
-        </svg>
-      </button>
-
-      {/* Mobile Navigation Links */}
+      {/* Mobile Menu */}
       <div
-        className={`${
-          isMenuOpen ? "block" : "hidden"
-        } fixed top-0 left-0 w-full h-full bg-slate-900 bg-opacity-75 z-10`}
-        onClick={toggleMenu}
+        className={`fixed top-0 left-0 h-full bg-white shadow-md transform ${
+          isOpen ? "translate-x-0" : "-translate-x-full"
+        } transition-transform duration-300 ease-in-out w-3/4 md:hidden`}
       >
-        <div className="flex justify-center items-center h-full">
-          <ul className="space-y-6 text-center">
-            <li>
-              <NavLink
-                className="text-sm text-white hover:text-gray-400"
-                to="/"
-                onClick={toggleMenu}
+        <div className="p-4">
+          <button
+            onClick={() => setIsOpen(false)}
+            className="text-gray-700 focus:outline-none"
+          >
+            <FiX size={24} />
+          </button>
+          <div className="mt-4">
+            <a
+              href="/"
+              className="block px-4 py-2 text-gray-700 hover:bg-blue-50"
+            >
+              Home
+            </a>
+            <a
+              href="/about"
+              className="block px-4 py-2 text-gray-700 hover:bg-blue-50"
+            >
+              About
+            </a>
+            {/* Services with Expand/Collapse */}
+            <div className="block px-4 py-2 text-gray-700 hover:bg-blue-50">
+              <div
+                className="flex justify-between items-center cursor-pointer"
+                onClick={() => setIsServicesOpen(!isServicesOpen)}
               >
-                Home
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                className="text-sm text-blue-600 font-bold hover:text-gray-400"
-                to="/about"
-                onClick={toggleMenu}
-              >
-                About Us
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                className="text-sm text-white hover:text-gray-400"
-                to="/practice"
-                onClick={toggleMenu}
-              >
-                Practice Areas
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                className="text-sm text-white hover:text-gray-400"
-                to="/contact"
-                onClick={toggleMenu}
-              >
-                Contact
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                className="text-sm text-white hover:text-gray-400"
-                to="/appointment"
-                onClick={toggleMenu}
-              >
-                Book an Appointment
-              </NavLink>
-            </li>
-
-            {/* Social Media Links (Mobile) */}
-            <div className="flex justify-center space-x-4 mt-8">
-              <a
-                href="https://twitter.com"
-                className="text-gray-400 hover:text-gray-500"
-              >
-                <i
-                  className="fa-brands fa-facebook fa-xl"
-                  style={{ color: "#1c71d8" }}
-                ></i>
-              </a>
-              <a
-                href="https://instagram.com"
-                className="text-gray-400 hover:text-gray-500"
-              >
-                <i
-                  className="fa-brands fa-instagram fa-xl"
-                  style={{ color: "yellow" }}
-                ></i>
-              </a>
-              <a
-                href="mailto:someone@example.com"
-                className="text-gray-400 hover:text-gray-500"
-              >
-                <i
-                  className="fa-regular fa-envelope fa-xl"
-                  style={{ color: "#ee2a7b", width: "20px" }}
-                ></i>
-              </a>
+                <span>Services</span>
+                {isServicesOpen ? <FiMinus /> : <FiPlus />}
+              </div>
+              {isServicesOpen && (
+                <div className="mt-2 pl-4">
+                  <a
+                    href="/service1"
+                    className="block px-4 py-2 text-gray-700 hover:bg-blue-50"
+                  >
+                    Service 1
+                  </a>
+                  <a
+                    href="/service2"
+                    className="block px-4 py-2 text-gray-700 hover:bg-blue-50"
+                  >
+                    Service 2
+                  </a>
+                  <a
+                    href="/service3"
+                    className="block px-4 py-2 text-gray-700 hover:bg-blue-50"
+                  >
+                    Service 3
+                  </a>
+                </div>
+              )}
             </div>
-          </ul>
+            <a
+              href="/contact"
+              className="block px-4 py-2 text-gray-700 hover:bg-blue-50"
+            >
+              Contact
+            </a>
+            <a
+              href="/contact"
+              className="block px-4 py-2 text-gray-700 hover:bg-blue-50"
+            >
+              Book an appointment
+            </a>
+            <a
+              href="/login"
+              className="block px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 mx-4 my-2 text-center"
+            >
+              Login
+            </a>
+          </div>
         </div>
       </div>
     </nav>
