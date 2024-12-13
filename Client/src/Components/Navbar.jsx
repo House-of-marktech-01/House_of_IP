@@ -1,12 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FiMenu, FiX, FiPlus, FiMinus } from "react-icons/fi";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <nav className="bg-white shadow-md fixed w-full z-50">
+    <nav
+      className={`${
+        scrolled
+          ? "bg-white bg-opacity-50 backdrop-blur-md"
+          : "bg-white"
+      } shadow-md fixed w-full z-50 transition-all duration-300 ease-in-out`}
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Mobile Menu Button (Left Aligned) */}
@@ -21,7 +41,7 @@ const Navbar = () => {
 
           {/* Logo */}
           <div className="flex items-center">
-            <a href="/" className="text-2xl font-bold text-blue-600">
+            <a href="/" className="text-2xl font-bold text-slate-900">
               House of IP
             </a>
           </div>
@@ -80,7 +100,7 @@ const Navbar = () => {
             </a>
             <a
               href="/login"
-              className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
+              className="bg-slate-900 text-white px-4 py-2 rounded-lg hover:bg-slate-700"
             >
               Login
             </a>
@@ -160,7 +180,7 @@ const Navbar = () => {
             </a>
             <a
               href="/login"
-              className="block px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 mx-4 my-2 text-center"
+              className="block px-4 py-2 bg-slate-900 text-white rounded-lg hover:bg-slate-700 mx-4 my-2 text-center"
             >
               Login
             </a>
