@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FiMenu, FiX, FiPlus, FiMinus } from "react-icons/fi";
-import {NavLink} from "react-router-dom"
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -117,12 +117,27 @@ const Navbar = () => {
             >
               Book an Appointment
             </NavLink>
-            <NavLink
-              to="/login"
-              className="bg-slate-900 text-white px-4 py-2 rounded-lg hover:bg-slate-700"
+            {/* Open the modal using document.getElementById('ID').showModal() method */}
+            <button
+              className="btn"
+              onClick={() => document.getElementById("my_modal_1").showModal()}
             >
               Login
-            </NavLink>
+            </button>
+            <dialog id="my_modal_1" className="modal">
+              <div className="modal-box">
+                <h3 className="font-bold text-lg">Hello!</h3>
+                <p className="py-4">
+                  Press ESC key or click the button below to close
+                </p>
+                <div className="modal-action">
+                  <form method="dialog">
+                    {/* if there is a button in form, it will close the modal */}
+                    <button className="btn">Close</button>
+                  </form>
+                </div>
+              </div>
+            </dialog>
           </div>
         </div>
       </div>
@@ -216,12 +231,27 @@ const Navbar = () => {
             >
               Book an appointment
             </NavLink>
-            <NavLink
-              to="/login"
-              className="block px-4 py-2 bg-slate-900 text-white rounded-lg hover:bg-slate-700 mx-4 my-2 text-center"
+            {/* Open the modal using document.getElementById('ID').showModal() method */}
+            <button
+              className="btn"
+              onClick={() => document.getElementById("my_modal_1").showModal()}
             >
               Login
-            </NavLink>
+            </button>
+            <dialog id="my_modal_1" className="modal">
+              <div className="modal-box">
+                <h3 className="font-bold text-lg">Hello!</h3>
+                <p className="py-4">
+                  Press ESC key or click the button below to close
+                </p>
+                <div className="modal-action">
+                  <form method="dialog">
+                    {/* if there is a button in form, it will close the modal */}
+                    <button className="btn">Close</button>
+                  </form>
+                </div>
+              </div>
+            </dialog>
           </div>
         </div>
       </div>
