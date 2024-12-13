@@ -16,6 +16,107 @@ const Trademark = () => {
             <li>Trademark</li>
           </ul>
         </div>
+        <div className="flex gap-5 border rounded-lg p-3 bg-white">
+          <div className="relative w-7/10 shrink-0 flex justify-center items-center">
+            <div className="sticky">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVKc6eE_WPmaSRuSzcabfmXNHoIYn-GoGNAA&s"
+                className="rounded-lg w-80"
+                alt="Trademark Rectification"
+              />
+            </div>
+          </div>
+          <div className="flex flex-col w-2/3">
+            <div className="align-middle">
+              <h2 className="text-base font-black mb-2 lg:mb-4">Trademark</h2>
+
+              <p className="prod_description text-sm text-gray-700 mt-2">
+                Drafting and filing of rectification for applications marked
+                Formalities Check Fail by Trademark Examiner. Exclusive pricing
+                for trademark applications filed by IndiaFilings. Inclusive of
+                government fee and service tax.
+              </p>
+
+              <div className="flex items-center justify-between flex-wrap gap-2 border-y-2 mt-4 pt-4 pb-4 mb-5">
+                <a className="btn btn-link flex-none" href="/">
+                  Terms and conditions
+                </a>
+                <div className="flex -space-x-2 lg:justify-end">
+                  <div className="flex">
+                    <a href="/">
+                      <h2 className="text-gray-600 font-medium text-sm">
+                        Refer a Friend
+                      </h2>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col w-3/10 justify-center items-center bg-gray-100">
+            <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+              <h2 className="text-2xl font-semibold text-center mb-6">Login</h2>
+              <form>
+                <div className="mb-4">
+                  <label
+                    htmlFor="username"
+                    className="block text-sm font-medium text-gray-700"
+                  >
+                    Username
+                  </label>
+                  <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    required
+                  />
+                </div>
+
+                <div className="mb-4">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-gray-700"
+                  >
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    required
+                  />
+                </div>
+
+                <div className="mb-4">
+                  <label
+                    htmlFor="password"
+                    className="block text-sm font-medium text-gray-700"
+                  >
+                    Password
+                  </label>
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    required
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full py-2 bg-indigo-500 text-white rounded-md hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                >
+                  Login
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
         <div className="bg-white px-14 text-justify">
           <h1 className="text-center text-3xl text-black pb-4">Trademark</h1>
           <p className="pb-8 text-gray-800">
