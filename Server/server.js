@@ -16,6 +16,9 @@ connectDB();
 
 // Routes
 app.use('/api/users', userRoutes);
+app.get("/",(req,res)=>{
+    res.send("running...")
+})
 
 // Start the server
 app.listen(PORT, () => {
