@@ -16,7 +16,7 @@ const OurStory = () => {
                 className="w-full lg:w-2/3 rounded-lg lg:h-96"
               >
                 <source
-                  src="https://img.indiafilings.com/videos/IndiaFilings-The-Journey!.mp4"
+                  src="/"
                   type="video/mp4"
                 />
               </video>
