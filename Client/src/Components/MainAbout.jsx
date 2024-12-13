@@ -3,7 +3,11 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 const MainAbout = () => {
-  const { ref, inView } = useInView({ triggerOnce: false, threshold: 0, rootMargin: "-100px 0px" });
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+    threshold: 0,
+    rootMargin: "-100px 0px",
+  });
   const controls = useAnimation();
 
   React.useEffect(() => {
@@ -24,33 +28,13 @@ const MainAbout = () => {
   return (
     <>
       {/* About Us Section */}
-      <div className="flex flex-col lg:flex-row bg-white items-start justify-between lg:space-x-6 p-6 lg:p-12">
-        <div className="lg:w-1/2 w-full">
-          <p className="text-sm lg:text-lg font-semibold text-black">・About Us</p>
-          <motion.h1
-            ref={ref}
-            initial="hidden"
-            animate={controls}
-            variants={textVariants}
-            className="font-bold text-2xl lg:text-4xl pt-8 lg:pt-16 text-yellow-400"
-          >
-            Your trusted partner in legal solutions.
-          </motion.h1>
-        </div>
-        <div className="lg:w-1/2 w-full">
-          <p className="text-black text-justify pt-8 lg:pt-24 text-base lg:text-xl">
-            At House of IP Legal, we provide comprehensive legal services to
-            individuals and businesses alike. Our expertise spans across
-            intellectual property, civil, criminal, and matrimonial law,
-            ensuring that you receive the best legal assistance tailored to your
-            needs.
-          </p>
-        </div>
-      </div>
+      <div className="flex flex-col lg:flex-row bg-white items-start justify-between lg:space-x-6 p-6 lg:p-12"></div>
 
       {/* Why Choose Us Section */}
       <div className="bg-white p-6 lg:p-12">
-        <p className="text-sm lg:text-lg font-semibold text-black">・Why Choose Us</p>
+        <p className="text-sm lg:text-lg font-semibold text-black">
+          ・Why Choose Us
+        </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
           {[
             "Get Your Legal Advise",
@@ -81,6 +65,24 @@ const MainAbout = () => {
               </p>
             </motion.div>
           ))}
+        </div>
+      </div>
+
+      {/* New Section with Image, Text, and Button */}
+      <div
+        className="relative bg-cover bg-center h-96 rounded-lg overflow-hidden"
+        style={{
+          backgroundImage:
+            "url(https://media.istockphoto.com/id/1330020430/photo/image-lawyer-businessman-sitting-at-the-office-with-a-woman-customer-explaining-the-agreement.jpg?s=612x612&w=0&k=20&c=sQs018kCsBMAdX82LcG3vKAh559b1J9caMDSLpCpFrA=)",
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-center p-6">
+          <h1 className="text-white text-2xl lg:text-4xl font-bold mb-4">
+            Consult Our Help Today
+          </h1>
+          <button className="bg-yellow-400 text-black px-6 py-3 rounded-md font-semibold text-sm lg:text-base hover:bg-yellow-500">
+            Contact
+          </button>
         </div>
       </div>
     </>

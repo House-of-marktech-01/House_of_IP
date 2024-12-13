@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FiMenu, FiX, FiPlus, FiMinus } from "react-icons/fi";
+import {NavLink} from "react-router-dom"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,8 +24,8 @@ const Navbar = () => {
     <nav
       className={`${
         scrolled
-          ? "bg-white bg-opacity-50 backdrop-blur-md"
-          : "bg-white"
+          ? "bg-slate-900 bg-opacity-50 backdrop-blur-md"
+          : "bg-slate-900"
       } shadow-md fixed w-full z-50 transition-all duration-300 ease-in-out`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -41,76 +42,94 @@ const Navbar = () => {
 
           {/* Logo */}
           <div className="flex items-center">
-            <a href="/" className="text-2xl font-bold text-slate-900">
+            <NavLink to="/" className="text-2xl font-bold text-white">
               House of IP
-            </a>
+            </NavLink>
           </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8 items-center">
-            <a
-              href="/"
-              className="text-gray-700 hover:text-blue-600 font-medium"
+            <NavLink
+              to="/"
+              className="text-white hover:text-blue-600 font-medium"
             >
               Home
-            </a>
-            <a
-              href="/about"
-              className="text-gray-700 hover:text-blue-600 font-medium"
+            </NavLink>
+            <NavLink
+              to="/about"
+              className="text-white hover:text-blue-600 font-medium"
             >
               About
-            </a>
+            </NavLink>
             <div className="relative group">
-              <button className="text-gray-700 hover:text-blue-600 font-medium">
+              <button className="text-white hover:text-blue-600 font-medium">
                 Services
               </button>
               {/* Dropdown */}
-              <div className="absolute left-0 mt-2 bg-white shadow-lg rounded-lg w-48 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none group-hover:pointer-events-auto">
-                <a
-                  href="/service1"
+              <div className="absolute left-0 bg-white shadow-lg rounded-lg w-48 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none group-hover:pointer-events-auto">
+                <NavLink
+                  to="/copyright"
                   className="block px-4 py-2 hover:bg-blue-50 text-gray-700"
                 >
-                  Service 1
-                </a>
-                <a
-                  href="/service2"
+                  Copyright
+                </NavLink>
+                <NavLink
+                  to="/design"
                   className="block px-4 py-2 hover:bg-blue-50 text-gray-700"
                 >
-                  Service 2
-                </a>
-                <a
-                  href="/service3"
+                  Design
+                </NavLink>
+                <NavLink
+                  to="/patent"
                   className="block px-4 py-2 hover:bg-blue-50 text-gray-700"
                 >
-                  Service 3
-                </a>
+                  Patent
+                </NavLink>
+                <NavLink
+                  to="/trademark"
+                  className="block px-4 py-2 hover:bg-blue-50 text-gray-700"
+                >
+                  Trademark
+                </NavLink>
+                <NavLink
+                  to="/"
+                  className="block px-4 py-2 hover:bg-blue-50 text-gray-700"
+                >
+                  IP Litigation
+                </NavLink>
+                <NavLink
+                  to="/"
+                  className="block px-4 py-2 hover:bg-blue-50 text-gray-700"
+                >
+                  Matrimonial Disputes
+                </NavLink>
               </div>
             </div>
-            <a
-              href="/contact"
-              className="text-gray-700 hover:text-blue-600 font-medium"
+            <NavLink
+              to="/contact"
+              className="text-white hover:text-blue-600 font-medium"
             >
               Contact
-            </a>
-            <a
-              href="/appointment"
-              className="text-gray-700 hover:text-blue-600 font-medium"
+            </NavLink>
+            <NavLink
+              to="/appointment"
+              className="text-white hover:text-blue-600 font-medium"
             >
               Book an Appointment
-            </a>
-            <a
-              href="/login"
+            </NavLink>
+            <NavLink
+              to="/login"
               className="bg-slate-900 text-white px-4 py-2 rounded-lg hover:bg-slate-700"
             >
               Login
-            </a>
+            </NavLink>
           </div>
         </div>
       </div>
 
       {/* Mobile Menu */}
       <div
-        className={`fixed top-0 left-0 h-full bg-white shadow-md transform ${
+        className={`fixed top-0 left-0 h-full bg-slate-900 shadow-md transform ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-300 ease-in-out w-3/4 md:hidden`}
       >
@@ -122,68 +141,87 @@ const Navbar = () => {
             <FiX size={24} />
           </button>
           <div className="mt-4">
-            <a
-              href="/"
+            <NavLink
+              to="/"
               className="block px-4 py-2 text-gray-700 hover:bg-blue-50"
             >
               Home
-            </a>
-            <a
-              href="/about"
+            </NavLink>
+            <NavLink
+              to="/about"
               className="block px-4 py-2 text-gray-700 hover:bg-blue-50"
             >
               About
-            </a>
+            </NavLink>
             {/* Services with Expand/Collapse */}
-            <div className="block px-4 py-2 text-gray-700 hover:bg-blue-50">
-              <div
-                className="flex justify-between items-center cursor-pointer"
-                onClick={() => setIsServicesOpen(!isServicesOpen)}
-              >
+            <div
+              className="block px-4 py-2 text-gray-700 hover:bg-blue-50"
+              onMouseEnter={() => setIsServicesOpen(true)}
+              onMouseLeave={() => setIsServicesOpen(false)}
+            >
+              <div className="flex justify-between items-center cursor-pointer">
                 <span>Services</span>
                 {isServicesOpen ? <FiMinus /> : <FiPlus />}
               </div>
               {isServicesOpen && (
                 <div className="mt-2 pl-4">
-                  <a
-                    href="/service1"
+                  <NavLink
+                    to="/copyright"
                     className="block px-4 py-2 text-gray-700 hover:bg-blue-50"
                   >
-                    Service 1
-                  </a>
-                  <a
-                    href="/service2"
+                    Copyright
+                  </NavLink>
+                  <NavLink
+                    to="/design"
                     className="block px-4 py-2 text-gray-700 hover:bg-blue-50"
                   >
-                    Service 2
-                  </a>
-                  <a
-                    href="/service3"
+                    Design
+                  </NavLink>
+                  <NavLink
+                    to="/patent"
                     className="block px-4 py-2 text-gray-700 hover:bg-blue-50"
                   >
-                    Service 3
-                  </a>
+                    Patent
+                  </NavLink>
+                  <NavLink
+                    to="/trademark"
+                    className="block px-4 py-2 text-gray-700 hover:bg-blue-50"
+                  >
+                    Trademark
+                  </NavLink>
+                  <NavLink
+                    to="/"
+                    className="block px-4 py-2 text-gray-700 hover:bg-blue-50"
+                  >
+                    IP Litigation
+                  </NavLink>
+                  <NavLink
+                    to="/"
+                    className="block px-4 py-2 text-gray-700 hover:bg-blue-50"
+                  >
+                    Matrimonial disputes
+                  </NavLink>
                 </div>
               )}
             </div>
-            <a
-              href="/contact"
+            <NavLink
+              to="/contact"
               className="block px-4 py-2 text-gray-700 hover:bg-blue-50"
             >
               Contact
-            </a>
-            <a
-              href="/contact"
+            </NavLink>
+            <NavLink
+              to="/appointment"
               className="block px-4 py-2 text-gray-700 hover:bg-blue-50"
             >
               Book an appointment
-            </a>
-            <a
-              href="/login"
+            </NavLink>
+            <NavLink
+              to="/login"
               className="block px-4 py-2 bg-slate-900 text-white rounded-lg hover:bg-slate-700 mx-4 my-2 text-center"
             >
               Login
-            </a>
+            </NavLink>
           </div>
         </div>
       </div>
