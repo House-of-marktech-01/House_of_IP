@@ -1,24 +1,13 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import ContactForm from "../Components/ContactForm";
+import { RWebShare } from "react-web-share";
 import { motion } from "framer-motion";
 
 const Copyright = () => {
   return (
     <>
-      <div className="w-full" style={{ position: "relative" }}>
-        <div className="relative w-full h-[200px] sm:h-[315px] overflow-hidden">
-          <img
-            src="https://www.jsalaw.com/wp-content/uploads/2022/07/Contact-Us-1200x315.jpg"
-            alt="Copyright"
-            className="w-full h-full object-cover"
-          />
-          {/* Overlay Text */}
-          <div className="font-montserrat absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-xl sm:text-2xl font-light text-center">
-            Copyright
-          </div>
-        </div>
-        <div className="breadcrumbs text-xs sm:text-sm pl-4 sm:pl-6 bg-white text-black pt-3 sm:pt-5">
+      <div id="copyright" className="w-full" style={{ position: "relative" }}>
+        <div className="breadcrumbs text-xs sm:text-sm pl-4 sm:pl-6 bg-white text-black pt-20 lg:pt-20">
           <ul>
             <li>
               <NavLink to="/">Home</NavLink>
@@ -29,278 +18,464 @@ const Copyright = () => {
             <li>Copyright</li>
           </ul>
         </div>
-        {/* copyright starting content  */}
-        <div className="pt-8 px-4 sm:pt-16 sm:pl-16 bg-white pb-8">
-          {/* Title */}
-          <h3 className="text-xl sm:text-2xl font-normal tracking-normal text-yellow-400">
-            Trademarks
-            <span className="block h-px w-24 sm:w-40 bg-[#8c6f46] mt-1"></span>
-          </h3>
-
-          {/* Paragraphs */}
-          <p className="pt-4 sm:pt-8 text-black font-montserrat text-sm sm:text-base text-justify sm:pr-20">
-            At JustiSphereX Legal, our dedicated team of trademark attorneys
-            offers more than just legal protection. We deliver comprehensive
-            business value by integrating industry insights, brand strategy, and
-            global trademark registration services. Our approach begins with a
-            deep understanding of your brand’s goals and conducting extensive
-            trademark availability searches to ensure success.
-          </p>
-
-          <p className="pt-4 sm:pt-8 text-black font-montserrat text-sm sm:text-base text-justify sm:pr-20">
-            We provide clear guidance on the feasibility of trademark
-            registration across multiple regions while offering strategic advice
-            to avoid potential conflicts. Our expertise also extends to securing
-            domain names, hashtags, taglines, and social media handles, ensuring
-            a seamless digital presence that aligns with your brand’s identity.
-          </p>
-
-          <p className="pt-4 sm:pt-8 text-black font-montserrat text-sm sm:text-base text-justify sm:pr-20">
-            When it comes to filing, our in-depth knowledge of trademark
-            classifications ensures optimal protection. Our experience in
-            representing clients in disputes such as oppositions, cancellations,
-            and rectifications allows us to defend your trademarks effectively
-            with evidence-based arguments and expert responses to examination
-            queries.
-          </p>
-
-          <p className="pt-4 sm:pt-8 text-black font-montserrat text-sm sm:text-base text-justify sm:pr-20">
-            For trademark enforcement, we monitor both physical and online
-            markets to detect potential infringement. We act swiftly by issuing
-            cease-and-desist and take-down notices, and in cases where
-            violations persist, we collaborate with authorities to confiscate
-            counterfeit or infringing products.
-          </p>
-
-          <p className="pt-4 sm:pt-8 text-black font-montserrat text-sm sm:text-base text-justify sm:pr-20">
-            Our success is driven by detailed documentation, well-constructed
-            legal responses, and a commitment to resolving disputes amicably.
-            This meticulous approach contributes to high approval rates for
-            trademark applications. Beyond registration, we manage renewals,
-            recordals, and monitor your brand for unauthorized use.
-            Additionally, we provide guidance on trademark valuation during
-            licensing, IP transfers, and mergers, empowering both startups and
-            multinationals to leverage their trademarks effectively.
-          </p>
-        </div>
-        {/* faq section */}
-        <div className="flex flex-col md:flex-row items-start md:items-center bg-white p-6 gap-8">
-          {/* Left Side Image */}
-
-          <div className="w-full md:w-1/2">
-            <motion.img
-              src="https://media.istockphoto.com/id/1150783053/photo/gavel-with-question-mark-on-chalkboard-background-3d-rendering.jpg?s=612x612&w=0&k=20&c=efEMnNLKYvzEkGiFMU6a4-oCLgrLmiCPQE0HVRDbBxA="
-              alt="Trademark Illustration"
-              className="rounded-lg w-full object-cover"
-              // Animation Props
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-            />
+        <div className="lg:flex gap-5 border p-3 bg-white lg:px-20">
+          <div className="relative w-7/10 shrink-0 flex justify-center items-center">
+            <div className="sticky">
+              <img
+                src="https://legalvidhiya.com/wp-content/uploads/2023/10/image-34.png"
+                className="rounded-lg w-80"
+                alt="Copyright"
+              />
+            </div>
           </div>
 
-          {/* Right Side FAQ Section */}
-          <div className="w-full md:w-1/2">
-            {/* Title */}
-            <h2 className="text-3xl font-bold text-yellow-500">
-              Frequently Asked Questions
-            </h2>
-            <p className="text-gray-500 mt-2 mb-6">
-              Let us answer your doubts here
-            </p>
+          <div className="flex flex-col lg:w-2/3">
+            <div className="my-auto w-full pt-10 px-5 sm:w-full">
+              <h2 className="text-base font-black mb-2 text-gray-700 lg:mb-4">
+                Copyright
+              </h2>
 
-            {/* FAQ Section */}
-            <div className="space-y-4">
+              <p className="prod_description text-sm text-gray-700 mt-2">
+                Copyright is a legal entitlement granted to the owner of
+                intellectual property. Copyright protection typically endures
+                for the author’s lifetime plus an additional 60 years after the
+                author’s death
+              </p>
+
+              <div className="flex items-center justify-between flex-wrap gap-2 border-y-2 mt-4 pt-4 pb-4 mb-5">
+                <a className="btn btn-link flex-none" href="/">
+                  Terms and conditions
+                </a>
+                <div className="flex -space-x-2 pl-5 lg:justify-end">
+                  <div className="flex">
+                    <RWebShare
+                      data={{
+                        url: "http://localhost:5173/copyright",
+                        title: "Copyright",
+                      }}
+                      onClick={() => console.log("shared successfully!")}
+                    >
+                      <button className="text-blue-500 hover:underline">
+                        Share with friends 🔗
+                      </button>
+                    </RWebShare>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="hidden sm:flex flex-col w-2/10 justify-center items-center bg-gray-100">
+            <div className="bg-white p-8 rounded-lg shadow-lg">
+              <h2 className="text-2xl font-semibold text-center mb-6 text-gray-800">
+                Login
+              </h2>
+              <form>
+                <div className="mb-4">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-gray-700"
+                  >
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    className="mt-1 p-2 w-full border bg-gray-300 text-gray-800 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    required
+                  />
+                </div>
+
+                <div className="mb-4">
+                  <label
+                    htmlFor="password"
+                    className="block text-sm font-medium text-gray-700"
+                  >
+                    Password
+                  </label>
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    className="mt-1 p-2 w-full border bg-gray-300 text-gray-800 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    required
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full py-2 bg-slate-900 text-white rounded-md hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                >
+                  Login
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-white px-5 text-justify lg:px-20">
+          <h1 className="text-center text-3xl text-black pb-4 pt-4">
+            Copyright
+          </h1>
+          <p className="pb-8 text-gray-800 text-sm">
+            As the importance of safeguarding creative content continues to
+            grow, House of IP provides comprehensive advisory and dispute
+            management services tailored for copyright protection. Our highly
+            regarded team of copyright attorneys supports authors, musicians,
+            filmmakers, software developers, and media companies in defending
+            their original creations and addressing infringement issues.
+          </p>
+          <p className="pb-8 text-gray-800 text-sm">
+            We specialize in a full suite of copyright services, including
+            registration, licensing, assignment, enforcement, and dispute
+            resolution, spanning various industries. Understanding the
+            complexities brought by technology and the surge in copyright
+            violations, we have effectively assisted clients in safeguarding
+            custom software, architectural designs, literary works, and
+            multimedia content.
+          </p>
+          <h2 className="text-lg font-medium text-black pb-5">
+            Comprehensive Copyright Solutions
+          </h2>
+          <p className="pb-8 text-gray-800 text-sm">
+            Our dedicated copyright registration team ensures rapid and thorough
+            protection for your work, covering text, images, sound, and video
+            documentation. We excel in representing clients before courts,
+            employing strategic oral arguments, compelling evidence, and
+            counterclaims. Additionally, we advise on legal best practices for
+            using third–party content, helping clients avoid copyright pitfalls.
+          </p>
+          <h2 className="text-lg font-medium text-black pb-5">
+            Our Expertise Includes:
+          </h2>
+          <p className="pb-8 text-gray-800 text-sm">
+            <strong>• Determining Copyright Eligibility:</strong> We assess if
+            your work qualifies for copyright protection under applicable laws.{" "}
+            <br /> <strong>• Resolving Evidence–Focused Disputes:</strong>{" "}
+            Tackling copyright disputes with jurisdiction–specific approaches.{" "}
+            <br /> <strong>• Guiding Safer Content Usage:</strong> Offering
+            clear guidelines to ensure legal and secure use of third-party
+            content.
+          </p>
+          <p className="pb-8 text-gray-800 text-sm">
+            Whether you are an artist or a business, we advise on licensing,
+            assignments, and permitted usage of copyrighted works. Our team
+            monitors both online and offline spaces for unauthorized use of
+            movies, music, books, software, and more. If necessary, we pursue
+            legal action, including filing civil and criminal complaints and
+            coordinating with cybercrime units to swiftly seize infringing
+            materials.
+          </p>
+          <h2 className="text-lg font-medium text-black pb-5">
+            Expert Representation in Copyright Disputes
+          </h2>
+          <p className="pb-8 text-gray-800 text-sm">
+            Our experienced copyright attorneys represent clients in cases
+            involving ownership disputes, royalty claims, co–authorship
+            conflicts, and adaptation rights. For high–value copyrighted
+            content, such as music, software, or literary works, we offer
+            valuation services, assisting producers, publishers, and tech
+            companies in funding rounds and M&A transactions. Our technical
+            experts assess code quality, vulnerability metrics, and architecture
+            strength for reliable valuation.
+          </p>
+        </div>
+        <div className="bg-white px-5 text-justify flex lg:px-20 ">
+          <div>
+            <h1 className="text-start text-2xl text-black pb-4">
+              Documents Required
+            </h1>
+            <h1 className="text-start text-xl text-black pb-4">Doc 1 name</h1>
+            <p className="pb-8 text-gray-800 text-sm">
+              Doc 1 info Lorem ipsum dolor sit amet, consectetur adipisicing
+              elit. Harum fugit iure veniam? Sint quasi labore pariatur,
+              molestias odit vitae aspernatur fuga repudiandae nulla autem nihil
+              dolore suscipit expedita placeat facere quod excepturi animi
+              atque.
+            </p>
+            <h1 className="text-start text-xl text-black pb-4">Doc 2 name</h1>
+            <p className="pb-8 text-gray-800 text-sm">
+              doc 2 info Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Amet nam dicta aut excepturi rerum ut quos fugiat quas
+              magnam. Assumenda minus aliquid placeat vero odio velit veniam
+              officiis sit eius!
+            </p>
+            <h1 className="text-start text-xl text-black pb-4">Doc 3 name</h1>
+            <p className="pb-8 text-gray-800 text-sm">
+              Doc 3 info Lorem ipsum dolor sit amet, consectetur adipisicing
+              elit. Exercitationem perspiciatis reiciendis quae provident, sit
+              atque nam culpa minus doloribus praesentium ex voluptatum.
+              Deserunt ipsa excepturi voluptas porro?
+            </p>
+          </div>
+
+          <div className="hidden lg:block lg:w-1/2 p-10 pl-16">
+            <h2 className="text-black font-normal pb-5">Related Links</h2>
+            <nav className="space-y-4 sticky top-24">
+              <a
+                href="/patent"
+                className="block text-gray-700 font-montserrat hover:text-blue-800 hover:underline text-lg font-medium"
+              >
+                Patent
+              </a>
+              <a
+                href="/design"
+                className="block text-gray-700 font-montserrat hover:text-blue-800 hover:underline text-lg font-medium"
+              >
+                Design
+              </a>
+              <a
+                href="/copyright"
+                className="block text-gray-700 font-montserrat hover:text-blue-800 hover:underline text-lg font-medium"
+              >
+                Copyright
+              </a>
+              <a
+                href="#trademark"
+                className="block text-gray-700 font-montserrat hover:text-blue-800 hover:underline text-lg font-medium"
+              >
+                Trademark
+              </a>
+            </nav>
+          </div>
+        </div>
+
+        <h1 className="text-center text-3xl text-black pb-4 bg-white">
+          Copyright FAQ's
+        </h1>
+        <div className="space-y-4 px-2 pt-8 bg-white lg:px-8">
+          {/* FAQ Section */}
+          <div className="flex-1">
+            {/* Your FAQ Content */}
+            <div className="space-y-4 pr-2 pt-4 h-full bg-slate-200 pb-10 pl-2 rounded-md lg:bg-white lg:px-10">
               {/* FAQ Item 1 */}
-              <details className="group overflow-hidden">
-                <summary className="flex justify-between items-center cursor-pointer p-4 bg-yellow-100 rounded-lg transition">
-                  <span className="font-medium text-yellow-700">
-                    Why Choose JustiSphereX Legal for Trademark Registration?
+              <details className="group overflow-hidden ">
+                <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-lg transition">
+                  <span className="font-medium text-white">
+                    What Copyrighted Works Do We Protect?
                   </span>
                   <span className="transition-transform group-open:rotate-180">
                     &#9660;
                   </span>
                 </summary>
                 <div className="transition-all duration-300 ease-in-out overflow-hidden max-h-0 group-open:max-h-96">
-                  <p className="mt-2 px-4 text-gray-700">
-                    At JustiSphereX Legal, we go beyond legal protection by
-                    offering a full-service solution that includes:
+                  <p className="mt-2 px-4 text-black text-sm">
+                    House of IP safeguards a wide range of creative content:
                   </p>
-                  <ul className="mt-2 px-4 list-disc list-inside text-gray-700">
+                  <ul className="mt-2 px-4 list-disc list-inside text-black text-sm">
                     <li>
-                      Industry research and strategic brand development to
-                      strengthen your trademark.
+                      <strong>Software:</strong> Handling ownership complexities
+                      and infringement issues in custom software.
                     </li>
                     <li>
-                      Alignment and registration capabilities across national
-                      and international territories.
+                      <strong>Architectural Works:</strong> Defending
+                      architects’ and designers’ rights to their original
+                      creations.
                     </li>
                     <li>
-                      Expert advice on domain names, hashtags, and social media
-                      handles for cohesive digital branding.
+                      <strong>Literary Works:</strong> Assisting authors,
+                      publishers, and stakeholders in protecting their written
+                      works.
+                    </li>
+                    <li>
+                      <strong>Multimedia Content:</strong> Managing copyright
+                      matters related to music, films, videos, and more.
                     </li>
                   </ul>
                 </div>
               </details>
 
+              {/* Add the other FAQ items here */}
               {/* FAQ Item 2 */}
               <details className="group overflow-hidden">
-                <summary className="flex justify-between items-center cursor-pointer p-4 bg-yellow-100 rounded-lg transition">
-                  <span className="font-medium text-yellow-700">
-                    How Do We Ensure Successful Trademark Registration?
+                <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-lg transition">
+                  <span className="font-medium text-white">
+                    How to Register Your Copyright?
                   </span>
                   <span className="transition-transform group-open:rotate-180">
                     &#9660;
                   </span>
                 </summary>
-                <div className="transition-all duration-300 ease-in-out overflow-hidden max-h-0 group-open:max-h-96">
-                  <p className="mt-2 px-4 text-black">
-                    We begin by understanding your brand’s objectives, followed
-                    by conducting comprehensive availability searches to
-                    identify potential conflicts and evaluate registration
-                    feasibility. Our thorough knowledge of trademark classes
-                    enables strategic protection, and we have a proven track
-                    record in oppositions, cancellations, and rectifications.
+                <div className="transition-all duration-300 ease-in-out overflow-hidden max-h-96 group-open:max-h-96 px-12 text-justify text-black font-montserrat font-thin overflow-y-auto">
+                  <p className="mt-2 px-4 text-black text-sm">
+                    Our expert team guides you through the copyright
+                    registration process, ensuring that your work is quickly
+                    protected in the appropriate category—whether it’s text,
+                    image, sound, or video. We handle the documentation and
+                    filing efficiently, so you can focus on your creativity.
                   </p>
                 </div>
               </details>
 
               {/* FAQ Item 3 */}
               <details className="group overflow-hidden">
-                <summary className="flex justify-between items-center cursor-pointer p-4 bg-yellow-100 rounded-lg transition">
-                  <span className="font-medium text-yellow-700">
-                    What Are Our Success Rates for Trademark Approvals?
+                <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-lg transition">
+                  <span className="font-medium text-white">
+                    What if Your Copyright is Infringed?
                   </span>
                   <span className="transition-transform group-open:rotate-180">
                     &#9660;
                   </span>
                 </summary>
                 <div className="transition-all duration-300 ease-in-out overflow-hidden max-h-0 group-open:max-h-96">
-                  <p className="mt-2 px-4 text-black">
-                    With a meticulous process that includes well-prepared
-                    applications, comprehensive examination responses, and
-                    evidence-backed arguments, we consistently achieve high
-                    approval rates for our clients.
+                  <p className="mt-2 px-4 text-black text-sm">
+                    House of IP has a proven track record in copyright dispute
+                    resolution. We represent clients in court, using compelling
+                    oral arguments, robust evidence, and strategic counterclaims
+                    to protect your rights. We also assist in recovering damages
+                    for copyright infringement.
                   </p>
                 </div>
               </details>
 
               {/* FAQ Item 4 */}
               <details className="group overflow-hidden">
-                <summary className="flex justify-between items-center cursor-pointer p-4 bg-yellow-100 rounded-lg transition">
-                  <span className="font-medium text-yellow-700">
-                    Support Beyond Registration
+                <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-lg transition">
+                  <span className="font-medium text-white">
+                    Legally Using Copyrighted Content
                   </span>
                   <span className="transition-transform group-open:rotate-180">
                     &#9660;
                   </span>
                 </summary>
-                <div className="transition-all duration-300 ease-in-out overflow-hidden max-h-0 group-open:max-h-96">
-                  <p className="mt-2 px-4 text-gray-700">
-                    Our 360-degree service doesn’t stop at registration. We also
-                    manage renewals, recordals, and continuous monitoring to
-                    safeguard your trademark. Additionally, we offer:
+                <div className="transition-all duration-300 ease-in-out overflow-hidden max-h-0 group-open:max-h-96 text-sm">
+                  <p className="mt-2 px-4 text-black">
+                    We provide legal guidance on the use of third–party
+                    copyrighted material through licenses, assignments, or
+                    fair–use guidelines. Our lawyers ensure you can leverage
+                    content legally and ethically while minimizing risks.
                   </p>
-                  <ul className="mt-2 px-4 list-disc list-inside text-gray-700">
-                    <li>
-                      Trademark valuation guidance for licensing agreements, IP
-                      transfers, or mergers.
-                    </li>
-                    <li>
-                      Strategic advice to help startups and established
-                      businesses maximize the potential of their trademarks,
-                      ensuring alignment with evolving brand objectives.
-                    </li>
-                  </ul>
+                </div>
+              </details>
+              <details className="group overflow-hidden pb-10">
+                <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-lg transition">
+                  <span className="font-medium text-white">
+                    Protecting High-Value Copyrighted Works
+                  </span>
+                  <span className="transition-transform group-open:rotate-180">
+                    &#9660;
+                  </span>
+                </summary>
+                <div className="transition-all duration-300 ease-in-out overflow-hidden max-h-0 group-open:max-h-96 text-sm">
+                  <p className="mt-2 px-4 text-black">
+                    For high–value content, including music, software, and
+                    literary works, offers comprehensive valuation services. Our
+                    team of legal and technical experts evaluates the commercial
+                    value of your content during investment, funding rounds, or
+                    mergers and acquisitions.
+                  </p>
                 </div>
               </details>
             </div>
           </div>
-        </div>
-        {/* extrainfo section */}
-        <div className="bg-white w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          {/* Header */}
-          <h1 className="text-2xl md:text-4xl text-yellow-400 mb-4 font-montserrat font-thin">
-            Trademarks Filing And Protection
-          </h1>
-          <p className="text-gray-600 text-sm md:text-base font-montserrat">
-            Your brand is more than just a name; it's the embodiment of your
-            reputation and customer trust. Here's a simplified breakdown of the
-            process for registering a trademark in India:
-          </p>
 
-          {/* Steps Section */}
-          <div className="mt-8 space-y-6">
-            {/* Step 1 */}
-            <div className="flex flex-col md:flex-row md:items-start md:space-x-4 px-10">
-              <div className="flex-shrink-0 text-lg font-bold text-gray-800 font-montserrat pr-6 text-justify">
-                1. Trademark Search & Selection
-              </div>
-              <div className="text-gray-600 text-sm md:text-base font-montserrat text-justify">
-                The foundation of a strong trademark strategy lies in choosing a
-                unique and registrable mark. We’ll conduct a thorough search to
-                ensure your chosen name isn’t already in use by another business
-                in your industry. This helps avoid potential conflicts and paves
-                the way for a smooth registration process.
-              </div>
+          <div className="lg:flex flex-row">
+            <div className="px-2 text-justify lg:w-3/4 lg:pl-10">
+              <h1 className="text-xl text-center text-black font-montserrat font-semibold lg:text-2xl">
+                Your Copyright Registration Process – Simplified
+              </h1>
+              <p className="text-gray-800 pt-5 text-sm">
+                Copyright protects your original creations, from literary works
+                to artistic expressions. Here’s a step–by–step guide to the
+                registration process in India:
+              </p>
+              <h3 className="font-bold text-gray-900 pt-3">
+                1. Determine Eligibility:
+              </h3>
+              <p className="text-gray-800 pt-2 text-sm">
+                Not every work qualifies for copyright. Our initial consultation
+                will help determine if your work, whether literary, musical,
+                dramatic, artistic, or cinematographic, meets the originality
+                criteria for protection.
+              </p>
+              <h3 className="font-bold text-gray-900 pt-3">
+                2. Application Preparation:
+              </h3>
+              <p className="text-gray-800 pt-2 text-sm">
+                Once eligibility is established, we’ll assist you in completing
+                the required forms, providing all necessary details about your
+                work (title, creator information, format) to ensure a flawless
+                application.
+              </p>
+              <h3 className="font-bold text-gray-900 pt-3">
+                3. Submission & Examination:
+              </h3>
+              <p className="text-gray-800 pt-2 text-sm">
+                The application is then submitted to the Copyright Office, along
+                with any required fees and a copy of your work. The office will
+                review the submission for accuracy and completeness.
+              </p>
+              <h3 className="font-bold text-gray-900 pt-3">
+                4. Registration & Certification:
+              </h3>
+              <p className="text-gray-800 pt-2 text-sm">
+                If no objections arise, your copyright will be officially
+                registered, and you’ll receive a certificate of registration,
+                serving as prima facie evidence of ownership.
+              </p>
+              <h3 className="font-bold text-gray-900 pt-3">
+                5. Post–Registration Protection:
+              </h3>
+              <p className="text-gray-800 pt-2 text-sm">
+                While registration is a crucial step, it is only the beginning.
+                We offer ongoing advice on protecting your rights, issuing
+                cease-and-desist notices, or pursuing legal action in case of
+                infringement.
+              </p>
             </div>
 
-            {/* Step 2 */}
-            <div className="flex flex-col md:flex-row md:items-start md:space-x-4 pt-5 px-10">
-              <div className="flex-shrink-0 text-lg font-bold text-gray-800 font-montserrat">
-                2. Application Preparation & Filing
-              </div>
-              <div className="text-gray-600 text-sm md:text-base font-montserrat text-justify">
-                Once we’ve identified a suitable trademark, we’ll draft a
-                comprehensive application for the Indian Trademark Office (IPO).
-                This involves defining the specific class of goods or services
-                your trademark will be associated with. We’ll also guide you on
-                choosing the most appropriate representation, whether it’s a
-                logo, wordmark, or a combination.
-              </div>
-            </div>
-            {/* step3 */}
-            <div className="flex flex-col md:flex-row md:items-start md:space-x-4 pt-5 px-10">
-              <div className="flex-shrink-0 text-lg font-bold text-gray-800 font-montserrat pr-16">
-                3. Examination & Response
-              </div>
-              <div className="text-gray-600 text-sm md:text-base font-montserrat text-justify">
-                The IPO will review your application, and we handle all
-                communications on your behalf. Should any objections arise, we
-                provide clear, legally sound responses to support your
-                trademark’s registrability, backed by additional documentation
-                and clarifications as needed.
-              </div>
-            </div>
-            {/* step 4 */}
-            <div className="flex flex-col md:flex-row md:items-start md:space-x-4 pt-5 text-justify px-10">
-              <div className="flex-shrink-0 text-lg font-bold text-gray-800 font-montserrat pr-12">
-                4. Registration & Publication
-              </div>
-              <div className="text-gray-600 text-sm md:text-base font-montserrat text-justify">
-                After a successful examination, your trademark will be published
-                in the Trademark Journal, allowing third parties to raise any
-                objections within a specified period. If no objections are
-                raised, your trademark will proceed to official registration.
-              </div>
-            </div>
-            {/* step 5 */}
-            <div className="flex flex-col md:flex-row md:items-start md:space-x-4 pt-5 text-justify px-10">
-              <div className="flex-shrink-0 text-lg font-bold text-gray-800 font-montserrat">
-                5. Post-Registration Management
-              </div>
-              <div className="text-gray-600 text-sm md:text-base font-montserrat text-justify">
-                Congratulations! Your brand identity is now legally protected.
-                JustiSphereX Legal will continue to support you by advising on
-                renewal strategies, managing infringement disputes, and
-                maintaining your trademark throughout its validity period.
-              </div>
+            {/* Card Section */}
+            <div className="flex flex-col justify-center space-y-4 items-center space-x-3 lg:flex-col">
+              {/* Card 1 */}
+              <a href="/patent">
+                <div className="card card-compact bg-base-100 w-72 shadow-xl">
+                  <figure>
+                    <img
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVKc6eE_WPmaSRuSzcabfmXNHoIYn-GoGNAA&s"
+                      alt="Patent"
+                      className="h-44 w-72"
+                    />
+                  </figure>
+                  <div className="card-body bg-white text-black">
+                    <h2 className="card-title">Trademark</h2>
+                  </div>
+                </div>
+              </a>
+
+              {/* Card 2 */}
+              <a href="/patent">
+                <div className="card card-compact bg-base-100 w-72 shadow-xl">
+                  <figure>
+                    <img
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI9Ngiq_F5HPP39UxsluGMvOiMx4-aZrO1vg&s"
+                      alt="Copyright"
+                      className="h-44"
+                    />
+                  </figure>
+                  <div className="card-body bg-white text-black">
+                    <h2 className="card-title">Patent</h2>
+                  </div>
+                </div>
+              </a>
+              <a href="/design">
+                <div className="card card-compact bg-base-100 w-72 shadow-xl">
+                  <figure>
+                    <img
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEaE-xi5291DEKz_fKdeE3LxPyxsovjgdojg&s"
+                      alt="Design"
+                      className="h-44 w-72"
+                    />
+                  </figure>
+                  <div className="card-body bg-white text-black">
+                    <h2 className="card-title">Design</h2>
+                  </div>
+                </div>
+              </a>
             </div>
           </div>
         </div>
       </div>
-      <ContactForm />
     </>
   );
 };

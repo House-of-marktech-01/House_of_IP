@@ -1,11 +1,12 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { RWebShare } from "react-web-share";
 
 const Trademark = () => {
   return (
     <>
-      <div className="w-full" style={{ position: "relative" }}>
-        <div className="breadcrumbs text-xs sm:text-sm pl-4 sm:pl-6 bg-white text-black pt-3 sm:pt-5 lg:pt-20">
+      <div id="trademark" className="w-full" style={{ position: "relative" }}>
+        <div className="breadcrumbs text-xs sm:text-sm pl-4 sm:pl-6 bg-white text-black pt-20 lg:pt-20">
           <ul>
             <li>
               <NavLink to="/">Home</NavLink>
@@ -16,7 +17,7 @@ const Trademark = () => {
             <li>Trademark</li>
           </ul>
         </div>
-        <div className="flex gap-5 border rounded-lg p-3 bg-white">
+        <div className="lg:flex gap-5 border p-3 bg-white lg:px-20">
           <div className="relative w-7/10 shrink-0 flex justify-center items-center">
             <div className="sticky">
               <img
@@ -26,9 +27,10 @@ const Trademark = () => {
               />
             </div>
           </div>
-          <div className="flex flex-col w-2/3">
-            <div className="align-middle">
-              <h2 className="text-base font-black mb-2 lg:mb-4">Trademark</h2>
+
+          <div className="flex flex-col lg:w-2/3">
+            <div className="my-auto w-full pt-10 px-5 sm:w-full">
+              <h2 className="text-base font-black mb-2 lg:mb-4 text-gray-800">Trademark</h2>
 
               <p className="prod_description text-sm text-gray-700 mt-2">
                 Drafting and filing of rectification for applications marked
@@ -41,39 +43,31 @@ const Trademark = () => {
                 <a className="btn btn-link flex-none" href="/">
                   Terms and conditions
                 </a>
-                <div className="flex -space-x-2 lg:justify-end">
+                <div className="flex -space-x-2 pl-5 lg:justify-end">
                   <div className="flex">
-                    <a href="/">
-                      <h2 className="text-gray-600 font-medium text-sm">
-                        Refer a Friend
-                      </h2>
-                    </a>
+                    <RWebShare
+                      data={{
+                        url: "http://localhost:5173/trademark",
+                        title: "Trademark",
+                      }}
+                      onClick={() => console.log("shared successfully!")}
+                    >
+                      <button className="text-blue-500 hover:underline">
+                        Share with friends 🔗
+                      </button>
+                    </RWebShare>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="flex flex-col w-3/10 justify-center items-center bg-gray-100">
-            <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
-              <h2 className="text-2xl font-semibold text-center mb-6">Login</h2>
+          <div className="hidden sm:flex flex-col w-2/10 justify-center items-center bg-gray-100">
+            <div className="bg-white p-8 rounded-lg ">
+              <h2 className="text-2xl font-semibold text-center mb-6 text-gray-800">
+                Login
+              </h2>
               <form>
-                <div className="mb-4">
-                  <label
-                    htmlFor="username"
-                    className="block text-sm font-medium text-gray-700"
-                  >
-                    Username
-                  </label>
-                  <input
-                    type="text"
-                    id="username"
-                    name="username"
-                    className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                    required
-                  />
-                </div>
-
                 <div className="mb-4">
                   <label
                     htmlFor="email"
@@ -85,7 +79,7 @@ const Trademark = () => {
                     type="email"
                     id="email"
                     name="email"
-                    className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    className="mt-1 p-2 w-full border bg-gray-300 text-gray-800 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
                     required
                   />
                 </div>
@@ -101,7 +95,7 @@ const Trademark = () => {
                     type="password"
                     id="password"
                     name="password"
-                    className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    className="mt-1 p-2 w-full border bg-gray-300 text-gray-800 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
                     required
                   />
                 </div>
@@ -117,9 +111,11 @@ const Trademark = () => {
           </div>
         </div>
 
-        <div className="bg-white px-14 text-justify">
-          <h1 className="text-center text-3xl text-black pb-4">Trademark</h1>
-          <p className="pb-8 text-gray-800">
+        <div className="bg-white px-5 text-justify lg:px-20">
+          <h1 className="text-center text-3xl text-black pb-4 pt-4">
+            Trademark
+          </h1>
+          <p className="pb-8 text-gray-800 text-sm">
             At JustiSphereX Legal, our dedicated team of trademark attorneys
             offers more than just legal protection. We deliver comprehensive
             business value by integrating industry insights, brand strategy, and
@@ -127,14 +123,14 @@ const Trademark = () => {
             deep understanding of your brand’s goals and conducting extensive
             trademark availability searches to ensure success.
           </p>
-          <p className="pb-8 text-gray-800">
+          <p className="pb-8 text-gray-800 text-sm">
             We provide clear guidance on the feasibility of trademark
             registration across multiple regions while offering strategic advice
             to avoid potential conflicts. Our expertise also extends to securing
             domain names, hashtags, taglines, and social media handles, ensuring
             a seamless digital presence that aligns with your brand’s identity.
           </p>
-          <p className="pb-8 text-gray-800">
+          <p className="pb-8 text-gray-800 text-sm">
             When it comes to filing, our in-depth knowledge of trademark
             classifications ensures optimal protection. Our experience in
             representing clients in disputes such as oppositions, cancellations,
@@ -142,14 +138,14 @@ const Trademark = () => {
             with evidence-based arguments and expert responses to examination
             queries.
           </p>
-          <p className="pb-8 text-gray-800">
+          <p className="pb-8 text-gray-800 text-sm">
             For trademark enforcement, we monitor both physical and online
             markets to detect potential infringement. We act swiftly by issuing
             cease-and-desist and take-down notices, and in cases where
             violations persist, we collaborate with authorities to confiscate
             counterfeit or infringing products.
           </p>
-          <p className="pb-8 text-gray-800">
+          <p className="pb-8 text-gray-800 text-sm">
             Our success is driven by detailed documentation, well-constructed
             legal responses, and a commitment to resolving disputes amicably.
             This meticulous approach contributes to high approval rates for
@@ -160,16 +156,76 @@ const Trademark = () => {
             multinationals to leverage their trademarks effectively.
           </p>
         </div>
+        <div className="bg-white px-5 text-justify flex lg:px-20">
+          <div>
+            <h1 className="text-start text-2xl text-black pb-4">
+              Documents Required
+            </h1>
+            <h1 className="text-start text-xl text-black pb-4">Doc 1 name</h1>
+            <p className="pb-8 text-gray-800 text-sm">
+              Doc 1 info Lorem ipsum dolor sit amet, consectetur adipisicing
+              elit. Harum fugit iure veniam? Sint quasi labore pariatur,
+              molestias odit vitae aspernatur fuga repudiandae nulla autem nihil
+              dolore suscipit expedita placeat facere quod excepturi animi
+              atque.
+            </p>
+            <h1 className="text-start text-xl text-black pb-4">Doc 2 name</h1>
+            <p className="pb-8 text-gray-800 text-sm">
+              doc 2 info Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Amet nam dicta aut excepturi rerum ut quos fugiat quas
+              magnam. Assumenda minus aliquid placeat vero odio velit veniam
+              officiis sit eius!
+            </p>
+            <h1 className="text-start text-xl text-black pb-4">Doc 3 name</h1>
+            <p className="pb-8 text-gray-800 text-sm">
+              Doc 3 info Lorem ipsum dolor sit amet, consectetur adipisicing
+              elit. Exercitationem perspiciatis reiciendis quae provident, sit
+              atque nam culpa minus doloribus praesentium ex voluptatum.
+              Deserunt ipsa excepturi voluptas porro?
+            </p>
+          </div>
+
+          <div className="hidden lg:block lg:w-1/2 p-10 pl-16">
+            <h2 className="text-black font-normal pb-5">Related Links</h2>
+            <nav className="space-y-4 sticky top-24">
+              <a
+                href="/patent"
+                className="block text-gray-700 font-montserrat hover:text-blue-800 hover:underline text-lg font-medium"
+              >
+                Patent
+              </a>
+              <a
+                href="/design"
+                className="block text-gray-700 font-montserrat hover:text-blue-800 hover:underline text-lg font-medium"
+              >
+                Design
+              </a>
+              <a
+                href="/copyright"
+                className="block text-gray-700 font-montserrat hover:text-blue-800 hover:underline text-lg font-medium"
+              >
+                Copyright
+              </a>
+              <a
+                href="#trademark"
+                className="block text-gray-700 font-montserrat hover:text-blue-800 hover:underline text-lg font-medium"
+              >
+                Trademark
+              </a>
+            </nav>
+          </div>
+        </div>
+
         <h1 className="text-center text-3xl text-black pb-4 bg-white">
           Trademark FAQ's
         </h1>
-        <div className="flex flex-wrap space-y-4 px-14 pt-8 bg-white">
+        <div className="space-y-4 px-2 pt-8 bg-white lg:px-10">
           {/* FAQ Section */}
           <div className="flex-1">
             {/* Your FAQ Content */}
-            <div className="space-y-4 pr-10 pt-4 h-full bg-slate-200 pb-10 pl-2 rounded-md">
+            <div className="space-y-4 pr-2 pt-4 h-full bg-slate-200 pb-10 pl-2 rounded-md lg:bg-white lg:px-10">
               {/* FAQ Item 1 */}
-              <details className="group overflow-hidden">
+              <details className="group overflow-hidden ">
                 <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-lg transition">
                   <span className="font-medium text-white">
                     Why Choose JustiSphereX Legal for Trademark Registration?
@@ -179,11 +235,11 @@ const Trademark = () => {
                   </span>
                 </summary>
                 <div className="transition-all duration-300 ease-in-out overflow-hidden max-h-0 group-open:max-h-96">
-                  <p className="mt-2 px-4 text-black">
+                  <p className="mt-2 px-4 text-black text-sm">
                     At JustiSphereX Legal, we go beyond legal protection by
                     offering a full-service solution that includes:
                   </p>
-                  <ul className="mt-2 px-4 list-disc list-inside text-black">
+                  <ul className="mt-2 px-4 list-disc list-inside text-black text-sm">
                     <li>
                       Industry research and strategic brand development to
                       strengthen your trademark.
@@ -212,7 +268,7 @@ const Trademark = () => {
                   </span>
                 </summary>
                 <div className="transition-all duration-300 ease-in-out overflow-hidden max-h-96 group-open:max-h-96 px-12 text-justify text-black font-montserrat font-thin overflow-y-auto">
-                  <p className="mt-2 px-4 text-black">
+                  <p className="mt-2 px-4 text-black text-sm">
                     We begin by understanding your brand’s objectives, followed
                     by conducting comprehensive availability searches to
                     identify potential conflicts and evaluate registration
@@ -234,7 +290,7 @@ const Trademark = () => {
                   </span>
                 </summary>
                 <div className="transition-all duration-300 ease-in-out overflow-hidden max-h-0 group-open:max-h-96">
-                  <p className="mt-2 px-4 text-black">
+                  <p className="mt-2 px-4 text-black text-sm">
                     With a meticulous process that includes well-prepared
                     applications, comprehensive examination responses, and
                     evidence-backed arguments, we consistently achieve high
@@ -253,7 +309,7 @@ const Trademark = () => {
                     &#9660;
                   </span>
                 </summary>
-                <div className="transition-all duration-300 ease-in-out overflow-hidden max-h-0 group-open:max-h-96">
+                <div className="transition-all duration-300 ease-in-out overflow-hidden max-h-0 group-open:max-h-96 text-sm">
                   <p className="mt-2 px-4 text-black">
                     Our 360-degree service doesn’t stop at registration. We also
                     manage renewals, recordals, and continuous monitoring to
@@ -275,34 +331,112 @@ const Trademark = () => {
             </div>
           </div>
 
-          {/* Card Section */}
-          <div className="flex flex-col space-y-4 items-center">
-            {/* Card 1 */}
-            <NavLink to="/patent">
-              <div className="card card-compact bg-base-100 w-96 shadow-xl">
-                <figure>
-                  <img
-                    src="https://blog.ipleaders.in/wp-content/uploads/2021/06/patent-law-book-gavel-1.jpg"
-                    alt="Patent"
-                  />
-                </figure>
-                <div className="card-body bg-white text-black">
-                  <h2 className="card-title">Patent</h2>
-                </div>
-              </div>
-            </NavLink>
+          <div className="lg:flex flex-row lg:px-10">
+            <div className="px-2 text-justify lg:w-3/4">
+              <h1 className="text-xl text-center text-black font-montserrat font-semibold lg:text-2xl">
+                Trademark Filing and Protection
+              </h1>
+              <p className="text-gray-800 pt-5 text-sm">
+                Your brand represents your reputation and the trust of your
+                customers. Here’s a streamlined process for registering a
+                trademark in India:
+              </p>
+              <h3 className="font-bold text-gray-900 pt-3">
+                1. Trademark Search & Selection
+              </h3>
+              <p className="text-gray-800 pt-2 text-sm">
+                A unique and registrable trademark is the cornerstone of a solid
+                brand strategy. We conduct thorough searches to ensure your
+                chosen mark is not already in use, avoiding potential conflicts
+                for a smoother registration process.
+              </p>
+              <h3 className="font-bold text-gray-900 pt-3">
+                2.Application Preparation & Filing
+              </h3>
+              <p className="text-gray-800 pt-2 text-sm">
+                Once a suitable trademark is identified, we draft a detailed
+                application for the Indian Trademark registry, defining the
+                class of goods or services your mark will cover. We also guide
+                you in selecting the most appropriate representation—be it a
+                logo, wordmark, or a combination of both.
+              </p>
+              <h3 className="font-bold text-gray-900 pt-3">
+                3. Examination & Response
+              </h3>
+              <p className="text-gray-800 pt-2 text-sm">
+                The IPO will review your application, and we handle all
+                communications on your behalf. Should any objections arise, we
+                provide clear, legally sound responses to support your
+                trademark’s registrability, backed by additional documentation
+                and clarifications as needed.
+              </p>
+              <h3 className="font-bold text-gray-900 pt-3">
+                4. Registration & Publication
+              </h3>
+              <p className="text-gray-800 pt-2 text-sm">
+                After a successful examination, your trademark will be published
+                in the Trademark Journal, allowing third parties to raise any
+                objections within a specified period. If no objections are
+                raised, your trademark will proceed to official registration.
+              </p>
+              <h3 className="font-bold text-gray-900 pt-3">
+                5. Post-Registration Management
+              </h3>
+              <p className="text-gray-800 pt-2 text-sm">
+                Congratulations! Your brand identity is now legally protected.
+                JustiSphereX Legal will continue to support you by advising on
+                renewal strategies, managing infringement disputes, and
+                maintaining your trademark throughout its validity period.
+              </p>
+            </div>
 
-            {/* Card 2 */}
-            <div className="card card-compact bg-base-100 w-96 shadow-xl">
-              <figure>
-                <img
-                  src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                  alt="Shoes"
-                />
-              </figure>
-              <div className="card-body">
-                <h2 className="card-title">Shoes!</h2>
-              </div>
+            {/* Card Section */}
+            <div className="flex flex-col justify-center space-y-4 items-center space-x-3 lg:flex-col">
+              {/* Card 1 */}
+              <a href="/patent">
+                <div className="card card-compact bg-base-100 w-72 shadow-xl">
+                  <figure>
+                    <img
+                      src="https://thelawcodes.com/wp-content/uploads/2023/10/What-is-Patent-Basics-Overview.webp"
+                      alt="Patent"
+                      className="h-44 w-52"
+                    />
+                  </figure>
+                  <div className="card-body bg-white text-black">
+                    <h2 className="card-title">Patent</h2>
+                  </div>
+                </div>
+              </a>
+
+              {/* Card 2 */}
+              <a href="/copyright">
+                <div className="card card-compact bg-base-100 w-72 shadow-xl">
+                  <figure>
+                    <img
+                      src="https://legalvidhiya.com/wp-content/uploads/2023/10/image-34.png"
+                      alt="Copyright"
+                      className="h-44"
+                    />
+                  </figure>
+                  <div className="card-body bg-white text-black">
+                    <h2 className="card-title">Copyright</h2>
+                  </div>
+                </div>
+              </a>
+              <a href="/design">
+                <div className="card card-compact bg-base-100 w-72 shadow-xl">
+                  <figure>
+                    <img
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEaE-xi5291DEKz_fKdeE3LxPyxsovjgdojg&s"
+                      alt="Design"
+                      className="h-44"
+                    />
+                  </figure>
+                  <div className="card-body bg-white text-black">
+                    <h2 className="card-title">Design</h2>
+                  </div>
+                </div>
+              </a>
             </div>
           </div>
         </div>

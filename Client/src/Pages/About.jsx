@@ -32,13 +32,14 @@ const About = () => {
             {/* Text Section */}
             <div className="w-full lg:w-2/3 lg:pl-6">
               <h2 className="text-xl lg:text-2xl font-bold text-gray-800 mb-4">
-                About JustiSphereXLegal
+                About{" "}
+                <span className="font-montserrat font-thin">House of IP</span>
               </h2>
               <p className="text-gray-600 text-sm lg:text-base leading-relaxed">
-                Welcome to JustiSphereX Legal, where innovation meets expertise,
-                and every story begins with a purpose. Ours started with a
-                simple yet profound belief—that the law should be a shield for
-                both creators and families alike. Founded with a commitment to
+                Welcome to House of IP, where innovation meets expertise, and
+                every story begins with a purpose. Ours started with a simple
+                yet profound belief—that the law should be a shield for both
+                creators and families alike. Founded with a commitment to
                 safeguarding what matters most, we’ve built our law firm from
                 the ground up, driven by a passion for protecting the ideas that
                 shape the future and the relationships that anchor our lives.
@@ -51,18 +52,18 @@ const About = () => {
         <div className="bg-gray-50 py-8 px-4 lg:px-16">
           <div className="flex flex-col lg:flex-row items-start justify-between space-y-6 lg:space-y-0">
             {/* Left Div */}
-            <div className="w-full lg:w-2/3 pr-0 lg:pr-6">
+            <div className="w-full lg:w-2/3 pr-0 lg:pr-6 relative lg:sticky top-16 self-start">
               <h2 className="text-xl lg:text-2xl font-bold text-gray-800 mb-4">
                 How We Began
               </h2>
               <p className="text-gray-600 text-sm lg:text-base leading-relaxed">
-                JustiSphereX Legal wasn’t born out of mere ambition; it grew
-                from the realization that the law could be more—more personal,
-                more protective, more compassionate. Our founder, with a
-                background rooted deeply in Intellectual Property Rights (IPR)
-                and matrimonial law, recognized that many people faced a gap in
+                House of IP wasn’t born out of mere ambition; it grew from the
+                realization that the law could be more—more personal, more
+                protective, more compassionate. Our founder, with a background
+                rooted deeply in Intellectual Property Rights (IPR) and
+                matrimonial law, recognized that many people faced a gap in
                 understanding their rights and how to shield them. With a vision
-                to close that gap, JustiSphereX Legal was born.
+                to close that gap, House of IP was born.
               </p>
               <h2 className="text-xl lg:text-2xl font-bold text-gray-800 mb-4">
                 Our Evolution
@@ -81,7 +82,7 @@ const About = () => {
             </div>
 
             {/* Right Div */}
-            <div className="w-full lg:w-1/2 grid grid-cols-1 sm:grid-cols-1 gap-4">
+            <div className="w-full lg:w-1/2 grid grid-cols-1 sm:grid-cols-1 gap-4 pt-10">
               {/* Child Div 1 */}
               <div className="p-4 bg-white rounded-lg shadow-md">
                 <h3 className="text-lg font-semibold text-gray-800 mb-2">
@@ -114,10 +115,10 @@ const About = () => {
                   Vision
                 </h3>
                 <p className="text-gray-600 text-xs">
-                  At JustiSphereX Legal, our vision is to become a leading force
-                  in redefining how legal protection is perceived and practiced.
-                  We strive to create a future where intellectual property
-                  rights and personal matters are safeguarded with utmost care,
+                  At House of IP, our vision is to become a leading force in
+                  redefining how legal protection is perceived and practiced. We
+                  strive to create a future where intellectual property rights
+                  and personal matters are safeguarded with utmost care,
                   precision, and innovation. We aim to empower individuals,
                   entrepreneurs, and businesses to confidently pursue their
                   ambitions, knowing that their legal rights are fully protected
@@ -149,17 +150,17 @@ const About = () => {
                   Our Evolution
                 </h3>
                 <p className="text-gray-600 text-xs">
-                  At JustiSphereX Legal, we take a client-first approach,
-                  combining expertise with empathy. Every case we handle,
-                  whether it’s an intellectual property dispute or a sensitive
-                  matrimonial issue, begins with a deep understanding of our
-                  clients’ needs. We believe that every legal challenge is
-                  unique, which is why we provide tailored strategies that not
-                  only resolve immediate issues but also anticipate future
-                  challenges. Our meticulous attention to detail, collaborative
-                  mindset, and innovative problem-solving ensure that we deliver
-                  results that matter—while building lasting relationships based
-                  on trust and success.
+                  At House of IP, we take a client-first approach, combining
+                  expertise with empathy. Every case we handle, whether it’s an
+                  intellectual property dispute or a sensitive matrimonial
+                  issue, begins with a deep understanding of our clients’ needs.
+                  We believe that every legal challenge is unique, which is why
+                  we provide tailored strategies that not only resolve immediate
+                  issues but also anticipate future challenges. Our meticulous
+                  attention to detail, collaborative mindset, and innovative
+                  problem-solving ensure that we deliver results that
+                  matter—while building lasting relationships based on trust and
+                  success.
                 </p>
               </div>
             </div>

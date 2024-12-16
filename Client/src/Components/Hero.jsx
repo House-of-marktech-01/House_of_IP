@@ -33,7 +33,7 @@ const Hero = () => {
                 />
               </motion.div>
 
-              <div className="lg:max-w-lg relative z-10 text-left text-slate-900">
+              <div className="lg:max-w-lg relative z-10 text-center text-slate-900">
                 <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold">
                   Your Trusted Partner in Legal Solutions
                 </h1>

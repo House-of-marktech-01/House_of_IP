@@ -1,8 +1,10 @@
+
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken"; // Import as a default export
 import User from "../models/userModels.js";
 
-const JWT_SECRET = process.env.JWT_SECRET;
+
+const JWT_SECRET = process.env.JWTSECRET;
 
 // Signup Handler
 export const signup = async (req, res) => {
@@ -57,5 +59,6 @@ export const signin = async (req, res) => {
     res.status(200).json({ message: "Login successful", token });
   } catch (error) {
     res.status(500).json({ message: "Error logging in", error });
+    console.log(JWT_SECRET)
   }
 };

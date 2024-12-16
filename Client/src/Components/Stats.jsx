@@ -3,11 +3,11 @@ import React, { useState, useEffect } from "react";
 const Stats = () => {
   return (
     <>
-      <h1 className="text-2xl pt-10 bg-white text-slate-900 sm:pl-2  lg:pl-10">
+      <h1 className=" text-2xl pt-10 bg-white text-slate-900 sm:pl-2">
         Explore our digital services stack.
       </h1>
       <div className="card-body bg-white">
-        <div className="grid grid-cols-4  sm:grid-cols-2 lg:grid-cols-6 gap-4 px-5 py-1.5">
+        <div className="grid grid-cols-3  sm:grid-cols-2 lg:grid-cols-6 gap-4 px-5 py-1.5">
           <div className="flex flex-col items-center mb-5">
             <span className="text-gray-900 text-2xl lg:text-3xl font-semibold">
               <svg

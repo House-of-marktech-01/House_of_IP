@@ -8,7 +8,7 @@ const Footer = () => {
         {/* Top Section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
           {/* Column 1 */}
-          <div>
+          <div className="pl-5">
             <h4 className="text-lg font-semibold mb-3 text-white">
               House of IP
             </h4>
@@ -42,7 +42,7 @@ const Footer = () => {
           </div>
 
           {/* Column 2 */}
-          <div>
+          <div className="pl-5">
             <h4 className="text-lg font-semibold mb-3 text-white">
               Platforms
             </h4>
@@ -57,21 +57,11 @@ const Footer = () => {
                   Trademark Search
                 </NavLink>
               </li>
-              <li>
-                <NavLink to="#" className="hover:underline">
-                  Client Portal
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="#" className="hover:underline">
-                  Filings.AE for UAE
-                </NavLink>
-              </li>
             </ul>
           </div>
 
           {/* Column 3 */}
-          <div>
+          <div className="pl-5">
             <h4 className="text-lg font-semibold mb-3 text-white">Usage</h4>
             <ul className="space-y-2 text-white">
               <li>
