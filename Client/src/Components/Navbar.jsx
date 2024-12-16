@@ -10,8 +10,13 @@ const Navbar = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const token = Cookies.get("jwtToken");
-  console.log(token);
+  const [token, setToken] = useState(Cookies.get("jwtToken"));
+
+  useEffect(() => {
+    const token = Cookies.get("jwtToken");
+    setToken(token);
+    setIsLogin(!token); // If no token, set to login
+  }, []); // Only run on component mount
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -37,6 +42,8 @@ const Navbar = () => {
       if (response.ok) {
         const data = await response.json();
         Cookies.set("jwtToken", data.token);
+        setToken(data.token); // Update the token state
+        setIsLogin(false);
         alert("Successfully submitted");
         // Perform actions on success like redirecting or storing token
       } else {
@@ -50,11 +57,6 @@ const Navbar = () => {
 
   const modalRef = useRef(null);
 
-  const toggleModal = () => {
-    if (modalRef.current) {
-      modalRef.current.showModal();
-    }
-  };
 
   const closeModal = () => {
     if (modalRef.current) {
@@ -63,6 +65,8 @@ const Navbar = () => {
   };
   const handleLogout = () => {
     Cookies.remove("jwtToken");
+    setToken(null); // Remove token from state
+    setIsLogin(true); // Switch to login state
   };
 
   return (
@@ -365,114 +369,119 @@ const Navbar = () => {
             </NavLink>
             <div>
               {/* Open Modal Button */}
-              <button className="btn" onClick={toggleModal}>
+              {token ? (
+              <button className="btn bg-slate-800" onClick={handleLogout}>
+                Logout
+              </button>
+            ) : (
+              <button
+                className="btn bg-slate-800"
+                onClick={() =>
+                  document.getElementById("login_signup_modal").showModal()
+                }
+              >
                 {isLogin ? "Login" : "Sign Up"}
               </button>
+            )}
 
               {/* Modal */}
-              <dialog
-                ref={modalRef}
-                id="login_signup_modal"
-                className="modal modal-bottom sm:modal-middle"
-              >
-                <div className="modal-box bg-slate-900 text-gray-300">
-                  <h3 className="font-bold text-lg text-white">
-                    {isLogin ? "Login" : "Sign Up"}
-                  </h3>
-
-                  <form className="space-y-4 mt-4">
-                    {/* Signup-specific fields */}
-                    {!isLogin && (
-                      <div>
-                        <label
-                          htmlFor="username"
-                          className="block text-sm font-medium text-gray-300"
-                        >
-                          Username
-                        </label>
-                        <input
-                          id="username"
-                          type="text"
-                          placeholder="Enter your username"
-                          className="input input-bordered w-full text-gray-900"
-                          required
-                        />
-                      </div>
-                    )}
-
-                    {/* Shared fields */}
+              <dialog id="login_signup_modal" className="modal">
+              <div className="modal-box bg-slate-900">
+                <h3 className="font-bold text-lg">
+                  {isLogin ? "Sign In" : "Sign Up"}
+                </h3>
+                <form className="space-y-4" onSubmit={handleSubmit}>
+                  {!isLogin && (
                     <div>
                       <label
-                        htmlFor="email"
-                        className="block text-sm font-medium text-gray-300"
+                        htmlFor="username"
+                        className="block text-sm font-medium text-gray-300 pt-5"
                       >
-                        Email
+                        Username
                       </label>
                       <input
-                        id="email"
-                        type="email"
-                        placeholder="Enter your email"
-                        className="input input-bordered w-full text-gray-900"
+                        id="username"
+                        type="text"
+                        placeholder="Enter your username"
+                        className="input input-bordered w-full"
+                        value={username}
+                        onChange={(e) => setUsername(e.target.value)}
                         required
                       />
                     </div>
-                    <div>
-                      <label
-                        htmlFor="password"
-                        className="block text-sm font-medium text-gray-300"
-                      >
-                        Password
-                      </label>
-                      <input
-                        id="password"
-                        type="password"
-                        placeholder="Enter your password"
-                        className="input input-bordered w-full text-gray-900"
-                        required
-                      />
-                    </div>
-
-                    <button
-                      type="submit"
-                      className="btn btn-primary w-full mt-4"
+                  )}
+                  <div>
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium text-gray-300 pt-5"
                     >
-                      {isLogin ? "Login" : "Sign Up"}
-                    </button>
-                  </form>
-
-                  {/* Toggle between Login and Signup */}
-                  <p className="text-center text-sm text-gray-400 mt-4">
-                    {isLogin ? (
-                      <>
-                        Don't have an account?{" "}
-                        <button
-                          onClick={() => setIsLogin(false)}
-                          className="text-blue-400 hover:text-blue-600 underline"
-                        >
-                          Sign Up
-                        </button>
-                      </>
-                    ) : (
-                      <>
-                        Already have an account?{" "}
-                        <button
-                          onClick={() => setIsLogin(true)}
-                          className="text-blue-400 hover:text-blue-600 underline"
-                        >
-                          Login
-                        </button>
-                      </>
-                    )}
-                  </p>
-
-                  {/* Modal Close Action */}
-                  <div className="modal-action">
-                    <button className="btn" onClick={closeModal}>
-                      Close
+                      Email
+                    </label>
+                    <input
+                      id="email"
+                      type="email"
+                      placeholder="Enter your email"
+                      className="input input-bordered w-full"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label
+                      htmlFor="password"
+                      className="block text-sm font-medium text-gray-300"
+                    >
+                      Password
+                    </label>
+                    <input
+                      id="password"
+                      type="password"
+                      placeholder="Enter your password"
+                      className="input input-bordered w-full"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                      required
+                    />
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <button type="submit" className="btn btn-primary">
+                      {isLogin ? "Sign In" : "Sign Up"}
                     </button>
                   </div>
+                </form>
+                <p className="text-center text-sm text-gray-300 py-4">
+                  {isLogin ? (
+                    <>
+                      Or
+                      <button
+                        onClick={() => setIsLogin(false)}
+                        className="text-blue-400 hover:text-blue-600 underline ml-1"
+                      >
+                        sign up
+                      </button>
+                      if you don&apos;t have an account.
+                    </>
+                  ) : (
+                    <>
+                      Already have an account?
+                      <button
+                        onClick={() => setIsLogin(true)}
+                        className="text-blue-400 hover:text-blue-600 underline ml-1"
+                      >
+                        Login
+                      </button>
+                    </>
+                  )}
+                </p>
+                <div className="modal-action">
+                  <form method="dialog">
+                    {/* This button will close the modal */}
+                    <button className="btn">Close</button>
+                  </form>
                 </div>
-              </dialog>
+              </div>
+            </dialog>
             </div>
           </div>
         </div>
