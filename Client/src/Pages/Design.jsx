@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { RWebShare } from "react-web-share";
 import { motion } from "framer-motion";
+import Cookies from "js-cookie";
 
 const Design = () => {
+  const [token, setToken] = useState(Cookies.get("jwtToken"));
   return (
     <>
       <div id="design" className="w-full" style={{ position: "relative" }}>
@@ -66,53 +68,59 @@ const Design = () => {
             </div>
           </div>
 
-          <div className="hidden sm:flex flex-col w-2/10 justify-center items-center bg-gray-100">
-            <div className="bg-white p-8 rounded-lg ">
-              <h2 className="text-2xl font-semibold text-center mb-6 text-gray-800">
-                Login
-              </h2>
-              <form>
-                <div className="mb-4">
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-medium text-gray-700"
-                  >
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    className="mt-1 p-2 w-full border bg-gray-300 text-gray-800 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                    required
-                  />
-                </div>
-
-                <div className="mb-4">
-                  <label
-                    htmlFor="password"
-                    className="block text-sm font-medium text-gray-700"
-                  >
-                    Password
-                  </label>
-                  <input
-                    type="password"
-                    id="password"
-                    name="password"
-                    className="mt-1 p-2 w-full border bg-gray-300 text-gray-800 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                    required
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full py-2 bg-indigo-500 text-white rounded-md hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                >
+          {token ? (
+            <button className="btn btn-active bg-slate-900 my-auto ml-5">
+              Make a Payment
+            </button>
+          ) : (
+            <div className="hidden sm:flex flex-col w-2/10 justify-center items-center bg-gray-100">
+              <div className="bg-white p-8 rounded-lg ">
+                <h2 className="text-2xl font-semibold text-center mb-6 text-gray-800">
                   Login
-                </button>
-              </form>
+                </h2>
+                <form>
+                  <div className="mb-4">
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium text-gray-700"
+                    >
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      className="mt-1 p-2 w-full border bg-gray-300 text-gray-800 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                      required
+                    />
+                  </div>
+
+                  <div className="mb-4">
+                    <label
+                      htmlFor="password"
+                      className="block text-sm font-medium text-gray-700"
+                    >
+                      Password
+                    </label>
+                    <input
+                      type="password"
+                      id="password"
+                      name="password"
+                      className="mt-1 p-2 w-full border bg-gray-300 text-gray-800 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                      required
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    className="w-full py-2 bg-indigo-500 text-white rounded-md hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  >
+                    Login
+                  </button>
+                </form>
+              </div>
             </div>
-          </div>
+          )}
         </div>
 
         <div className="bg-white px-5 text-justify lg:px-20">

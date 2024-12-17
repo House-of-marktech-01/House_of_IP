@@ -2,7 +2,7 @@ import React from "react";
 
 const OurStory = () => {
   return (
-    <div className="w-full mx-auto bg-white">
+    <div className="w-full mx-auto bg-slate-100">
       <div className="lg:grid lg:grid-cols-2 mt-5=">
         <div className="lg:col-span-2 flex flex-col items-center">
           <div className="w-full">

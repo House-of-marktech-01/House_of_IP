@@ -1,8 +1,7 @@
-
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken"; // Import as a default export
 import User from "../models/userModels.js";
-
+import nodemailer from "nodemailer";
 
 const JWT_SECRET = process.env.JWTSECRET;
 
@@ -32,14 +31,13 @@ export const signup = async (req, res) => {
   }
 };
 
-// Signin Handler
+
+
 export const signin = async (req, res) => {
   const { email, password } = req.body;
 
   if (!email || !password) {
-    return res
-      .status(400)
-      .json({ message: "Username and password are required" });
+    return res.status(400).json({ message: "Email and password are required" });
   }
 
   try {
@@ -50,15 +48,56 @@ export const signin = async (req, res) => {
 
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) {
-      return res.status(400).json({ message: "Invalid username or password" });
+      return res.status(400).json({ message: "Invalid email or password" });
     }
 
     // Generate JWT
-    const token = jwt.sign({ id: user._id , username:user.username }, JWT_SECRET, { expiresIn: "1h" });
+    const token = jwt.sign(
+      { id: user._id, username: user.username },
+      process.env.JWTSECRET,
+      { expiresIn: "1h" }
+    );
+
+    // Set the JWT token as a cookie
+    res.cookie("jwtToken", token, {
+      httpOnly: false, // Ensures the cookie is not accessible via JavaScript
+      secure: process.env.NODE_ENV === "production", // Only send cookie over HTTPS in production
+      sameSite: "None", // Allows the cookie to be sent cross-site (important for third-party cookies)
+      maxAge: 3600000, // 1 hour in milliseconds
+    });
 
     res.status(200).json({ message: "Login successful", token });
   } catch (error) {
+    console.error(error);
     res.status(500).json({ message: "Error logging in", error });
-    console.log(JWT_SECRET)
+  }
+};
+
+export const sendMail = async (req, res) => {
+  const { fullName, email, subject, message } = req.body;
+
+  try {
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.EMAIL, // Your email
+        pass: process.env.EMAIL_PASSWORD, // App password (use App Password for Gmail)
+      },
+    });
+    const mailOptions = {
+      from: `${fullName} <${email}>`, // Must match the authenticated email
+      to: process.env.EMAIL, // The client's email (your email)
+      subject: `Contact Form Submission: ${subject}`,
+      text: `You have a new contact form submission:\n\nName: ${fullName}\nEmail: ${email}\nMessage: ${message}`,
+      replyTo: email, // Allows the recipient to reply directly to the user's email
+    };
+
+    await transporter.sendMail(mailOptions);
+    res.status(200).json({ message: "Email sent successfully!" });
+  } catch (error) {
+    console.error("Error sending email:", error);
+    res
+      .status(500)
+      .json({ message: "Failed to send email. Please try again later." });
   }
 };

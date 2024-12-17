@@ -3,13 +3,13 @@ import React, { useState, useEffect } from "react";
 const Stats = () => {
   return (
     <>
-      <h1 className=" text-2xl pt-10 bg-white text-slate-900 sm:pl-2">
+      <h1 className=" text-2xl pt-10 bg-slate-100 text-gray-900 text-center sm:pl-2">
         Explore our digital services stack.
       </h1>
-      <div className="card-body bg-white">
-        <div className="grid grid-cols-3  sm:grid-cols-2 lg:grid-cols-6 gap-4 px-5 py-1.5">
-          <div className="flex flex-col items-center mb-5">
-            <span className="text-gray-900 text-2xl lg:text-3xl font-semibold">
+      <div className="card-body bg-slate-100 lg:px-20">
+        <div className="grid grid-cols-3  sm:grid-cols-2 lg:grid-cols-3 gap-4 px-2 py-1.5">
+          <div className="flex flex-col items-center mb-5 bg-slate-900 pt-3 p-5 rounded-lg">
+            <span className="text-gray-100 text-2xl lg:text-3xl font-semibold">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -25,11 +25,11 @@ const Stats = () => {
                 ></path>
               </svg>
             </span>
-            <span className="text-gray-700 text-sm mt-2">Copyright</span>
+            <span className="text-gray-100 text-sm mt-2">Copyright</span>
           </div>
 
-          <div className="flex flex-col items-center mb-5">
-            <span className="text-gray-900 text-2xl lg:text-3xl font-semibold">
+          <div className="flex flex-col items-center mb-5 pt-3 p-5 rounded-lg bg-slate-900">
+            <span className="text-gray-100 text-2xl lg:text-3xl font-semibold">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -45,10 +45,10 @@ const Stats = () => {
                 ></path>
               </svg>
             </span>
-            <span className="text-gray-700 text-sm mt-2">Trademark</span>
+            <span className="text-gray-100 text-sm mt-2">Trademark</span>
           </div>
-          <div className="flex flex-col items-center mb-5">
-            <span className="text-gray-900 text-2xl lg:text-3xl font-semibold">
+          <div className="flex flex-col items-center mb-5 pt-3 p-5 rounded-lg bg-slate-900">
+            <span className="text-gray-100 text-2xl lg:text-3xl font-semibold">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -64,13 +64,13 @@ const Stats = () => {
                 ></path>
               </svg>
             </span>
-            <span className="text-gray-700 text-sm mt-2">
+            <span className="text-gray-100 text-sm mt-2 ">
               Matrimonial Disputes
             </span>
           </div>
 
-          <div className="flex flex-col items-center mb-5">
-            <span className="text-gray-900 text-2xl lg:text-3xl font-semibold">
+          <div className="flex flex-col items-center mb-5 pt-3 p-5 rounded-lg bg-slate-900">
+            <span className="text-gray-100 text-2xl lg:text-3xl font-semibold">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -86,11 +86,11 @@ const Stats = () => {
                 ></path>
               </svg>
             </span>
-            <span className="text-gray-700 text-sm mt-2">Patent</span>
+            <span className="text-gray-100 text-sm mt-2">Patent</span>
           </div>
 
-          <div className="flex flex-col items-center mb-5">
-            <span className="text-gray-900 text-2xl lg:text-3xl font-semibold">
+          <div className="flex flex-col items-center mb-5 pt-3 p-5 rounded-lg bg-slate-900">
+            <span className="text-gray-100 text-2xl lg:text-3xl font-semibold">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -106,11 +106,11 @@ const Stats = () => {
                 ></path>
               </svg>
             </span>
-            <span className="text-gray-700 text-sm mt-2 lg:block">Design</span>
+            <span className="text-gray-100 text-sm mt-2 lg:block">Design</span>
           </div>
 
-          <div className="flex flex-col items-center mb-5">
-            <span className="text-gray-900 text-2xl lg:text-3xl font-semibold">
+          <div className="flex flex-col items-center mb-5 pt-3 p-5 rounded-lg bg-slate-900">
+            <span className="text-gray-100 text-2xl lg:text-3xl font-semibold">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -126,7 +126,7 @@ const Stats = () => {
                 ></path>
               </svg>
             </span>
-            <span className="text-gray-700 text-sm mt-2">IP Litigation</span>
+            <span className="text-gray-100 text-sm mt-2">IP Litigation</span>
           </div>
         </div>
       </div>

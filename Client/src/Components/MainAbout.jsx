@@ -1,133 +1,87 @@
-import React from "react";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import React, { useState } from "react";
 
 const MainAbout = () => {
-  const { ref, inView } = useInView({
-    triggerOnce: false,
-    threshold: 0,
-    rootMargin: "-100px 0px",
-  });
-  const controls = useAnimation();
+  const [activeIndex, setActiveIndex] = useState(null);
 
-  React.useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    }
-  }, [inView, controls]);
-
-  const textVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.8 },
+  const whyChooseUsData = [
+    {
+      title: "Get Your Legal Advise",
+      details:
+        "Seeking expert legal advice? Our experienced attorneys at House of IP are here to help. Whether you have questions about civil, criminal, or matrimonial matters, we provide clear, practical guidance to resolve your legal issues efficiently. Contact us today!",
     },
+    {
+      title: "Work With Experts",
+      details:
+        "A team of seasoned legal experts bring extensive experience and specialized knowledge to handle civil, criminal, and matrimonial cases.",
+    },
+    {
+      title: "Comprehensive Expertise",
+      details:
+        "At House of IP, we combine profound expertise with a broad range of legal services. Our intellectual spectrum ensures that you receive in-depth analysis and comprehensive solutions for all your legal needs, from civil and criminal to matrimonial matters. Experience the perfect blend of depth and breadth with us.",
+    },
+    {
+      title: "Efficiency",
+      details:
+        "At House of IP, we pride ourselves on delivering efficient legal services. Our streamlined processes and coordinated efforts ensure timely and effective resolution of your legal matters, allowing you to focus on what matters most. Trust us for a seamless legal experience.",
+    },
+  ];
+
+  const handleToggle = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
   };
 
   return (
-    <>
-      {/* About Us Section */}
-      <div className="flex flex-col lg:flex-row bg-white items-start justify-between lg:space-x-6 p-6 lg:p-12"></div>
+    <div className="bg-slate-100 p-6 lg:p-12">
+      <p className="text-lg lg:text-lg font-semibold text-black">
+        ・Why Choose Us
+      </p>
 
-      {/* Why Choose Us Section */}
-      <div className="bg-white p-6 lg:p-12">
-        <p className="text-sm lg:text-lg font-semibold text-black">
-          ・Why Choose Us
-        </p>
-
-        <div className="carousel w-full mt-6">
-          <div id="item1" className="carousel-item w-full">
-            <div className="p-6 bg-gray-100 rounded-md text-black">
-              <h1 className="text-slate-900 text-xl lg:text-2xl font-bold pb-4">
-                Get Your Legal Advise
-              </h1>
-              <p className="text-sm lg:text-base">
-                Seeking expert legal advice? Our experienced attorneys at
-                Justispherex Legal are here to help. Whether you have questions
-                about civil, criminal, or matrimonial matters, we provide clear,
-                practical guidance to resolve your legal issues efficiently.
-                Contact us today!
-              </p>
-            </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
+        {whyChooseUsData.map((item, index) => (
+          <div
+            key={index}
+            className="relative p-6 bg-slate-900 rounded-md text-black shadow-md"
+          >
+            <h1 className="text-slate-100 text-xl lg:text-xl font-base pb-2">
+              {item.title}
+            </h1>
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                handleToggle(index);
+              }}
+              className="text-blue-500 text-sm lg:text-base hover:underline cursor-pointer"
+            >
+              Details
+            </a>
+            {activeIndex === index && (
+              <div
+                className="absolute top-full left-0 mt-2 w-full bg-slate-900 text-white shadow-lg p-4 rounded-md border text-sm lg:text-base z-10"
+                style={{
+                  animation: "fadeIn 0.3s ease-in-out",
+                }}
+              >
+                {item.details}
+              </div>
+            )}
           </div>
-          <div id="item2" className="carousel-item w-full">
-            <div className="p-6 bg-gray-100 rounded-md text-black">
-              <h1 className="text-slate-900 text-xl lg:text-2xl font-bold pb-4">
-                Work With Experts
-              </h1>
-              <p className="text-sm lg:text-base">
-                A team of seasoned legal experts bring extensive experience and
-                specialized knowledge to handle civil, criminal, and matrimonial
-                cases.
-              </p>
-            </div>
-          </div>
-          <div id="item3" className="carousel-item w-full">
-            <div className="p-6 bg-gray-100 rounded-md text-black">
-              <h1 className="text-slate-900 text-xl lg:text-2xl font-bold pb-4">
-                Comprehensive Expertise
-              </h1>
-              <p className="text-sm lg:text-base">
-                At Justispherex Legal, we combine profound expertise with a
-                broad range of legal services. Our intellectual spectrum ensures
-                that you receive in-depth analysis and comprehensive solutions
-                for all your legal needs, from civil and criminal to matrimonial
-                matters. Experience the perfect blend of depth and breadth with
-                us.
-              </p>
-            </div>
-          </div>
-          <div id="item4" className="carousel-item w-full">
-            <div className="p-6 bg-gray-100 rounded-md text-black">
-              <h1 className="text-slate-900 text-xl lg:text-2xl font-bold pb-4">
-                Efficiency
-              </h1>
-              <p className="text-sm lg:text-base">
-                At Justispherex Legal, we pride ourselves on delivering
-                efficient legal services. Our streamlined processes and
-                coordinated efforts ensure timely and effective resolution of
-                your legal matters, allowing you to focus on what matters most.
-                Trust us for a seamless legal experience.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="flex w-full justify-center gap-2 py-2">
-          <a href="#item1" className="btn btn-xs">
-            1
-          </a>
-          <a href="#item2" className="btn btn-xs">
-            2
-          </a>
-          <a href="#item3" className="btn btn-xs">
-            3
-          </a>
-          <a href="#item4" className="btn btn-xs">
-            4
-          </a>
-        </div>
+        ))}
       </div>
 
-      {/* New Section with Image, Text, and Button */}
-      <div
-        className="relative bg-cover bg-center h-96 rounded-lg overflow-hidden"
-        style={{
-          backgroundImage:
-            "url(https://media.istockphoto.com/id/1330020430/photo/image-lawyer-businessman-sitting-at-the-office-with-a-woman-customer-explaining-the-agreement.jpg?s=612x612&w=0&k=20&c=sQs018kCsBMAdX82LcG3vKAh559b1J9caMDSLpCpFrA=)",
-        }}
-      >
-        <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-center p-6">
-          <h1 className="text-white text-2xl lg:text-4xl font-bold mb-4">
-            Consult Our Help Today
-          </h1>
-          <button className="bg-yellow-400 text-black px-6 py-3 rounded-md font-semibold text-sm lg:text-base hover:bg-yellow-500">
-            Contact
-          </button>
-        </div>
-      </div>
-    </>
+      <style>{`
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: translateY(10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      `}</style>
+    </div>
   );
 };
 
