@@ -1,11 +1,85 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { RWebShare } from "react-web-share";
 import { motion } from "framer-motion";
 import Cookies from "js-cookie";
+import { useDropzone } from "react-dropzone";
+import axios from "axios";
 
 const Copyright = () => {
   const [token, setToken] = useState(Cookies.get("jwtToken"));
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [selectedFile, setSelectedFile] = useState(null);
+  const [isUploading, setIsUploading] = useState(false);
+  const [uploadStatus, setUploadStatus] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch("http://localhost:5000/api/users/signin", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, password }),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        alert(`Error: ${errorData.message}`);
+      } else {
+        const data = await response.json();
+        Cookies.set("jwtToken", data.token);
+        alert("Login successful!");
+        console.log("Response Data:", data);
+      }
+    } catch (error) {
+      console.error("Error during login:", error);
+      alert("An error occurred. Please try again.");
+    }
+  };
+  const { getRootProps, getInputProps } = useDropzone({
+    accept: ".pdf, .doc, .docx", // Accepted file formats
+    onDrop: (acceptedFiles) => {
+      setSelectedFile(acceptedFiles[0]);
+    },
+  });
+
+  const handleUpload = async () => {
+    if (!selectedFile) {
+      alert("Please select a document to upload!");
+      return;
+    }
+
+    const formData = new FormData();
+    formData.append("document", selectedFile); // Append file to form data
+
+    try {
+      setIsUploading(true);
+      setUploadStatus("");
+
+      // Make POST request to your backend
+      const response = await axios.post(
+        "http://localhost:5000/api/users/send-doc", // Your backend endpoint
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
+
+      setUploadStatus("Document uploaded successfully!");
+      console.log("Response:", response.data);
+    } catch (error) {
+      setUploadStatus("Failed to upload document.");
+      console.error("Error uploading document:", error);
+    } finally {
+      setIsUploading(false);
+    }
+  };
   return (
     <>
       <div id="copyright" className="w-full" style={{ position: "relative" }}>
@@ -68,16 +142,54 @@ const Copyright = () => {
           </div>
 
           {token ? (
-            <button className="btn btn-active bg-slate-900 my-auto ml-5">
-              Make a Payment
-            </button>
+            <div className="max-w-lg mx-auto p-6 bg-gray-100 rounded-lg shadow-md">
+              <h2 className="text-2xl font-bold mb-4 text-center">
+                Upload Document
+              </h2>
+
+              <div
+                {...getRootProps()}
+                className="border-2 border-dashed border-gray-400 p-6 mb-4 text-center cursor-pointer bg-white rounded-md"
+              >
+                <input {...getInputProps()} />
+                <p className="text-gray-600">
+                  Drag & drop a document here, or click to select a file
+                </p>
+                {selectedFile && (
+                  <p className="mt-2 text-gray-800">
+                    Selected File: {selectedFile.name}
+                  </p>
+                )}
+              </div>
+
+              <button
+                onClick={handleUpload}
+                disabled={isUploading}
+                className="relative flex items-center px-6 py-3 overflow-hidden font-medium transition-all bg-indigo-500 rounded-md group w-full"
+              >
+                <span className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-indigo-700 rounded group-hover:-mr-4 group-hover:-mt-4">
+                  <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
+                </span>
+                <span className="absolute bottom-0 rotate-180 left-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-indigo-700 rounded group-hover:-ml-4 group-hover:-mb-4">
+                  <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
+                </span>
+                <span className="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full bg-indigo-600 rounded-md group-hover:translate-x-0"></span>
+                <span className="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-white">
+                  {isUploading ? "Uploading..." : "Upload Document"}
+                </span>
+              </button>
+
+              {uploadStatus && (
+                <p className="mt-4 text-center text-gray-700">{uploadStatus}</p>
+              )}
+            </div>
           ) : (
             <div className="hidden sm:flex flex-col w-2/10 justify-center items-center bg-gray-100">
               <div className="bg-white p-8 rounded-lg">
                 <h2 className="text-2xl font-semibold text-center mb-6 text-gray-800">
                   Login
                 </h2>
-                <form>
+                <form onSubmit={handleSubmit}>
                   <div className="mb-4">
                     <label
                       htmlFor="email"
@@ -91,6 +203,8 @@ const Copyright = () => {
                       name="email"
                       className="mt-1 p-2 w-full border bg-gray-300 text-gray-800 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
                       required
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                     />
                   </div>
 
@@ -107,12 +221,15 @@ const Copyright = () => {
                       name="password"
                       className="mt-1 p-2 w-full border bg-gray-300 text-gray-800 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
                       required
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full py-2 bg-slate-900 text-white rounded-md hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    onClick={handleSubmit}
+                    className="w-full py-2 bg-indigo-500 text-white rounded-md hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
                   >
                     Login
                   </button>
@@ -122,126 +239,102 @@ const Copyright = () => {
           )}
         </div>
 
-        <div className="bg-white px-5 text-justify lg:px-20">
-          <h1 className="text-center text-3xl text-black pb-4 pt-4">
-            Copyright
-          </h1>
-          <p className="pb-8 text-gray-800 text-sm">
-            As the importance of safeguarding creative content continues to
-            grow, House of IP provides comprehensive advisory and dispute
-            management services tailored for copyright protection. Our highly
-            regarded team of copyright attorneys supports authors, musicians,
-            filmmakers, software developers, and media companies in defending
-            their original creations and addressing infringement issues.
-          </p>
-          <p className="pb-8 text-gray-800 text-sm">
-            We specialize in a full suite of copyright services, including
-            registration, licensing, assignment, enforcement, and dispute
-            resolution, spanning various industries. Understanding the
-            complexities brought by technology and the surge in copyright
-            violations, we have effectively assisted clients in safeguarding
-            custom software, architectural designs, literary works, and
-            multimedia content.
-          </p>
-          <h2 className="text-lg font-medium text-black pb-5">
-            Comprehensive Copyright Solutions
-          </h2>
-          <p className="pb-8 text-gray-800 text-sm">
-            Our dedicated copyright registration team ensures rapid and thorough
-            protection for your work, covering text, images, sound, and video
-            documentation. We excel in representing clients before courts,
-            employing strategic oral arguments, compelling evidence, and
-            counterclaims. Additionally, we advise on legal best practices for
-            using third–party content, helping clients avoid copyright pitfalls.
-          </p>
-          <h2 className="text-lg font-medium text-black pb-5">
-            Our Expertise Includes:
-          </h2>
-          <p className="pb-8 text-gray-800 text-sm">
-            <strong>• Determining Copyright Eligibility:</strong> We assess if
-            your work qualifies for copyright protection under applicable laws.{" "}
-            <br /> <strong>• Resolving Evidence–Focused Disputes:</strong>{" "}
-            Tackling copyright disputes with jurisdiction–specific approaches.{" "}
-            <br /> <strong>• Guiding Safer Content Usage:</strong> Offering
-            clear guidelines to ensure legal and secure use of third-party
-            content.
-          </p>
-          <p className="pb-8 text-gray-800 text-sm">
-            Whether you are an artist or a business, we advise on licensing,
-            assignments, and permitted usage of copyrighted works. Our team
-            monitors both online and offline spaces for unauthorized use of
-            movies, music, books, software, and more. If necessary, we pursue
-            legal action, including filing civil and criminal complaints and
-            coordinating with cybercrime units to swiftly seize infringing
-            materials.
-          </p>
-          <h2 className="text-lg font-medium text-black pb-5">
-            Expert Representation in Copyright Disputes
-          </h2>
-          <p className="pb-8 text-gray-800 text-sm">
-            Our experienced copyright attorneys represent clients in cases
-            involving ownership disputes, royalty claims, co–authorship
-            conflicts, and adaptation rights. For high–value copyrighted
-            content, such as music, software, or literary works, we offer
-            valuation services, assisting producers, publishers, and tech
-            companies in funding rounds and M&A transactions. Our technical
-            experts assess code quality, vulnerability metrics, and architecture
-            strength for reliable valuation.
-          </p>
-        </div>
-        <div className="bg-white px-5 text-justify flex lg:px-20 ">
-          <div>
-            <h1 className="text-start text-2xl text-black pb-4">
-              Documents Required
+        <div className="bg-white px-5 text-justify lg:px-20 grid grid-cols-1 lg:grid-cols-4">
+          <div className="lg:col-span-3">
+            <h1 className="text-center text-3xl text-black pb-4 pt-4">
+              Copyright
             </h1>
-            <h1 className="text-start text-xl text-black pb-4">Doc 1 name</h1>
             <p className="pb-8 text-gray-800 text-sm">
-              Doc 1 info Lorem ipsum dolor sit amet, consectetur adipisicing
-              elit. Harum fugit iure veniam? Sint quasi labore pariatur,
-              molestias odit vitae aspernatur fuga repudiandae nulla autem nihil
-              dolore suscipit expedita placeat facere quod excepturi animi
-              atque.
+              As the importance of safeguarding creative content continues to
+              grow, House of IP provides comprehensive advisory and dispute
+              management services tailored for copyright protection. Our highly
+              regarded team of copyright attorneys supports authors, musicians,
+              filmmakers, software developers, and media companies in defending
+              their original creations and addressing infringement issues.
             </p>
-            <h1 className="text-start text-xl text-black pb-4">Doc 2 name</h1>
             <p className="pb-8 text-gray-800 text-sm">
-              doc 2 info Lorem ipsum dolor sit amet consectetur adipisicing
-              elit. Amet nam dicta aut excepturi rerum ut quos fugiat quas
-              magnam. Assumenda minus aliquid placeat vero odio velit veniam
-              officiis sit eius!
+              We specialize in a full suite of copyright services, including
+              registration, licensing, assignment, enforcement, and dispute
+              resolution, spanning various industries. Understanding the
+              complexities brought by technology and the surge in copyright
+              violations, we have effectively assisted clients in safeguarding
+              custom software, architectural designs, literary works, and
+              multimedia content.
             </p>
-            <h1 className="text-start text-xl text-black pb-4">Doc 3 name</h1>
+            <h2 className="text-lg font-medium text-black pb-5">
+              Comprehensive Copyright Solutions
+            </h2>
             <p className="pb-8 text-gray-800 text-sm">
-              Doc 3 info Lorem ipsum dolor sit amet, consectetur adipisicing
-              elit. Exercitationem perspiciatis reiciendis quae provident, sit
-              atque nam culpa minus doloribus praesentium ex voluptatum.
-              Deserunt ipsa excepturi voluptas porro?
+              Our dedicated copyright registration team ensures rapid and
+              thorough protection for your work, covering text, images, sound,
+              and video documentation. We excel in representing clients before
+              courts, employing strategic oral arguments, compelling evidence,
+              and counterclaims. Additionally, we advise on legal best practices
+              for using third-party content, helping clients avoid copyright
+              pitfalls.
+            </p>
+            <h2 className="text-lg font-medium text-black pb-5">
+              Our Expertise Includes:
+            </h2>
+            <p className="pb-8 text-gray-800 text-sm">
+              <strong>• Determining Copyright Eligibility:</strong> We assess if
+              your work qualifies for copyright protection under applicable
+              laws. <br />{" "}
+              <strong>• Resolving Evidence–Focused Disputes:</strong> Tackling
+              copyright disputes with jurisdiction–specific approaches. <br />{" "}
+              <strong>• Guiding Safer Content Usage:</strong> Offering clear
+              guidelines to ensure legal and secure use of third-party content.
+            </p>
+            <p className="pb-8 text-gray-800 text-sm">
+              Whether you are an artist or a business, we advise on licensing,
+              assignments, and permitted usage of copyrighted works. Our team
+              monitors both online and offline spaces for unauthorized use of
+              movies, music, books, software, and more. If necessary, we pursue
+              legal action, including filing civil and criminal complaints and
+              coordinating with cybercrime units to swiftly seize infringing
+              materials.
+            </p>
+            <h2 className="text-lg font-medium text-black pb-5">
+              Expert Representation in Copyright Disputes
+            </h2>
+            <p className="pb-8 text-gray-800 text-sm">
+              Our experienced copyright attorneys represent clients in cases
+              involving ownership disputes, royalty claims, co–authorship
+              conflicts, and adaptation rights. For high–value copyrighted
+              content, such as music, software, or literary works, we offer
+              valuation services, assisting producers, publishers, and tech
+              companies in funding rounds and M&A transactions. Our technical
+              experts assess code quality, vulnerability metrics, and
+              architecture strength for reliable valuation.
             </p>
           </div>
 
-          <div className="hidden lg:block lg:w-1/2 p-10 pl-16">
-            <h2 className="text-black font-normal pb-5">Related Links</h2>
-            <nav className="space-y-4 sticky top-24">
+          <div className="hidden lg:block lg:col-span-1 lg:px-10 pl-16">
+            <h2 className="text-slate-900 font-medium text-2xl pb-5 bg-white pl-4 pt-4 rounded-t-xl rounded-b-xl">
+              Related Links
+            </h2>
+            <nav className="space-y-4 sticky top-24 bg-slate-900 pl-4 rounded-xl mt-5 pt-5">
               <a
                 href="/patent"
-                className="block text-gray-700 font-montserrat hover:text-blue-800 hover:underline text-lg font-medium"
+                className="block text-white font-montserrat hover:text-blue-800 hover:underline text-lg font-medium"
               >
                 Patent
               </a>
               <a
                 href="/design"
-                className="block text-gray-700 font-montserrat hover:text-blue-800 hover:underline text-lg font-medium"
+                className="block text-white font-montserrat hover:text-blue-800 hover:underline text-lg font-medium"
               >
                 Design
               </a>
               <a
                 href="/copyright"
-                className="block text-gray-700 font-montserrat hover:text-blue-800 hover:underline text-lg font-medium"
+                className="block text-white font-montserrat hover:text-blue-800 hover:underline text-lg font-medium"
               >
                 Copyright
               </a>
               <a
                 href="#trademark"
-                className="block text-gray-700 font-montserrat hover:text-blue-800 hover:underline text-lg font-medium"
+                className="block text-white font-montserrat hover:text-blue-800 hover:underline text-lg font-medium"
               >
                 Trademark
               </a>

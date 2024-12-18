@@ -3,7 +3,7 @@ import { FocusCards } from "../Components/utils/focus-cards";
 export function FocusCardsDemo() {
   const cards = [
     {
-      title: "Copy Right",
+      title: "CopyRight",
       src: "https://www.jusip.in/wp-content/uploads/2024/02/Patents-India-filling-enforcement.jpg",
       link: "copyright",
     },

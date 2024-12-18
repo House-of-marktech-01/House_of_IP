@@ -144,7 +144,7 @@ const ContactForm = () => {
 
                 <button
                   type="submit"
-                  className="w-1/4 py-3 bg-gray-600 text-white text-lg rounded-md hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-[#071b35]"
+                  className="w-1/2 lg:w-1/4 py-3 bg-gray-600 text-white text-lg rounded-md hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-[#071b35]"
                   disabled={loading}
                 >
                   {loading ? "Submitting..." : "Submit Now"}

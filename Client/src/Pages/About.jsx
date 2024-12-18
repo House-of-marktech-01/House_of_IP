@@ -84,24 +84,24 @@ const About = () => {
             {/* Right Div */}
             <div className="w-full lg:w-1/2 grid grid-cols-1 sm:grid-cols-1 gap-4 pt-10">
               {/* Child Div 1 */}
-              <div className="p-4 bg-white rounded-lg shadow-md">
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">
+              <div className="p-4 rounded-lg shadow-md lg:bg-slate-900">
+                <h3 className="text-lg font-semibold text-gray-800 mb-2 lg:text-white">
                   Our Expertise: Where Innovation Meets Humanity
                 </h3>
-                <h5 className="text-base font-semibold text-gray-800 mb-2">
+                <h5 className="text-base font-semibold text-gray-800 mb-2 lg:text-white">
                   1. Intellectual Property Rights (IPR)
                 </h5>
-                <p className="text-gray-600 text-xs">
+                <p className="text-gray-600 text-xs lg:text-white">
                   In today’s fast–paced world of innovation and creativity,
                   protecting intellectual property is more important than ever.
                   Our team offers comprehensive legal services across
                   TRADEMARKS, COPYRIGHTS, PATENTS, AND DESIGNS, ensuring that
                   our clients’ intellectual assets are safeguarded.
                 </p>
-                <h5 className="text-base font-semibold text-gray-800 mb-2">
+                <h5 className="text-base font-semibold text-gray-800 mb-2 pt-5 lg:text-white">
                   2. Matrimonial Cases
                 </h5>
-                <p className="text-gray-600 text-xs">
+                <p className="text-gray-600 text-xs lg:text-white">
                   Personal matters require a personal touch. We bring empathy
                   and expertise to matters of divorce, child custody, and
                   alimony, guiding our clients through emotionally charged times
@@ -110,11 +110,11 @@ const About = () => {
               </div>
 
               {/* Child Div 2 */}
-              <div className="p-4 bg-white rounded-lg shadow-md">
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">
+              <div className="p-4 bg-white rounded-lg shadow-md lg:bg-slate-900">
+                <h3 className="text-lg font-semibold text-gray-800 mb-2 lg:text-white">
                   Vision
                 </h3>
-                <p className="text-gray-600 text-xs">
+                <p className="text-gray-600 text-xs lg:text-white">
                   At House of IP, our vision is to become a leading force in
                   redefining how legal protection is perceived and practiced. We
                   strive to create a future where intellectual property rights
@@ -127,11 +127,11 @@ const About = () => {
               </div>
 
               {/* Child Div 3 */}
-              <div className="p-4 bg-white rounded-lg shadow-md">
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">
+              <div className="p-4 bg-white rounded-lg shadow-md lg:bg-slate-900">
+                <h3 className="text-lg font-semibold text-gray-800 mb-2 lg:text-white">
                   Mission
                 </h3>
-                <p className="text-gray-600 text-xs">
+                <p className="text-gray-600 text-xs lg:text-white">
                   Our mission is to provide reliable, personalized, and
                   forward-thinking legal solutions that serve as a shield for
                   our clients. We are committed to simplifying complex legal
@@ -145,11 +145,11 @@ const About = () => {
               </div>
 
               {/* Child Div 4 */}
-              <div className="p-4 bg-white rounded-lg shadow-md">
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">
+              <div className="p-4 bg-white rounded-lg shadow-md lg:bg-slate-900">
+                <h3 className="text-lg font-semibold text-gray-800 mb-2 lg:text-white">
                   Our Evolution
                 </h3>
-                <p className="text-gray-600 text-xs">
+                <p className="text-gray-600 text-xs lg:text-white">
                   At House of IP, we take a client-first approach, combining
                   expertise with empathy. Every case we handle, whether it’s an
                   intellectual property dispute or a sensitive matrimonial

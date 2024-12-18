@@ -2,6 +2,7 @@ import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken"; // Import as a default export
 import User from "../models/userModels.js";
 import nodemailer from "nodemailer";
+import multer from "multer";
 
 const JWT_SECRET = process.env.JWTSECRET;
 
@@ -30,8 +31,6 @@ export const signup = async (req, res) => {
     res.status(500).json({ message: "Error creating user", error });
   }
 };
-
-
 
 export const signin = async (req, res) => {
   const { email, password } = req.body;
@@ -99,5 +98,33 @@ export const sendMail = async (req, res) => {
     res
       .status(500)
       .json({ message: "Failed to send email. Please try again later." });
+  }
+};
+
+export const sendDoc = async (req, res) => {
+  try {
+    const { file } = req;
+    if (!file) return res.status(400).json({ message: "No file uploaded" });
+
+    // Send email to website owner
+    const transporter = nodemailer.createTransport({
+      service: "Gmail",
+      auth: { user: process.env.EMAIL_PASSWORD, pass: process.env.email_password_upload },
+    });
+    console.log(process.env.EMAIL)
+    console.log(process.env.EMAIL_PASSWORD)
+
+    await transporter.sendMail({
+      from: "oganapure22ecs@student.mes.ac.in",
+      to: "omnathganapure9981@gmail.com", // Website owner's email
+      subject: "New Document Uploaded",
+      text: `A new document has been uploaded: ${file.originalname}`,
+      attachments: [{ filename: file.originalname, path: file.path }],
+    });
+
+    res.status(200).json({ message: "Document uploaded and sent to owner" });
+  } catch (error) {
+    console.error("Error uploading document:", error);
+    res.status(500).json({ message: "Failed to upload document" });
   }
 };

@@ -2,8 +2,8 @@ import React from "react";
 
 const OurStory = () => {
   return (
-    <div className="w-full mx-auto bg-slate-100">
-      <div className="lg:grid lg:grid-cols-2 mt-5=">
+    <div className="w-full mx-auto bg-slate-100 lg:px-12">
+      <div className="lg:grid lg:grid-cols-2">
         <div className="lg:col-span-2 flex flex-col items-center">
           <div className="w-full">
             <div className="flex flex-wrap md:flex-nowrap items-center gap-6 md:gap-10 lg:px-10 px-5">
