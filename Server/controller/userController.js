@@ -103,28 +103,43 @@ export const sendMail = async (req, res) => {
 
 export const sendDoc = async (req, res) => {
   try {
-    const { file } = req;
-    if (!file) return res.status(400).json({ message: "No file uploaded" });
+    const { url } = req.body; // The uploaded URL received from the frontend
 
-    // Send email to website owner
+    if (!url) {
+      return res.status(400).json({ message: "URL is required!" });
+    }
+
+    // Setup nodemailer transporter
     const transporter = nodemailer.createTransport({
-      service: "Gmail",
-      auth: { user: process.env.EMAIL_PASSWORD, pass: process.env.email_password_upload },
+      service: "gmail",
+      auth: {
+        user: process.env.EMAIL, // Your email
+        pass: process.env.EMAIL_PASSWORD, // App password (use App Password for Gmail)
+      },
     });
-    console.log(process.env.EMAIL)
-    console.log(process.env.EMAIL_PASSWORD)
 
-    await transporter.sendMail({
-      from: "oganapure22ecs@student.mes.ac.in",
-      to: "omnathganapure9981@gmail.com", // Website owner's email
+    // Email details
+    const mailOptions = {
+      from: `Document Uploader <${process.env.EMAIL}>`, // Must match the authenticated email
+      to: process.env.EMAIL, // The owner's email address
       subject: "New Document Uploaded",
-      text: `A new document has been uploaded: ${file.originalname}`,
-      attachments: [{ filename: file.originalname, path: file.path }],
-    });
+      html: `
+        <p>A new document has been uploaded.</p>
+        <p><strong>URL:</strong> <a href="${url}" target="_blank">${url}</a></p>
+        <p>You can view or download the document using the above link.</p>
+      `,
+    };
 
-    res.status(200).json({ message: "Document uploaded and sent to owner" });
+    // Send the email
+    await transporter.sendMail(mailOptions);
+
+    res
+      .status(200)
+      .json({ message: "URL sent to the owner's email successfully!" });
   } catch (error) {
-    console.error("Error uploading document:", error);
-    res.status(500).json({ message: "Failed to upload document" });
+    console.error("Error sending email:", error);
+    res
+      .status(500)
+      .json({ message: "Failed to send email. Please try again later." });
   }
 };

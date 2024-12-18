@@ -18,24 +18,27 @@ const Practice = () => {
           </ul>
         </div>
       </div>
-      <h1 className="bg-white text-center text-3xl text-slate-900 pt-9">
+      <h1 className="bg-white text-center text-3xl text-slate-800 pt-9 underline">
         Practice Areas
       </h1>
-      <p className="bg-white py-4 pt-10 text-black font-montserrat px-3 text-sm lg:px-20">
-        House of ip offers a comprehensive suite of legal services across key
+      <h1 className="bg-white text-center text-xl text-slate-800 pt-5 ">
+        Our Expertice
+      </h1>
+      <p className="bg-white py-4 pt-10 text-black px-3 text-sm lg:px-24">
+        <span className="text-xl font-bold text-slate-800">House of ip</span>  offers a comprehensive suite of legal services across key
         areas catering to the evolving needs of inventors, creators and
         businesses. Our core specialization lies in Intellectual Property
         protection, litigation and licensing across patents, trademarks,
         copyrights, designs leveraging in-house technical experts
       </p>
-      <p className="bg-white lg:px-20 px-3 text-sm py-4 text-black font-montserrat">
+      <p className="bg-white lg:px-24 px-3 text-sm py-4 text-black">
         Further, we provide allied corporate and commercial advisory
         encompassing dispute resolution, regulatory compliance, entity
         structuring and transactions support. For personal clients, we offer
         specialized assistance in family disputes, inheritance matters and
         immigration needs.
       </p>
-      <p className="bg-white lg:px-20 px-3 text-sm py-4 text-black font-montserrat">
+      <p className="bg-white lg:px-24 px-3 text-sm py-4 text-black">
         Having handled over 2200+ cases, our seasoned lawyers provide litigation
         assistance across criminal, civil and commercial conflicts. We also
         cover alternative resolution mechanisms including seamless arbitration

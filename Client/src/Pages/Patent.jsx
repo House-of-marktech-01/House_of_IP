@@ -4,6 +4,7 @@ import { RWebShare } from "react-web-share";
 import Cookies from "js-cookie";
 import { useDropzone } from "react-dropzone";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 const Patent = () => {
   const [email, setEmail] = useState("");
@@ -53,12 +54,12 @@ const Patent = () => {
       }
     } catch (error) {
       console.error("Error during login:", error);
-      alert("An error occurred. Please try again.");
+      toast.error("An error occurred. Please try again.");
     }
   };
 
   const { getRootProps, getInputProps } = useDropzone({
-    accept: ".pdf, .doc, .docx", // Accepted file formats
+    accept: ".pdf, .doc, .docx, .txt", // Additional file types if needed
     onDrop: (acceptedFiles) => {
       setSelectedFile(acceptedFiles[0]);
     },
@@ -66,31 +67,36 @@ const Patent = () => {
 
   const handleUpload = async () => {
     if (!selectedFile) {
-      alert("Please select a document to upload!");
+      toast.error("Please select a document to upload!");
       return;
     }
 
     const formData = new FormData();
-    formData.append("document", selectedFile); // Append file to form data
+    formData.append("file", selectedFile); // Append the file
+    formData.append("upload_preset", "houseofip"); // Replace with your preset
+    formData.append("cloud_name", "dqkzwt6oe"); // Replace with your Cloudinary cloud name
+    formData.append("folder", "documents"); // Optional: specify a folder in Cloudinary
 
     try {
       setIsUploading(true);
       setUploadStatus("");
 
-      // Make POST request to your backend
+      // Make POST request to Cloudinary API
       const response = await axios.post(
-        "http://localhost:5000/api/users/send-doc", // Your backend endpoint
-        formData,
-        {
-          headers: {
-            "Content-Type": "multipart/form-data",
-            Authorization: `Bearer ${localStorage.getItem("token")}`, // Pass JWT token if required
-          },
-        }
+        "https://api.cloudinary.com/v1_1/dqkzwt6oe/raw/upload", // Endpoint for uploading raw files
+        formData
       );
 
-      setUploadStatus("Document uploaded successfully!");
-      console.log("Response:", response.data);
+      const uploadedUrl = response.data.secure_url; // URL of the uploaded document
+      toast.success("Document uploaded successfully");
+      setSelectedFile(null);
+      console.log("Uploaded Document URL:", uploadedUrl);
+
+      // Optionally send the uploaded URL to your backend
+      // await axios.post("http://localhost:5000/api/users/save-doc-url", { url: uploadedUrl });
+      await axios.post("http://localhost:5000/api/users/upload-url", {
+        url: uploadedUrl, // The Cloudinary URL
+      });
     } catch (error) {
       setUploadStatus("Failed to upload document.");
       console.error("Error uploading document:", error);
@@ -98,6 +104,7 @@ const Patent = () => {
       setIsUploading(false);
     }
   };
+
   return (
     <>
       <div id="patent" className="w-full" style={{ position: "relative" }}>
@@ -162,46 +169,46 @@ const Patent = () => {
 
           {token ? (
             <div className="max-w-lg mx-auto p-6 bg-gray-100 rounded-lg shadow-md">
-            <h2 className="text-2xl font-bold mb-4 text-center">
-              Upload Document
-            </h2>
+              <h2 className="text-2xl font-bold mb-4 text-center">
+                Upload Document
+              </h2>
 
-            <div
-              {...getRootProps()}
-              className="border-2 border-dashed border-gray-400 p-6 mb-4 text-center cursor-pointer bg-white rounded-md"
-            >
-              <input {...getInputProps()} />
-              <p className="text-gray-600">
-                Drag & drop a document here, or click to select a file
-              </p>
-              {selectedFile && (
-                <p className="mt-2 text-gray-800">
-                  Selected File: {selectedFile.name}
+              <div
+                {...getRootProps()}
+                className="border-2 border-dashed border-gray-400 p-6 mb-4 text-center cursor-pointer bg-white rounded-md"
+              >
+                <input {...getInputProps()} />
+                <p className="text-gray-600">
+                  Drag & drop a document here, or click to select a file
                 </p>
+                {selectedFile && (
+                  <p className="mt-2 text-gray-800">
+                    Selected File: {selectedFile.name}
+                  </p>
+                )}
+              </div>
+
+              <button
+                onClick={handleUpload}
+                disabled={isUploading}
+                className="relative flex items-center px-6 py-3 overflow-hidden font-medium transition-all bg-indigo-500 rounded-md group w-full"
+              >
+                <span className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-indigo-700 rounded group-hover:-mr-4 group-hover:-mt-4">
+                  <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
+                </span>
+                <span className="absolute bottom-0 rotate-180 left-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-indigo-700 rounded group-hover:-ml-4 group-hover:-mb-4">
+                  <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
+                </span>
+                <span className="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full bg-indigo-600 rounded-md group-hover:translate-x-0"></span>
+                <span className="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-white">
+                  {isUploading ? "Uploading..." : "Upload Document"}
+                </span>
+              </button>
+
+              {uploadStatus && (
+                <p className="mt-4 text-center text-gray-700">{uploadStatus}</p>
               )}
             </div>
-
-            <button
-              onClick={handleUpload}
-              disabled={isUploading}
-              className="relative flex items-center px-6 py-3 overflow-hidden font-medium transition-all bg-indigo-500 rounded-md group w-full"
-            >
-              <span className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-indigo-700 rounded group-hover:-mr-4 group-hover:-mt-4">
-                <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
-              </span>
-              <span className="absolute bottom-0 rotate-180 left-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-indigo-700 rounded group-hover:-ml-4 group-hover:-mb-4">
-                <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
-              </span>
-              <span className="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full bg-indigo-600 rounded-md group-hover:translate-x-0"></span>
-              <span className="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-white">
-                {isUploading ? "Uploading..." : "Upload Document"}
-              </span>
-            </button>
-
-            {uploadStatus && (
-              <p className="mt-4 text-center text-gray-700">{uploadStatus}</p>
-            )}
-          </div>
           ) : (
             <div className="hidden sm:flex flex-col w-2/10 justify-center items-center bg-gray-100">
               <div className="bg-white p-8 rounded-lg">

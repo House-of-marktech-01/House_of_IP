@@ -4,6 +4,7 @@ import { RWebShare } from "react-web-share";
 import Cookies from "js-cookie";
 import { useDropzone } from "react-dropzone";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 const Trademark = () => {
   const [token, setToken] = useState(Cookies.get("jwtToken"));
@@ -55,7 +56,7 @@ const Trademark = () => {
   };
 
   const { getRootProps, getInputProps } = useDropzone({
-    accept: ".pdf, .doc, .docx", // Accepted file formats
+    accept: ".pdf, .doc, .docx, .txt", // Additional file types if needed
     onDrop: (acceptedFiles) => {
       setSelectedFile(acceptedFiles[0]);
     },
@@ -63,31 +64,38 @@ const Trademark = () => {
 
   const handleUpload = async () => {
     if (!selectedFile) {
-      alert("Please select a document to upload!");
+      toast.error("Please select a document to upload!");
       return;
     }
 
     const formData = new FormData();
-    formData.append("document", selectedFile); // Append file to form data
+    formData.append("file", selectedFile); // Append the file
+    formData.append("upload_preset", "houseofip"); // Replace with your preset
+    formData.append("cloud_name", "dqkzwt6oe"); // Replace with your Cloudinary cloud name
+    formData.append("folder", "documents"); // Optional: specify a folder in Cloudinary
 
     try {
       setIsUploading(true);
       setUploadStatus("");
 
-      // Make POST request to your backend
+      // Make POST request to Cloudinary API
       const response = await axios.post(
-        "http://localhost:5000/api/users/send-doc", // Your backend endpoint
-        formData,
-        {
-          headers: {
-            "Content-Type": "multipart/form-data",
-            Authorization: `Bearer ${localStorage.getItem("token")}`, // Pass JWT token if required
-          },
-        }
+        "https://api.cloudinary.com/v1_1/dqkzwt6oe/raw/upload", // Endpoint for uploading raw files
+        formData
       );
 
-      setUploadStatus("Document uploaded successfully!");
-      console.log("Response:", response.data);
+      const uploadedUrl = response.data.secure_url; // URL of the uploaded document
+      toast.success("Document uploaded successfully");
+      setSelectedFile(null);
+      console.log("Uploaded Document URL:", uploadedUrl);
+
+      // Optionally send the uploaded URL to your backend
+      // await axios.post("http://localhost:5000/api/users/save-doc-url", { url: uploadedUrl });
+
+      await axios.post('http://localhost:5000/api/users/upload-url', {
+        url: uploadedUrl, // The Cloudinary URL
+      });
+
     } catch (error) {
       setUploadStatus("Failed to upload document.");
       console.error("Error uploading document:", error);
@@ -95,7 +103,6 @@ const Trademark = () => {
       setIsUploading(false);
     }
   };
-
   return (
     <>
       <div id="trademark" className="w-full" style={{ position: "relative" }}>
