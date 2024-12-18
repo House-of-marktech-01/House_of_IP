@@ -308,7 +308,7 @@ const Trademark = () => {
           </p>
         </div>
         <div className="bg-white px-5 text-justify flex lg:px-20 ">
-          <div className="lg:w-2/3">
+          <div className="lg:w-3/4">
             <h1 className="text-start text-2xl text-black pb-4">
               Documents Required
             </h1>
@@ -394,7 +394,7 @@ const Trademark = () => {
             </div>
           </div>
 
-          <div className="hidden lg:block lg:w-1/3 px-10 pl-16">
+          <div className="hidden lg:block lg:w-1/4 px-10 pl-16">
             <h2 className="text-slate-900 font-medium text-2xl pb-5 bg-white pl-4 pt-4 rounded-t-xl rounded-b-xl">
               Related Links
             </h2>
@@ -437,7 +437,7 @@ const Trademark = () => {
             <div className="space-y-4 pr-2 pt-4 h-full bg-slate-200 pb-10 pl-2 rounded-md lg:bg-white lg:px-10">
               {/* FAQ Item 1 */}
               <details className="group overflow-hidden ">
-                <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-lg transition">
+                <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg rounded-b-sm transition">
                   <span className="font-medium text-white">
                     Why Choose House of IP for Trademark Registration?
                   </span>
@@ -445,7 +445,7 @@ const Trademark = () => {
                     &#9660;
                   </span>
                 </summary>
-                <div className="transition-all duration-300 ease-in-out overflow-hidden max-h-0 group-open:max-h-96">
+                <div className="transition-all duration-300 bg-slate-600 rounded-b-xl ease-in-out overflow-hidden max-h-0 group-open:max-h-96">
                   <p className="mt-2 px-4 text-black text-sm">
                     At House of IP, we go beyond legal protection by offering a
                     full-service solution that includes:
@@ -470,7 +470,7 @@ const Trademark = () => {
               {/* Add the other FAQ items here */}
               {/* FAQ Item 2 */}
               <details className="group overflow-hidden">
-                <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-lg transition">
+                <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg rounded-b-sm transition">
                   <span className="font-medium text-white">
                     How Do We Ensure Successful Trademark Registration?
                   </span>
@@ -478,7 +478,7 @@ const Trademark = () => {
                     &#9660;
                   </span>
                 </summary>
-                <div className="transition-all duration-300 ease-in-out overflow-hidden max-h-96 group-open:max-h-96 px-12 text-justify text-black font-montserrat font-thin overflow-y-auto">
+                <div className="transition-all duration-300 ease-in-out overflow-hidden max-h-96 rounded-b-xl bg-slate-600 pb-6 group-open:max-h-96 px-12 text-justify text-black font-montserrat font-thin overflow-y-auto">
                   <p className="mt-2 px-4 text-black text-sm">
                     We begin by understanding your brand’s objectives, followed
                     by conducting comprehensive availability searches to
@@ -492,7 +492,7 @@ const Trademark = () => {
 
               {/* FAQ Item 3 */}
               <details className="group overflow-hidden">
-                <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-lg transition">
+                <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg rounded-b-sm transition">
                   <span className="font-medium text-white">
                     What Are Our Success Rates for Trademark Approvals?
                   </span>
@@ -500,7 +500,7 @@ const Trademark = () => {
                     &#9660;
                   </span>
                 </summary>
-                <div className="transition-all duration-300 ease-in-out overflow-hidden max-h-0 group-open:max-h-96">
+                <div className="transition-all duration-300 ease-in-out overflow-hidden rounded-b-xl bg-slate-600 pb-6 max-h-0 group-open:max-h-96">
                   <p className="mt-2 px-4 text-black text-sm">
                     With a meticulous process that includes well-prepared
                     applications, comprehensive examination responses, and
@@ -512,7 +512,7 @@ const Trademark = () => {
 
               {/* FAQ Item 4 */}
               <details className="group overflow-hidden pb-10">
-                <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-lg transition">
+                <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg rounded-b-sm transition">
                   <span className="font-medium text-white">
                     Support Beyond Registration
                   </span>
@@ -520,7 +520,7 @@ const Trademark = () => {
                     &#9660;
                   </span>
                 </summary>
-                <div className="transition-all duration-300 ease-in-out overflow-hidden max-h-0 group-open:max-h-96 text-sm">
+                <div className="transition-all duration-300 ease-in-out overflow-hidden bg-slate-600 rounded-b-xl pb-6 max-h-0 group-open:max-h-96 text-sm">
                   <p className="mt-2 px-4 text-black">
                     Our 360-degree service doesn’t stop at registration. We also
                     manage renewals, recordals, and continuous monitoring to

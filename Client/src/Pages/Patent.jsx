@@ -465,7 +465,7 @@ const Patent = () => {
             </div>
           </div>
 
-          <div className="hidden lg:block lg:w-1/2 px-10 pl-16">
+          <div className="hidden lg:block lg:w-1/4 px-10 pl-16">
             <h2 className="text-slate-900 font-medium text-2xl pb-5 bg-white pl-4 pt-4 rounded-t-xl rounded-b-xl">
               Related Links
             </h2>

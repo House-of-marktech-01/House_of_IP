@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import ContactForm from "../Components/ContactForm";
 
 import { NavLink } from "react-router-dom";
-import Card from "../Components/Card"
+import Card from "../Components/Card";
 const Practice = () => {
   return (
     <>
@@ -24,12 +24,14 @@ const Practice = () => {
       <h1 className="bg-white text-center text-xl text-slate-800 pt-5 ">
         Our Expertice
       </h1>
+      <div></div>
       <p className="bg-white py-4 pt-10 text-black px-3 text-sm lg:px-24">
-        <span className="text-xl font-bold text-slate-800">House of ip</span>  offers a comprehensive suite of legal services across key
-        areas catering to the evolving needs of inventors, creators and
-        businesses. Our core specialization lies in Intellectual Property
-        protection, litigation and licensing across patents, trademarks,
-        copyrights, designs leveraging in-house technical experts
+        <span className="text-xl font-bold text-slate-800">House of ip</span>{" "}
+        offers a comprehensive suite of legal services across key areas catering
+        to the evolving needs of inventors, creators and businesses. Our core
+        specialization lies in Intellectual Property protection, litigation and
+        licensing across patents, trademarks, copyrights, designs leveraging
+        in-house technical experts
       </p>
       <p className="bg-white lg:px-24 px-3 text-sm py-4 text-black">
         Further, we provide allied corporate and commercial advisory
@@ -46,7 +48,7 @@ const Practice = () => {
         approach, House of ip strives to deliver legal excellence with
         responsibility.
       </p>
-      <Card/>
+      <Card />
       <div className="flex flex-col lg:flex-row items-center justify-center p-6 bg-slate-900">
         {/* Image Section */}
         <div className="flex justify-center w-full lg:w-1/2 mb-6 lg:mb-0">

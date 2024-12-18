@@ -3,6 +3,7 @@ import { FiMenu, FiX, FiPlus, FiMinus } from "react-icons/fi";
 import { NavLink, useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
 import Fuse from "fuse.js";
+import {toast} from "react-toastify"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -147,14 +148,14 @@ const Navbar = () => {
         Cookies.set("jwtToken", data.token);
         setToken(data.token); // Update the token state
         setIsLogin(false);
-        alert("Successfully submitted");
+        toast.success("Successfully submitted");
         // Perform actions on success like redirecting or storing token
       } else {
         alert(`Error: ${result.message}`);
       }
     } catch (error) {
       console.error("Error:", error);
-      alert("An error occurred. Please try again.");
+      toast.error("An error occurred. Please try again.");
     }
   };
 
