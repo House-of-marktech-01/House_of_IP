@@ -50,7 +50,7 @@ const Stats = () => {
               </div>
               <div className="absolute w-56 left-0 p-5 -bottom-16 duration-500 group-hover:-translate-y-12">
                 <div className="absolute -z-10 left-0 w-64 h-28 opacity-0 duration-500 group-hover:opacity-70 group-hover:bg-slate-900"></div>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r font-bold text-2xl to-indigo-600 from-slate-700">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r font-bold text-2xl to-indigo-600 from-indigo-700">
                   Trademark
                 </span>
                 <p className="group-hover:opacity-100 w-56 text-xs duration-500 opacity-0">
@@ -77,7 +77,7 @@ const Stats = () => {
               </div>
               <div className="absolute w-56 left-0 p-5 -bottom-16 duration-500 group-hover:-translate-y-12">
                 <div className="absolute -z-10 left-0 w-64 h-28 opacity-0 duration-500 group-hover:opacity-70 group-hover:bg-slate-900"></div>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r font-bold text-2xl to-indigo-600 from-slate-700">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r font-bold text-2xl to-indigo-600 from-indigo-700">
                   Copyright
                 </span>
                 <p className="group-hover:opacity-100 w-56 text-xs duration-500 opacity-0">
@@ -105,7 +105,7 @@ const Stats = () => {
               </div>
               <div className="absolute w-56 left-0 p-5 -bottom-16 duration-500 group-hover:-translate-y-12">
                 <div className="absolute -z-10 left-0 w-64 h-28 opacity-0 duration-500 group-hover:opacity-70 group-hover:bg-slate-900"></div>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r font-bold text-2xl to-indigo-600 from-slate-700">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r font-bold text-2xl to-indigo-600 from-indigo-700">
                   Design
                 </span>
                 <p className="group-hover:opacity-100 w-56 text-xs duration-500 opacity-0">
@@ -130,7 +130,7 @@ const Stats = () => {
               </div>
               <div className="absolute w-56 left-0 p-5 -bottom-16 duration-500 group-hover:-translate-y-12">
                 <div className="absolute -z-10 left-0 w-64 h-28 opacity-0 duration-500 group-hover:opacity-70 group-hover:bg-slate-900"></div>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r font-bold text-2xl to-indigo-600 from-slate-700">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r font-bold text-2xl to-indigo-600 from-indigo-700">
                   Patent
                 </span>
                 <p className="group-hover:opacity-100 w-56 text-xs duration-500 opacity-0">

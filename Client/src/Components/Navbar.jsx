@@ -205,11 +205,11 @@ const Navbar = () => {
                 About
               </NavLink>
               <div className="relative group">
-                <a href="/practice">
+                <NavLink to="/practice">
                   <button className="text-white hover:text-blue-600 font-medium">
                     Services
                   </button>
-                </a>
+                </NavLink>
                 {/* Dropdown */}
                 <div className="absolute left-0 bg-white shadow-lg rounded-lg w-48 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none group-hover:pointer-events-auto">
                   <NavLink
@@ -456,7 +456,7 @@ const Navbar = () => {
                 onMouseLeave={() => setIsServicesOpen(false)}
               >
                 <div className="flex justify-between items-center cursor-pointer">
-                  <a href="/practice"><span className="text-gray-500">Services</span></a>
+                  <NavLink to="/practice"><span className="text-gray-500">Services</span></NavLink>
                   {isServicesOpen ? <FiMinus /> : <FiPlus />}
                 </div>
                 {isServicesOpen && (
