@@ -18,7 +18,7 @@ body {
 }
 
 .parallax-container {
-  background-image: url("https://t4.ftcdn.net/jpg/05/00/95/25/360_F_500952555_YwAsH6OtnjaropE5AEkTLVuR78y6g2l4.jpg"); /* Replace with your image URL */
+  background-image: url("https://www.constantcontact.com/blog/wp-content/uploads/2020/10/Blog-header-lawyer.jpg"); /* Replace with your image URL */
   height: 100vh;
   background-size: cover;
   background-position: center;
@@ -26,4 +26,24 @@ body {
   display: flex;
   align-items: center;
   color: white;
+}
+
+@media (max-width: 768px) {
+  
+  .parallax-container {
+    padding-top: 200px;
+    background-size: contain; /* Change to 'contain' to fit the image */
+    background-attachment: scroll; /* Disable fixed to improve performance on mobile */
+    height: auto; /* Adjust height to content for smaller screens */
+    padding: 50px 20px; /* Add padding for better spacing */
+  }
+}
+
+/* Media query for extra small devices (phones) */
+@media (max-width: 480px) {
+  .parallax-container {
+    background-size: cover; /* Adjust to cover for smaller devices */
+    background-position: top; /* Align the image better */
+    padding: 30px 15px;
+  }
 }

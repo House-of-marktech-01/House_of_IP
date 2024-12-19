@@ -51,7 +51,7 @@ const ContactForm = () => {
   return (
     <div
       id="consult"
-      className="py-20 md:py-28 bg-cover bg-center bg-no-repeat bg-white parallax-container"
+      className="py-20 md:py-28 bg-cover bg-center bg-no-repeat bg-white"
     >
       <div className="py-10">
         <div className="container mx-auto px-4 md:px-8">
@@ -61,7 +61,7 @@ const ContactForm = () => {
               <h3 className="text-4xl font-light text-yellow-400 mb-4">
                 Free Consultation
               </h3>
-              <p className="text-md text-black mb-6">
+              <p className="text-sm text-black mb-6">
                 At House of IP, we understand the complexities of the law and
                 their potential impact on your life and business. Whether you
                 face a  challenge or seek guidance for your endeavors, our
@@ -71,15 +71,15 @@ const ContactForm = () => {
               <ul>
                 <li className="flex items-center mb-3">
                   <i className="fas fa-phone text-blue-600 text-xl mr-3"></i>
-                  <span className="text-lg text-black">+91-99141-31579</span>
+                  <span className="text-sm text-black">+91-99141-31579</span>
                 </li>
                 <li className="flex items-center mb-3">
                   <i className="fas fa-envelope text-red-600 text-xl mr-3"></i>
-                  <span className="text-lg text-black">houseofintellectualproperty@gmail.com</span>
+                  <span className="text-sm text-black">houseofintellectualproperty@gmail.com</span>
                 </li>
                 <li className="flex items-center">
                   <i className="fas fa-clock text-purple-700 text-xl mr-3"></i>
-                  <span className="text-lg text-black">
+                  <span className="text-sm text-black">
                     Mon - Sat 11.00-19.00
                   </span>
                 </li>
@@ -106,7 +106,7 @@ const ContactForm = () => {
                     required
                     value={fullName}
                     onChange={(e) => setFullName(e.target.value)}
-                    className="w-full px-4 py-3 border text-black bg-transparent bg-white placeholder:text-gray-900 border-gray-300 rounded-md focus:outline-none focus:ring-[#294160] focus:ring-2 text-lg"
+                    className="w-full px-4 py-3 border text-sm text-black bg-transparent bg-white placeholder:text-gray-900 border-gray-300 rounded-md focus:outline-none focus:ring-[#294160] focus:ring-2 "
                   />
                   <input
                     type="email"
@@ -115,7 +115,7 @@ const ContactForm = () => {
                     required
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full px-4 py-3 border text-black bg-transparent bg-white placeholder:text-gray-900 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#294160] text-lg"
+                    className="w-full px-4 py-3 border text-black bg-transparent bg-white placeholder:text-gray-900 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#294160] text-sm"
                   />
                   <input
                     type="text"
@@ -124,7 +124,7 @@ const ContactForm = () => {
                     required
                     value={subject}
                     onChange={(e) => setSubject(e.target.value)}
-                    className="w-full px-4 py-3 border text-black bg-transparent bg-white placeholder:text-gray-900 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#294160] text-lg"
+                    className="w-full px-4 py-3 border text-black bg-transparent bg-white placeholder:text-gray-900 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#294160] text-sm"
                   />
                 </div>
 
@@ -135,12 +135,12 @@ const ContactForm = () => {
                   rows="6"
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  className="w-full px-4 py-3 border text-black bg-white bg-transparent placeholder:text-gray-900 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#294160] text-lg"
+                  className="w-full px-4 py-3 border text-black bg-white bg-transparent placeholder:text-gray-900 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#294160] text-sm"
                 ></textarea>
 
                 <button
                   type="submit"
-                  className="w-1/2 lg:w-1/4 py-3 bg-gray-600 text-black text-lg rounded-md hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-[#071b35]"
+                  className="w-1/2 lg:w-1/4 py-3 bg-slate-900 text-white text-lg rounded-md hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-[#071b35]"
                   disabled={loading}
                 >
                   {loading ? "Submitting..." : "Submit Now"}

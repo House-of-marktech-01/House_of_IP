@@ -6,7 +6,7 @@ import Chatbot from "../Components/Chatbot";
 const Contact = () => {
   return (
     <div className="w-full relative ">
-      <div class="flex justify-evenly pb-20 items-center w-full pt-3 bg-white parallax-container">
+      <div class="flex flex-col lg:flex-row justify-evenly  items-center w-full pt-3 bg-white parallax-container">
         <div class="rounded-xl overflow-hidden relative text-center p-4 group items-center flex px-9 bg-slate-800 flex-col max-w-sm hover:shadow-2xl transition-all duration-500 shadow-xl">
           <div class="text-white group-hover:scale-105 transition-all">
             <svg
