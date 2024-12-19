@@ -30,14 +30,14 @@ const Stats = () => {
       </h1>
       <div className="card-body bg-slate-100 lg:px-20 py-10" ref={ref}>
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 px-10 lg:px-10 py-1.5 mx-auto"
+          className="grid grid-cols-1 gap-y-14 sm:grid-cols-2 lg:grid-cols-4 gap-10 px-10 lg:px-10 py-1.5 mx-auto"
           initial="initial"
           animate={isInView ? "inView" : "outOfView"}
           variants={gridVariants}
         >
           {/* Card 1 */}
           <motion.div
-            className="relative group cursor-pointer overflow-hidden duration-500 pr-5 w-64 h-48 bg-slate-800 text-gray-50 p-5 mx-auto"
+            className="relative group rounded-xl lg:rounded-l-xl cursor-pointer overflow-hidden duration-500 pr-5 w-64 h-48 bg-slate-800 text-gray-50 p-5 mx-auto"
             variants={cardVariants}
           >
             <div>
@@ -64,7 +64,7 @@ const Stats = () => {
 
           {/* Card 2 */}
           <motion.div
-            className="relative group cursor-pointer overflow-hidden duration-500 pr-5 w-64 h-48 bg-slate-800 text-gray-50 p-5 mx-auto"
+            className="relative group cursor-pointer rounded-xl overflow-hidden duration-500 pr-5 w-64 h-48 bg-slate-800 text-gray-50 p-5 mx-auto"
             variants={cardVariants}
           >
             <div>
@@ -90,35 +90,9 @@ const Stats = () => {
           </motion.div>
 
           {/* Card 3 */}
-          <motion.div
-            className="relative group cursor-pointer overflow-hidden duration-500 pr-5 w-64 h-48 bg-slate-800 text-gray-50 p-5 mx-auto"
-            variants={cardVariants}
-          >
-            <div>
-              <div className="group-hover:scale-110 w-full h-36 bg-blue-400 duration-500">
-                <img
-                  src="https://media.licdn.com/dms/image/v2/C5112AQGJzX51eH37HQ/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1567008264730?e=2147483647&v=beta&t=pLt0DQhx_eLU1yvtHdOkFx-OyckP50WRCTsIPU6OKis"
-                  alt=""
-                  className="h-36"
-                />
-              </div>
-              <div className="absolute w-56 left-0 p-5 -bottom-16 duration-500 group-hover:-translate-y-12">
-                <div className="absolute -z-10 left-0 w-64 h-28 opacity-0 duration-500 group-hover:opacity-70 group-hover:bg-slate-900"></div>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r font-bold text-2xl to-indigo-600 from-slate-700">
-                  Patent
-                </span>
-                <p className="group-hover:opacity-100 w-56 text-xs duration-500 opacity-0">
-                  Safeguard your innovative ideas and inventions with patent
-                  registration. Gain exclusive rights to your creations and
-                  advance your technological edge.
-                </p>
-              </div>
-            </div>
-          </motion.div>
 
-          {/* Card 4 */}
           <motion.div
-            className="relative group cursor-pointer overflow-hidden duration-500 pr-5 w-64 h-48 bg-slate-800 text-gray-50 p-5 mx-auto"
+            className="relative group cursor-pointer rounded-xl overflow-hidden duration-500 pr-5 w-64 h-48 bg-slate-800 text-gray-50 p-5 mx-auto"
             variants={cardVariants}
           >
             <div>
@@ -138,6 +112,31 @@ const Stats = () => {
                   Protect the visual and aesthetic aspects of your product with
                   design registration, covering elements. Ensure your unique
                   designs remain legally secure in markets.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+          <motion.div
+            className="relative group cursor-pointer rounded-xl lg:rounded-r-xl overflow-hidden duration-500 pr-5 w-64 h-48 bg-slate-800 text-gray-50 p-5 mx-auto"
+            variants={cardVariants}
+          >
+            <div>
+              <div className="group-hover:scale-110 w-full h-36 bg-blue-400 duration-500">
+                <img
+                  src="https://media.licdn.com/dms/image/v2/C5112AQGJzX51eH37HQ/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1567008264730?e=2147483647&v=beta&t=pLt0DQhx_eLU1yvtHdOkFx-OyckP50WRCTsIPU6OKis"
+                  alt=""
+                  className="h-36"
+                />
+              </div>
+              <div className="absolute w-56 left-0 p-5 -bottom-16 duration-500 group-hover:-translate-y-12">
+                <div className="absolute -z-10 left-0 w-64 h-28 opacity-0 duration-500 group-hover:opacity-70 group-hover:bg-slate-900"></div>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r font-bold text-2xl to-indigo-600 from-slate-700">
+                  Patent
+                </span>
+                <p className="group-hover:opacity-100 w-56 text-xs duration-500 opacity-0">
+                  Safeguard your innovative ideas and inventions with patent
+                  registration. Gain exclusive rights to your creations and
+                  advance your technological edge.
                 </p>
               </div>
             </div>

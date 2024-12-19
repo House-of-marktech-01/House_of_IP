@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 const Hero = () => {
   const { ref, inView } = useInView({
     triggerOnce: true, // Trigger animation once
-    threshold: 0.2, // Trigger when 20% of the image is visible
+    threshold: 0.2, // Trigger when 20% of the element is visible
   });
 
   const handleClick = () => {
@@ -26,23 +26,19 @@ const Hero = () => {
                 transition={{ duration: 0.5 }} // Duration of the animation
                 className="absolute top-0 left-0 w-full h-full"
               >
-                <img
-                  src="https://t3.ftcdn.net/jpg/01/07/15/58/360_F_107155820_NCUA4CtCkIDXXHnKAlWVzUvRjfMe0k5D.jpg"
-                  className="object-cover w-full h-full rounded-lg shadow-2xl"
-                  alt=" Consultation"
-                />
               </motion.div>
 
-              <div className="lg:max-w-lg relative z-10 text-center text-slate-900">
-                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold relative ">
-                  Your Trusted Partner in  Solutions
+              <div className="lg:max-w-lg relative z-10 text-left lg:text-center text-white w-full lg:w-1/2">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold relative">
+                  Protect Your Creations. Secure Your Future.
                 </h1>
-                <p className="py-4 sm:py-6 text-sm sm:text-base text-slate-900">
-                  Welcome to House of IP —your trusted partner for expert
-                   services in intellectual property and matrimonial law.
-                  We’re here to provide tailored solutions for individuals and
-                  businesses alike.
+                <p className="py-4 sm:py-6 text-sm sm:text-base text-white">
+                  Welcome to House of IP, your trusted partner in intellectual property registration. Whether you're an inventor, artist, or entrepreneur, we help you safeguard your ideas and innovations.
                 </p>
+              </div>
+
+              {/* Book Appointment button on the right side */}
+              <div className="lg:max-w-lg relative z-10 text-center lg:text-left mt-4 lg:mt-0 lg:absolute pb-6 bottom-0">
                 <button
                   className="btn text-black bg-yellow-500 hover:bg-yellow-200"
                   onClick={handleClick}
@@ -51,42 +47,6 @@ const Hero = () => {
                 </button>
               </div>
             </div>
-          </div>
-
-          <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#slide4" className="btn btn-circle">
-              ❮
-            </a>
-            <a href="#slide2" className="btn btn-circle">
-              ❯
-            </a>
-          </div>
-        </div>
-
-        {/* Slide 2 - Video Player */}
-        <div id="slide2" className="carousel-item relative w-full">
-          <div className="relative w-full h-[70vh] sm:h-[80vh] lg:h-[70vh]">
-            <video
-              className="w-full h-full object-cover"
-              autoPlay
-              loop
-              muted
-              controls
-            >
-              <source
-                src="https://www.w3schools.com/html/movie.mp4"
-                type="video/mp4"
-              />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-            <a href="#slide1" className="btn btn-circle">
-              ❮
-            </a>
-            <a href="#slide3" className="btn btn-circle">
-              ❯
-            </a>
           </div>
         </div>
       </div>

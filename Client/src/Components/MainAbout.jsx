@@ -5,7 +5,7 @@ const MainAbout = () => {
 
   const whyChooseUsData = [
     {
-      title: "Get Your  Advise",
+      title: "Get Your Advise",
       details:
         "Seeking expert  advice? Our experienced attorneys at House of IP are here to help. Whether you have questions about civil, criminal, or matrimonial matters, we provide clear, practical guidance to resolve your  issues efficiently. Contact us today!",
     },

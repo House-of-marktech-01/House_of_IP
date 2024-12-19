@@ -26,7 +26,7 @@ const Practice = () => {
       </h1>
       <div></div>
       <p className="bg-white py-4 pt-10 text-black px-3 text-sm lg:px-24">
-        <span className="text-xl font-bold text-slate-800">House of ip</span>{" "}
+        <span className="text-xl font-bold text-slate-800">House of IP</span>{" "}
         offers a comprehensive suite of legal services across key areas catering
         to the evolving needs of inventors, creators and businesses. Our core
         specialization lies in Intellectual Property protection, litigation and
@@ -45,7 +45,7 @@ const Practice = () => {
         assistance across criminal, civil and commercial conflicts. We also
         cover alternative resolution mechanisms including seamless arbitration
         and mediation services. With diverse competencies and client-first
-        approach, House of ip strives to deliver legal excellence with
+        approach, House of IP strives to deliver legal excellence with
         responsibility.
       </p>
       <Card />

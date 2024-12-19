@@ -3,7 +3,7 @@ import { FiMenu, FiX, FiPlus, FiMinus } from "react-icons/fi";
 import { NavLink, useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
 import Fuse from "fuse.js";
-import {toast} from "react-toastify"
+import { toast } from "react-toastify";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -68,10 +68,10 @@ const Navbar = () => {
       url: "/appointment",
     },
     {
-      id:8,
-      title:"Practice Areas",
-      description:"practice,copyright,trademark,design,patent"
-    }
+      id: 8,
+      title: "Practice Areas",
+      description: "practice,copyright,trademark,design,patent",
+    },
   ];
 
   const fuse = new Fuse(searchIndex, {
@@ -204,16 +204,12 @@ const Navbar = () => {
               >
                 About
               </NavLink>
-              <NavLink
-                to="/practice"
-                className="text-white hover:text-blue-600 font-medium"
-              >
-                Practice Areas
-              </NavLink>
               <div className="relative group">
-                <button className="text-white hover:text-blue-600 font-medium">
-                  Services
-                </button>
+                <a href="/practice">
+                  <button className="text-white hover:text-blue-600 font-medium">
+                    Services
+                  </button>
+                </a>
                 {/* Dropdown */}
                 <div className="absolute left-0 bg-white shadow-lg rounded-lg w-48 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none group-hover:pointer-events-auto">
                   <NavLink
@@ -239,18 +235,6 @@ const Navbar = () => {
                     className="block px-4 py-2 hover:bg-slate-800 text-gray-700 hover:text-gray-300"
                   >
                     Trademark
-                  </NavLink>
-                  <NavLink
-                    to="/"
-                    className="block px-4 py-2 hover:bg-slate-800 text-gray-700 hover:text-gray-300"
-                  >
-                    IP Litigation
-                  </NavLink>
-                  <NavLink
-                    to="/"
-                    className="block px-4 py-2 hover:bg-slate-800 text-gray-700 hover:text-gray-300"
-                  >
-                    Matrimonial Disputes
                   </NavLink>
                 </div>
               </div>
@@ -465,12 +449,6 @@ const Navbar = () => {
               >
                 About
               </NavLink>
-              <NavLink
-                to="/practice"
-                className="block px-4 py-2 text-gray-500 hover:bg-slate-800"
-              >
-                Practice Areas
-              </NavLink>
               {/* Services with Expand/Collapse */}
               <div
                 className="block px-4 py-2 text-gray-700 hover:bg-slate-800"
@@ -478,7 +456,7 @@ const Navbar = () => {
                 onMouseLeave={() => setIsServicesOpen(false)}
               >
                 <div className="flex justify-between items-center cursor-pointer">
-                  <span className="text-gray-500">Services</span>
+                  <a href="/practice"><span className="text-gray-500">Services</span></a>
                   {isServicesOpen ? <FiMinus /> : <FiPlus />}
                 </div>
                 {isServicesOpen && (
@@ -506,18 +484,6 @@ const Navbar = () => {
                       className="block px-4 py-2 text-gray-500 hover:bg-slate-800"
                     >
                       Trademark
-                    </NavLink>
-                    <NavLink
-                      to="/"
-                      className="block px-4 py-2 text-gray-500 hover:bg-slate-800"
-                    >
-                      IP Litigation
-                    </NavLink>
-                    <NavLink
-                      to="/"
-                      className="block px-4 py-2 text-gray-500 hover:bg-slate-800"
-                    >
-                      Matrimonial disputes
                     </NavLink>
                   </div>
                 )}
