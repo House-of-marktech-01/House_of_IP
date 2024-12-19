@@ -10,3 +10,9 @@ body {
   font-size: 1.2rem;
   font-weight: 400;
 }
+/* Global CSS (or in your CSS module) */
+@media (max-width: 768px) {
+  .custom-cursor {
+    display: none !important;
+  }
+}

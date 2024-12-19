@@ -14,7 +14,7 @@ const Practice = () => {
             <li>
               <NavLink to="/">Home</NavLink>
             </li>
-            <li>Practice Areas</li> {/* Updated this breadcrumb for clarity */}
+            <li>Practice Areas</li> 
           </ul>
         </div>
       </div>

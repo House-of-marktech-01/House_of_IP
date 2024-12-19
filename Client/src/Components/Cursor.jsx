@@ -14,12 +14,8 @@ const CustomCursor = () => {
 
   return (
     <motion.div
-      className="fixed top-0 left-0 w-5 h-5 bg-slate-800 rounded-full pointer-events-none z-50"
+      className="custom-cursor fixed top-0 left-0 w-5 h-5 bg-slate-800 rounded-full pointer-events-none z-50"
       style={{ x: cursorPosition.x, y: cursorPosition.y }}
-      // animate={{
-      //   scale: [1, 1.5, 1],
-      //   opacity: [1, 0.8, 1],
-      // }}
       transition={{
         duration: 0.3,
         repeat: Infinity,
