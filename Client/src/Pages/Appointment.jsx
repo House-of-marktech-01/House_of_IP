@@ -50,8 +50,8 @@ const Appointment = () => {
         <div className="mt-8 text-center">
           <p className="text-gray-600">
             Need help? Contact us at
-            <a
-              href="mailto:support@example.com"
+            <NavLink
+              to="mailto:support@example.com"
               className="text-blue-500 hover:underline ml-1"
             >
               Ownersemailid@gmail.com

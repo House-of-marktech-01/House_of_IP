@@ -30,7 +30,7 @@ const Contact = () => {
           </div>
           <div class="flex items-center transition-all duration-500 delay-200 group-hover:bottom-3 -bottom-full absolute gap-2 justify-evenly w-full">
             <div class="flex gap-3 text-2xl bg-gray-700 text-white p-1 hover:p-2 transition-all duration-500 delay-200 rounded-full shadow-sm">
-              <a class="hover:scale-110 transition-all duration-500 delay-200">
+              <NavLink class="hover:scale-110 transition-all duration-500 delay-200">
                 <svg
                   width="1em"
                   height="1em"
@@ -42,7 +42,7 @@ const Contact = () => {
                   <path d="M22 6l-10 7L2 6"></path>
                 </svg>
               </NavLink>
-              <a class="hover:scale-110 transition-all duration-500 delay-200">
+              <NavLink class="hover:scale-110 transition-all duration-500 delay-200">
                 <svg
                   width="1em"
                   height="1em"
@@ -78,7 +78,7 @@ const Contact = () => {
           </div>
           <div class="flex items-center transition-all duration-500 delay-200 group-hover:bottom-3 -bottom-full absolute gap-2 justify-evenly w-full">
             <div class="flex gap-3 text-2xl bg-gray-700 text-white p-1 hover:p-2 transition-all duration-500 delay-200 rounded-full shadow-sm">
-              <a class="hover:scale-110 transition-all duration-500 delay-200">
+              <NavLink class="hover:scale-110 transition-all duration-500 delay-200">
                 <svg
                   width="1em"
                   height="1em"
@@ -90,7 +90,7 @@ const Contact = () => {
                   <path d="M22 6l-10 7L2 6"></path>
                 </svg>
               </NavLink>
-              <a class="hover:scale-110 transition-all duration-500 delay-200">
+              <NavLink class="hover:scale-110 transition-all duration-500 delay-200">
                 <svg
                   width="1em"
                   height="1em"
@@ -126,7 +126,7 @@ const Contact = () => {
           </div>
           <div class="flex items-center transition-all duration-500 delay-200 group-hover:bottom-3 -bottom-full absolute gap-2 justify-evenly w-full">
             <div class="flex gap-3 text-2xl bg-gray-700 text-white p-1 hover:p-2 transition-all duration-500 delay-200 rounded-full shadow-sm">
-              <a class="hover:scale-110 transition-all duration-500 delay-200">
+              <NavLink class="hover:scale-110 transition-all duration-500 delay-200">
                 <svg
                   width="1em"
                   height="1em"
@@ -138,7 +138,7 @@ const Contact = () => {
                   <path d="M22 6l-10 7L2 6"></path>
                 </svg>
               </NavLink>
-              <a class="hover:scale-110 transition-all duration-500 delay-200">
+              <NavLink class="hover:scale-110 transition-all duration-500 delay-200">
                 <svg
                   width="1em"
                   height="1em"

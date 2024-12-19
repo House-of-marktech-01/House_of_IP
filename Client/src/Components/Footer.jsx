@@ -105,7 +105,7 @@ const Footer = () => {
           </p>
           <p className="mt-1">
             Unless otherwise indicated, all materials on these pages are
-            copyrighted by IndiaFilings Private Limited. No part of these pages,
+            copyrighted by House of IP. No part of these pages,
             either text or image, may be used for any purpose.
           </p>
 
