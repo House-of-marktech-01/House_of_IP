@@ -9,7 +9,7 @@ const Hero = () => {
   });
 
   const handleClick = () => {
-    window.open("https://calendly.com/omnathganapure9981/30min");
+    window.open("https://calendly.com/houseofintellectualproperty/30min");
   };
 
   return (
@@ -29,17 +29,17 @@ const Hero = () => {
                 <img
                   src="https://t3.ftcdn.net/jpg/01/07/15/58/360_F_107155820_NCUA4CtCkIDXXHnKAlWVzUvRjfMe0k5D.jpg"
                   className="object-cover w-full h-full rounded-lg shadow-2xl"
-                  alt="Legal Consultation"
+                  alt=" Consultation"
                 />
               </motion.div>
 
               <div className="lg:max-w-lg relative z-10 text-center text-slate-900">
                 <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold relative ">
-                  Your Trusted Partner in Legal Solutions
+                  Your Trusted Partner in  Solutions
                 </h1>
                 <p className="py-4 sm:py-6 text-sm sm:text-base text-slate-900">
-                  Welcome to House of IP Legal—your trusted partner for expert
-                  legal services in intellectual property and matrimonial law.
+                  Welcome to House of IP —your trusted partner for expert
+                   services in intellectual property and matrimonial law.
                   We’re here to provide tailored solutions for individuals and
                   businesses alike.
                 </p>

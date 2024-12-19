@@ -26,10 +26,10 @@ const OurStory = () => {
                   Our Story!
                 </h2>
                 <p className="text-md text-gray-800 leading-relaxed mb-2.5">
-                  At House of IP Legal, we provide comprehensive legal services
+                  At House of IP , we provide comprehensive  services
                   to individuals and businesses alike. Our expertise spans
                   across intellectual property, civil, criminal, and matrimonial
-                  law, ensuring that you receive the best legal assistance
+                  law, ensuring that you receive the best  assistance
                   tailored to your needs.
                   <a
                     className="text-blue-600 hover:underline"

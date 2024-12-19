@@ -69,14 +69,14 @@ const About = () => {
                 Our Evolution
               </h2>
               <p className="text-gray-600 text-sm lg:text-base leading-relaxed">
-                From the early days of offering tailored legal advice to local
+                From the early days of offering tailored  advice to local
                 entrepreneurs and individuals, our firm quickly grew into a
-                trusted legal partner for clients across diverse fields. Whether
+                trusted  partner for clients across diverse fields. Whether
                 it’s a startup fighting to protect its brand or a family
                 navigating the complexities of matrimonial law, we’ve always
                 stood by our clients with dedication, professionalism, and care.
                 Each case is a new chapter in our journey, and we are honoured
-                to play a role in shaping the legal landscape for the people we
+                to play a role in shaping the  landscape for the people we
                 serve.
               </p>
             </div>
@@ -94,7 +94,7 @@ const About = () => {
                 <p className="text-gray-600 text-xs lg:text-white">
                   In today’s fast–paced world of innovation and creativity,
                   protecting intellectual property is more important than ever.
-                  Our team offers comprehensive legal services across
+                  Our team offers comprehensive  services across
                   TRADEMARKS, COPYRIGHTS, PATENTS, AND DESIGNS, ensuring that
                   our clients’ intellectual assets are safeguarded.
                 </p>
@@ -116,12 +116,12 @@ const About = () => {
                 </h3>
                 <p className="text-gray-600 text-xs lg:text-white">
                   At House of IP, our vision is to become a leading force in
-                  redefining how legal protection is perceived and practiced. We
+                  redefining how  protection is perceived and practiced. We
                   strive to create a future where intellectual property rights
                   and personal matters are safeguarded with utmost care,
                   precision, and innovation. We aim to empower individuals,
                   entrepreneurs, and businesses to confidently pursue their
-                  ambitions, knowing that their legal rights are fully protected
+                  ambitions, knowing that their  rights are fully protected
                   and supported.
                 </p>
               </div>
@@ -133,8 +133,8 @@ const About = () => {
                 </h3>
                 <p className="text-gray-600 text-xs lg:text-white">
                   Our mission is to provide reliable, personalized, and
-                  forward-thinking legal solutions that serve as a shield for
-                  our clients. We are committed to simplifying complex legal
+                  forward-thinking  solutions that serve as a shield for
+                  our clients. We are committed to simplifying complex 
                   landscapes, ensuring that each individual, creator, and
                   business we work with understands and harnesses the power of
                   the law to their advantage. With a foundation built on trust,
@@ -154,7 +154,7 @@ const About = () => {
                   expertise with empathy. Every case we handle, whether it’s an
                   intellectual property dispute or a sensitive matrimonial
                   issue, begins with a deep understanding of our clients’ needs.
-                  We believe that every legal challenge is unique, which is why
+                  We believe that every  challenge is unique, which is why
                   we provide tailored strategies that not only resolve immediate
                   issues but also anticipate future challenges. Our meticulous
                   attention to detail, collaborative mindset, and innovative

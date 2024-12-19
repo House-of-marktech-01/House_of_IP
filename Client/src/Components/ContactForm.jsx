@@ -68,8 +68,8 @@ const ContactForm = () => {
               <p className="text-md text-white mb-6">
                 At HOUSE OF IP, we understand the complexities of the law and
                 their potential impact on your life and business. Whether you
-                face a legal challenge or seek guidance for your endeavors, our
-                experienced team is here to assist you in navigating the legal
+                face a  challenge or seek guidance for your endeavors, our
+                experienced team is here to assist you in navigating the 
                 process with clarity and expertise.
               </p>
               <ul>

@@ -5,24 +5,24 @@ const MainAbout = () => {
 
   const whyChooseUsData = [
     {
-      title: "Get Your Legal Advise",
+      title: "Get Your  Advise",
       details:
-        "Seeking expert legal advice? Our experienced attorneys at House of IP are here to help. Whether you have questions about civil, criminal, or matrimonial matters, we provide clear, practical guidance to resolve your legal issues efficiently. Contact us today!",
+        "Seeking expert  advice? Our experienced attorneys at House of IP are here to help. Whether you have questions about civil, criminal, or matrimonial matters, we provide clear, practical guidance to resolve your  issues efficiently. Contact us today!",
     },
     {
       title: "Work With Experts",
       details:
-        "A team of seasoned legal experts bring extensive experience and specialized knowledge to handle civil, criminal, and matrimonial cases.",
+        "A team of seasoned  experts bring extensive experience and specialized knowledge to handle civil, criminal, and matrimonial cases.",
     },
     {
       title: "Comprehensive Expertise",
       details:
-        "At House of IP, we combine profound expertise with a broad range of legal services. Our intellectual spectrum ensures that you receive in-depth analysis and comprehensive solutions for all your legal needs, from civil and criminal to matrimonial matters. Experience the perfect blend of depth and breadth with us.",
+        "At House of IP, we combine profound expertise with a broad range of  services. Our intellectual spectrum ensures that you receive in-depth analysis and comprehensive solutions for all your  needs, from civil and criminal to matrimonial matters. Experience the perfect blend of depth and breadth with us.",
     },
     {
       title: "Efficiency",
       details:
-        "At House of IP, we pride ourselves on delivering efficient legal services. Our streamlined processes and coordinated efforts ensure timely and effective resolution of your legal matters, allowing you to focus on what matters most. Trust us for a seamless legal experience.",
+        "At House of IP, we pride ourselves on delivering efficient  services. Our streamlined processes and coordinated efforts ensure timely and effective resolution of your  matters, allowing you to focus on what matters most. Trust us for a seamless  experience.",
     },
   ];
 

@@ -41,7 +41,7 @@ const Appointment = () => {
         {/* Calendly Widget Section */}
         <div className="bg-white rounded-lg shadow-lg p-4 w-full max-w-4xl">
           <InlineWidget
-            url="https://calendly.com/omnathganapure9981/30min"
+            url="https://calendly.com/houseofintellectualproperty/30min"
             styles={{ height: "600px" }}
           />
         </div>
