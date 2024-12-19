@@ -92,10 +92,9 @@ const Trademark = () => {
       // Optionally send the uploaded URL to your backend
       // await axios.post("http://localhost:5000/api/users/save-doc-url", { url: uploadedUrl });
 
-      await axios.post('http://localhost:5000/api/users/upload-url', {
+      await axios.post("http://localhost:5000/api/users/upload-url", {
         url: uploadedUrl, // The Cloudinary URL
       });
-
     } catch (error) {
       setUploadStatus("Failed to upload document.");
       console.error("Error uploading document:", error);
@@ -142,9 +141,9 @@ const Trademark = () => {
               </p>
 
               <div className="flex items-center justify-between flex-wrap gap-2 border-y-2 mt-4 pt-4 pb-4 mb-5">
-                <a className="btn btn-link flex-none" href="/">
+                <NavLink className="btn btn-link flex-none" to="/">
                   Terms and conditions
-                </a>
+                </NavLink>
                 <div className="flex -space-x-2 pl-5 lg:justify-end">
                   <div className="flex">
                     <RWebShare
@@ -163,103 +162,47 @@ const Trademark = () => {
               </div>
             </div>
           </div>
+          <div className="max-w-lg mx-auto p-6 bg-slate-800 rounded-lg shadow-md">
+            <h2 className="text-2xl font-bold mb-4 text-center">
+              Upload Document
+            </h2>
 
-          {token ? (
-            <div className="max-w-lg mx-auto p-6 bg-gray-100 rounded-lg shadow-md">
-              <h2 className="text-2xl font-bold mb-4 text-center">
-                Upload Document
-              </h2>
-
-              <div
-                {...getRootProps()}
-                className="border-2 border-dashed border-gray-400 p-6 mb-4 text-center cursor-pointer bg-white rounded-md"
-              >
-                <input {...getInputProps()} />
-                <p className="text-gray-600">
-                  Drag & drop a document here, or click to select a file
+            <div
+              {...getRootProps()}
+              className="border-2 border-dashed border-slate-700 p-6 mb-4 text-center cursor-pointer bg-state-700 rounded-md"
+            >
+              <input {...getInputProps()} />
+              <p className="text-gray-200">
+                Drag & drop a document here, or click to select a file
+              </p>
+              {selectedFile && (
+                <p className="mt-2 text-gray-100">
+                  Selected File: {selectedFile.name}
                 </p>
-                {selectedFile && (
-                  <p className="mt-2 text-gray-800">
-                    Selected File: {selectedFile.name}
-                  </p>
-                )}
-              </div>
-
-              <button
-                onClick={handleUpload}
-                disabled={isUploading}
-                className="relative flex items-center px-6 py-3 overflow-hidden font-medium transition-all bg-indigo-500 rounded-md group w-full"
-              >
-                <span className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-indigo-700 rounded group-hover:-mr-4 group-hover:-mt-4">
-                  <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
-                </span>
-                <span className="absolute bottom-0 rotate-180 left-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-indigo-700 rounded group-hover:-ml-4 group-hover:-mb-4">
-                  <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
-                </span>
-                <span className="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full bg-indigo-600 rounded-md group-hover:translate-x-0"></span>
-                <span className="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-white">
-                  {isUploading ? "Uploading..." : "Upload Document"}
-                </span>
-              </button>
-
-              {uploadStatus && (
-                <p className="mt-4 text-center text-gray-700">{uploadStatus}</p>
               )}
             </div>
-          ) : (
-            <div className="hidden sm:flex flex-col w-2/10 justify-center items-center bg-gray-100">
-              <div className="bg-white p-8 rounded-lg">
-                <h2 className="text-2xl font-semibold text-center mb-6 text-gray-800">
-                  Login
-                </h2>
-                <form onSubmit={handleSubmit}>
-                  <div className="mb-4">
-                    <label
-                      htmlFor="email"
-                      className="block text-sm font-medium text-gray-700"
-                    >
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      className="mt-1 p-2 w-full border bg-gray-300 text-gray-800 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                      required
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                    />
-                  </div>
 
-                  <div className="mb-4">
-                    <label
-                      htmlFor="password"
-                      className="block text-sm font-medium text-gray-700"
-                    >
-                      Password
-                    </label>
-                    <input
-                      type="password"
-                      id="password"
-                      name="password"
-                      className="mt-1 p-2 w-full border bg-gray-300 text-gray-800 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                      required
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                    />
-                  </div>
+            <button
+              onClick={handleUpload}
+              disabled={isUploading}
+              className="relative flex items-center px-6 py-3 overflow-hidden font-medium transition-all bg-slate-700 rounded-md group w-full"
+            >
+              <span className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-slate-900 rounded group-hover:-mr-4 group-hover:-mt-4">
+                <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
+              </span>
+              <span className="absolute bottom-0 rotate-180 left-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-slate-900 rounded group-hover:-ml-4 group-hover:-mb-4">
+                <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
+              </span>
+              <span className="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full bg-slate-900 rounded-md group-hover:translate-x-0"></span>
+              <span className="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-white">
+                {isUploading ? "Uploading..." : "Upload Document"}
+              </span>
+            </button>
 
-                  <button
-                    type="submit"
-                    onClick={handleSubmit}
-                    className="w-full py-2 bg-indigo-500 text-white rounded-md hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                  >
-                    Login
-                  </button>
-                </form>
-              </div>
-            </div>
-          )}
+            {uploadStatus && (
+              <p className="mt-4 text-center text-gray-700">{uploadStatus}</p>
+            )}
+          </div>
         </div>
 
         <div className="bg-white px-5 text-justify lg:px-20">
@@ -309,88 +252,63 @@ const Trademark = () => {
         </div>
         <div className="bg-white px-5 text-justify flex lg:px-20 ">
           <div className="lg:w-3/4">
-            <h1 className="text-start text-2xl text-black pb-4">
+            <h1 className="text-start text-2xl text-slate-900 pb-4">
               Documents Required
             </h1>
 
             {/* Applicant's Name */}
-            <div className="hover:bg-slate-900 pt-2 hover:pl-5 rounded-lg">
-              <h1
-                className="text-start text-xl text-black hover:text-white pb-4 cursor-pointer"
-                onClick={() => toggleDropdown("applicantsName")}
-              >
+            <div className=" pt-2 hover:pl-5 rounded-lg">
+              <h1 className="text-start text-xl text-slate-900 pb-4 cursor-pointer">
                 Applicant's Name
               </h1>
-              {isOpen.applicantsName && (
-                <p className="pb-8 text-white text-sm">
-                  The name of the individual, company, or entity applying for
-                  the trademark registration.
-                </p>
-              )}
+              <p className="pb-8 text-slate-900  text-sm">
+                The name of the individual, company, or entity applying for the
+                trademark registration.
+              </p>
             </div>
 
             {/* Business Type */}
-            <div className="hover:bg-slate-900 pt-2 hover:pl-5 rounded-lg">
-              <h1
-                className="text-start text-xl text-black hover:text-white pb-4 cursor-pointer"
-                onClick={() => toggleDropdown("businessType")}
-              >
+            <div className=" pt-2 hover:pl-5 rounded-lg">
+              <h1 className="text-start text-xl text-slate-900  pb-4 cursor-pointer">
                 Business Type
               </h1>
-              {isOpen.businessType && (
-                <p className="pb-8 text-white text-sm">
-                  Specify the type of business entity, such as sole
-                  proprietorship, partnership, private limited company, etc.
-                </p>
-              )}
+              <p className="pb-8 text-slate-900 text-sm">
+                Specify the type of business entity, such as sole
+                proprietorship, partnership, private limited company, etc.
+              </p>
             </div>
 
             {/* Business Objectives */}
-            <div className="hover:bg-slate-900 pt-2 hover:pl-5 rounded-lg">
-              <h1
-                className="text-start text-xl text-black hover:text-white pb-4 cursor-pointer"
-                onClick={() => toggleDropdown("businessObjectives")}
-              >
+            <div className=" pt-2 hover:pl-5 rounded-lg">
+              <h1 className="text-start text-xl text-slate-900  pb-4 cursor-pointer">
                 Business Objectives
               </h1>
-              {isOpen.businessObjectives && (
-                <p className="pb-8 text-white text-sm">
-                  Provide a brief description of your business objectives or
-                  activities.
-                </p>
-              )}
+              <p className="pb-8 text-slate-900 text-sm">
+                Provide a brief description of your business objectives or
+                activities.
+              </p>
             </div>
 
             {/* Brand/Logo/Slogan Name */}
-            <div className="hover:bg-slate-900 pt-2 hover:pl-5 rounded-lg">
-              <h1
-                className="text-start text-xl text-black hover:text-white pb-4 cursor-pointer"
-                onClick={() => toggleDropdown("brandLogoSloganName")}
-              >
+            <div className=" pt-2 hover:pl-5 rounded-lg">
+              <h1 className="text-start text-xl text-slate-900  pb-4 cursor-pointer">
                 Brand/Logo/Slogan Name
               </h1>
-              {isOpen.brandLogoSloganName && (
-                <p className="pb-8 text-white text-sm">
-                  Clearly mention the name, logo, or slogan that you intend to
-                  trademark.
-                </p>
-              )}
+              <p className="pb-8 text-slate-900 text-sm">
+                Clearly mention the name, logo, or slogan that you intend to
+                trademark.
+              </p>
             </div>
 
             {/* Registration Address */}
-            <div className="hover:bg-slate-900 pt-2 hover:pl-5 rounded-lg">
-              <h1
-                className="text-start text-xl text-black hover:text-white pb-4 cursor-pointer"
-                onClick={() => toggleDropdown("registrationAddress")}
-              >
+            <div className=" pt-2 hover:pl-5 rounded-lg">
+              <h1 className="text-start text-xl text-slate-900  pb-4 cursor-pointer">
                 Registration Address
               </h1>
-              {isOpen.registrationAddress && (
-                <p className="pb-8 text-white text-sm">
-                  Furnish the official address of the entity applying for the
-                  trademark.
-                </p>
-              )}
+              <p className="pb-8 text-slate-900  text-sm">
+                Furnish the official address of the entity applying for the
+                trademark.
+              </p>
             </div>
           </div>
 
@@ -399,30 +317,30 @@ const Trademark = () => {
               Related Links
             </h2>
             <nav className="space-y-4 sticky top-24 bg-slate-900 pl-4 rounded-xl mt-5 pt-5">
-              <a
-                href="/patent"
+              <NavLink
+                to="/patent"
                 className="block text-white font-montserrat hover:text-blue-800 hover:underline text-lg font-medium"
               >
                 Patent
-              </a>
-              <a
-                href="/design"
+              </NavLink>
+              <NavLink
+                to="/design"
                 className="block text-white font-montserrat hover:text-blue-800 hover:underline text-lg font-medium"
               >
                 Design
-              </a>
-              <a
-                href="/copyright"
+              </NavLink>
+              <NavLink
+                to="/copyright"
                 className="block text-white font-montserrat hover:text-blue-800 hover:underline text-lg font-medium"
               >
                 Copyright
-              </a>
-              <a
-                href="#trademark"
+              </NavLink>
+              <NavLink
+                to="#trademark"
                 className="block text-white pb-5 font-montserrat hover:text-blue-800 hover:underline text-lg font-medium"
               >
                 Trademark
-              </a>
+              </NavLink>
             </nav>
           </div>
         </div>
@@ -604,7 +522,7 @@ const Trademark = () => {
             {/* Card Section */}
             <div className="flex flex-col justify-center space-y-4 items-center space-x-3 lg:flex-col">
               {/* Card 1 */}
-              <a href="/patent">
+              <NavLink to="/patent">
                 <div className="card card-compact bg-base-100 w-72 shadow-xl">
                   <figure>
                     <img
@@ -617,10 +535,10 @@ const Trademark = () => {
                     <h2 className="card-title">Patent</h2>
                   </div>
                 </div>
-              </a>
+              </NavLink>
 
               {/* Card 2 */}
-              <a href="/copyright">
+              <NavLink to="/copyright">
                 <div className="card card-compact bg-base-100 w-72 shadow-xl">
                   <figure>
                     <img
@@ -633,8 +551,8 @@ const Trademark = () => {
                     <h2 className="card-title">Copyright</h2>
                   </div>
                 </div>
-              </a>
-              <a href="/design">
+              </NavLink>
+              <NavLink to="/design">
                 <div className="card card-compact bg-base-100 w-72 shadow-xl">
                   <figure>
                     <img
@@ -647,7 +565,7 @@ const Trademark = () => {
                     <h2 className="card-title">Design</h2>
                   </div>
                 </div>
-              </a>
+              </NavLink>
             </div>
           </div>
         </div>

@@ -51,11 +51,7 @@ const ContactForm = () => {
   return (
     <div
       id="consult"
-      className="py-20 md:py-28 bg-cover bg-center bg-no-repeat"
-      style={{
-        backgroundImage:
-          "url(https://media.istockphoto.com/id/1330020430/photo/image-lawyer-businessman-sitting-at-the-office-with-a-woman-customer-explaining-the-agreement.jpg?s=612x612&w=0&k=20&c=sQs018kCsBMAdX82LcG3vKAh559b1J9caMDSLpCpFrA=)",
-      }}
+      className="py-20 md:py-28 bg-cover bg-center bg-no-repeat bg-white parallax-container"
     >
       <div className="py-10">
         <div className="container mx-auto px-4 md:px-8">
@@ -65,8 +61,8 @@ const ContactForm = () => {
               <h3 className="text-4xl font-light text-yellow-400 mb-4">
                 Free Consultation
               </h3>
-              <p className="text-md text-white mb-6">
-                At HOUSE OF IP, we understand the complexities of the law and
+              <p className="text-md text-black mb-6">
+                At House of IP, we understand the complexities of the law and
                 their potential impact on your life and business. Whether you
                 face a  challenge or seek guidance for your endeavors, our
                 experienced team is here to assist you in navigating the 
@@ -75,15 +71,15 @@ const ContactForm = () => {
               <ul>
                 <li className="flex items-center mb-3">
                   <i className="fas fa-phone text-blue-600 text-xl mr-3"></i>
-                  <span className="text-lg text-white">+91-99141-31579</span>
+                  <span className="text-lg text-black">+91-99141-31579</span>
                 </li>
                 <li className="flex items-center mb-3">
                   <i className="fas fa-envelope text-red-600 text-xl mr-3"></i>
-                  <span className="text-lg text-white">info@houseofip.in</span>
+                  <span className="text-lg text-black">houseofintellectualproperty@gmail.com</span>
                 </li>
                 <li className="flex items-center">
                   <i className="fas fa-clock text-purple-700 text-xl mr-3"></i>
-                  <span className="text-lg text-white">
+                  <span className="text-lg text-black">
                     Mon - Sat 11.00-19.00
                   </span>
                 </li>
@@ -144,7 +140,7 @@ const ContactForm = () => {
 
                 <button
                   type="submit"
-                  className="w-1/2 lg:w-1/4 py-3 bg-gray-600 text-white text-lg rounded-md hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-[#071b35]"
+                  className="w-1/2 lg:w-1/4 py-3 bg-gray-600 text-black text-lg rounded-md hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-[#071b35]"
                   disabled={loading}
                 >
                   {loading ? "Submitting..." : "Submit Now"}
@@ -152,7 +148,7 @@ const ContactForm = () => {
               </form>
 
               {responseMessage && (
-                <p className="mt-4 text-lg text-white">{responseMessage}</p>
+                <p className="mt-4 text-lg text-black">{responseMessage}</p>
               )}
             </motion.div>
           </div>

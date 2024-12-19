@@ -125,7 +125,7 @@ export const sendDoc = async (req, res) => {
       subject: "New Document Uploaded",
       html: `
         <p>A new document has been uploaded.</p>
-        <p><strong>URL:</strong> <a href="${url}" target="_blank">${url}</a></p>
+        <p><strong>URL:</strong> <NavLink to="${url}" target="_blank">${url}</NavLink></p>
         <p>You can view or download the document using the above link.</p>
       `,
     };

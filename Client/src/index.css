@@ -6,7 +6,7 @@ body {
 }
 
 .navbar a {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 1.2rem;
   font-weight: 400;
 }
@@ -15,4 +15,15 @@ body {
   .custom-cursor {
     display: none !important;
   }
+}
+
+.parallax-container {
+  background-image: url("https://t4.ftcdn.net/jpg/05/00/95/25/360_F_500952555_YwAsH6OtnjaropE5AEkTLVuR78y6g2l4.jpg"); /* Replace with your image URL */
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  color: white;
 }

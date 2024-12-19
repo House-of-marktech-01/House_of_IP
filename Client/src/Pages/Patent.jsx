@@ -5,6 +5,8 @@ import Cookies from "js-cookie";
 import { useDropzone } from "react-dropzone";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const Patent = () => {
   const [email, setEmail] = useState("");
@@ -23,6 +25,15 @@ const Patent = () => {
     nationalBiodiversity: false,
     sourceBiologicalMaterial: false,
   });
+  const { ref, inView } = useInView({
+    triggerOnce: true, // Animation triggers only once
+    threshold: 0.2, // Percentage of the element visible to trigger
+  });
+
+  const variants = {
+    hidden: { opacity: 0, y: 50 }, // Initial state
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } }, // Visible state
+  };
   const toggleDropdown = (section) => {
     setIsOpen((prevState) => ({
       ...prevState,
@@ -145,9 +156,9 @@ const Patent = () => {
               </p>
 
               <div className="flex items-center justify-between flex-wrap gap-2 border-y-2 mt-4 pt-4 pb-4 mb-5">
-                <a className="btn btn-link flex-none" href="/">
+                <NavLink className="btn btn-link flex-none" to="/">
                   Terms and conditions
-                </a>
+                </NavLink>
                 <div className="flex -space-x-2 pl-5 lg:justify-end">
                   <div className="flex">
                     <RWebShare
@@ -167,153 +178,112 @@ const Patent = () => {
             </div>
           </div>
 
-          {token ? (
-            <div className="max-w-lg mx-auto p-6 bg-gray-100 rounded-lg shadow-md">
-              <h2 className="text-2xl font-bold mb-4 text-center">
-                Upload Document
-              </h2>
+          <div className="max-w-lg mx-auto p-6 bg-slate-800 rounded-lg shadow-md">
+            <h2 className="text-2xl font-bold mb-4 text-center">
+              Upload Document
+            </h2>
 
-              <div
-                {...getRootProps()}
-                className="border-2 border-dashed border-gray-400 p-6 mb-4 text-center cursor-pointer bg-white rounded-md"
-              >
-                <input {...getInputProps()} />
-                <p className="text-gray-600">
-                  Drag & drop a document here, or click to select a file
+            <div
+              {...getRootProps()}
+              className="border-2 border-dashed border-slate-700 p-6 mb-4 text-center cursor-pointer bg-state-700 rounded-md"
+            >
+              <input {...getInputProps()} />
+              <p className="text-gray-200">
+                Drag & drop a document here, or click to select a file
+              </p>
+              {selectedFile && (
+                <p className="mt-2 text-gray-100">
+                  Selected File: {selectedFile.name}
                 </p>
-                {selectedFile && (
-                  <p className="mt-2 text-gray-800">
-                    Selected File: {selectedFile.name}
-                  </p>
-                )}
-              </div>
-
-              <button
-                onClick={handleUpload}
-                disabled={isUploading}
-                className="relative flex items-center px-6 py-3 overflow-hidden font-medium transition-all bg-indigo-500 rounded-md group w-full"
-              >
-                <span className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-indigo-700 rounded group-hover:-mr-4 group-hover:-mt-4">
-                  <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
-                </span>
-                <span className="absolute bottom-0 rotate-180 left-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-indigo-700 rounded group-hover:-ml-4 group-hover:-mb-4">
-                  <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
-                </span>
-                <span className="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full bg-indigo-600 rounded-md group-hover:translate-x-0"></span>
-                <span className="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-white">
-                  {isUploading ? "Uploading..." : "Upload Document"}
-                </span>
-              </button>
-
-              {uploadStatus && (
-                <p className="mt-4 text-center text-gray-700">{uploadStatus}</p>
               )}
             </div>
-          ) : (
-            <div className="hidden sm:flex flex-col w-2/10 justify-center items-center bg-gray-100">
-              <div className="bg-white p-8 rounded-lg">
-                <h2 className="text-2xl font-semibold text-center mb-6 text-gray-800">
-                  Login
-                </h2>
-                <form onSubmit={handleSubmit}>
-                  <div className="mb-4">
-                    <label
-                      htmlFor="email"
-                      className="block text-sm font-medium text-gray-700"
-                    >
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      className="mt-1 p-2 w-full border bg-gray-300 text-gray-800 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                      required
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                    />
-                  </div>
 
-                  <div className="mb-4">
-                    <label
-                      htmlFor="password"
-                      className="block text-sm font-medium text-gray-700"
-                    >
-                      Password
-                    </label>
-                    <input
-                      type="password"
-                      id="password"
-                      name="password"
-                      className="mt-1 p-2 w-full border bg-gray-300 text-gray-800 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                      required
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                    />
-                  </div>
+            <button
+              onClick={handleUpload}
+              disabled={isUploading}
+              className="relative flex items-center px-6 py-3 overflow-hidden font-medium transition-all bg-slate-700 rounded-md group w-full"
+            >
+              <span className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-slate-900 rounded group-hover:-mr-4 group-hover:-mt-4">
+                <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
+              </span>
+              <span className="absolute bottom-0 rotate-180 left-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-slate-900 rounded group-hover:-ml-4 group-hover:-mb-4">
+                <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
+              </span>
+              <span className="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full bg-slate-900 rounded-md group-hover:translate-x-0"></span>
+              <span className="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-white">
+                {isUploading ? "Uploading..." : "Upload Document"}
+              </span>
+            </button>
 
-                  <button
-                    type="submit"
-                    onClick={handleSubmit}
-                    className="w-full py-2 bg-indigo-500 text-white rounded-md hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                  >
-                    Login
-                  </button>
-                </form>
-              </div>
-            </div>
-          )}
+            {uploadStatus && (
+              <p className="mt-4 text-center text-gray-700">{uploadStatus}</p>
+            )}
+          </div>
         </div>
 
         <div className="bg-white px-5 text-justify lg:px-20">
-          <h1 className="text-center text-3xl text-black pb-4 pt-4">Patents</h1>
-          <p className="pb-8 text-gray-800 text-sm">
-            As a premier Intellectual Property (IP) law firm, House of IP offers
-            comprehensive patent filing and protection services tailored for
-            companies and inventors across a wide array of industries. Our
-            highly skilled team, comprising multi–domain experts, including
-            patent agents, engineers, and researchers, ensures top–tier patent
-            drafting, prosecution, and litigation support.
-          </p>
-          <p className="pb-8 text-gray-800 text-sm">
-            Our patent drafting services are meticulously crafted to suit the
-            uniqueness of each invention. This process involves conducting
-            exhaustive prior art and landscape searches, followed by in–depth
-            consultations with the inventor. We specialize in drafting both
-            provisional and complete specifications for submission to the Indian
-            Patent Office, as well as global filings through the Patent
-            Cooperation Treaty (PCT) or direct routes. Our expertise spans
-            multiple jurisdictions, including the Indian Patent Office, USPTO,
-            and EPO, enabling us to successfully navigate the complexities of
-            patent prosecution by addressing examiner objections with strong,
-            legally sound arguments.
-          </p>
-          <p className="pb-8 text-gray-800 text-sm">
-            For patent prosecution, our team excels in responding to examiner
-            queries and building compelling cases that highlight the inventive
-            merit of your application. We provide end-to-end guidance during
-            patent office hearings, ensuring inventors are thoroughly briefed to
-            navigate these critical moments confidently.
-          </p>
-          <p className="pb-8 text-gray-800 text-sm">
-            On the litigation front, we analyse cited prior art in opposition
-            and revocation cases, prepare robust written responses, affidavits,
-            and deliver compelling arguments during oral hearings. We also
-            handle patent appeals, counterclaims, and revocation proceedings
-            across various High Courts, ensuring clients receive strategic
-            representation. Our litigation support teams are experienced in
-            nullifying opposition filings and revocation requests through solid
-            evidence and courtroom advocacy.
-          </p>
-          <p className="pb-8 text-gray-800 text-sm">
-            To maximize the value of your patents, our IP commercialization
-            experts provide services such as landscape mapping, patent
-            valuation, due diligence, and the development of monetization
-            strategies through licensing or technology transfers. Trusted by
-            leading companies, universities, and research institutions across
-            India, we help secure and unlock the full potential of your
-            intellectual property.
-          </p>
+          <motion.div
+            ref={ref}
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"}
+            variants={variants}
+            className="parallax-bg bg-fixed bg-cover bg-center"
+            style={{
+              backgroundImage: "url('your-image-url.jpg')", // Replace with your image URL
+            }}
+          >
+            <h1 className="text-center text-3xl text-black pb-4 pt-4">
+              Patents
+            </h1>
+            <p className="pb-8 text-gray-800 text-sm">
+              As a premier Intellectual Property (IP) law firm, House of IP
+              offers comprehensive patent filing and protection services
+              tailored for companies and inventors across a wide array of
+              industries. Our highly skilled team, comprising multi–domain
+              experts, including patent agents, engineers, and researchers,
+              ensures top–tier patent drafting, prosecution, and litigation
+              support.
+            </p>
+            <p className="pb-8 text-gray-800 text-sm">
+              Our patent drafting services are meticulously crafted to suit the
+              uniqueness of each invention. This process involves conducting
+              exhaustive prior art and landscape searches, followed by in–depth
+              consultations with the inventor. We specialize in drafting both
+              provisional and complete specifications for submission to the
+              Indian Patent Office, as well as global filings through the Patent
+              Cooperation Treaty (PCT) or direct routes. Our expertise spans
+              multiple jurisdictions, including the Indian Patent Office, USPTO,
+              and EPO, enabling us to successfully navigate the complexities of
+              patent prosecution by addressing examiner objections with strong,
+              legally sound arguments.
+            </p>
+            <p className="pb-8 text-gray-800 text-sm">
+              For patent prosecution, our team excels in responding to examiner
+              queries and building compelling cases that highlight the inventive
+              merit of your application. We provide end-to-end guidance during
+              patent office hearings, ensuring inventors are thoroughly briefed
+              to navigate these critical moments confidently.
+            </p>
+            <p className="pb-8 text-gray-800 text-sm">
+              On the litigation front, we analyse cited prior art in opposition
+              and revocation cases, prepare robust written responses,
+              affidavits, and deliver compelling arguments during oral hearings.
+              We also handle patent appeals, counterclaims, and revocation
+              proceedings across various High Courts, ensuring clients receive
+              strategic representation. Our litigation support teams are
+              experienced in nullifying opposition filings and revocation
+              requests through solid evidence and courtroom advocacy.
+            </p>
+            <p className="pb-8 text-gray-800 text-sm">
+              To maximize the value of your patents, our IP commercialization
+              experts provide services such as landscape mapping, patent
+              valuation, due diligence, and the development of monetization
+              strategies through licensing or technology transfers. Trusted by
+              leading companies, universities, and research institutions across
+              India, we help secure and unlock the full potential of your
+              intellectual property.
+            </p>
+          </motion.div>
         </div>
         <div className="bg-white px-5 text-justify flex lg:px-20 ">
           <div className="w-full lg:w-3/4">
@@ -322,178 +292,133 @@ const Patent = () => {
             </h1>
 
             {/* Patent Registration */}
-            <div className="hover:bg-slate-900 pt-2 hover:pl-5 rounded-lg">
-              <h1
-                className="text-start text-xl text-black hover:text-white pb-4 cursor-pointer"
-                onClick={() => toggleDropdown("patentRegistration")}
-              >
+            <div className=" pt-2 hover:pl-5 rounded-lg">
+              <h1 className="text-start text-xl text-black  pb-4">
                 Patent Registration Application
               </h1>
-              {isOpen.patentRegistration && (
-                <p className="pb-8 text-white text-sm">Form-1.</p>
-              )}
+              <p className="pb-8 text-black text-sm">Form-1.</p>
             </div>
 
             {/* Complete Specifications */}
-            <div className="hover:bg-slate-900 pt-2 hover:pl-5 rounded-lg">
-              <h1
-                className="text-start text-xl text-black hover:text-white pb-4 cursor-pointer"
-                onClick={() => toggleDropdown("specifications")}
-              >
+            <div className="pt-2 hover:pl-5 rounded-lg">
+              <h1 className="text-start text-xl text-black  pb-4">
                 Complete Specifications
               </h1>
-              {isOpen.specifications && (
-                <p className="pb-8 text-white text-sm">
-                  Form-2. In the absence of complete specifications, a
-                  provisional specification can be submitted.
-                </p>
-              )}
+              <p className="pb-8 text-black text-sm">
+                Form-2. In the absence of complete specifications, a provisional
+                specification can be submitted.
+              </p>
             </div>
 
             {/* Statement and Undertaking */}
-            <div className="hover:bg-slate-900 pt-2 hover:pl-5 rounded-lg">
-              <h1
-                className="text-start text-xl text-black hover:text-white pb-4 cursor-pointer"
-                onClick={() => toggleDropdown("statementUndertaking")}
-              >
+            <div className="pt-2 hover:pl-5 rounded-lg">
+              <h1 className="text-start text-xl text-black pb-4">
                 Statement and Undertaking
               </h1>
-              {isOpen.statementUndertaking && (
-                <p className="pb-8 text-whitetext-sm">Form-3.</p>
-              )}
+              <p className="pb-8 text-black text-sm">Form-3.</p>
             </div>
 
             {/* Inventor's Declaration */}
-            <div className="hover:bg-slate-900 pt-2 hover:pl-5 rounded-lg">
-              <h1
-                className="text-start text-xl text-black hover:text-white pb-4 cursor-pointer"
-                onClick={() => toggleDropdown("inventorsDeclaration")}
-              >
+            <div className=" pt-2 hover:pl-5 rounded-lg">
+              <h1 className="text-start text-xl text-black  pb-4">
                 Inventor's Declaration
               </h1>
-              {isOpen.inventorsDeclaration && (
-                <p className="pb-8 text-white text-sm">
-                  A declaration from the inventor clarifying the details of the
-                  invention and its originality, provided in Form-5.
-                </p>
-              )}
+              <p className="pb-8 text-black text-sm">
+                A declaration from the inventor clarifying the details of the
+                invention and its originality, provided in Form-5.
+              </p>
             </div>
 
             {/* Proof of Right */}
-            <div className="hover:bg-slate-900 pt-2 hover:pl-5 rounded-lg">
-              <h1
-                className="text-start text-xl text-black hover:text-white pb-4 cursor-pointer"
-                onClick={() => toggleDropdown("proofOfRight")}
-              >
+            <div className=" pt-2 hover:pl-5 rounded-lg">
+              <h1 className="text-start text-xl text-black  pb-4">
                 Proof of Right
               </h1>
-              {isOpen.proofOfRight && (
-                <p className="pb-8 text-white text-sm">
-                  Documentation from the inventor confirming the applicant's
-                  right to apply for the patent registration.
-                </p>
-              )}
+              <p className="pb-8 text-black text-sm">
+                Documentation from the inventor confirming the applicant's right
+                to apply for the patent registration.
+              </p>
             </div>
 
             {/* Power of Authority */}
-            <div className="hover:bg-slate-900 pt-2 hover:pl-5 rounded-lg">
-              <h1
-                className="text-start text-xl text-black hover:text-white pb-4 cursor-pointer"
-                onClick={() => toggleDropdown("powerOfAuthority")}
-              >
+            <div className=" pt-2 hover:pl-5 rounded-lg">
+              <h1 className="text-start text-xl text-black  pb-4">
                 Power of Authority
               </h1>
-              {isOpen.powerOfAuthority && (
-                <p className="pb-8 text-white text-sm">
-                  If a patent agent or legal representative is submitting the
-                  patent application, then Form-26, a power of authority, is
-                  required.
-                </p>
-              )}
+              <p className="pb-8 text-black text-sm">
+                If a patent agent or legal representative is submitting the
+                patent application, then Form-26, a power of authority, is
+                required.
+              </p>
             </div>
 
             {/* Priority Documents */}
-            <div className="hover:bg-slate-900 pt-2 hover:pl-5 rounded-lg">
-              <h1
-                className="text-start text-xl text-black hover:text-white pb-4 cursor-pointer"
-                onClick={() => toggleDropdown("priorityDocuments")}
-              >
+            <div className=" pt-2 hover:pl-5 rounded-lg">
+              <h1 className="text-start text-xl text-black  pb-4">
                 Priority Documents
               </h1>
-              {isOpen.priorityDocuments && (
-                <p className="pb-8 text-white text-sm">
-                  For convention applications (from the Paris Convention) or PCT
-                  (Patent Cooperation Treaty) national phase applications, it's
-                  imperative to present priority documents. These can be
-                  provided with the initial submission or within 18 months from
-                  the priority date.
-                </p>
-              )}
+              <p className="pb-8 text-black text-sm">
+                For convention applications (from the Paris Convention) or PCT
+                (Patent Cooperation Treaty) national phase applications, it's
+                imperative to present priority documents. These can be provided
+                with the initial submission or within 18 months from the
+                priority date.
+              </p>
             </div>
 
             {/* Permission from National Biodiversity Authority */}
-            <div className="hover:bg-slate-900 pt-2 hover:pl-5 rounded-lg">
-              <h1
-                className="text-start text-xl text-black hover:text-white pb-4 cursor-pointer"
-                onClick={() => toggleDropdown("nationalBiodiversity")}
-              >
+            <div className=" pt-2 hover:pl-5 rounded-lg">
+              <h1 className="text-start text-xl text-black  pb-4">
                 Permission from National Biodiversity Authority
               </h1>
-              {isOpen.nationalBiodiversity && (
-                <p className="pb-8 text-white text-sm">
-                  If the application involves biological material sourced from
-                  India, obtaining permission from the National Biodiversity
-                  Authority is mandatory.
-                </p>
-              )}
+              <p className="pb-8 text-black text-sm">
+                If the application involves biological material sourced from
+                India, obtaining permission from the National Biodiversity
+                Authority is mandatory.
+              </p>
             </div>
 
             {/* Source of Biological Material */}
-            <div className="hover:bg-slate-900 pt-2 hover:pl-5 rounded-lg">
-              <h1
-                className="text-start text-xl text-black hover:text-white pb-4 cursor-pointer"
-                onClick={() => toggleDropdown("sourceBiologicalMaterial")}
-              >
+            <div className=" pt-2 hover:pl-5 rounded-lg">
+              <h1 className="text-start text-xl text-black  pb-4">
                 Source of Biological Material
               </h1>
-              {isOpen.sourceBiologicalMaterial && (
-                <p className="pb-8 text-white text-sm">
-                  The patent application should specify the source or origin of
-                  any biological material mentioned in the specifications.
-                </p>
-              )}
+              <p className="pb-8 text-black text-sm">
+                The patent application should specify the source or origin of
+                any biological material mentioned in the specifications.
+              </p>
             </div>
           </div>
 
-          <div className="hidden lg:block lg:w-1/4 px-10 pl-16">
+          <div className="hidden lg:block lg:w-1/3 px-10 pl-16">
             <h2 className="text-slate-900 font-medium text-2xl pb-5 bg-white pl-4 pt-4 rounded-t-xl rounded-b-xl">
               Related Links
             </h2>
             <nav className="space-y-4 sticky top-24 bg-slate-900 pl-4 rounded-xl mt-5 pt-5">
-              <a
-                href="/patent"
+              <NavLink
+                to="/patent"
                 className="block text-white font-montserrat hover:text-blue-800 hover:underline text-lg font-medium"
               >
                 Patent
-              </a>
-              <a
-                href="/design"
+              </NavLink>
+              <NavLink
+                to="/design"
                 className="block text-white font-montserrat hover:text-blue-800 hover:underline text-lg font-medium"
               >
                 Design
-              </a>
-              <a
-                href="/copyright"
+              </NavLink>
+              <NavLink
+                to="/copyright"
                 className="block text-white font-montserrat hover:text-blue-800 hover:underline text-lg font-medium"
               >
                 Copyright
-              </a>
-              <a
-                href="#trademark"
-                className="block text-white font-montserrat hover:text-blue-800 hover:underline text-lg font-medium"
+              </NavLink>
+              <NavLink
+                to="#trademark"
+                className="block text-white pb-5 font-montserrat hover:text-blue-800 hover:underline text-lg font-medium"
               >
                 Trademark
-              </a>
+              </NavLink>
             </nav>
           </div>
         </div>
@@ -716,7 +641,7 @@ const Patent = () => {
             {/* Card Section */}
             <div className="flex flex-col justify-center space-y-4 items-center space-x-3 lg:flex-col">
               {/* Card 1 */}
-              <a href="/trademark">
+              <NavLink to="/trademark">
                 <div className="card card-compact bg-base-100 w-72 shadow-xl">
                   <figure>
                     <img
@@ -729,10 +654,10 @@ const Patent = () => {
                     <h2 className="card-title">Trademark</h2>
                   </div>
                 </div>
-              </a>
+              </NavLink>
 
               {/* Card 2 */}
-              <a href="/copyright">
+              <NavLink to="/copyright">
                 <div className="card card-compact bg-base-100 w-72 shadow-xl">
                   <figure>
                     <img
@@ -745,8 +670,8 @@ const Patent = () => {
                     <h2 className="card-title">Copyright</h2>
                   </div>
                 </div>
-              </a>
-              <a href="/design">
+              </NavLink>
+              <NavLink to="/design">
                 <div className="card card-compact bg-base-100 w-72 shadow-xl">
                   <figure>
                     <img
@@ -759,7 +684,7 @@ const Patent = () => {
                     <h2 className="card-title">Design</h2>
                   </div>
                 </div>
-              </a>
+              </NavLink>
             </div>
           </div>
         </div>

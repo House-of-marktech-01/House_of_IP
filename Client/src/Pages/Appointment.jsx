@@ -55,7 +55,7 @@ const Appointment = () => {
               className="text-blue-500 hover:underline ml-1"
             >
               Ownersemailid@gmail.com
-            </a>
+            </NavLink>
           </p>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const OurStory = () => {
   const videoRef = useRef(null);
@@ -88,10 +89,10 @@ const OurStory = () => {
                   across intellectual property, civil, criminal, and matrimonial
                   law, ensuring that you receive the best assistance
                   tailored to your needs.
-                  <a className="text-blue-600 hover:underline" href="/about">
+                  <NavLink className="text-blue-600 hover:underline" to="/about">
                     {" "}
                     about House of IP.
-                  </a>
+                  </NavLink>
                 </p>
               </div>
             </div>

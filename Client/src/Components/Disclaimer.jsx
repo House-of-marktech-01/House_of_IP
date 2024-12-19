@@ -10,7 +10,7 @@ const DisclaimerModal = ({ onClose }) => {
           from advertising or soliciting work through communication in the
           public domain. This website is not a means for advertisement or
           solicitation. Its sole purpose is to provide you the information you
-          seek. JustiSphereX Legal has no intention to advertise or solicit
+          seek. House of IP has no intention to advertise or solicit
           clients through this website. Please note that all decisions you take
           from the information provided in the website are your personal
           decisions and we will bear no responsibility towards them. By clicking

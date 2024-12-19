@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../Components/Button";
+import { NavLink } from "react-router-dom";
 
 const Card = () => {
   return (
@@ -32,9 +33,9 @@ const Card = () => {
             Protect your brand with our expert trademark registration and
             defense services.
           </p>
-          <a href="/trademark">
+          <NavLink to="/trademark">
             <Button />
-          </a>
+          </NavLink>
         </div>
       </div>
       <div className="group max-w-sm mx-auto bg-white rounded-lg shadow-lg overflow-hidden md:max-w-md lg:max-w-lg relative">
@@ -65,9 +66,9 @@ const Card = () => {
             Safeguard your creative works with our specialized copyright
             registration.
           </p>
-          <a href="/copyright">
+          <NavLink to="/copyright">
             <Button />
-          </a>
+          </NavLink>
         </div>
       </div>
       <div className="group max-w-sm mx-auto bg-white rounded-lg shadow-lg overflow-hidden md:max-w-md lg:max-w-lg relative">
@@ -97,9 +98,9 @@ const Card = () => {
           <p className="text-sm text-gray-600 group-hover:text-gray-300 leading-relaxed mb-4 relative z-20">
             Protect your unique product designs with our expert legal services.
           </p>
-          <a href="/design">
+          <NavLink to="/design">
             <Button />
-          </a>
+          </NavLink>
         </div>
       </div>
       <div className="group max-w-sm mx-auto bg-white rounded-lg shadow-lg overflow-hidden md:max-w-md lg:max-w-lg relative">
@@ -130,9 +131,9 @@ const Card = () => {
             Secure your innovations with our comprehensive patent filing and
             protection.
           </p>
-          <a href="/patent">
+          <NavLink to="/patent">
             <Button />
-          </a>
+          </NavLink>
         </div>
       </div>
     </div>

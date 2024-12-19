@@ -213,6 +213,12 @@ const Navbar = () => {
                 {/* Dropdown */}
                 <div className="absolute left-0 bg-white shadow-lg rounded-lg w-48 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none group-hover:pointer-events-auto">
                   <NavLink
+                    to="/trademark"
+                    className="block px-4 py-2 hover:bg-slate-800 text-gray-700 hover:text-gray-300"
+                  >
+                    Trademark
+                  </NavLink>
+                  <NavLink
                     to="/copyright"
                     className="block px-4 py-2 hover:bg-slate-800 text-gray-700 hover:text-gray-300"
                   >
@@ -229,12 +235,6 @@ const Navbar = () => {
                     className="block px-4 py-2 hover:bg-slate-800 text-gray-700 hover:text-gray-300"
                   >
                     Patent
-                  </NavLink>
-                  <NavLink
-                    to="/trademark"
-                    className="block px-4 py-2 hover:bg-slate-800 text-gray-700 hover:text-gray-300"
-                  >
-                    Trademark
                   </NavLink>
                 </div>
               </div>
@@ -456,7 +456,9 @@ const Navbar = () => {
                 onMouseLeave={() => setIsServicesOpen(false)}
               >
                 <div className="flex justify-between items-center cursor-pointer">
-                  <NavLink to="/practice"><span className="text-gray-500">Services</span></NavLink>
+                  <NavLink to="/practice">
+                    <span className="text-gray-500">Services</span>
+                  </NavLink>
                   {isServicesOpen ? <FiMinus /> : <FiPlus />}
                 </div>
                 {isServicesOpen && (

@@ -62,40 +62,37 @@ const Design = () => {
       setSelectedFile(acceptedFiles[0]);
     },
   });
-  
-
-  
 
   const handleUpload = async () => {
     if (!selectedFile) {
       toast.error("Please select a document to upload!");
       return;
     }
-  
+
     const formData = new FormData();
     formData.append("file", selectedFile); // Append the file
     formData.append("upload_preset", "houseofip"); // Replace with your preset
     formData.append("cloud_name", "dqkzwt6oe"); // Replace with your Cloudinary cloud name
     formData.append("folder", "documents"); // Optional: specify a folder in Cloudinary
-  
+
     try {
       setIsUploading(true);
       setUploadStatus("");
-  
+
       // Make POST request to Cloudinary API
       const response = await axios.post(
         "https://api.cloudinary.com/v1_1/dqkzwt6oe/raw/upload", // Endpoint for uploading raw files
         formData
       );
-  
+
       const uploadedUrl = response.data.secure_url; // URL of the uploaded document
-      toast.success("Document uploaded successfully")
-      setSelectedFile(null)
+      toast.success("Document uploaded successfully");
+      setSelectedFile(null);
       console.log("Uploaded Document URL:", uploadedUrl);
-  
+
       // Optionally send the uploaded URL to your backend
       // await axios.post("http://localhost:5000/api/users/save-doc-url", { url: uploadedUrl });
-      await axios.post('http://localhost:5000/api/users/upload-url', {
+      await axios.post("http://localhost:5000/api/users/upload-url", {
         url: uploadedUrl, // The Cloudinary URL
       });
     } catch (error) {
@@ -105,7 +102,6 @@ const Design = () => {
       setIsUploading(false);
     }
   };
-  
 
   return (
     <>
@@ -147,9 +143,9 @@ const Design = () => {
               </p>
 
               <div className="flex items-center justify-between flex-wrap gap-2 border-y-2 mt-4 pt-4 pb-4 mb-5">
-                <a className="btn btn-link flex-none" href="/">
+                <NavLink className="btn btn-link flex-none" to="/">
                   Terms and conditions
-                </a>
+                </NavLink>
                 <div className="flex -space-x-2 pl-5 lg:justify-end">
                   <div className="flex">
                     <RWebShare
@@ -169,108 +165,53 @@ const Design = () => {
             </div>
           </div>
 
-          {token ? (
-            <div className="max-w-lg mx-auto p-6 bg-gray-100 rounded-lg shadow-md">
-              <h2 className="text-2xl font-bold mb-4 text-center">
-                Upload Document
-              </h2>
+          <div className="max-w-lg mx-auto p-6 bg-slate-800 rounded-lg shadow-md">
+            <h2 className="text-2xl font-bold mb-4 text-center">
+              Upload Document
+            </h2>
 
-              <div
-                {...getRootProps()}
-                className="border-2 border-dashed border-gray-400 p-6 mb-4 text-center cursor-pointer bg-white rounded-md"
-              >
-                <input {...getInputProps()} />
-                <p className="text-gray-600">
-                  Drag & drop a document here, or click to select a file
+            <div
+              {...getRootProps()}
+              className="border-2 border-dashed border-slate-700 p-6 mb-4 text-center cursor-pointer bg-state-700 rounded-md"
+            >
+              <input {...getInputProps()} />
+              <p className="text-gray-200">
+                Drag & drop a document here, or click to select a file
+              </p>
+              {selectedFile && (
+                <p className="mt-2 text-gray-100">
+                  Selected File: {selectedFile.name}
                 </p>
-                {selectedFile && (
-                  <p className="mt-2 text-gray-800">
-                    Selected File: {selectedFile.name}
-                  </p>
-                )}
-              </div>
-
-              <button
-                onClick={handleUpload}
-                disabled={isUploading}
-                className="relative flex items-center px-6 py-3 overflow-hidden font-medium transition-all bg-indigo-500 rounded-md group w-full"
-              >
-                <span className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-indigo-700 rounded group-hover:-mr-4 group-hover:-mt-4">
-                  <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
-                </span>
-                <span className="absolute bottom-0 rotate-180 left-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-indigo-700 rounded group-hover:-ml-4 group-hover:-mb-4">
-                  <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
-                </span>
-                <span className="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full bg-indigo-600 rounded-md group-hover:translate-x-0"></span>
-                <span className="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-white">
-                  {isUploading ? "Uploading..." : "Upload Document"}
-                </span>
-              </button>
-
-              {uploadStatus && (
-                <p className="mt-4 text-center text-gray-700">{uploadStatus}</p>
               )}
             </div>
-          ) : (
-            <div className="hidden sm:flex flex-col w-2/10 justify-center items-center bg-gray-100">
-              <div className="bg-white p-8 rounded-lg">
-                <h2 className="text-2xl font-semibold text-center mb-6 text-gray-800">
-                  Login
-                </h2>
-                <form onSubmit={handleSubmit}>
-                  <div className="mb-4">
-                    <label
-                      htmlFor="email"
-                      className="block text-sm font-medium text-gray-700"
-                    >
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      className="mt-1 p-2 w-full border bg-gray-300 text-gray-800 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                      required
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                    />
-                  </div>
 
-                  <div className="mb-4">
-                    <label
-                      htmlFor="password"
-                      className="block text-sm font-medium text-gray-700"
-                    >
-                      Password
-                    </label>
-                    <input
-                      type="password"
-                      id="password"
-                      name="password"
-                      className="mt-1 p-2 w-full border bg-gray-300 text-gray-800 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                      required
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                    />
-                  </div>
+            <button
+              onClick={handleUpload}
+              disabled={isUploading}
+              className="relative flex items-center px-6 py-3 overflow-hidden font-medium transition-all bg-slate-700 rounded-md group w-full"
+            >
+              <span className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-slate-900 rounded group-hover:-mr-4 group-hover:-mt-4">
+                <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
+              </span>
+              <span className="absolute bottom-0 rotate-180 left-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-slate-900 rounded group-hover:-ml-4 group-hover:-mb-4">
+                <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
+              </span>
+              <span className="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full bg-slate-900 rounded-md group-hover:translate-x-0"></span>
+              <span className="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-white">
+                {isUploading ? "Uploading..." : "Upload Document"}
+              </span>
+            </button>
 
-                  <button
-                    type="submit"
-                    onClick={handleSubmit}
-                    className="w-full py-2 bg-indigo-500 text-white rounded-md hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                  >
-                    Login
-                  </button>
-                </form>
-              </div>
-            </div>
-          )}
+            {uploadStatus && (
+              <p className="mt-4 text-center text-gray-700">{uploadStatus}</p>
+            )}
+          </div>
         </div>
 
         <div className="bg-white px-5 text-justify lg:px-20">
           <h1 className="text-center text-3xl text-black pb-4 pt-4">Design</h1>
           <p className="pb-8 text-gray-800 text-sm">
-            At JustiSphereX Legal, we offer comprehensive design registration
+            At House of IP, we offer comprehensive design registration
             services to help protect the visual aspects of your product. A
             registered design under the Designs Act, 2000 safeguards the unique
             shape, pattern, configuration, or ornamentation of your product,
@@ -294,84 +235,58 @@ const Design = () => {
             </h1>
 
             {/* Applicant's Details */}
-            <div className="hover:bg-slate-900 pt-2 hover:pl-5 rounded-lg">
-              <h1
-                className="text-start text-xl text-black hover:text-white pb-4 cursor-pointer"
-                onClick={() => toggleDropdown("applicantsDetails")}
-              >
+            <div className=" pt-2 hover:pl-5 rounded-lg">
+              <h1 className="text-start text-xl text-black  pb-4">
                 Applicant's Details
               </h1>
-              {isOpen.applicantsDetails && (
-                <p className="pb-8 text-white text-sm">
-                  Name and complete address of the applicant.
-                </p>
-              )}
+              <p className="pb-8 text-black text-sm">
+                Name and complete address of the applicant.
+              </p>
             </div>
 
             {/* Applicant's Nature/Status */}
-            <div className="hover:bg-slate-900 pt-2 hover:pl-5 rounded-lg">
-              <h1
-                className="text-start text-xl text-black hover:text-white pb-4 cursor-pointer"
-                onClick={() => toggleDropdown("applicantsNatureStatus")}
-              >
+            <div className=" pt-2 hover:pl-5 rounded-lg">
+              <h1 className="text-start text-xl text-black  pb-4">
                 Applicant's Nature/Status
               </h1>
-              {isOpen.applicantsNatureStatus && (
-                <p className="pb-8 text-white text-sm">
-                  Clear indication of the legal status of the applicant,
-                  specifying whether the applicant is an individual, a company,
-                  etc.
-                </p>
-              )}
+              <p className="pb-8 text-black text-sm">
+                Clear indication of the legal status of the applicant,
+                specifying whether the applicant is an individual, a company,
+                etc.
+              </p>
             </div>
 
             {/* Startup Certificate (if applicable) */}
-            <div className="hover:bg-slate-900 pt-2 hover:pl-5 rounded-lg">
-              <h1
-                className="text-start text-xl text-black hover:text-white pb-4 cursor-pointer"
-                onClick={() => toggleDropdown("startupCertificate")}
-              >
+            <div className=" pt-2 hover:pl-5 rounded-lg">
+              <h1 className="text-start text-xl text-black  pb-4">
                 Startup Certificate (if applicable)
               </h1>
-              {isOpen.startupCertificate && (
-                <p className="pb-8 text-white text-sm">
-                  Startups must provide a registration certificate.
-                </p>
-              )}
+              <p className="pb-8 text-black text-sm">
+                Startups must provide a registration certificate.
+              </p>
             </div>
 
             {/* Description of the Article */}
-            <div className="hover:bg-slate-900 pt-2 hover:pl-5 rounded-lg">
-              <h1
-                className="text-start text-xl text-black hover:text-white pb-4 cursor-pointer"
-                onClick={() => toggleDropdown("descriptionOfArticle")}
-              >
+            <div className=" pt-2 hover:pl-5 rounded-lg">
+              <h1 className="text-start text-xl text-black  pb-4">
                 Description of the Article
               </h1>
-              {isOpen.descriptionOfArticle && (
-                <p className="pb-8 text-white text-sm">
-                  A detailed description of the 'article' to which the design
-                  pertains, accompanied by its classification according to the
-                  prescribed categories.
-                </p>
-              )}
+              <p className="pb-8 text-black text-sm">
+                A detailed description of the 'article' to which the design
+                pertains, accompanied by its classification according to the
+                prescribed categories.
+              </p>
             </div>
 
             {/* Visual Representation */}
-            <div className="hover:bg-slate-900 pt-2 hover:pl-5 rounded-lg">
-              <h1
-                className="text-start text-xl text-black hover:text-white pb-4 cursor-pointer"
-                onClick={() => toggleDropdown("visualRepresentation")}
-              >
+            <div className=" pt-2 hover:pl-5 rounded-lg">
+              <h1 className="text-start text-xl text-black  pb-4">
                 Visual Representation
               </h1>
-              {isOpen.visualRepresentation && (
-                <p className="pb-8 text-white text-sm">
-                  A minimum of four visuals (images or drawings) showing the
-                  article from all angles should be included with the
-                  application.
-                </p>
-              )}
+              <p className="pb-8 text-black text-sm">
+                A minimum of four visuals (images or drawings) showing the
+                article from all angles should be included with the application.
+              </p>
             </div>
           </div>
 
@@ -380,30 +295,30 @@ const Design = () => {
               Related Links
             </h2>
             <nav className="space-y-4 sticky top-24 bg-slate-900 pl-4 rounded-xl mt-5 pt-5">
-              <a
-                href="/patent"
+              <NavLink
+                to="/patent"
                 className="block text-white font-montserrat hover:text-blue-800 hover:underline text-lg font-medium"
               >
                 Patent
-              </a>
-              <a
-                href="/design"
+              </NavLink>
+              <NavLink
+                to="/design"
                 className="block text-white font-montserrat hover:text-blue-800 hover:underline text-lg font-medium"
               >
                 Design
-              </a>
-              <a
-                href="/copyright"
+              </NavLink>
+              <NavLink
+                to="/copyright"
                 className="block text-white font-montserrat hover:text-blue-800 hover:underline text-lg font-medium"
               >
                 Copyright
-              </a>
-              <a
-                href="#trademark"
+              </NavLink>
+              <NavLink
+                to="#trademark"
                 className="block text-white pb-5 font-montserrat hover:text-blue-800 hover:underline text-lg font-medium"
               >
                 Trademark
-              </a>
+              </NavLink>
             </nav>
           </div>
         </div>
@@ -460,7 +375,7 @@ const Design = () => {
                 <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-lg transition">
                   <span className="font-medium text-white">
                     What is the process of registering a design with
-                    JustiSphereX Legal?
+                    House of IP?
                   </span>
                   <span className="transition-transform group-open:rotate-180">
                     &#9660;
@@ -514,7 +429,7 @@ const Design = () => {
                 </summary>
                 <div className="transition-all duration-300 ease-in-out overflow-hidden max-h-0 group-open:max-h-96">
                   <p className="mt-2 px-4 text-black text-sm">
-                    At JustiSphereX Legal, we help you take swift legal action
+                    At House of IP, we help you take swift legal action
                     if your registered design is copied. Our team assists in
                     filing design infringement cases, preparing legal documents,
                     and representing you in court to ensure your design rights
@@ -536,7 +451,7 @@ const Design = () => {
                   <p className="mt-2 px-4 text-black">
                     Registering your design not only protects it but also allows
                     you to explore commercialization opportunities. Our experts
-                    at JustiSphereX Legal help you:
+                    at House of IP help you:
                   </p>
                   <ul className="mt-2 px-4 list-disc list-inside text-black">
                     <li>
@@ -555,7 +470,7 @@ const Design = () => {
               <details className="group overflow-hidden pb-10">
                 <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-lg transition">
                   <span className="font-medium text-white">
-                    How do I know if JustiSphereX Legal is the right firm for
+                    How do I know if House of IP is the right firm for
                     design protection?
                   </span>
                   <span className="transition-transform group-open:rotate-180">
@@ -634,7 +549,7 @@ const Design = () => {
             {/* Card Section */}
             <div className="flex flex-col justify-center space-y-4 items-center space-x-3 lg:flex-col">
               {/* Card 1 */}
-              <a href="/patent">
+              <NavLink to="/patent">
                 <div className="card card-compact bg-base-100 w-72 shadow-xl">
                   <figure>
                     <img
@@ -647,10 +562,10 @@ const Design = () => {
                     <h2 className="card-title">Patent</h2>
                   </div>
                 </div>
-              </a>
+              </NavLink>
 
               {/* Card 2 */}
-              <a href="/copyright">
+              <NavLink to="/copyright">
                 <div className="card card-compact bg-base-100 w-72 shadow-xl">
                   <figure>
                     <img
@@ -663,8 +578,8 @@ const Design = () => {
                     <h2 className="card-title">Copyright</h2>
                   </div>
                 </div>
-              </a>
-              <a href="/trademark">
+              </NavLink>
+              <NavLink to="/trademark">
                 <div className="card card-compact bg-base-100 w-72 shadow-xl">
                   <figure>
                     <img
@@ -677,7 +592,7 @@ const Design = () => {
                     <h2 className="card-title">Trademark</h2>
                   </div>
                 </div>
-              </a>
+              </NavLink>
             </div>
           </div>
         </div>

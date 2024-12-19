@@ -1,9 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import ContactForm from "../Components/ContactForm";
-
 import { NavLink } from "react-router-dom";
 import Card from "../Components/Card";
+
 const Practice = () => {
   return (
     <>
@@ -65,12 +65,12 @@ const Practice = () => {
             Let us help you!
           </h2>
           <p className="text-lg text-gray-100">Book an appointment with us!</p>
-          <a
-            href="http://calendly.com/justispherexlegal/book-an-appointment"
+          <NavLink
+            to="http://calendly.com/justispherexlegal/book-an-appointment"
             className="bg-blue-600 text-white py-3 px-6 rounded-lg shadow-md hover:bg-blue-700 transition duration-300"
           >
             BOOK APPOINTMENT
-          </a>
+          </NavLink>
         </div>
       </div>
       <ContactForm />
