@@ -105,7 +105,7 @@ const Copyright = () => {
           <div className="relative w-7/10 shrink-0 flex justify-center items-center">
             <div className="sticky">
               <img
-                src="https://vidhiya.com/wp-content/uploads/2023/10/image-34.png"
+                src="https://blog.ipleaders.in/wp-content/uploads/2021/06/1_copyright-designs-and-patents-act-1988-1.jpg"
                 className="rounded-lg w-80"
                 alt="Copyright"
               />
@@ -301,10 +301,15 @@ const Copyright = () => {
           {/* FAQ Section */}
           <div className="flex-1">
             {/* Your FAQ Content */}
-            <div className="space-y-4 pr-2 pt-4 h-full bg-slate-200 pb-10 pl-2 rounded-md lg:bg-white lg:px-10">
+            <div className="flex flex-row">
+            <img
+                  src="https://img.freepik.com/free-vector/tiny-people-sitting-standing-near-giant-faq_74855-7879.jpg"
+                  alt=""
+                />
+            <div className="space-y-4 pr-2 pt-4 h-full w-full bg-slate-200 pb-10 pl-2 rounded-md lg:bg-white lg:px-10">
               {/* FAQ Item 1 */}
               <details className="group overflow-hidden ">
-                <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-lg transition">
+                <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg transition">
                   <span className="font-medium text-white">
                     What Copyrighted Works Do We Protect?
                   </span>
@@ -312,7 +317,7 @@ const Copyright = () => {
                     &#9660;
                   </span>
                 </summary>
-                <div className="transition-all duration-300 ease-in-out overflow-hidden max-h-0 group-open:max-h-96">
+                <div className="transition-all duration-300 ease-in-out overflow-hidden bg-gray-500 rounded-b-xl max-h-0 group-open:max-h-96">
                   <p className="mt-2 px-4 text-black text-sm">
                     House of IP safeguards a wide range of creative content:
                   </p>
@@ -342,7 +347,7 @@ const Copyright = () => {
               {/* Add the other FAQ items here */}
               {/* FAQ Item 2 */}
               <details className="group overflow-hidden">
-                <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-lg transition">
+                <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg transition">
                   <span className="font-medium text-white">
                     How to Register Your Copyright?
                   </span>
@@ -350,7 +355,7 @@ const Copyright = () => {
                     &#9660;
                   </span>
                 </summary>
-                <div className="transition-all duration-300 ease-in-out overflow-hidden max-h-96 group-open:max-h-96 px-12 text-justify text-black font-montserrat font-thin overflow-y-auto">
+                <div className="transition-all duration-300 ease-in-out overflow-hidden bg-gray-500 rounded-b-xl max-h-96 group-open:max-h-96 px-12 text-justify text-black font-montserrat font-thin overflow-y-auto">
                   <p className="mt-2 px-4 text-black text-sm">
                     Our expert team guides you through the copyright
                     registration process, ensuring that your work is quickly
@@ -363,7 +368,7 @@ const Copyright = () => {
 
               {/* FAQ Item 3 */}
               <details className="group overflow-hidden">
-                <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-lg transition">
+                <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg transition">
                   <span className="font-medium text-white">
                     What if Your Copyright is Infringed?
                   </span>
@@ -371,7 +376,7 @@ const Copyright = () => {
                     &#9660;
                   </span>
                 </summary>
-                <div className="transition-all duration-300 ease-in-out overflow-hidden max-h-0 group-open:max-h-96">
+                <div className="transition-all duration-300 ease-in-out bg-gray-500 rounded-b-xl overflow-hidden max-h-0 group-open:max-h-96">
                   <p className="mt-2 px-4 text-black text-sm">
                     House of IP has a proven track record in copyright dispute
                     resolution. We represent clients in court, using compelling
@@ -384,15 +389,15 @@ const Copyright = () => {
 
               {/* FAQ Item 4 */}
               <details className="group overflow-hidden">
-                <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-lg transition">
+                <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg transition">
                   <span className="font-medium text-white">
-                    ly Using Copyrighted Content
+                    Using Copyrighted Content
                   </span>
                   <span className="transition-transform group-open:rotate-180">
                     &#9660;
                   </span>
                 </summary>
-                <div className="transition-all duration-300 ease-in-out overflow-hidden max-h-0 group-open:max-h-96 text-sm">
+                <div className="transition-all duration-300 ease-in-out bg-gray-500 rounded-b-xl overflow-hidden max-h-0 group-open:max-h-96 text-sm">
                   <p className="mt-2 px-4 text-black">
                     We provide  guidance on the use of third–party
                     copyrighted material through licenses, assignments, or
@@ -402,7 +407,7 @@ const Copyright = () => {
                 </div>
               </details>
               <details className="group overflow-hidden pb-10">
-                <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-lg transition">
+                <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg transition">
                   <span className="font-medium text-white">
                     Protecting High-Value Copyrighted Works
                   </span>
@@ -410,7 +415,7 @@ const Copyright = () => {
                     &#9660;
                   </span>
                 </summary>
-                <div className="transition-all duration-300 ease-in-out overflow-hidden max-h-0 group-open:max-h-96 text-sm">
+                <div className="transition-all duration-300 bg-gray-500 rounded-b-xl ease-in-out overflow-hidden max-h-0 group-open:max-h-96 text-sm">
                   <p className="mt-2 px-4 text-black">
                     For high–value content, including music, software, and
                     literary works, offers comprehensive valuation services. Our
@@ -420,6 +425,7 @@ const Copyright = () => {
                   </p>
                 </div>
               </details>
+            </div>
             </div>
           </div>
 

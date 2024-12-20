@@ -330,19 +330,24 @@ const Design = () => {
           {/* FAQ Section */}
           <div className="flex-1">
             {/* Your FAQ Content */}
-            <div className="space-y-4 pr-2 pt-4 h-full bg-slate-200 pb-10 pl-2 rounded-md lg:bg-white lg:px-10">
+            <div className="flex flex-row">
+            <img
+                  src="https://img.freepik.com/free-vector/tiny-people-sitting-standing-near-giant-faq_74855-7879.jpg"
+                  alt=""
+                />
+            <div className="space-y-4 pr-2 pt-4 w-full h-full bg-slate-200 pb-10 pl-2 rounded-md lg:bg-white lg:px-10">
               {/* FAQ Item 1 */}
               <details className="group overflow-hidden ">
-                <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-lg transition">
+                <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg transition">
                   <span className="font-medium text-white">
-                    What types of designs can be registered with JustiSphereX
+                    What types of designs can be registered with House of IP
                     ?
                   </span>
                   <span className="transition-transform group-open:rotate-180">
                     &#9660;
                   </span>
                 </summary>
-                <div className="transition-all duration-300 ease-in-out overflow-hidden max-h-0 group-open:max-h-96">
+                <div className="transition-all duration-300 ease-in-out overflow-hidden max-h-0 group-open:max-h-96 bg-gray-500 rounded-b-xl">
                   <p className="mt-2 px-4 text-black text-sm">
                     We assist with registering a wide range of product designs,
                     including but not limited to:
@@ -372,7 +377,7 @@ const Design = () => {
               {/* Add the other FAQ items here */}
               {/* FAQ Item 2 */}
               <details className="group overflow-hidden">
-                <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-lg transition">
+                <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg transition">
                   <span className="font-medium text-white">
                     What is the process of registering a design with
                     House of IP?
@@ -381,7 +386,7 @@ const Design = () => {
                     &#9660;
                   </span>
                 </summary>
-                <div className="transition-all duration-300 ease-in-out overflow-hidden max-h-96 group-open:max-h-96 px-12 text-justify text-black font-montserrat font-thin overflow-y-auto">
+                <div className="transition-all duration-300 ease-in-out overflow-hidden max-h-96 bg-gray-500 rounded-b-xl group-open:max-h-96 px-12 text-justify text-black font-montserrat font-thin overflow-y-auto">
                   <p className="mt-2 px-4 text-black text-sm">
                     Our design registration process is straightforward and
                     includes:
@@ -418,7 +423,7 @@ const Design = () => {
 
               {/* FAQ Item 3 */}
               <details className="group overflow-hidden">
-                <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-lg transition">
+                <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg transition">
                   <span className="font-medium text-white">
                     Prices & FeesWhat happens if someone copies my registered
                     design?
@@ -427,7 +432,7 @@ const Design = () => {
                     &#9660;
                   </span>
                 </summary>
-                <div className="transition-all duration-300 ease-in-out overflow-hidden max-h-0 group-open:max-h-96">
+                <div className="transition-all duration-300 ease-in-out overflow-hidden bg-gray-500 rounded-b-xl max-h-0 group-open:max-h-96">
                   <p className="mt-2 px-4 text-black text-sm">
                     At House of IP, we help you take swift  action
                     if your registered design is copied. Our team assists in
@@ -439,7 +444,7 @@ const Design = () => {
               </details>
 
               <details className="group overflow-hidden">
-                <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-lg transition">
+                <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg transition">
                   <span className="font-medium text-white">
                     How can I monetize my registered design?
                   </span>
@@ -447,7 +452,7 @@ const Design = () => {
                     &#9660;
                   </span>
                 </summary>
-                <div className="transition-all duration-300 ease-in-out overflow-hidden max-h-0 group-open:max-h-96 text-sm">
+                <div className="transition-all duration-300 ease-in-out overflow-hidden bg-gray-500 rounded-b-xl max-h-0 group-open:max-h-96 text-sm">
                   <p className="mt-2 px-4 text-black">
                     Registering your design not only protects it but also allows
                     you to explore commercialization opportunities. Our experts
@@ -468,7 +473,7 @@ const Design = () => {
 
               {/* FAQ Item 4 */}
               <details className="group overflow-hidden pb-10">
-                <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-lg transition">
+                <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg transition">
                   <span className="font-medium text-white">
                     How do I know if House of IP is the right firm for
                     design protection?
@@ -477,10 +482,10 @@ const Design = () => {
                     &#9660;
                   </span>
                 </summary>
-                <div className="transition-all duration-300 ease-in-out overflow-hidden max-h-0 group-open:max-h-96 text-sm">
+                <div className="transition-all duration-300 ease-in-out overflow-hidden bg-gray-500 rounded-b-xl max-h-0 group-open:max-h-96 text-sm">
                   <p className="mt-2 px-4 text-black">
                     With a proven track record in IP law and extensive
-                    experience in design protection, JustiSphereX is a
+                    experience in design protection, House of IP is a
                     trusted partner for securing your product’s design. Our
                     dedicated team of experts provides personalized guidance
                     through every step of the design registration process,
@@ -489,6 +494,7 @@ const Design = () => {
                   </p>
                 </div>
               </details>
+            </div>
             </div>
           </div>
 
@@ -555,7 +561,7 @@ const Design = () => {
                     <img
                       src="https://thelawcodes.com/wp-content/uploads/2023/10/What-is-Patent-Basics-Overview.webp"
                       alt="Patent"
-                      className="h-44 w-52"
+                      className="h-44 w-full"
                     />
                   </figure>
                   <div className="card-body bg-white text-black">
@@ -569,9 +575,9 @@ const Design = () => {
                 <div className="card card-compact bg-base-100 w-72 shadow-xl">
                   <figure>
                     <img
-                      src="https://vidhiya.com/wp-content/uploads/2023/10/image-34.png"
+                      src="https://blog.ipleaders.in/wp-content/uploads/2021/06/1_copyright-designs-and-patents-act-1988-1.jpg"
                       alt="Copyright"
-                      className="h-44"
+                      className="h-44 w-full"
                     />
                   </figure>
                   <div className="card-body bg-white text-black">
@@ -585,7 +591,7 @@ const Design = () => {
                     <img
                       src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVKc6eE_WPmaSRuSzcabfmXNHoIYn-GoGNAA&s"
                       alt="Design"
-                      className="h-44"
+                      className="h-44 w-full"
                     />
                   </figure>
                   <div className="card-body bg-white text-black">

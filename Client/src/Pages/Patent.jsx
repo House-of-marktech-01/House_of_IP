@@ -346,9 +346,8 @@ const Patent = () => {
                 Power of Authority
               </h1>
               <p className="pb-8 text-black text-sm">
-                If a patent agent or  representative is submitting the
-                patent application, then Form-26, a power of authority, is
-                required.
+                If a patent agent or representative is submitting the patent
+                application, then Form-26, a power of authority, is required.
               </p>
             </div>
 
@@ -430,152 +429,162 @@ const Patent = () => {
           {/* FAQ Section */}
           <div className="flex-1">
             {/* Your FAQ Content */}
-            <div className="space-y-4 pr-2 pt-4 h-full bg-slate-200 pb-10 pl-2 rounded-md lg:bg-white lg:px-10">
-              {/* FAQ Item 1 */}
-              <details className="group overflow-hidden ">
-                <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-lg transition">
-                  <span className="font-medium text-white">
-                    What types of patents does House of IP handle?
-                  </span>
-                  <span className="transition-transform group-open:rotate-180">
-                    &#9660;
-                  </span>
-                </summary>
-                <div className="transition-all duration-300 ease-in-out overflow-hidden max-h-0 group-open:max-h-96">
-                  <p className="mt-2 px-4 text-black text-sm">
-                    At House of IP, our multidisciplinary team of technical
-                    experts and patent agents assists in drafting, prosecuting,
-                    and litigating patents across a wide range of sectors,
-                    including mechanical, electrical, software, and
-                    biotechnology inventions.
-                  </p>
-                </div>
-              </details>
+            <div className="flex flex-row">
+              <div className="hidden lg:block w-3/4">
+                <img
+                  src="https://img.freepik.com/free-vector/tiny-people-sitting-standing-near-giant-faq_74855-7879.jpg"
+                  alt=""
+                />
+              </div>
+              <div className="space-y-4 pr-2 pt-4 h-full w-full bg-slate-200 pb-10 pl-2 rounded-md lg:bg-white lg:px-10">
+                {/* FAQ Item 1 */}
+                <details className="group overflow-hidden ">
+                  <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg transition">
+                    <span className="font-medium text-white">
+                      What types of patents does House of IP handle?
+                    </span>
+                    <span className="transition-transform group-open:rotate-180">
+                      &#9660;
+                    </span>
+                  </summary>
+                  <div className="transition-all duration-300 bg-gray-500 rounded-b-xl ease-in-out overflow-hidden max-h-0 group-open:max-h-96">
+                    <p className="mt-2 px-4 text-black text-sm">
+                      At House of IP, our multidisciplinary team of technical
+                      experts and patent agents assists in drafting,
+                      prosecuting, and litigating patents across a wide range of
+                      sectors, including mechanical, electrical, software, and
+                      biotechnology inventions.
+                    </p>
+                  </div>
+                </details>
 
-              {/* Add the other FAQ items here */}
-              {/* FAQ Item 2 */}
-              <details className="group overflow-hidden">
-                <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-lg transition">
-                  <span className="font-medium text-white">
-                    What is the process of filing a patent with JustiSphereX
-                    ?
-                  </span>
-                  <span className="transition-transform group-open:rotate-180">
-                    &#9660;
-                  </span>
-                </summary>
-                <div className="transition-all duration-300 ease-in-out overflow-hidden max-h-96 group-open:max-h-96 px-12 text-justify text-black font-montserrat font-thin overflow-y-auto">
-                  <p className="mt-2 px-4 text-black text-sm">
-                    Our patent filing process is comprehensive and includes:
-                  </p>
-                  <ul className="mt-2 px-4 list-disc list-inside text-black text-sm">
-                    <li>
-                      <strong>Prior art search and landscape analysis:</strong>
-                      We conduct thorough research on existing patents and
-                      technologies relevant to your invention.
-                    </li>
-                    <li>
-                      <strong>Inventor consultations:</strong> We collaborate
-                      with you to understand every technical aspect of your
-                      invention.
-                    </li>
-                    <li>
-                      <strong>Drafting</strong> We prepare provisional and
-                      complete patent specifications tailored to your needs.
-                    </li>
-                    <li>
-                      <strong>Filing</strong> We manage the filing process at
-                      the Indian Patent Office, USPTO, EPO, or other
-                      jurisdictions via PCT or direct routes.
-                    </li>
-                    <li>
-                      <strong>Prosecution</strong> We handle communication with
-                      patent offices, addressing examiner queries to ensure a
-                      smooth progression of your application.
-                    </li>
-                  </ul>
-                </div>
-              </details>
+                {/* Add the other FAQ items here */}
+                {/* FAQ Item 2 */}
+                <details className="group overflow-hidden">
+                  <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg transition">
+                    <span className="font-medium text-white">
+                      What is the process of filing a patent with House of IP ?
+                    </span>
+                    <span className="transition-transform group-open:rotate-180">
+                      &#9660;
+                    </span>
+                  </summary>
+                  <div className="transition-all duration-300 bg-gray-500 rounded-b-xl ease-in-out overflow-hidden max-h-96 group-open:max-h-96 px-12 text-justify text-black font-montserrat font-thin overflow-y-auto">
+                    <p className="mt-2 px-4 text-black text-sm">
+                      Our patent filing process is comprehensive and includes:
+                    </p>
+                    <ul className="mt-2 px-4 list-disc list-inside text-black text-sm">
+                      <li>
+                        <strong>
+                          Prior art search and landscape analysis:
+                        </strong>
+                        We conduct thorough research on existing patents and
+                        technologies relevant to your invention.
+                      </li>
+                      <li>
+                        <strong>Inventor consultations:</strong> We collaborate
+                        with you to understand every technical aspect of your
+                        invention.
+                      </li>
+                      <li>
+                        <strong>Drafting</strong> We prepare provisional and
+                        complete patent specifications tailored to your needs.
+                      </li>
+                      <li>
+                        <strong>Filing</strong> We manage the filing process at
+                        the Indian Patent Office, USPTO, EPO, or other
+                        jurisdictions via PCT or direct routes.
+                      </li>
+                      <li>
+                        <strong>Prosecution</strong> We handle communication
+                        with patent offices, addressing examiner queries to
+                        ensure a smooth progression of your application.
+                      </li>
+                    </ul>
+                  </div>
+                </details>
 
-              {/* FAQ Item 3 */}
-              <details className="group overflow-hidden">
-                <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-lg transition">
-                  <span className="font-medium text-white">
-                    What happens if my patent application is challenged?
-                  </span>
-                  <span className="transition-transform group-open:rotate-180">
-                    &#9660;
-                  </span>
-                </summary>
-                <div className="transition-all duration-300 ease-in-out overflow-hidden max-h-0 group-open:max-h-96">
-                  <p className="mt-2 px-4 text-black text-sm">
-                    At House of IP, our dedicated litigation team is well–versed
-                    in handling patent disputes. We thoroughly analyse the
-                    challenge, prepare strong counter–arguments supported by
-                    evidence, and represent you during oral hearings to defend
-                    your patent’s validity.
-                  </p>
-                </div>
-              </details>
+                {/* FAQ Item 3 */}
+                <details className="group overflow-hidden">
+                  <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg transition">
+                    <span className="font-medium text-white">
+                      What happens if my patent application is challenged?
+                    </span>
+                    <span className="transition-transform group-open:rotate-180">
+                      &#9660;
+                    </span>
+                  </summary>
+                  <div className="transition-all duration-300 ease-in-out bg-gray-500 rounded-b-xl overflow-hidden max-h-0 group-open:max-h-96">
+                    <p className="mt-2 px-4 text-black text-sm">
+                      At House of IP, our dedicated litigation team is
+                      well–versed in handling patent disputes. We thoroughly
+                      analyse the challenge, prepare strong counter–arguments
+                      supported by evidence, and represent you during oral
+                      hearings to defend your patent’s validity.
+                    </p>
+                  </div>
+                </details>
 
-              {/* FAQ Item 4 */}
-              <details className="group overflow-hidden">
-                <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-lg transition">
-                  <span className="font-medium text-white">
-                    How can I monetize my patent?
-                  </span>
-                  <span className="transition-transform group-open:rotate-180">
-                    &#9660;
-                  </span>
-                </summary>
-                <div className="transition-all duration-300 ease-in-out overflow-hidden max-h-0 group-open:max-h-96 text-sm">
-                  <p className="mt-2 px-4 text-black">
-                    Our IP commercialization team provides expert services,
-                    including:
-                  </p>
-                  <ul className="mt-2 px-4 list-disc list-inside text-black text-sm">
-                    <li>
-                      <strong> Landscape mapping: </strong>
-                      Identifying markets and competitors for your patent.
-                    </li>
-                    <li>
-                      <strong>Patent valuation:</strong> Determining the
-                      commercial potential of your invention.
-                    </li>
-                    <li>
-                      <strong>Due diligence:</strong> Conducting risk
-                      assessments to ensure informed decision–making.
-                    </li>
-                    <li>
-                      <strong>Monetization strategies: </strong> Crafting
-                      tailored strategies for licensing or technology transfer
-                      to maximize your patent’s value.
-                    </li>
-                  </ul>
-                </div>
-              </details>
-              <details className="group overflow-hidden">
-                <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-lg transition">
-                  <span className="font-medium text-white">
-                    How do I know if House of IP is the right patent law firm
-                    for me?
-                  </span>
-                  <span className="transition-transform group-open:rotate-180">
-                    &#9660;
-                  </span>
-                </summary>
-                <div className="transition-all duration-300 ease-in-out overflow-hidden max-h-0 group-open:max-h-96">
-                  <p className="mt-2 px-4 text-black text-sm">
-                    House of IP is a distinguished IP law firm with a proven
-                    track record of securing and leveraging patents for
-                    businesses, academic institutions, and research
-                    organizations across India. Our multidisciplinary team of
-                    experts offers personalized services and extensive
-                    jurisdictional experience to support you through every step
-                    of the patent process, from filing to commercialization.
-                  </p>
-                </div>
-              </details>
+                {/* FAQ Item 4 */}
+                <details className="group overflow-hidden">
+                  <summary className="flex justify-between items-center cursor-pointer p-4  bg-slate-900 rounded-t-lg transition">
+                    <span className="font-medium text-white">
+                      How can I monetize my patent?
+                    </span>
+                    <span className="transition-transform group-open:rotate-180">
+                      &#9660;
+                    </span>
+                  </summary>
+                  <div className="transition-all duration-300 ease-in-out bg-gray-500 rounded-b-xl overflow-hidden max-h-0 group-open:max-h-96 text-sm">
+                    <p className="mt-2 px-4 text-black">
+                      Our IP commercialization team provides expert services,
+                      including:
+                    </p>
+                    <ul className="mt-2 px-4 list-disc list-inside text-black text-sm">
+                      <li>
+                        <strong> Landscape mapping: </strong>
+                        Identifying markets and competitors for your patent.
+                      </li>
+                      <li>
+                        <strong>Patent valuation:</strong> Determining the
+                        commercial potential of your invention.
+                      </li>
+                      <li>
+                        <strong>Due diligence:</strong> Conducting risk
+                        assessments to ensure informed decision–making.
+                      </li>
+                      <li>
+                        <strong>Monetization strategies: </strong> Crafting
+                        tailored strategies for licensing or technology transfer
+                        to maximize your patent’s value.
+                      </li>
+                    </ul>
+                  </div>
+                </details>
+                <details className="group overflow-hidden">
+                  <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg transition">
+                    <span className="font-medium text-white">
+                      How do I know if House of IP is the right patent law firm
+                      for me?
+                    </span>
+                    <span className="transition-transform group-open:rotate-180">
+                      &#9660;
+                    </span>
+                  </summary>
+                  <div className="transition-all duration-300 bg-gray-500 rounded-b-xl ease-in-out overflow-hidden max-h-0 group-open:max-h-96">
+                    <p className="mt-2 px-4 text-black text-sm">
+                      House of IP is a distinguished IP law firm with a proven
+                      track record of securing and leveraging patents for
+                      businesses, academic institutions, and research
+                      organizations across India. Our multidisciplinary team of
+                      experts offers personalized services and extensive
+                      jurisdictional experience to support you through every
+                      step of the patent process, from filing to
+                      commercialization.
+                    </p>
+                  </div>
+                </details>
+              </div>
             </div>
           </div>
           <div className="lg:flex flex-row">
@@ -661,7 +670,7 @@ const Patent = () => {
                 <div className="card card-compact bg-base-100 w-72 shadow-xl">
                   <figure>
                     <img
-                      src="https://vidhiya.com/wp-content/uploads/2023/10/image-34.png"
+                      src="https://blog.ipleaders.in/wp-content/uploads/2021/06/1_copyright-designs-and-patents-act-1988-1.jpg"
                       alt="Copyright"
                       className="h-44"
                     />

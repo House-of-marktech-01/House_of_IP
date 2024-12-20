@@ -7,7 +7,7 @@ const TestimonialCard = () => {
       author: "Shidharth Ganguly(CEO – ByProduct Ventures)",
     },
     {
-      text: "From the first consultation, I knew I was in the right hands with JustiSphereX. Their team is not only knowledgeable but also genuinely invested in the success of their clients. The Partners, in particular, were outstanding—they provided personal guidance and helped me navigate complex  issues with clarity and confidence. Their attention to detail and commitment to delivering the best possible outcome really sets this firm apart. Highly recommended!",
+      text: "From the first consultation, I knew I was in the right hands with House of IP. Their team is not only knowledgeable but also genuinely invested in the success of their clients. The Partners, in particular, were outstanding—they provided personal guidance and helped me navigate complex  issues with clarity and confidence. Their attention to detail and commitment to delivering the best possible outcome really sets this firm apart. Highly recommended!",
       author: "Avinash Pandey (Director – LyfLyne India HealthTech)",
     },
     {

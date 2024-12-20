@@ -66,7 +66,7 @@ const Practice = () => {
           </h2>
           <p className="text-lg text-gray-100">Book an appointment with us!</p>
           <NavLink
-            to="http://calendly.com/justispherex/book-an-appointment"
+            to="http://calendly.com/House of IP/book-an-appointment"
             className="bg-blue-600 text-white py-3 px-6 rounded-lg shadow-md hover:bg-blue-700 transition duration-300"
           >
             BOOK APPOINTMENT

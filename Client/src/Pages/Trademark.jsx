@@ -352,7 +352,12 @@ const Trademark = () => {
           {/* FAQ Section */}
           <div className="flex-1">
             {/* Your FAQ Content */}
-            <div className="space-y-4 pr-2 pt-4 h-full bg-slate-200 pb-10 pl-2 rounded-md lg:bg-white lg:px-10">
+            <div className="flex flex-row">
+            <img
+                  src="https://img.freepik.com/free-vector/tiny-people-sitting-standing-near-giant-faq_74855-7879.jpg"
+                  alt=""
+                />
+            <div className="space-y-4 pr-2 pt-4 w-full h-full bg-slate-200 pb-10 pl-2 rounded-md lg:bg-white lg:px-10">
               {/* FAQ Item 1 */}
               <details className="group overflow-hidden ">
                 <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg rounded-b-sm transition">
@@ -458,6 +463,7 @@ const Trademark = () => {
                 </div>
               </details>
             </div>
+            </div>
           </div>
 
           <div className="lg:flex flex-row lg:px-10">
@@ -542,7 +548,7 @@ const Trademark = () => {
                 <div className="card card-compact bg-base-100 w-72 shadow-xl">
                   <figure>
                     <img
-                      src="https://vidhiya.com/wp-content/uploads/2023/10/image-34.png"
+                      src="https://blog.ipleaders.in/wp-content/uploads/2021/06/1_copyright-designs-and-patents-act-1988-1.jpg"
                       alt="Copyright"
                       className="h-44"
                     />
