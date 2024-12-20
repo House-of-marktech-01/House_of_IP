@@ -432,7 +432,7 @@ const Patent = () => {
             <div className="flex flex-row">
               <div className="hidden lg:block w-3/4">
                 <img
-                  src="https://img.freepik.com/free-vector/tiny-people-sitting-standing-near-giant-faq_74855-7879.jpg"
+                  src="https://media.istockphoto.com/id/1180390158/photo/3d-rendering-of-hefty-stone-question-mark-standing-on-sounding-block-with-gavel-beside-on.jpg?s=612x612&w=0&k=20&c=Huhzii9Fk2_tYE5m_OxcA99wkGCJXueUXv870b-CLkM="
                   alt=""
                 />
               </div>

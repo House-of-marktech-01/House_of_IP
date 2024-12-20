@@ -58,12 +58,13 @@ const ContactForm = () => {
       id="consult"
       className="py-20 md:py-28 bg-cover bg-center bg-no-repeat bg-gray-200"
     >
+      <h1 className="text-3xl text-black text-center font-semibold">Contact Us</h1>
       <div className="py-10">
         <div className="container mx-auto px-4 md:px-8">
           <div className="flex flex-col lg:flex-row">
             {/* Left Column */}
             <div className="lg:w-1/2 px-4 mb-12 lg:mb-0">
-              <h3 className="text-4xl font-light text-yellow-400 mb-4">
+              <h3 className="text-4xl font-light text-black mb-4">
                 Free Consultation
               </h3>
               <p className="text-sm text-black mb-6">

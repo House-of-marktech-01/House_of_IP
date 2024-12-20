@@ -6,7 +6,7 @@ import ContactForm from "../Components/ContactForm"
 const Appointment = () => {
   return (
     <>
-      <div className="w-full" style={{ position: "relative" }}>
+      <div className="w-full pt-16 bg-gray-100" style={{ position: "relative" }}>
         <div className="relative w-full h-[200px] sm:h-[315px] overflow-hidden">
           <img
             src="https://lawfirmignite.com/wp-content/uploads/2024/08/law-firm-appointment-setting.png"
@@ -18,7 +18,7 @@ const Appointment = () => {
             Book an Appointment
           </div>
         </div>
-        <div className="breadcrumbs text-xs sm:text-sm pl-4 sm:pl-6 bg-white text-black pt-3 sm:pt-5">
+        <div className="breadcrumbs text-xs sm:text-sm pl-4 sm:pl-6 bg-gray-200 text-black pt-3 sm:pt-5">
           <ul>
             <li>
               <NavLink to="/">Home</NavLink>
@@ -27,7 +27,7 @@ const Appointment = () => {
           </ul>
         </div>
       </div>
-      <div className="min-h-screen bg-white flex flex-col items-center justify-center p-6">
+      <div className="min-h-screen bg-gray-200 flex flex-col items-center justify-center p-6">
         {/* Header Section */}
         <div className="text-center mb-8">
           <h1 className="text-3xl md:text-5xl font-bold text-gray-800 mb-4">
