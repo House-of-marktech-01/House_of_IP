@@ -5,6 +5,7 @@ import Cookies from "js-cookie";
 import { useDropzone } from "react-dropzone";
 import axios from "axios";
 import { toast } from "react-toastify";
+import {motion} from 'framer-motion'
 
 const Trademark = () => {
   const [token, setToken] = useState(Cookies.get("jwtToken"));
@@ -14,6 +15,14 @@ const Trademark = () => {
   const [isUploading, setIsUploading] = useState(false);
   const [uploadStatus, setUploadStatus] = useState("");
 
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
   const [isOpen, setIsOpen] = useState({
     businessType: false,
     businessObjectives: false,
@@ -206,49 +215,58 @@ const Trademark = () => {
         </div>
 
         <div className="bg-white px-5 text-justify lg:px-20">
-          <h1 className="text-center text-3xl text-black pb-4 pt-4">
+          <motion.h1
+            className="text-center text-3xl text-black pb-4 pt-4"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={fadeInUp}
+          >
             Trademark
-          </h1>
-          <p className="pb-8 text-gray-800 text-sm">
-            At House of IP, our dedicated team of trademark attorneys offers
-            more than just protection. We deliver comprehensive business value
-            by integrating industry insights, brand strategy, and global
-            trademark registration services. Our approach begins with a deep
-            understanding of your brand’s goals and conducting extensive
-            trademark availability searches to ensure success.
-          </p>
-          <p className="pb-8 text-gray-800 text-sm">
-            We provide clear guidance on the feasibility of trademark
-            registration across multiple regions while offering strategic advice
-            to avoid potential conflicts. Our expertise also extends to securing
-            domain names, hashtags, taglines, and social media handles, ensuring
-            a seamless digital presence that aligns with your brand’s identity.
-          </p>
-          <p className="pb-8 text-gray-800 text-sm">
-            When it comes to filing, our in-depth knowledge of trademark
-            classifications ensures optimal protection. Our experience in
-            representing clients in disputes such as oppositions, cancellations,
-            and rectifications allows us to defend your trademarks effectively
-            with evidence-based arguments and expert responses to examination
-            queries.
-          </p>
-          <p className="pb-8 text-gray-800 text-sm">
-            For trademark enforcement, we monitor both physical and online
-            markets to detect potential infringement. We act swiftly by issuing
-            cease-and-desist and take-down notices, and in cases where
-            violations persist, we collaborate with authorities to confiscate
-            counterfeit or infringing products.
-          </p>
-          <p className="pb-8 text-gray-800 text-sm">
-            Our success is driven by detailed documentation, well-constructed
-            responses, and a commitment to resolving disputes amicably. This
-            meticulous approach contributes to high approval rates for trademark
-            applications. Beyond registration, we manage renewals, recordals,
-            and monitor your brand for unauthorized use. Additionally, we
-            provide guidance on trademark valuation during licensing, IP
-            transfers, and mergers, empowering both startups and multinationals
-            to leverage their trademarks effectively.
-          </p>
+          </motion.h1>
+          {[
+            `At House of IP, our dedicated team of trademark attorneys offers
+        more than just protection. We deliver comprehensive business value
+        by integrating industry insights, brand strategy, and global
+        trademark registration services. Our approach begins with a deep
+        understanding of your brand’s goals and conducting extensive
+        trademark availability searches to ensure success.`,
+            `We provide clear guidance on the feasibility of trademark
+        registration across multiple regions while offering strategic advice
+        to avoid potential conflicts. Our expertise also extends to securing
+        domain names, hashtags, taglines, and social media handles, ensuring
+        a seamless digital presence that aligns with your brand’s identity.`,
+            `When it comes to filing, our in-depth knowledge of trademark
+        classifications ensures optimal protection. Our experience in
+        representing clients in disputes such as oppositions, cancellations,
+        and rectifications allows us to defend your trademarks effectively
+        with evidence-based arguments and expert responses to examination
+        queries.`,
+            `For trademark enforcement, we monitor both physical and online
+        markets to detect potential infringement. We act swiftly by issuing
+        cease-and-desist and take-down notices, and in cases where
+        violations persist, we collaborate with authorities to confiscate
+        counterfeit or infringing products.`,
+            `Our success is driven by detailed documentation, well-constructed
+        responses, and a commitment to resolving disputes amicably. This
+        meticulous approach contributes to high approval rates for trademark
+        applications. Beyond registration, we manage renewals, recordals,
+        and monitor your brand for unauthorized use. Additionally, we
+        provide guidance on trademark valuation during licensing, IP
+        transfers, and mergers, empowering both startups and multinationals
+        to leverage their trademarks effectively.`,
+          ].map((text, index) => (
+            <motion.p
+              key={index}
+              className="pb-8 text-gray-800 text-sm"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              variants={fadeInUp}
+            >
+              {text}
+            </motion.p>
+          ))}
         </div>
         <div className="bg-white px-5 text-justify flex lg:px-20 ">
           <div className="lg:w-3/4">

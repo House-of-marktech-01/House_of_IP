@@ -5,6 +5,7 @@ import Cookies from "js-cookie";
 import { useDropzone } from "react-dropzone";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { motion } from "framer-motion";
 
 const Design = () => {
   const [token, setToken] = useState(Cookies.get("jwtToken"));
@@ -54,6 +55,14 @@ const Design = () => {
       console.error("Error during login:", error);
       alert("An error occurred. Please try again.");
     }
+  };
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
   };
 
   const { getRootProps, getInputProps } = useDropzone({
@@ -209,24 +218,41 @@ const Design = () => {
         </div>
 
         <div className="bg-white px-5 text-justify lg:px-20">
-          <h1 className="text-center text-3xl text-black pb-4 pt-4">Design</h1>
-          <p className="pb-8 text-gray-800 text-sm">
-            At House of IP, we offer comprehensive design registration services
-            to help protect the visual aspects of your product. A registered
-            design under the Designs Act, 2000 safeguards the unique shape,
-            pattern, configuration, or ornamentation of your product, ensuring
-            that others cannot replicate its appearance without permission.
-            Whether you are a designer, manufacturer, or business owner,
-            securing your product’s design is a crucial step in protecting your
-            creative efforts.
-          </p>
-          <p className="pb-8 text-gray-800 text-sm">
-            Our team has extensive experience across a variety of industries,
-            assisting clients in registering their designs and enforcing their
-            rights in case of infringement. We make the process seamless, from
-            filing to protection, ensuring that your design rights are fully
-            secured.
-          </p>
+          <motion.h1
+            className="text-center text-3xl text-black pb-4 pt-4"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={fadeInUp}
+          >
+            Design
+          </motion.h1>
+          {[
+            `At House of IP, we offer comprehensive design registration services
+        to help protect the visual aspects of your product. A registered
+        design under the Designs Act, 2000 safeguards the unique shape,
+        pattern, configuration, or ornamentation of your product, ensuring
+        that others cannot replicate its appearance without permission.
+        Whether you are a designer, manufacturer, or business owner,
+        securing your product’s design is a crucial step in protecting your
+        creative efforts.`,
+            `Our team has extensive experience across a variety of industries,
+        assisting clients in registering their designs and enforcing their
+        rights in case of infringement. We make the process seamless, from
+        filing to protection, ensuring that your design rights are fully
+        secured.`,
+          ].map((text, index) => (
+            <motion.p
+              key={index}
+              className="pb-8 text-gray-800 text-sm"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              variants={fadeInUp}
+            >
+              {text}
+            </motion.p>
+          ))}
         </div>
         <div className="bg-white px-5 text-justify flex lg:px-20">
           <div className="w-full lg:w-3/4">

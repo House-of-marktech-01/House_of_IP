@@ -7,6 +7,7 @@ import { useDropzone } from "react-dropzone";
 import axios from "axios";
 import { toast } from "react-toastify";
 
+
 const Copyright = () => {
   const [token, setToken] = useState(Cookies.get("jwtToken"));
   const [email, setEmail] = useState("");
@@ -15,6 +16,10 @@ const Copyright = () => {
   const [isUploading, setIsUploading] = useState(false);
   const [uploadStatus, setUploadStatus] = useState("");
 
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+  };
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -119,10 +124,10 @@ const Copyright = () => {
               </h2>
 
               <p className="prod_description text-sm text-gray-700 mt-2">
-                Copyright is a  entitlement granted to the owner of
-                intellectual property. Copyright protection typically endures
-                for the author’s lifetime plus an additional 60 years after the
-                author’s death
+                Copyright is a entitlement granted to the owner of intellectual
+                property. Copyright protection typically endures for the
+                author’s lifetime plus an additional 60 years after the author’s
+                death
               </p>
 
               <div className="flex items-center justify-between flex-wrap gap-2 border-y-2 mt-4 pt-4 pb-4 mb-5">
@@ -192,64 +197,96 @@ const Copyright = () => {
         </div>
 
         <div className="bg-white px-5 text-justify lg:px-20 grid grid-cols-1 lg:grid-cols-4">
-          <div className="lg:col-span-3">
-            <h1 className="text-center text-3xl text-black pb-4 pt-4">
+          <motion.div
+            className="lg:col-span-3"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+          >
+            <motion.h1
+              className="text-center text-3xl text-black pb-4 pt-4"
+              variants={fadeInUp}
+            >
               Copyright
-            </h1>
-            <p className="pb-8 text-gray-800 text-sm">
-              As the importance of safeguarding creative content continues to
-              grow, House of IP provides comprehensive advisory and dispute
-              management services tailored for copyright protection. Our highly
-              regarded team of copyright attorneys supports authors, musicians,
-              filmmakers, software developers, and media companies in defending
-              their original creations and addressing infringement issues.
-            </p>
-            <p className="pb-8 text-gray-800 text-sm">
-              We specialize in a full suite of copyright services, including
-              registration, licensing, assignment, enforcement, and dispute
-              resolution, spanning various industries. Understanding the
-              complexities brought by technology and the surge in copyright
-              violations, we have effectively assisted clients in safeguarding
-              custom software, architectural designs, literary works, and
-              multimedia content.
-            </p>
-            <h2 className="text-lg font-medium text-black pb-5">
+            </motion.h1>
+
+            {[
+              `As the importance of safeguarding creative content continues to grow, House of IP provides comprehensive advisory and dispute management services tailored for copyright protection. Our highly regarded team of copyright attorneys supports authors, musicians, filmmakers, software developers, and media companies in defending their original creations and addressing infringement issues.`,
+              `We specialize in a full suite of copyright services, including registration, licensing, assignment, enforcement, and dispute resolution, spanning various industries. Understanding the complexities brought by technology and the surge in copyright violations, we have effectively assisted clients in safeguarding custom software, architectural designs, literary works, and multimedia content.`,
+            ].map((text, index) => (
+              <motion.p
+                key={index}
+                className="pb-8 text-gray-800 text-sm"
+                variants={fadeInUp}
+              >
+                {text}
+              </motion.p>
+            ))}
+
+            <motion.h2
+              className="text-lg font-medium text-black pb-5"
+              variants={fadeInUp}
+            >
               Comprehensive Copyright Solutions
-            </h2>
-            <p className="pb-8 text-gray-800 text-sm">
+            </motion.h2>
+
+            <motion.p
+              className="pb-8 text-gray-800 text-sm"
+              variants={fadeInUp}
+            >
               Our dedicated copyright registration team ensures rapid and
               thorough protection for your work, covering text, images, sound,
               and video documentation. We excel in representing clients before
               courts, employing strategic oral arguments, compelling evidence,
-              and counterclaims. Additionally, we advise on  best practices
-              for using third-party content, helping clients avoid copyright
+              and counterclaims. Additionally, we advise on best practices for
+              using third-party content, helping clients avoid copyright
               pitfalls.
-            </p>
-            <h2 className="text-lg font-medium text-black pb-5">
+            </motion.p>
+
+            <motion.h2
+              className="text-lg font-medium text-black pb-5"
+              variants={fadeInUp}
+            >
               Our Expertise Includes:
-            </h2>
-            <p className="pb-8 text-gray-800 text-sm">
+            </motion.h2>
+
+            <motion.p
+              className="pb-8 text-gray-800 text-sm"
+              variants={fadeInUp}
+            >
               <strong>• Determining Copyright Eligibility:</strong> We assess if
               your work qualifies for copyright protection under applicable
-              laws. <br />{" "}
+              laws. <br />
               <strong>• Resolving Evidence–Focused Disputes:</strong> Tackling
-              copyright disputes with jurisdiction–specific approaches. <br />{" "}
+              copyright disputes with jurisdiction–specific approaches. <br />
               <strong>• Guiding Safer Content Usage:</strong> Offering clear
-              guidelines to ensure  and secure use of third-party content.
-            </p>
-            <p className="pb-8 text-gray-800 text-sm">
+              guidelines to ensure secure use of third-party content.
+            </motion.p>
+
+            <motion.p
+              className="pb-8 text-gray-800 text-sm"
+              variants={fadeInUp}
+            >
               Whether you are an artist or a business, we advise on licensing,
               assignments, and permitted usage of copyrighted works. Our team
               monitors both online and offline spaces for unauthorized use of
               movies, music, books, software, and more. If necessary, we pursue
-               action, including filing civil and criminal complaints and
+              action, including filing civil and criminal complaints and
               coordinating with cybercrime units to swiftly seize infringing
               materials.
-            </p>
-            <h2 className="text-lg font-medium text-black pb-5">
+            </motion.p>
+
+            <motion.h2
+              className="text-lg font-medium text-black pb-5"
+              variants={fadeInUp}
+            >
               Expert Representation in Copyright Disputes
-            </h2>
-            <p className="pb-8 text-gray-800 text-sm">
+            </motion.h2>
+
+            <motion.p
+              className="pb-8 text-gray-800 text-sm"
+              variants={fadeInUp}
+            >
               Our experienced copyright attorneys represent clients in cases
               involving ownership disputes, royalty claims, co–authorship
               conflicts, and adaptation rights. For high–value copyrighted
@@ -258,8 +295,8 @@ const Copyright = () => {
               companies in funding rounds and M&A transactions. Our technical
               experts assess code quality, vulnerability metrics, and
               architecture strength for reliable valuation.
-            </p>
-          </div>
+            </motion.p>
+          </motion.div>
 
           <div className="hidden lg:block lg:col-span-1 lg:px-10 pl-16">
             <h2 className="text-slate-900 font-medium text-2xl pb-5 bg-white pl-4 pt-4 rounded-t-xl rounded-b-xl">
@@ -302,131 +339,131 @@ const Copyright = () => {
           <div className="flex-1">
             {/* Your FAQ Content */}
             <div className="flex flex-row">
-            <img
-                  src="https://media.istockphoto.com/id/1180390158/photo/3d-rendering-of-hefty-stone-question-mark-standing-on-sounding-block-with-gavel-beside-on.jpg?s=612x612&w=0&k=20&c=Huhzii9Fk2_tYE5m_OxcA99wkGCJXueUXv870b-CLkM="
-                  alt=""
-                  className="h-96 "
-                />
-            <div className="space-y-4 pr-2 pt-4 h-full w-full bg-slate-200 pb-10 pl-2 rounded-md lg:bg-white lg:px-10">
-              {/* FAQ Item 1 */}
-              <details className="group overflow-hidden ">
-                <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg transition">
-                  <span className="font-medium text-white">
-                    What Copyrighted Works Do We Protect?
-                  </span>
-                  <span className="transition-transform group-open:rotate-180">
-                    &#9660;
-                  </span>
-                </summary>
-                <div className="transition-all duration-300 ease-in-out overflow-hidden bg-gray-500 rounded-b-xl max-h-0 group-open:max-h-96">
-                  <p className="mt-2 px-4 text-black text-sm">
-                    House of IP safeguards a wide range of creative content:
-                  </p>
-                  <ul className="mt-2 px-4 list-disc list-inside text-black text-sm">
-                    <li>
-                      <strong>Software:</strong> Handling ownership complexities
-                      and infringement issues in custom software.
-                    </li>
-                    <li>
-                      <strong>Architectural Works:</strong> Defending
-                      architects’ and designers’ rights to their original
-                      creations.
-                    </li>
-                    <li>
-                      <strong>Literary Works:</strong> Assisting authors,
-                      publishers, and stakeholders in protecting their written
-                      works.
-                    </li>
-                    <li>
-                      <strong>Multimedia Content:</strong> Managing copyright
-                      matters related to music, films, videos, and more.
-                    </li>
-                  </ul>
-                </div>
-              </details>
+              <img
+                src="https://media.istockphoto.com/id/1180390158/photo/3d-rendering-of-hefty-stone-question-mark-standing-on-sounding-block-with-gavel-beside-on.jpg?s=612x612&w=0&k=20&c=Huhzii9Fk2_tYE5m_OxcA99wkGCJXueUXv870b-CLkM="
+                alt=""
+                className="h-96 "
+              />
+              <div className="space-y-4 pr-2 pt-4 h-full w-full bg-slate-200 pb-10 pl-2 rounded-md lg:bg-white lg:px-10">
+                {/* FAQ Item 1 */}
+                <details className="group overflow-hidden ">
+                  <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg transition">
+                    <span className="font-medium text-white">
+                      What Copyrighted Works Do We Protect?
+                    </span>
+                    <span className="transition-transform group-open:rotate-180">
+                      &#9660;
+                    </span>
+                  </summary>
+                  <div className="transition-all duration-300 ease-in-out overflow-hidden bg-gray-500 rounded-b-xl max-h-0 group-open:max-h-96">
+                    <p className="mt-2 px-4 text-black text-sm">
+                      House of IP safeguards a wide range of creative content:
+                    </p>
+                    <ul className="mt-2 px-4 list-disc list-inside text-black text-sm">
+                      <li>
+                        <strong>Software:</strong> Handling ownership
+                        complexities and infringement issues in custom software.
+                      </li>
+                      <li>
+                        <strong>Architectural Works:</strong> Defending
+                        architects’ and designers’ rights to their original
+                        creations.
+                      </li>
+                      <li>
+                        <strong>Literary Works:</strong> Assisting authors,
+                        publishers, and stakeholders in protecting their written
+                        works.
+                      </li>
+                      <li>
+                        <strong>Multimedia Content:</strong> Managing copyright
+                        matters related to music, films, videos, and more.
+                      </li>
+                    </ul>
+                  </div>
+                </details>
 
-              {/* Add the other FAQ items here */}
-              {/* FAQ Item 2 */}
-              <details className="group overflow-hidden">
-                <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg transition">
-                  <span className="font-medium text-white">
-                    How to Register Your Copyright?
-                  </span>
-                  <span className="transition-transform group-open:rotate-180">
-                    &#9660;
-                  </span>
-                </summary>
-                <div className="transition-all duration-300 ease-in-out overflow-hidden bg-gray-500 rounded-b-xl max-h-96 group-open:max-h-96 px-12 text-justify text-black font-montserrat font-thin overflow-y-auto">
-                  <p className="mt-2 px-4 text-black text-sm">
-                    Our expert team guides you through the copyright
-                    registration process, ensuring that your work is quickly
-                    protected in the appropriate category—whether it’s text,
-                    image, sound, or video. We handle the documentation and
-                    filing efficiently, so you can focus on your creativity.
-                  </p>
-                </div>
-              </details>
+                {/* Add the other FAQ items here */}
+                {/* FAQ Item 2 */}
+                <details className="group overflow-hidden">
+                  <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg transition">
+                    <span className="font-medium text-white">
+                      How to Register Your Copyright?
+                    </span>
+                    <span className="transition-transform group-open:rotate-180">
+                      &#9660;
+                    </span>
+                  </summary>
+                  <div className="transition-all duration-300 ease-in-out overflow-hidden bg-gray-500 rounded-b-xl max-h-96 group-open:max-h-96 px-12 text-justify text-black font-montserrat font-thin overflow-y-auto">
+                    <p className="mt-2 px-4 text-black text-sm">
+                      Our expert team guides you through the copyright
+                      registration process, ensuring that your work is quickly
+                      protected in the appropriate category—whether it’s text,
+                      image, sound, or video. We handle the documentation and
+                      filing efficiently, so you can focus on your creativity.
+                    </p>
+                  </div>
+                </details>
 
-              {/* FAQ Item 3 */}
-              <details className="group overflow-hidden">
-                <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg transition">
-                  <span className="font-medium text-white">
-                    What if Your Copyright is Infringed?
-                  </span>
-                  <span className="transition-transform group-open:rotate-180">
-                    &#9660;
-                  </span>
-                </summary>
-                <div className="transition-all duration-300 ease-in-out bg-gray-500 rounded-b-xl overflow-hidden max-h-0 group-open:max-h-96">
-                  <p className="mt-2 px-4 text-black text-sm">
-                    House of IP has a proven track record in copyright dispute
-                    resolution. We represent clients in court, using compelling
-                    oral arguments, robust evidence, and strategic counterclaims
-                    to protect your rights. We also assist in recovering damages
-                    for copyright infringement.
-                  </p>
-                </div>
-              </details>
+                {/* FAQ Item 3 */}
+                <details className="group overflow-hidden">
+                  <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg transition">
+                    <span className="font-medium text-white">
+                      What if Your Copyright is Infringed?
+                    </span>
+                    <span className="transition-transform group-open:rotate-180">
+                      &#9660;
+                    </span>
+                  </summary>
+                  <div className="transition-all duration-300 ease-in-out bg-gray-500 rounded-b-xl overflow-hidden max-h-0 group-open:max-h-96">
+                    <p className="mt-2 px-4 text-black text-sm">
+                      House of IP has a proven track record in copyright dispute
+                      resolution. We represent clients in court, using
+                      compelling oral arguments, robust evidence, and strategic
+                      counterclaims to protect your rights. We also assist in
+                      recovering damages for copyright infringement.
+                    </p>
+                  </div>
+                </details>
 
-              {/* FAQ Item 4 */}
-              <details className="group overflow-hidden">
-                <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg transition">
-                  <span className="font-medium text-white">
-                    Using Copyrighted Content
-                  </span>
-                  <span className="transition-transform group-open:rotate-180">
-                    &#9660;
-                  </span>
-                </summary>
-                <div className="transition-all duration-300 ease-in-out bg-gray-500 rounded-b-xl overflow-hidden max-h-0 group-open:max-h-96 text-sm">
-                  <p className="mt-2 px-4 text-black">
-                    We provide  guidance on the use of third–party
-                    copyrighted material through licenses, assignments, or
-                    fair–use guidelines. Our lawyers ensure you can leverage
-                    content ly and ethically while minimizing risks.
-                  </p>
-                </div>
-              </details>
-              <details className="group overflow-hidden pb-10">
-                <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg transition">
-                  <span className="font-medium text-white">
-                    Protecting High-Value Copyrighted Works
-                  </span>
-                  <span className="transition-transform group-open:rotate-180">
-                    &#9660;
-                  </span>
-                </summary>
-                <div className="transition-all duration-300 bg-gray-500 rounded-b-xl ease-in-out overflow-hidden max-h-0 group-open:max-h-96 text-sm">
-                  <p className="mt-2 px-4 text-black">
-                    For high–value content, including music, software, and
-                    literary works, offers comprehensive valuation services. Our
-                    team of  and technical experts evaluates the commercial
-                    value of your content during investment, funding rounds, or
-                    mergers and acquisitions.
-                  </p>
-                </div>
-              </details>
-            </div>
+                {/* FAQ Item 4 */}
+                <details className="group overflow-hidden">
+                  <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg transition">
+                    <span className="font-medium text-white">
+                      Using Copyrighted Content
+                    </span>
+                    <span className="transition-transform group-open:rotate-180">
+                      &#9660;
+                    </span>
+                  </summary>
+                  <div className="transition-all duration-300 ease-in-out bg-gray-500 rounded-b-xl overflow-hidden max-h-0 group-open:max-h-96 text-sm">
+                    <p className="mt-2 px-4 text-black">
+                      We provide guidance on the use of third–party copyrighted
+                      material through licenses, assignments, or fair–use
+                      guidelines. Our lawyers ensure you can leverage content ly
+                      and ethically while minimizing risks.
+                    </p>
+                  </div>
+                </details>
+                <details className="group overflow-hidden pb-10">
+                  <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg transition">
+                    <span className="font-medium text-white">
+                      Protecting High-Value Copyrighted Works
+                    </span>
+                    <span className="transition-transform group-open:rotate-180">
+                      &#9660;
+                    </span>
+                  </summary>
+                  <div className="transition-all duration-300 bg-gray-500 rounded-b-xl ease-in-out overflow-hidden max-h-0 group-open:max-h-96 text-sm">
+                    <p className="mt-2 px-4 text-black">
+                      For high–value content, including music, software, and
+                      literary works, offers comprehensive valuation services.
+                      Our team of and technical experts evaluates the commercial
+                      value of your content during investment, funding rounds,
+                      or mergers and acquisitions.
+                    </p>
+                  </div>
+                </details>
+              </div>
             </div>
           </div>
 
@@ -480,7 +517,7 @@ const Copyright = () => {
               <p className="text-gray-800 pt-2 text-sm">
                 While registration is a crucial step, it is only the beginning.
                 We offer ongoing advice on protecting your rights, issuing
-                cease-and-desist notices, or pursuing  action in case of
+                cease-and-desist notices, or pursuing action in case of
                 infringement.
               </p>
             </div>

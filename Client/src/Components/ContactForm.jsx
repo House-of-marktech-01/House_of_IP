@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { toast } from "react-toastify";
 
 const ContactForm = () => {
   // State to store form values
@@ -39,7 +40,7 @@ const ContactForm = () => {
 
       if (response.ok) {
         setResponseMessage("Your message has been sent successfully!");
-        alert(responseMessage);
+        toast.success("Your message has been sent successfully!")
       } else {
         setResponseMessage(
           data.message || "Something went wrong, please try again."
@@ -58,7 +59,9 @@ const ContactForm = () => {
       id="consult"
       className="py-20 md:py-28 bg-cover bg-center bg-no-repeat bg-gray-200"
     >
-      <h1 className="text-3xl text-black text-center font-semibold">Contact Us</h1>
+      <h1 className="text-3xl text-black text-center font-semibold">
+        Contact Us
+      </h1>
       <div className="py-10">
         <div className="container mx-auto px-4 md:px-8">
           <div className="flex flex-col lg:flex-row">
@@ -69,11 +72,11 @@ const ContactForm = () => {
               </h3>
               <p className="text-sm text-black mb-6">
                 At House of Intellectual Property, we are committed to
-                empowering individuals and businesses with expert  guidance
-                and intellectual property solutions. Whether you're looking to
-                protect your innovations, resolve  disputes, or need
-                strategic advice, our experienced team is here to assist you
-                every step of the way.
+                empowering individuals and businesses with expert guidance and
+                intellectual property solutions. Whether you're looking to
+                protect your innovations, resolve disputes, or need strategic
+                advice, our experienced team is here to assist you every step of
+                the way.
               </p>
               <ul>
                 <li className="flex items-center mb-3">
@@ -167,16 +170,21 @@ const ContactForm = () => {
 
                 <button
                   type="submit"
-                  className="w-1/2 lg:w-1/4 py-3 bg-slate-900 text-white text-lg rounded-md hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-[#071b35]"
+                  className="relative flex items-center px-6 py-3 overflow-hidden font-medium transition-all bg-slate-700 rounded-md group"
                   disabled={loading}
                 >
-                  {loading ? "Submitting..." : "Submit Now"}
+                  <span className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-slate-900 rounded group-hover:-mr-4 group-hover:-mt-4">
+                    <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
+                  </span>
+                  <span className="absolute bottom-0 rotate-180 left-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-slate-900 rounded group-hover:-ml-4 group-hover:-mb-4">
+                    <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
+                  </span>
+                  <span className="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full bg-slate-800 rounded-md group-hover:translate-x-0"></span>
+                  <span className="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-white">
+                    {loading ? "Submitting..." : "Submit Now"}
+                  </span>
                 </button>
               </form>
-
-              {responseMessage && (
-                <p className="mt-4 text-lg text-black">{responseMessage}</p>
-              )}
             </motion.div>
           </div>
         </div>

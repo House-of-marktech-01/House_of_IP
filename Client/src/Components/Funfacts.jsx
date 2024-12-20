@@ -48,17 +48,23 @@ const FunFact = () => {
         {funFacts.map((fact) => (
           <motion.div
             key={fact.id}
-            className="bg-slate-900 shadow-lg rounded-lg p-6 text-center hover:shadow-xl hover:scale-105 transition-transform"
+            className="relative bg-slate-900 shadow-lg rounded-lg p-6 text-center hover:shadow-xl hover:scale-105 transition-transform overflow-hidden"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
             variants={cardVariants}
           >
-            <div className="text-4xl mb-4">{fact.icon}</div>
-            <h3 className="text-xl font-semibold text-gray-200 mb-2">
-              {fact.title}
-            </h3>
-            <p className="text-sm text-gray-300">{fact.content}</p>
+            {/* Border Animation */}
+            <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 via-transparent to-indigo-500 animate-border pointer-events-none"></div>
+
+            {/* Content */}
+            <div className="relative z-10">
+              <div className="text-4xl mb-4">{fact.icon}</div>
+              <h3 className="text-xl font-semibold text-gray-200 mb-2">
+                {fact.title}
+              </h3>
+              <p className="text-sm text-gray-300">{fact.content}</p>
+            </div>
           </motion.div>
         ))}
       </div>

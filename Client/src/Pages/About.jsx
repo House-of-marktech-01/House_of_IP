@@ -90,8 +90,7 @@ const About = () => {
                   trademarks.
                 </li>
                 <li>
-                  Expanded our expertise to include IP commercialization and
-                  litigation support.
+                  Expanded our expertise to include IP commercialization support.
                 </li>
                 <li>
                   Built a cutting-edge digital platform for streamlined IP
