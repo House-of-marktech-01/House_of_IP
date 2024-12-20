@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const TestimonialCard = () => {
   const testimonials = [
@@ -22,12 +23,19 @@ const TestimonialCard = () => {
 
   return (
     <div className="bg-white">
-      <h1 className="text-2xl text-center pb-7 text-slate-900 lg:font-bold">Lets here what our clients say</h1>
+      <h1 className="text-2xl text-center pb-7 text-slate-900 lg:font-bold">
+        Lets here what our clients say
+      </h1>
+
       <div className="grid grid-cols-1 gap-4 p-4 lg:grid-cols-2 lg:px-20 pb-5">
         {testimonials.map((testimonial, index) => (
-          <div
+          <motion.div
             key={index}
             className="bg-slate-900 p-6 rounded-md shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+            initial={{ opacity: 0, y: 50 }} // Initial state
+            whileInView={{ opacity: 1, y: 0 }} // Animate when in view
+            viewport={{ once: true, amount: 0.2 }} // Trigger once when 20% of the element is visible
+            transition={{ duration: 0.6, delay: index * 0.2 }} // Add stagger effect
           >
             <p className=" text-white text-xs italic mb-4">
               "{testimonial.text}"
@@ -35,7 +43,7 @@ const TestimonialCard = () => {
             <p className="text-right font-bold text-xs text-white">
               - {testimonial.author}
             </p>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
