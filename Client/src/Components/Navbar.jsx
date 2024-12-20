@@ -4,6 +4,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
 import Fuse from "fuse.js";
 import { toast } from "react-toastify";
+import BaseUrl from "../../BaseUrl";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -132,8 +133,8 @@ const Navbar = () => {
 
     // Define the endpoint based on the form type (sign-in or sign-up)
     const endpoint = isLogin
-      ? "http://localhost:5000/api/users/signin"
-      : "http://localhost:5000/api/users/signup";
+      ? `${BaseUrl}api/users/signin`
+      : `${BaseUrl}api/users/signup`;
 
     try {
       const response = await fetch(endpoint, {
@@ -151,7 +152,7 @@ const Navbar = () => {
         toast.success("Successfully submitted");
         // Perform actions on success like redirecting or storing token
       } else {
-        alert(`Error: ${result.message}`);
+        alert(`Error: ${data.message}`);
       }
     } catch (error) {
       console.error("Error:", error);

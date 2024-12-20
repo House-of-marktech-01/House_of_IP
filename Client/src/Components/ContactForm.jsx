@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { toast } from "react-toastify";
+import BaseUrl from "../../BaseUrl";
 
 const ContactForm = () => {
   // State to store form values
@@ -26,7 +27,7 @@ const ContactForm = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/users/send-mail",
+        `${BaseUrl}api/users/send-mail`,
         {
           method: "POST",
           headers: {
