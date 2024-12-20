@@ -121,7 +121,7 @@ const Design = () => {
           <div className="relative w-7/10 shrink-0 flex justify-center items-center">
             <div className="sticky">
               <img
-                src="https://img.indiafilings.com/catalog/design-registration.png"
+                src="https://www.bdslegalserv.com/assets/img/design_registration.jpg"
                 className="rounded-lg w-56"
                 alt="Trademark Rectification"
               />
@@ -211,14 +211,14 @@ const Design = () => {
         <div className="bg-white px-5 text-justify lg:px-20">
           <h1 className="text-center text-3xl text-black pb-4 pt-4">Design</h1>
           <p className="pb-8 text-gray-800 text-sm">
-            At House of IP, we offer comprehensive design registration
-            services to help protect the visual aspects of your product. A
-            registered design under the Designs Act, 2000 safeguards the unique
-            shape, pattern, configuration, or ornamentation of your product,
-            ensuring that others cannot replicate its appearance without
-            permission. Whether you are a designer, manufacturer, or business
-            owner, securing your product’s design is a crucial step in
-            protecting your creative efforts.
+            At House of IP, we offer comprehensive design registration services
+            to help protect the visual aspects of your product. A registered
+            design under the Designs Act, 2000 safeguards the unique shape,
+            pattern, configuration, or ornamentation of your product, ensuring
+            that others cannot replicate its appearance without permission.
+            Whether you are a designer, manufacturer, or business owner,
+            securing your product’s design is a crucial step in protecting your
+            creative efforts.
           </p>
           <p className="pb-8 text-gray-800 text-sm">
             Our team has extensive experience across a variety of industries,
@@ -235,8 +235,8 @@ const Design = () => {
             </h1>
 
             {/* Applicant's Details */}
-            <div className=" pt-2 hover:pl-5 rounded-lg">
-              <h1 className="text-start text-xl text-black  pb-4">
+            <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
+              <h1 className="text-start text-xl text-black pb-4">
                 Applicant's Details
               </h1>
               <p className="pb-8 text-black text-sm">
@@ -245,20 +245,19 @@ const Design = () => {
             </div>
 
             {/* Applicant's Nature/Status */}
-            <div className=" pt-2 hover:pl-5 rounded-lg">
-              <h1 className="text-start text-xl text-black  pb-4">
+            <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
+              <h1 className="text-start text-xl text-black pb-4">
                 Applicant's Nature/Status
               </h1>
               <p className="pb-8 text-black text-sm">
-                Clear indication of the  status of the applicant,
-                specifying whether the applicant is an individual, a company,
-                etc.
+                Clear indication of the status of the applicant, specifying
+                whether the applicant is an individual, a company, etc.
               </p>
             </div>
 
             {/* Startup Certificate (if applicable) */}
-            <div className=" pt-2 hover:pl-5 rounded-lg">
-              <h1 className="text-start text-xl text-black  pb-4">
+            <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
+              <h1 className="text-start text-xl text-black pb-4">
                 Startup Certificate (if applicable)
               </h1>
               <p className="pb-8 text-black text-sm">
@@ -267,8 +266,8 @@ const Design = () => {
             </div>
 
             {/* Description of the Article */}
-            <div className=" pt-2 hover:pl-5 rounded-lg">
-              <h1 className="text-start text-xl text-black  pb-4">
+            <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
+              <h1 className="text-start text-xl text-black pb-4">
                 Description of the Article
               </h1>
               <p className="pb-8 text-black text-sm">
@@ -279,8 +278,8 @@ const Design = () => {
             </div>
 
             {/* Visual Representation */}
-            <div className=" pt-2 hover:pl-5 rounded-lg">
-              <h1 className="text-start text-xl text-black  pb-4">
+            <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
+              <h1 className="text-start text-xl text-black pb-4">
                 Visual Representation
               </h1>
               <p className="pb-8 text-black text-sm">
@@ -331,171 +330,173 @@ const Design = () => {
           <div className="flex-1">
             {/* Your FAQ Content */}
             <div className="flex flex-row">
-            <img
-                  src="https://media.istockphoto.com/id/1180390158/photo/3d-rendering-of-hefty-stone-question-mark-standing-on-sounding-block-with-gavel-beside-on.jpg?s=612x612&w=0&k=20&c=Huhzii9Fk2_tYE5m_OxcA99wkGCJXueUXv870b-CLkM="
-                  alt=""
-                  className="h-96"
-                />
-            <div className="space-y-4 pr-2 pt-4 w-full h-full bg-slate-200 pb-10 pl-2 rounded-md lg:bg-white lg:px-10">
-              {/* FAQ Item 1 */}
-              <details className="group overflow-hidden ">
-                <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg transition">
-                  <span className="font-medium text-white">
-                    What types of designs can be registered with House of IP
-                    ?
-                  </span>
-                  <span className="transition-transform group-open:rotate-180">
-                    &#9660;
-                  </span>
-                </summary>
-                <div className="transition-all duration-300 ease-in-out overflow-hidden max-h-0 group-open:max-h-96 bg-gray-500 rounded-b-xl">
-                  <p className="mt-2 px-4 text-black text-sm">
-                    We assist with registering a wide range of product designs,
-                    including but not limited to:
-                  </p>
-                  <ul className="mt-2 px-4 list-disc list-inside text-black text-sm">
-                    <li>
-                      <strong>Product shapes and configurations</strong> (e.g.,
-                      furniture, gadgets)
-                    </li>
-                    <li>
-                      <strong>Surface patterns</strong> (e.g., textiles,
-                      wallpaper)
-                    </li>
-                    <li>
-                      <strong>Ornamentation</strong> (e.g., decorative elements
-                      on products)
-                    </li>
-                  </ul>
-                  <p className="mt-2 px-4 text-black text-sm">
-                    Our expertise spans multiple industries, allowing us to
-                    provide tailored solutions for your specific design
-                    protection needs.
-                  </p>
-                </div>
-              </details>
+              <img
+                src="https://media.istockphoto.com/id/1180390158/photo/3d-rendering-of-hefty-stone-question-mark-standing-on-sounding-block-with-gavel-beside-on.jpg?s=612x612&w=0&k=20&c=Huhzii9Fk2_tYE5m_OxcA99wkGCJXueUXv870b-CLkM="
+                alt=""
+                className="h-96"
+              />
+              <div className="space-y-4 pr-2 pt-4 w-full h-full bg-slate-200 pb-10 pl-2 rounded-md lg:bg-white lg:px-10">
+                {/* FAQ Item 1 */}
+                <details className="group overflow-hidden ">
+                  <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg transition">
+                    <span className="font-medium text-white">
+                      What types of designs can be registered with House of IP ?
+                    </span>
+                    <span className="transition-transform group-open:rotate-180">
+                      &#9660;
+                    </span>
+                  </summary>
+                  <div className="transition-all duration-300 ease-in-out overflow-hidden max-h-0 group-open:max-h-96 bg-gray-500 rounded-b-xl">
+                    <p className="mt-2 px-4 text-black text-sm">
+                      We assist with registering a wide range of product
+                      designs, including but not limited to:
+                    </p>
+                    <ul className="mt-2 px-4 list-disc list-inside text-black text-sm">
+                      <li>
+                        <strong>Product shapes and configurations</strong>{" "}
+                        (e.g., furniture, gadgets)
+                      </li>
+                      <li>
+                        <strong>Surface patterns</strong> (e.g., textiles,
+                        wallpaper)
+                      </li>
+                      <li>
+                        <strong>Ornamentation</strong> (e.g., decorative
+                        elements on products)
+                      </li>
+                    </ul>
+                    <p className="mt-2 px-4 text-black text-sm">
+                      Our expertise spans multiple industries, allowing us to
+                      provide tailored solutions for your specific design
+                      protection needs.
+                    </p>
+                  </div>
+                </details>
 
-              {/* Add the other FAQ items here */}
-              {/* FAQ Item 2 */}
-              <details className="group overflow-hidden">
-                <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg transition">
-                  <span className="font-medium text-white">
-                    What is the process of registering a design with
-                    House of IP?
-                  </span>
-                  <span className="transition-transform group-open:rotate-180">
-                    &#9660;
-                  </span>
-                </summary>
-                <div className="transition-all duration-300 ease-in-out overflow-hidden max-h-96 bg-gray-500 rounded-b-xl group-open:max-h-96 px-12 text-justify text-black font-montserrat font-thin overflow-y-auto">
-                  <p className="mt-2 px-4 text-black text-sm">
-                    Our design registration process is straightforward and
-                    includes:
-                  </p>
-                  <p className="mt-2 px-4 text-black text-sm">
-                    <strong>1. Consultation and Design Assessment:</strong> We
-                    start by understanding your product and its design elements
-                    to ensure eligibility under the Designs Act, 2000.
-                  </p>
-                  <p className="mt-2 px-4 text-black text-sm">
-                    <strong>2. Design Search:</strong> We conduct a search to
-                    ensure that your design is unique and not already registered
-                    by another entity.
-                  </p>
-                  <p className="mt-2 px-4 text-black text-sm">
-                    <strong>3. Application Drafting:</strong> Our team prepares
-                    and files the design application with the Indian Patent
-                    Office, ensuring that all necessary documents are in order.
-                  </p>
-                  <p className="mt-2 px-4 text-black text-sm">
-                    <strong>4. Filing and Registration:</strong> We manage the
-                    entire filing process, from submitting your application to
-                    addressing any queries raised by the Design Office until
-                    your design is successfully registered.
-                  </p>
-                  <p className="mt-2 px-4 text-black text-sm">
-                    <strong>5. Post–Registration Support:</strong> Once your
-                    design is registered, we provide support to help you enforce
-                    your rights in case of infringement and assist with renewals
-                    to keep your design protected.
-                  </p>
-                </div>
-              </details>
+                {/* Add the other FAQ items here */}
+                {/* FAQ Item 2 */}
+                <details className="group overflow-hidden">
+                  <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg transition">
+                    <span className="font-medium text-white">
+                      What is the process of registering a design with House of
+                      IP?
+                    </span>
+                    <span className="transition-transform group-open:rotate-180">
+                      &#9660;
+                    </span>
+                  </summary>
+                  <div className="transition-all duration-300 ease-in-out overflow-hidden max-h-96 bg-gray-500 rounded-b-xl group-open:max-h-96 px-12 text-justify text-black font-montserrat font-thin overflow-y-auto">
+                    <p className="mt-2 px-4 text-black text-sm">
+                      Our design registration process is straightforward and
+                      includes:
+                    </p>
+                    <p className="mt-2 px-4 text-black text-sm">
+                      <strong>1. Consultation and Design Assessment:</strong> We
+                      start by understanding your product and its design
+                      elements to ensure eligibility under the Designs Act,
+                      2000.
+                    </p>
+                    <p className="mt-2 px-4 text-black text-sm">
+                      <strong>2. Design Search:</strong> We conduct a search to
+                      ensure that your design is unique and not already
+                      registered by another entity.
+                    </p>
+                    <p className="mt-2 px-4 text-black text-sm">
+                      <strong>3. Application Drafting:</strong> Our team
+                      prepares and files the design application with the Indian
+                      Patent Office, ensuring that all necessary documents are
+                      in order.
+                    </p>
+                    <p className="mt-2 px-4 text-black text-sm">
+                      <strong>4. Filing and Registration:</strong> We manage the
+                      entire filing process, from submitting your application to
+                      addressing any queries raised by the Design Office until
+                      your design is successfully registered.
+                    </p>
+                    <p className="mt-2 px-4 text-black text-sm">
+                      <strong>5. Post–Registration Support:</strong> Once your
+                      design is registered, we provide support to help you
+                      enforce your rights in case of infringement and assist
+                      with renewals to keep your design protected.
+                    </p>
+                  </div>
+                </details>
 
-              {/* FAQ Item 3 */}
-              <details className="group overflow-hidden">
-                <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg transition">
-                  <span className="font-medium text-white">
-                    Prices & FeesWhat happens if someone copies my registered
-                    design?
-                  </span>
-                  <span className="transition-transform group-open:rotate-180">
-                    &#9660;
-                  </span>
-                </summary>
-                <div className="transition-all duration-300 ease-in-out overflow-hidden bg-gray-500 rounded-b-xl max-h-0 group-open:max-h-96">
-                  <p className="mt-2 px-4 text-black text-sm">
-                    At House of IP, we help you take swift  action
-                    if your registered design is copied. Our team assists in
-                    filing design infringement cases, preparing  documents,
-                    and representing you in court to ensure your design rights
-                    are upheld.
-                  </p>
-                </div>
-              </details>
+                {/* FAQ Item 3 */}
+                <details className="group overflow-hidden">
+                  <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg transition">
+                    <span className="font-medium text-white">
+                      Prices & FeesWhat happens if someone copies my registered
+                      design?
+                    </span>
+                    <span className="transition-transform group-open:rotate-180">
+                      &#9660;
+                    </span>
+                  </summary>
+                  <div className="transition-all duration-300 ease-in-out overflow-hidden bg-gray-500 rounded-b-xl max-h-0 group-open:max-h-96">
+                    <p className="mt-2 px-4 text-black text-sm">
+                      At House of IP, we help you take swift action if your
+                      registered design is copied. Our team assists in filing
+                      design infringement cases, preparing documents, and
+                      representing you in court to ensure your design rights are
+                      upheld.
+                    </p>
+                  </div>
+                </details>
 
-              <details className="group overflow-hidden">
-                <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg transition">
-                  <span className="font-medium text-white">
-                    How can I monetize my registered design?
-                  </span>
-                  <span className="transition-transform group-open:rotate-180">
-                    &#9660;
-                  </span>
-                </summary>
-                <div className="transition-all duration-300 ease-in-out overflow-hidden bg-gray-500 rounded-b-xl max-h-0 group-open:max-h-96 text-sm">
-                  <p className="mt-2 px-4 text-black">
-                    Registering your design not only protects it but also allows
-                    you to explore commercialization opportunities. Our experts
-                    at House of IP help you:
-                  </p>
-                  <ul className="mt-2 px-4 list-disc list-inside text-black">
-                    <li>
-                      License your design to other manufacturers or businesses.
-                    </li>
-                    <li>Negotiate design rights transfer agreements.</li>
-                    <li>
-                      Maximize the commercial value of your design through
-                      strategic partnerships.
-                    </li>
-                  </ul>
-                </div>
-              </details>
+                <details className="group overflow-hidden">
+                  <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg transition">
+                    <span className="font-medium text-white">
+                      How can I monetize my registered design?
+                    </span>
+                    <span className="transition-transform group-open:rotate-180">
+                      &#9660;
+                    </span>
+                  </summary>
+                  <div className="transition-all duration-300 ease-in-out overflow-hidden bg-gray-500 rounded-b-xl max-h-0 group-open:max-h-96 text-sm">
+                    <p className="mt-2 px-4 text-black">
+                      Registering your design not only protects it but also
+                      allows you to explore commercialization opportunities. Our
+                      experts at House of IP help you:
+                    </p>
+                    <ul className="mt-2 px-4 list-disc list-inside text-black">
+                      <li>
+                        License your design to other manufacturers or
+                        businesses.
+                      </li>
+                      <li>Negotiate design rights transfer agreements.</li>
+                      <li>
+                        Maximize the commercial value of your design through
+                        strategic partnerships.
+                      </li>
+                    </ul>
+                  </div>
+                </details>
 
-              {/* FAQ Item 4 */}
-              <details className="group overflow-hidden pb-10">
-                <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg transition">
-                  <span className="font-medium text-white">
-                    How do I know if House of IP is the right firm for
-                    design protection?
-                  </span>
-                  <span className="transition-transform group-open:rotate-180">
-                    &#9660;
-                  </span>
-                </summary>
-                <div className="transition-all duration-300 ease-in-out overflow-hidden bg-gray-500 rounded-b-xl max-h-0 group-open:max-h-96 text-sm">
-                  <p className="mt-2 px-4 text-black">
-                    With a proven track record in IP law and extensive
-                    experience in design protection, House of IP is a
-                    trusted partner for securing your product’s design. Our
-                    dedicated team of experts provides personalized guidance
-                    through every step of the design registration process,
-                    ensuring that your creative work is safeguarded and
-                    leveraged for its full potential.
-                  </p>
-                </div>
-              </details>
-            </div>
+                {/* FAQ Item 4 */}
+                <details className="group overflow-hidden pb-10">
+                  <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg transition">
+                    <span className="font-medium text-white">
+                      How do I know if House of IP is the right firm for design
+                      protection?
+                    </span>
+                    <span className="transition-transform group-open:rotate-180">
+                      &#9660;
+                    </span>
+                  </summary>
+                  <div className="transition-all duration-300 ease-in-out overflow-hidden bg-gray-500 rounded-b-xl max-h-0 group-open:max-h-96 text-sm">
+                    <p className="mt-2 px-4 text-black">
+                      With a proven track record in IP law and extensive
+                      experience in design protection, House of IP is a trusted
+                      partner for securing your product’s design. Our dedicated
+                      team of experts provides personalized guidance through
+                      every step of the design registration process, ensuring
+                      that your creative work is safeguarded and leveraged for
+                      its full potential.
+                    </p>
+                  </div>
+                </details>
+              </div>
             </div>
           </div>
 

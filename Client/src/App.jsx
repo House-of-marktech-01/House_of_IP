@@ -9,6 +9,7 @@ import Footer from "./Components/Footer";
 import ScrollToTopButton from "./Components/ScrollTop";
 import Chatbot from "./Components/Chatbot";
 import CustomCursor from "./Components/Cursor";
+import ScrollProgress from "./Components/ScrollProgress";
 
 // Lazy load the page components
 const Home = lazy(() => import("./Pages/Home"));
@@ -29,6 +30,7 @@ function App() {
         <ToastContainer />
         <Navbar />
         {/* Suspense component to handle loading state */}
+        <ScrollProgress/>
         <Suspense
           fallback={
             <div className="flex justify-center items-center min-h-screen">

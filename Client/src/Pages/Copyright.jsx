@@ -510,7 +510,7 @@ const Copyright = () => {
                     <img
                       src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI9Ngiq_F5HPP39UxsluGMvOiMx4-aZrO1vg&s"
                       alt="Copyright"
-                      className="h-44"
+                      className="h-44 w-full"
                     />
                   </figure>
                   <div className="card-body bg-white text-black">
@@ -522,7 +522,7 @@ const Copyright = () => {
                 <div className="card card-compact bg-base-100 w-72 shadow-xl">
                   <figure>
                     <img
-                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEaE-xi5291DEKz_fKdeE3LxPyxsovjgdojg&s"
+                      src="https://www.bdslegalserv.com/assets/img/design_registration.jpg"
                       alt="Design"
                       className="h-44 w-72"
                     />

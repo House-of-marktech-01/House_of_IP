@@ -211,8 +211,8 @@ const Trademark = () => {
           </h1>
           <p className="pb-8 text-gray-800 text-sm">
             At House of IP, our dedicated team of trademark attorneys offers
-            more than just  protection. We deliver comprehensive business
-            value by integrating industry insights, brand strategy, and global
+            more than just protection. We deliver comprehensive business value
+            by integrating industry insights, brand strategy, and global
             trademark registration services. Our approach begins with a deep
             understanding of your brand’s goals and conducting extensive
             trademark availability searches to ensure success.
@@ -241,13 +241,13 @@ const Trademark = () => {
           </p>
           <p className="pb-8 text-gray-800 text-sm">
             Our success is driven by detailed documentation, well-constructed
-             responses, and a commitment to resolving disputes amicably.
-            This meticulous approach contributes to high approval rates for
-            trademark applications. Beyond registration, we manage renewals,
-            recordals, and monitor your brand for unauthorized use.
-            Additionally, we provide guidance on trademark valuation during
-            licensing, IP transfers, and mergers, empowering both startups and
-            multinationals to leverage their trademarks effectively.
+            responses, and a commitment to resolving disputes amicably. This
+            meticulous approach contributes to high approval rates for trademark
+            applications. Beyond registration, we manage renewals, recordals,
+            and monitor your brand for unauthorized use. Additionally, we
+            provide guidance on trademark valuation during licensing, IP
+            transfers, and mergers, empowering both startups and multinationals
+            to leverage their trademarks effectively.
           </p>
         </div>
         <div className="bg-white px-5 text-justify flex lg:px-20 ">
@@ -257,19 +257,19 @@ const Trademark = () => {
             </h1>
 
             {/* Applicant's Name */}
-            <div className=" pt-2 hover:pl-5 rounded-lg">
+            <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
               <h1 className="text-start text-xl text-slate-900 pb-4 cursor-pointer">
                 Applicant's Name
               </h1>
-              <p className="pb-8 text-slate-900  text-sm">
+              <p className="pb-8 text-slate-900 text-sm">
                 The name of the individual, company, or entity applying for the
                 trademark registration.
               </p>
             </div>
 
             {/* Business Type */}
-            <div className=" pt-2 hover:pl-5 rounded-lg">
-              <h1 className="text-start text-xl text-slate-900  pb-4 cursor-pointer">
+            <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
+              <h1 className="text-start text-xl text-slate-900 pb-4 cursor-pointer">
                 Business Type
               </h1>
               <p className="pb-8 text-slate-900 text-sm">
@@ -279,8 +279,8 @@ const Trademark = () => {
             </div>
 
             {/* Business Objectives */}
-            <div className=" pt-2 hover:pl-5 rounded-lg">
-              <h1 className="text-start text-xl text-slate-900  pb-4 cursor-pointer">
+            <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
+              <h1 className="text-start text-xl text-slate-900 pb-4 cursor-pointer">
                 Business Objectives
               </h1>
               <p className="pb-8 text-slate-900 text-sm">
@@ -290,8 +290,8 @@ const Trademark = () => {
             </div>
 
             {/* Brand/Logo/Slogan Name */}
-            <div className=" pt-2 hover:pl-5 rounded-lg">
-              <h1 className="text-start text-xl text-slate-900  pb-4 cursor-pointer">
+            <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
+              <h1 className="text-start text-xl text-slate-900 pb-4 cursor-pointer">
                 Brand/Logo/Slogan Name
               </h1>
               <p className="pb-8 text-slate-900 text-sm">
@@ -301,11 +301,11 @@ const Trademark = () => {
             </div>
 
             {/* Registration Address */}
-            <div className=" pt-2 hover:pl-5 rounded-lg">
-              <h1 className="text-start text-xl text-slate-900  pb-4 cursor-pointer">
+            <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
+              <h1 className="text-start text-xl text-slate-900 pb-4 cursor-pointer">
                 Registration Address
               </h1>
-              <p className="pb-8 text-slate-900  text-sm">
+              <p className="pb-8 text-slate-900 text-sm">
                 Furnish the official address of the entity applying for the
                 trademark.
               </p>
@@ -353,117 +353,117 @@ const Trademark = () => {
           <div className="flex-1">
             {/* Your FAQ Content */}
             <div className="flex flex-row">
-            <img
-                  src="https://media.istockphoto.com/id/1180390158/photo/3d-rendering-of-hefty-stone-question-mark-standing-on-sounding-block-with-gavel-beside-on.jpg?s=612x612&w=0&k=20&c=Huhzii9Fk2_tYE5m_OxcA99wkGCJXueUXv870b-CLkM="
-                  alt=""
-                  className="h-80"
-                />
-            <div className="space-y-4 pr-2 pt-4 w-full h-full bg-slate-200 pb-10 pl-2 rounded-md lg:bg-white lg:px-10">
-              {/* FAQ Item 1 */}
-              <details className="group overflow-hidden ">
-                <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg rounded-b-sm transition">
-                  <span className="font-medium text-white">
-                    Why Choose House of IP for Trademark Registration?
-                  </span>
-                  <span className="transition-transform group-open:rotate-180">
-                    &#9660;
-                  </span>
-                </summary>
-                <div className="transition-all duration-300 bg-slate-600 rounded-b-xl ease-in-out overflow-hidden max-h-0 group-open:max-h-96">
-                  <p className="mt-2 px-4 text-black text-sm">
-                    At House of IP, we go beyond  protection by offering a
-                    full-service solution that includes:
-                  </p>
-                  <ul className="mt-2 px-4 list-disc list-inside text-black text-sm">
-                    <li>
-                      Industry research and strategic brand development to
-                      strengthen your trademark.
-                    </li>
-                    <li>
-                      Alignment and registration capabilities across national
-                      and international territories.
-                    </li>
-                    <li>
-                      Expert advice on domain names, hashtags, and social media
-                      handles for cohesive digital branding.
-                    </li>
-                  </ul>
-                </div>
-              </details>
+              <img
+                src="https://media.istockphoto.com/id/1180390158/photo/3d-rendering-of-hefty-stone-question-mark-standing-on-sounding-block-with-gavel-beside-on.jpg?s=612x612&w=0&k=20&c=Huhzii9Fk2_tYE5m_OxcA99wkGCJXueUXv870b-CLkM="
+                alt=""
+                className="h-80"
+              />
+              <div className="space-y-4 pr-2 pt-4 w-full h-full bg-slate-200 pb-10 pl-2 rounded-md lg:bg-white lg:px-10">
+                {/* FAQ Item 1 */}
+                <details className="group overflow-hidden ">
+                  <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg rounded-b-sm transition">
+                    <span className="font-medium text-white">
+                      Why Choose House of IP for Trademark Registration?
+                    </span>
+                    <span className="transition-transform group-open:rotate-180">
+                      &#9660;
+                    </span>
+                  </summary>
+                  <div className="transition-all duration-300 bg-slate-600 rounded-b-xl ease-in-out overflow-hidden max-h-0 group-open:max-h-96">
+                    <p className="mt-2 px-4 text-black text-sm">
+                      At House of IP, we go beyond protection by offering a
+                      full-service solution that includes:
+                    </p>
+                    <ul className="mt-2 px-4 list-disc list-inside text-black text-sm">
+                      <li>
+                        Industry research and strategic brand development to
+                        strengthen your trademark.
+                      </li>
+                      <li>
+                        Alignment and registration capabilities across national
+                        and international territories.
+                      </li>
+                      <li>
+                        Expert advice on domain names, hashtags, and social
+                        media handles for cohesive digital branding.
+                      </li>
+                    </ul>
+                  </div>
+                </details>
 
-              {/* Add the other FAQ items here */}
-              {/* FAQ Item 2 */}
-              <details className="group overflow-hidden">
-                <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg rounded-b-sm transition">
-                  <span className="font-medium text-white">
-                    How Do We Ensure Successful Trademark Registration?
-                  </span>
-                  <span className="transition-transform group-open:rotate-180">
-                    &#9660;
-                  </span>
-                </summary>
-                <div className="transition-all duration-300 ease-in-out overflow-hidden max-h-96 rounded-b-xl bg-slate-600 pb-6 group-open:max-h-96 px-12 text-justify text-black font-montserrat font-thin overflow-y-auto">
-                  <p className="mt-2 px-4 text-black text-sm">
-                    We begin by understanding your brand’s objectives, followed
-                    by conducting comprehensive availability searches to
-                    identify potential conflicts and evaluate registration
-                    feasibility. Our thorough knowledge of trademark classes
-                    enables strategic protection, and we have a proven track
-                    record in oppositions, cancellations, and rectifications.
-                  </p>
-                </div>
-              </details>
+                {/* Add the other FAQ items here */}
+                {/* FAQ Item 2 */}
+                <details className="group overflow-hidden">
+                  <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg rounded-b-sm transition">
+                    <span className="font-medium text-white">
+                      How Do We Ensure Successful Trademark Registration?
+                    </span>
+                    <span className="transition-transform group-open:rotate-180">
+                      &#9660;
+                    </span>
+                  </summary>
+                  <div className="transition-all duration-300 ease-in-out overflow-hidden max-h-96 rounded-b-xl bg-slate-600 pb-6 group-open:max-h-96 px-12 text-justify text-black font-montserrat font-thin overflow-y-auto">
+                    <p className="mt-2 px-4 text-black text-sm">
+                      We begin by understanding your brand’s objectives,
+                      followed by conducting comprehensive availability searches
+                      to identify potential conflicts and evaluate registration
+                      feasibility. Our thorough knowledge of trademark classes
+                      enables strategic protection, and we have a proven track
+                      record in oppositions, cancellations, and rectifications.
+                    </p>
+                  </div>
+                </details>
 
-              {/* FAQ Item 3 */}
-              <details className="group overflow-hidden">
-                <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg rounded-b-sm transition">
-                  <span className="font-medium text-white">
-                    What Are Our Success Rates for Trademark Approvals?
-                  </span>
-                  <span className="transition-transform group-open:rotate-180">
-                    &#9660;
-                  </span>
-                </summary>
-                <div className="transition-all duration-300 ease-in-out overflow-hidden rounded-b-xl bg-slate-600 pb-6 max-h-0 group-open:max-h-96">
-                  <p className="mt-2 px-4 text-black text-sm">
-                    With a meticulous process that includes well-prepared
-                    applications, comprehensive examination responses, and
-                    evidence-backed arguments, we consistently achieve high
-                    approval rates for our clients.
-                  </p>
-                </div>
-              </details>
+                {/* FAQ Item 3 */}
+                <details className="group overflow-hidden">
+                  <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg rounded-b-sm transition">
+                    <span className="font-medium text-white">
+                      What Are Our Success Rates for Trademark Approvals?
+                    </span>
+                    <span className="transition-transform group-open:rotate-180">
+                      &#9660;
+                    </span>
+                  </summary>
+                  <div className="transition-all duration-300 ease-in-out overflow-hidden rounded-b-xl bg-slate-600 pb-6 max-h-0 group-open:max-h-96">
+                    <p className="mt-2 px-4 text-black text-sm">
+                      With a meticulous process that includes well-prepared
+                      applications, comprehensive examination responses, and
+                      evidence-backed arguments, we consistently achieve high
+                      approval rates for our clients.
+                    </p>
+                  </div>
+                </details>
 
-              {/* FAQ Item 4 */}
-              <details className="group overflow-hidden pb-10">
-                <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg rounded-b-sm transition">
-                  <span className="font-medium text-white">
-                    Support Beyond Registration
-                  </span>
-                  <span className="transition-transform group-open:rotate-180">
-                    &#9660;
-                  </span>
-                </summary>
-                <div className="transition-all duration-300 ease-in-out overflow-hidden bg-slate-600 rounded-b-xl pb-6 max-h-0 group-open:max-h-96 text-sm">
-                  <p className="mt-2 px-4 text-black">
-                    Our 360-degree service doesn’t stop at registration. We also
-                    manage renewals, recordals, and continuous monitoring to
-                    safeguard your trademark. Additionally, we offer:
-                  </p>
-                  <ul className="mt-2 px-4 list-disc list-inside text-black">
-                    <li>
-                      Trademark valuation guidance for licensing agreements, IP
-                      transfers, or mergers.
-                    </li>
-                    <li>
-                      Strategic advice to help startups and established
-                      businesses maximize the potential of their trademarks,
-                      ensuring alignment with evolving brand objectives.
-                    </li>
-                  </ul>
-                </div>
-              </details>
-            </div>
+                {/* FAQ Item 4 */}
+                <details className="group overflow-hidden pb-10">
+                  <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg rounded-b-sm transition">
+                    <span className="font-medium text-white">
+                      Support Beyond Registration
+                    </span>
+                    <span className="transition-transform group-open:rotate-180">
+                      &#9660;
+                    </span>
+                  </summary>
+                  <div className="transition-all duration-300 ease-in-out overflow-hidden bg-slate-600 rounded-b-xl pb-6 max-h-0 group-open:max-h-96 text-sm">
+                    <p className="mt-2 px-4 text-black">
+                      Our 360-degree service doesn’t stop at registration. We
+                      also manage renewals, recordals, and continuous monitoring
+                      to safeguard your trademark. Additionally, we offer:
+                    </p>
+                    <ul className="mt-2 px-4 list-disc list-inside text-black">
+                      <li>
+                        Trademark valuation guidance for licensing agreements,
+                        IP transfers, or mergers.
+                      </li>
+                      <li>
+                        Strategic advice to help startups and established
+                        businesses maximize the potential of their trademarks,
+                        ensuring alignment with evolving brand objectives.
+                      </li>
+                    </ul>
+                  </div>
+                </details>
+              </div>
             </div>
           </div>
 
@@ -502,9 +502,9 @@ const Trademark = () => {
               <p className="text-gray-800 pt-2 text-sm">
                 The IPO will review your application, and we handle all
                 communications on your behalf. Should any objections arise, we
-                provide clear, ly sound responses to support your
-                trademark’s registrability, backed by additional documentation
-                and clarifications as needed.
+                provide clear, ly sound responses to support your trademark’s
+                registrability, backed by additional documentation and
+                clarifications as needed.
               </p>
               <h3 className="font-bold text-gray-900 pt-3">
                 4. Registration & Publication
@@ -519,8 +519,8 @@ const Trademark = () => {
                 5. Post-Registration Management
               </h3>
               <p className="text-gray-800 pt-2 text-sm">
-                Congratulations! Your brand identity is now ly protected.
-                House of IP will continue to support you by advising on renewal
+                Congratulations! Your brand identity is now ly protected. House
+                of IP will continue to support you by advising on renewal
                 strategies, managing infringement disputes, and maintaining your
                 trademark throughout its validity period.
               </p>

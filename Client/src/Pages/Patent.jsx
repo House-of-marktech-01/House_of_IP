@@ -292,16 +292,16 @@ const Patent = () => {
             </h1>
 
             {/* Patent Registration */}
-            <div className=" pt-2 hover:pl-5 rounded-lg">
-              <h1 className="text-start text-xl text-black  pb-4">
+            <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
+              <h1 className="text-start text-xl text-black pb-4">
                 Patent Registration Application
               </h1>
               <p className="pb-8 text-black text-sm">Form-1.</p>
             </div>
 
             {/* Complete Specifications */}
-            <div className="pt-2 hover:pl-5 rounded-lg">
-              <h1 className="text-start text-xl text-black  pb-4">
+            <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
+              <h1 className="text-start text-xl text-black pb-4">
                 Complete Specifications
               </h1>
               <p className="pb-8 text-black text-sm">
@@ -311,7 +311,7 @@ const Patent = () => {
             </div>
 
             {/* Statement and Undertaking */}
-            <div className="pt-2 hover:pl-5 rounded-lg">
+            <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
               <h1 className="text-start text-xl text-black pb-4">
                 Statement and Undertaking
               </h1>
@@ -319,8 +319,8 @@ const Patent = () => {
             </div>
 
             {/* Inventor's Declaration */}
-            <div className=" pt-2 hover:pl-5 rounded-lg">
-              <h1 className="text-start text-xl text-black  pb-4">
+            <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
+              <h1 className="text-start text-xl text-black pb-4">
                 Inventor's Declaration
               </h1>
               <p className="pb-8 text-black text-sm">
@@ -330,8 +330,8 @@ const Patent = () => {
             </div>
 
             {/* Proof of Right */}
-            <div className=" pt-2 hover:pl-5 rounded-lg">
-              <h1 className="text-start text-xl text-black  pb-4">
+            <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
+              <h1 className="text-start text-xl text-black pb-4">
                 Proof of Right
               </h1>
               <p className="pb-8 text-black text-sm">
@@ -341,8 +341,8 @@ const Patent = () => {
             </div>
 
             {/* Power of Authority */}
-            <div className=" pt-2 hover:pl-5 rounded-lg">
-              <h1 className="text-start text-xl text-black  pb-4">
+            <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
+              <h1 className="text-start text-xl text-black pb-4">
                 Power of Authority
               </h1>
               <p className="pb-8 text-black text-sm">
@@ -352,8 +352,8 @@ const Patent = () => {
             </div>
 
             {/* Priority Documents */}
-            <div className=" pt-2 hover:pl-5 rounded-lg">
-              <h1 className="text-start text-xl text-black  pb-4">
+            <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
+              <h1 className="text-start text-xl text-black pb-4">
                 Priority Documents
               </h1>
               <p className="pb-8 text-black text-sm">
@@ -366,8 +366,8 @@ const Patent = () => {
             </div>
 
             {/* Permission from National Biodiversity Authority */}
-            <div className=" pt-2 hover:pl-5 rounded-lg">
-              <h1 className="text-start text-xl text-black  pb-4">
+            <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
+              <h1 className="text-start text-xl text-black pb-4">
                 Permission from National Biodiversity Authority
               </h1>
               <p className="pb-8 text-black text-sm">
@@ -378,8 +378,8 @@ const Patent = () => {
             </div>
 
             {/* Source of Biological Material */}
-            <div className=" pt-2 hover:pl-5 rounded-lg">
-              <h1 className="text-start text-xl text-black  pb-4">
+            <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
+              <h1 className="text-start text-xl text-black pb-4">
                 Source of Biological Material
               </h1>
               <p className="pb-8 text-black text-sm">
@@ -672,7 +672,7 @@ const Patent = () => {
                     <img
                       src="https://blog.ipleaders.in/wp-content/uploads/2021/06/1_copyright-designs-and-patents-act-1988-1.jpg"
                       alt="Copyright"
-                      className="h-44"
+                      className="h-44 w-full"
                     />
                   </figure>
                   <div className="card-body bg-white text-black">
