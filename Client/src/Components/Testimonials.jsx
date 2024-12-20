@@ -7,15 +7,15 @@ const TestimonialCard = () => {
       author: "Shidharth Ganguly(CEO – ByProduct Ventures)",
     },
     {
-      text: "From the first consultation, I knew I was in the right hands with JustiSphereXLegal. Their team is not only knowledgeable but also genuinely invested in the success of their clients. The Partners, in particular, were outstanding—they provided personal guidance and helped me navigate complex legal issues with clarity and confidence. Their attention to detail and commitment to delivering the best possible outcome really sets this firm apart. Highly recommended!",
+      text: "From the first consultation, I knew I was in the right hands with JustiSphereX. Their team is not only knowledgeable but also genuinely invested in the success of their clients. The Partners, in particular, were outstanding—they provided personal guidance and helped me navigate complex  issues with clarity and confidence. Their attention to detail and commitment to delivering the best possible outcome really sets this firm apart. Highly recommended!",
       author: "Avinash Pandey (Director – LyfLyne India HealthTech)",
     },
     {
-      text: "The legal services at House of IP are exceptional. They go above and beyond, ensuring every aspect of your case is carefully considered. I was particularly impressed with the personal involvement of the firm’s partners. They offered me direct advice and guidance, making the entire process much smoother and less stressful. Their expertise is evident, but what truly impressed me was their dedication to my individual needs. I can confidently say that their legal service is the best I’ve experienced.",
+      text: "The  services at House of IP are exceptional. They go above and beyond, ensuring every aspect of your case is carefully considered. I was particularly impressed with the personal involvement of the firm’s partners. They offered me direct advice and guidance, making the entire process much smoother and less stressful. Their expertise is evident, but what truly impressed me was their dedication to my individual needs. I can confidently say that their  service is the best I’ve experienced.",
       author: "Rakesh Kumar (Owner – Ganapati Jewellers)",
     },
     {
-      text: "I can’t speak highly enough about House of IP. From the consultation to the resolution of my case, they were with me every step of the way. The firm’s partners personally guided me through some of the most complex legal matters, offering clear, actionable advice. Their legal services are truly top-tier, combining deep knowledge with a personal touch that you rarely find elsewhere. If you’re looking for a firm that delivers outstanding results with personal attention, this is the one.",
+      text: "I can’t speak highly enough about House of IP. From the consultation to the resolution of my case, they were with me every step of the way. The firm’s partners personally guided me through some of the most complex  matters, offering clear, actionable advice. Their  services are truly top-tier, combining deep knowledge with a personal touch that you rarely find elsewhere. If you’re looking for a firm that delivers outstanding results with personal attention, this is the one.",
       author: "Rohan Singh (Owner – Rohan Industries)",
     },
   ];

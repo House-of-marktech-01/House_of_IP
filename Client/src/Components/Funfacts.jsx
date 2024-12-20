@@ -48,17 +48,17 @@ const FunFact = () => {
         {funFacts.map((fact) => (
           <motion.div
             key={fact.id}
-            className="bg-white shadow-lg rounded-lg p-6 text-center hover:shadow-xl hover:scale-105 transition-transform"
+            className="bg-slate-900 shadow-lg rounded-lg p-6 text-center hover:shadow-xl hover:scale-105 transition-transform"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
             variants={cardVariants}
           >
             <div className="text-4xl mb-4">{fact.icon}</div>
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">
+            <h3 className="text-xl font-semibold text-gray-200 mb-2">
               {fact.title}
             </h3>
-            <p className="text-sm text-gray-600">{fact.content}</p>
+            <p className="text-sm text-gray-300">{fact.content}</p>
           </motion.div>
         ))}
       </div>

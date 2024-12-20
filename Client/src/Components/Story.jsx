@@ -31,7 +31,7 @@ const OurStory = () => {
                   height="auto"
                   loop
                   muted
-                  className="w-full rounded-lg lg:h-96"
+                  className="w-full lg:h-96"
                 >
                   <source
                     src="https://www.w3schools.com/html/mov_bbb.mp4"
@@ -39,7 +39,7 @@ const OurStory = () => {
                   />
                 </video>
                 {/* Custom Controls */}
-                <div className="absolute bottom-0 left-0 w-full bg-slate-900 py-3 flex justify-center items-center rounded-b-lg">
+                <div className="absolute bottom-0 left-0 w-full bg-slate-900 py-3 flex justify-center items-center ">
                   <button
                     onClick={togglePlayPause}
                     className="flex items-center justify-center w-10 h-10 bg-white rounded-full shadow-lg hover:scale-105 transition-transform"
@@ -79,20 +79,20 @@ const OurStory = () => {
                 </div>
               </div>
 
-              <div className="flex flex-col items-start gap-3">
+              <div className="flex flex-col items-start lg:w-[90%] gap-3">
                 <h2 className="text-2xl font-semibold text-slate-900">
                   Our Story!
                 </h2>
                 <p className="text-md text-gray-800 leading-relaxed mb-2.5">
-                  At House of IP, we provide comprehensive services
-                  to individuals and businesses alike. Our expertise spans
-                  across intellectual property, civil, criminal, and matrimonial
-                  law, ensuring that you receive the best assistance
-                  tailored to your needs.
-                  <NavLink className="text-blue-600 hover:underline" to="/about">
-                    {" "}
-                    about House of IP.
-                  </NavLink>
+                  At House of IP, we empower creators, innovators, and
+                  entrepreneurs by securing their intellectual property rights.
+                  From trademarks and copyrights to designs and patents, we
+                  provide comprehensive solutions to protect your ideas and
+                  innovations. With a focus on precision and trust, we ensure
+                  your creations are safeguarded, giving you the confidence to
+                  thrive in a competitive world. For more details, visit 
+                  <NavLink to="/about"><span className="text-bold pl-1 pr-1 text-blue-700">About</span></NavLink>
+                   or <NavLink to="/contact"><span className="text-bold pl-1 pr-1 text-blue-700">Contact</span></NavLink> our experts to get started today!
                 </p>
               </div>
             </div>

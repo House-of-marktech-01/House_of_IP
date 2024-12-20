@@ -69,7 +69,7 @@ const About = () => {
                 ideas have the power to change the world, they often remain
                 vulnerable without proper protection. This insight drove us to
                 establish a platform that bridges the gap between creators and
-                the legal safeguards they need. From humble beginnings, we’ve
+                the  safeguards they need. From humble beginnings, we’ve
                 grown into a leading IP service provider trusted by inventors,
                 entrepreneurs, and businesses alike.
               </p>
@@ -171,7 +171,7 @@ const About = () => {
                     <p>
                       <strong>Prosecution:</strong> Represent clients during
                       patent/trademark examinations and address objections with
-                      sound legal arguments.
+                      sound  arguments.
                     </p>
                   </div>
                   <div class="flex items-start text-gray-600 lg:text-white">

@@ -96,7 +96,7 @@ const Card = () => {
             Design
           </h3>
           <p className="text-sm text-gray-600 group-hover:text-gray-300 leading-relaxed mb-4 relative z-20">
-            Protect your unique product designs with our expert legal services.
+            Protect your unique product designs with our expert  services.
           </p>
           <NavLink to="/design">
             <Button />

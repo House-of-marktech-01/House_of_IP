@@ -211,7 +211,7 @@ const Trademark = () => {
           </h1>
           <p className="pb-8 text-gray-800 text-sm">
             At House of IP, our dedicated team of trademark attorneys offers
-            more than just legal protection. We deliver comprehensive business
+            more than just  protection. We deliver comprehensive business
             value by integrating industry insights, brand strategy, and global
             trademark registration services. Our approach begins with a deep
             understanding of your brand’s goals and conducting extensive
@@ -241,7 +241,7 @@ const Trademark = () => {
           </p>
           <p className="pb-8 text-gray-800 text-sm">
             Our success is driven by detailed documentation, well-constructed
-            legal responses, and a commitment to resolving disputes amicably.
+             responses, and a commitment to resolving disputes amicably.
             This meticulous approach contributes to high approval rates for
             trademark applications. Beyond registration, we manage renewals,
             recordals, and monitor your brand for unauthorized use.
@@ -365,7 +365,7 @@ const Trademark = () => {
                 </summary>
                 <div className="transition-all duration-300 bg-slate-600 rounded-b-xl ease-in-out overflow-hidden max-h-0 group-open:max-h-96">
                   <p className="mt-2 px-4 text-black text-sm">
-                    At House of IP, we go beyond legal protection by offering a
+                    At House of IP, we go beyond  protection by offering a
                     full-service solution that includes:
                   </p>
                   <ul className="mt-2 px-4 list-disc list-inside text-black text-sm">
@@ -495,7 +495,7 @@ const Trademark = () => {
               <p className="text-gray-800 pt-2 text-sm">
                 The IPO will review your application, and we handle all
                 communications on your behalf. Should any objections arise, we
-                provide clear, legally sound responses to support your
+                provide clear, ly sound responses to support your
                 trademark’s registrability, backed by additional documentation
                 and clarifications as needed.
               </p>
@@ -512,7 +512,7 @@ const Trademark = () => {
                 5. Post-Registration Management
               </h3>
               <p className="text-gray-800 pt-2 text-sm">
-                Congratulations! Your brand identity is now legally protected.
+                Congratulations! Your brand identity is now ly protected.
                 House of IP will continue to support you by advising on renewal
                 strategies, managing infringement disputes, and maintaining your
                 trademark throughout its validity period.
@@ -542,7 +542,7 @@ const Trademark = () => {
                 <div className="card card-compact bg-base-100 w-72 shadow-xl">
                   <figure>
                     <img
-                      src="https://legalvidhiya.com/wp-content/uploads/2023/10/image-34.png"
+                      src="https://vidhiya.com/wp-content/uploads/2023/10/image-34.png"
                       alt="Copyright"
                       className="h-44"
                     />

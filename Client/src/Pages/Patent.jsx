@@ -255,7 +255,7 @@ const Patent = () => {
               multiple jurisdictions, including the Indian Patent Office, USPTO,
               and EPO, enabling us to successfully navigate the complexities of
               patent prosecution by addressing examiner objections with strong,
-              legally sound arguments.
+              ly sound arguments.
             </p>
             <p className="pb-8 text-gray-800 text-sm">
               For patent prosecution, our team excels in responding to examiner
@@ -346,7 +346,7 @@ const Patent = () => {
                 Power of Authority
               </h1>
               <p className="pb-8 text-black text-sm">
-                If a patent agent or legal representative is submitting the
+                If a patent agent or  representative is submitting the
                 patent application, then Form-26, a power of authority, is
                 required.
               </p>
@@ -458,7 +458,7 @@ const Patent = () => {
                 <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-lg transition">
                   <span className="font-medium text-white">
                     What is the process of filing a patent with JustiSphereX
-                    Legal?
+                    ?
                   </span>
                   <span className="transition-transform group-open:rotate-180">
                     &#9660;
@@ -661,7 +661,7 @@ const Patent = () => {
                 <div className="card card-compact bg-base-100 w-72 shadow-xl">
                   <figure>
                     <img
-                      src="https://legalvidhiya.com/wp-content/uploads/2023/10/image-34.png"
+                      src="https://vidhiya.com/wp-content/uploads/2023/10/image-34.png"
                       alt="Copyright"
                       className="h-44"
                     />

@@ -105,7 +105,7 @@ const Copyright = () => {
           <div className="relative w-7/10 shrink-0 flex justify-center items-center">
             <div className="sticky">
               <img
-                src="https://legalvidhiya.com/wp-content/uploads/2023/10/image-34.png"
+                src="https://vidhiya.com/wp-content/uploads/2023/10/image-34.png"
                 className="rounded-lg w-80"
                 alt="Copyright"
               />
@@ -119,7 +119,7 @@ const Copyright = () => {
               </h2>
 
               <p className="prod_description text-sm text-gray-700 mt-2">
-                Copyright is a legal entitlement granted to the owner of
+                Copyright is a  entitlement granted to the owner of
                 intellectual property. Copyright protection typically endures
                 for the author’s lifetime plus an additional 60 years after the
                 author’s death
@@ -221,7 +221,7 @@ const Copyright = () => {
               thorough protection for your work, covering text, images, sound,
               and video documentation. We excel in representing clients before
               courts, employing strategic oral arguments, compelling evidence,
-              and counterclaims. Additionally, we advise on legal best practices
+              and counterclaims. Additionally, we advise on  best practices
               for using third-party content, helping clients avoid copyright
               pitfalls.
             </p>
@@ -235,14 +235,14 @@ const Copyright = () => {
               <strong>• Resolving Evidence–Focused Disputes:</strong> Tackling
               copyright disputes with jurisdiction–specific approaches. <br />{" "}
               <strong>• Guiding Safer Content Usage:</strong> Offering clear
-              guidelines to ensure legal and secure use of third-party content.
+              guidelines to ensure  and secure use of third-party content.
             </p>
             <p className="pb-8 text-gray-800 text-sm">
               Whether you are an artist or a business, we advise on licensing,
               assignments, and permitted usage of copyrighted works. Our team
               monitors both online and offline spaces for unauthorized use of
               movies, music, books, software, and more. If necessary, we pursue
-              legal action, including filing civil and criminal complaints and
+               action, including filing civil and criminal complaints and
               coordinating with cybercrime units to swiftly seize infringing
               materials.
             </p>
@@ -386,7 +386,7 @@ const Copyright = () => {
               <details className="group overflow-hidden">
                 <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-lg transition">
                   <span className="font-medium text-white">
-                    Legally Using Copyrighted Content
+                    ly Using Copyrighted Content
                   </span>
                   <span className="transition-transform group-open:rotate-180">
                     &#9660;
@@ -394,10 +394,10 @@ const Copyright = () => {
                 </summary>
                 <div className="transition-all duration-300 ease-in-out overflow-hidden max-h-0 group-open:max-h-96 text-sm">
                   <p className="mt-2 px-4 text-black">
-                    We provide legal guidance on the use of third–party
+                    We provide  guidance on the use of third–party
                     copyrighted material through licenses, assignments, or
                     fair–use guidelines. Our lawyers ensure you can leverage
-                    content legally and ethically while minimizing risks.
+                    content ly and ethically while minimizing risks.
                   </p>
                 </div>
               </details>
@@ -414,7 +414,7 @@ const Copyright = () => {
                   <p className="mt-2 px-4 text-black">
                     For high–value content, including music, software, and
                     literary works, offers comprehensive valuation services. Our
-                    team of legal and technical experts evaluates the commercial
+                    team of  and technical experts evaluates the commercial
                     value of your content during investment, funding rounds, or
                     mergers and acquisitions.
                   </p>
@@ -473,7 +473,7 @@ const Copyright = () => {
               <p className="text-gray-800 pt-2 text-sm">
                 While registration is a crucial step, it is only the beginning.
                 We offer ongoing advice on protecting your rights, issuing
-                cease-and-desist notices, or pursuing legal action in case of
+                cease-and-desist notices, or pursuing  action in case of
                 infringement.
               </p>
             </div>

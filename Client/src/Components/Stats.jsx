@@ -111,7 +111,7 @@ const Stats = () => {
                 <p className="group-hover:opacity-100 w-56 text-xs duration-500 opacity-0">
                   Protect the visual and aesthetic aspects of your product with
                   design registration, covering elements. Ensure your unique
-                  designs remain legally secure in markets.
+                  designs remain ly secure in markets.
                 </p>
               </div>
             </div>

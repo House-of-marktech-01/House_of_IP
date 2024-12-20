@@ -27,7 +27,7 @@ const Practice = () => {
       <div></div>
       <p className="bg-white py-4 pt-10 text-black px-3 text-sm lg:px-24">
         <span className="text-xl font-bold text-slate-800">House of IP</span>{" "}
-        offers a comprehensive suite of legal services across key areas catering
+        offers a comprehensive suite of  services across key areas catering
         to the evolving needs of inventors, creators and businesses. Our core
         specialization lies in Intellectual Property protection, litigation and
         licensing across patents, trademarks, copyrights, designs leveraging
@@ -45,7 +45,7 @@ const Practice = () => {
         assistance across criminal, civil and commercial conflicts. We also
         cover alternative resolution mechanisms including seamless arbitration
         and mediation services. With diverse competencies and client-first
-        approach, House of IP strives to deliver legal excellence with
+        approach, House of IP strives to deliver  excellence with
         responsibility.
       </p>
       <Card />
@@ -66,7 +66,7 @@ const Practice = () => {
           </h2>
           <p className="text-lg text-gray-100">Book an appointment with us!</p>
           <NavLink
-            to="http://calendly.com/justispherexlegal/book-an-appointment"
+            to="http://calendly.com/justispherex/book-an-appointment"
             className="bg-blue-600 text-white py-3 px-6 rounded-lg shadow-md hover:bg-blue-700 transition duration-300"
           >
             BOOK APPOINTMENT

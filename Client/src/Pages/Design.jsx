@@ -250,7 +250,7 @@ const Design = () => {
                 Applicant's Nature/Status
               </h1>
               <p className="pb-8 text-black text-sm">
-                Clear indication of the legal status of the applicant,
+                Clear indication of the  status of the applicant,
                 specifying whether the applicant is an individual, a company,
                 etc.
               </p>
@@ -336,7 +336,7 @@ const Design = () => {
                 <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-lg transition">
                   <span className="font-medium text-white">
                     What types of designs can be registered with JustiSphereX
-                    Legal?
+                    ?
                   </span>
                   <span className="transition-transform group-open:rotate-180">
                     &#9660;
@@ -429,9 +429,9 @@ const Design = () => {
                 </summary>
                 <div className="transition-all duration-300 ease-in-out overflow-hidden max-h-0 group-open:max-h-96">
                   <p className="mt-2 px-4 text-black text-sm">
-                    At House of IP, we help you take swift legal action
+                    At House of IP, we help you take swift  action
                     if your registered design is copied. Our team assists in
-                    filing design infringement cases, preparing legal documents,
+                    filing design infringement cases, preparing  documents,
                     and representing you in court to ensure your design rights
                     are upheld.
                   </p>
@@ -480,7 +480,7 @@ const Design = () => {
                 <div className="transition-all duration-300 ease-in-out overflow-hidden max-h-0 group-open:max-h-96 text-sm">
                   <p className="mt-2 px-4 text-black">
                     With a proven track record in IP law and extensive
-                    experience in design protection, JustiSphereXLegal is a
+                    experience in design protection, JustiSphereX is a
                     trusted partner for securing your product’s design. Our
                     dedicated team of experts provides personalized guidance
                     through every step of the design registration process,
@@ -569,7 +569,7 @@ const Design = () => {
                 <div className="card card-compact bg-base-100 w-72 shadow-xl">
                   <figure>
                     <img
-                      src="https://legalvidhiya.com/wp-content/uploads/2023/10/image-34.png"
+                      src="https://vidhiya.com/wp-content/uploads/2023/10/image-34.png"
                       alt="Copyright"
                       className="h-44"
                     />
