@@ -13,7 +13,12 @@ const corsOptions = {
   origin: "https://house-of-ip.vercel.app",
   credentials: true,
 };
-app.use(cors(corsOptions))
+app.use(cors(corsOptions));
+
+// Your routes here
+app.post("/api/users/signin", (req, res) => {
+  res.json({ message: "Success" });
+});
 
 app.use(bodyParser.json());
 // Connect to MongoDB
