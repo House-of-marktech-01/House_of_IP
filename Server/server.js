@@ -10,7 +10,7 @@ const app = express();
 const PORT = 5000 || process.env.PORT;
 
 const corsOptions = {
-  origin: "http://localhost:5173",
+  origin: "https://house-of-ip.vercel.app/",
   credentials: true,
 };
 app.use(cors(corsOptions))
