@@ -6,6 +6,7 @@ import BaseUrl from "../../BaseUrl";
 const ContactForm = () => {
   // State to store form values
   const [fullName, setFullName] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
@@ -15,7 +16,7 @@ const ContactForm = () => {
   // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault(); // Prevent default form submission behavior
-    setLoading(true); // Set loading state
+    setIsLoading(true); // Set loading state
 
     // Create the request body
     const requestBody = {
@@ -26,22 +27,19 @@ const ContactForm = () => {
     };
 
     try {
-      const response = await fetch(
-        `${BaseUrl}api/users/send-mail`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(requestBody),
-        }
-      );
+      const response = await fetch(`${BaseUrl}api/users/send-mail`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(requestBody),
+      });
 
       const data = await response.json();
 
       if (response.ok) {
         setResponseMessage("Your message has been sent successfully!");
-        toast.success("Your message has been sent successfully!")
+        toast.success("Your message has been sent successfully!");
       } else {
         setResponseMessage(
           data.message || "Something went wrong, please try again."
@@ -51,7 +49,7 @@ const ContactForm = () => {
       console.error("Error sending email:", error);
       setResponseMessage("Failed to send the message. Please try again later.");
     } finally {
-      setLoading(false); // Reset loading state
+      setIsLoading(false); // Reset loading state
     }
   };
 
@@ -181,8 +179,15 @@ const ContactForm = () => {
                     <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
                   </span>
                   <span className="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full bg-slate-800 rounded-md group-hover:translate-x-0"></span>
-                  <span className="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-white">
-                    {loading ? "Submitting..." : "Submit Now"}
+                  <span className="relative flex items-center justify-center w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-white">
+                    {loading ? (
+                      <>
+                        <span className="loading loading-spinner loading-md mr-2"></span>
+                        Submitting...
+                      </>
+                    ) : (
+                      "Submit Now"
+                    )}
                   </span>
                 </button>
               </form>
