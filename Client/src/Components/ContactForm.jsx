@@ -100,7 +100,7 @@ const ContactForm = () => {
               <div className="mt-2">
                 <div className="mr-3 max-w-[300px] rounded-xl hover:scale-110 duration-700 p-5">
                   <h4 className="py-2 text-slate-900 font-bold">
-                    <i class="fa-solid fa-location-dot"></i> Uttar Pradesh
+                    <i className="fa-solid fa-location-dot"></i> Uttar Pradesh
                   </h4>
                   <p className="text-base leading-7 text-slate-900 font-thin space-y-4">
                     Rajrooppur, Prayagraj, Uttar Pradesh - 211011
@@ -108,7 +108,7 @@ const ContactForm = () => {
                 </div>
                 <div className="mr-3 max-w-[300px] rounded-xl hover:scale-110 duration-700 p-5">
                   <h4 className="py-2 text-slate-900 font-bold">
-                    <i class="fa-solid fa-location-dot"></i> South Delhi
+                    <i className="fa-solid fa-location-dot"></i> South Delhi
                   </h4>
                   <p className="text-base leading-7 text-slate-900 font-thin space-y-4">
                     Malviya Nagar, South Delhi - 110017

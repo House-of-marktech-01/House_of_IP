@@ -73,18 +73,18 @@ const About = () => {
                 grown into a leading IP service provider trusted by inventors,
                 entrepreneurs, and businesses alike.
               </p>
-              <p class="text-lg text-slate-900 lg:text-2xl pt-4 font-bold text-start mb-6">
+              <p className="text-lg text-slate-900 lg:text-2xl pt-4 font-bold text-start mb-6">
                 Our Evolution
               </p>
-              <p class="mb-4 text-justify text-gray-700 text-sm lg:text-base">
+              <p className="mb-4 text-justify text-gray-700 text-sm lg:text-base">
                 Since our inception, we have continually adapted to the
                 ever-changing landscape of intellectual property laws and global
                 innovation trends.
               </p>
-              <h3 class="text-sm font-semibold text-gray-700 mb-4 lg:text-base">
+              <h3 className="text-sm font-semibold text-gray-700 mb-4 lg:text-base">
                 Milestones:
               </h3>
-              <ul class="list-disc text-sm text-gray-700 pl-6 mb-4 lg:text-base">
+              <ul className="list-disc text-sm text-gray-700 pl-6 mb-4 lg:text-base">
                 <li>
                   Established a global filing network for patents and
                   trademarks.
@@ -97,7 +97,7 @@ const About = () => {
                   registration and management.
                 </li>
               </ul>
-              <p class="text-justify text-sm text-gray-700 lg:text-base">
+              <p className="text-justify text-sm text-gray-700 lg:text-base">
                 Today, <strong>House of IP</strong> stands as a beacon for
                 creators, offering end-to-end services that span multiple
                 jurisdictions and industries.
@@ -123,7 +123,7 @@ const About = () => {
                 <h3 className="text-lg font-semibold text-slate-900 mb-2 lg:text-white">
                   Mission
                 </h3>
-                <ul class="list-disc text-sm text-gray-600 pl-6 mb-4 lg:text-base lg:text-white">
+                <ul className="list-disc text-sm text-gray-600 pl-6 mb-4 lg:text-base lg:text-white">
                   <li>
                     Empower Innovators: Equip creators with the tools and
                     resources to protect their intellectual property.
@@ -141,24 +141,24 @@ const About = () => {
 
               {/* Child Div 4 */}
               <div className="p-4 bg-white rounded-lg shadow-md lg:bg-slate-900 ">
-                <h2 class="text-xl text-slate-900  font-bold text-start mb-6 lg:text-white lg:text-2xl">
+                <h2 className="text-xl text-slate-900  font-bold text-start mb-6 lg:text-white lg:text-2xl">
                   Our Work Process
                 </h2>
-                <div class="space-y-6">
-                  <div class="flex items-start text-gray-600 lg:text-white ">
+                <div className="space-y-6">
+                  <div className="flex items-start text-gray-600 lg:text-white ">
                     <p>
                       <strong>Consultation:</strong> We start by understanding
                       your unique IP needs through personalized consultations.
                     </p>
                   </div>
-                  <div class="flex items-start text-gray-600 lg:text-white">
+                  <div className="flex items-start text-gray-600 lg:text-white">
                     <p>
                       <strong>Research & Strategy:</strong> Conduct
                       comprehensive prior art searches and landscape analyses to
                       build a robust IP protection strategy.
                     </p>
                   </div>
-                  <div class="flex items-start text-gray-600 lg:text-white">
+                  <div className="flex items-start text-gray-600 lg:text-white">
                     <p>
                       <strong>Filing & Documentation:</strong> Handle all
                       paperwork, filings, and submissions with meticulous
@@ -166,28 +166,28 @@ const About = () => {
                       laws.
                     </p>
                   </div>
-                  <div class="flex items-start text-gray-600 lg:text-white">
+                  <div className="flex items-start text-gray-600 lg:text-white">
                     <p>
                       <strong>Prosecution:</strong> Represent clients during
                       patent/trademark examinations and address objections with
                       sound  arguments.
                     </p>
                   </div>
-                  <div class="flex items-start text-gray-600 lg:text-white">
+                  <div className="flex items-start text-gray-600 lg:text-white">
                     <p>
                       <strong>Protection & Litigation:</strong> Provide expert
                       support for opposition, revocation, and IP infringement
                       cases.
                     </p>
                   </div>
-                  <div class="flex items-start text-gray-600 lg:text-white">
+                  <div className="flex items-start text-gray-600 lg:text-white">
                     <p>
                       <strong>Commercialization:</strong> Assist in monetizing
                       your intellectual property through licensing, technology
                       transfer, or strategic partnerships.
                     </p>
                   </div>
-                  <div class="flex items-start text-gray-600 lg:text-white">
+                  <div className="flex items-start text-gray-600 lg:text-white">
                     <p>
                       <strong>Ongoing Support:</strong> Offer continuous IP
                       management, ensuring your rights are maintained and

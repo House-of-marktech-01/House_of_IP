@@ -11,6 +11,7 @@ const Navbar = () => {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isLogin, setIsLogin] = useState(true);
   const [username, setUsername] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [token, setToken] = useState(Cookies.get("jwtToken"));
@@ -125,6 +126,7 @@ const Navbar = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true); // Start loading
 
     // Prepare the data based on login or signup
     const formData = isLogin
@@ -157,6 +159,8 @@ const Navbar = () => {
     } catch (error) {
       console.error("Error:", error);
       toast.error("An error occurred. Please try again.");
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -389,8 +393,18 @@ const Navbar = () => {
                       />
                     </div>
                     <div className="flex items-center justify-between">
-                      <button type="submit" className="btn btn-primary">
-                        {isLogin ? "Sign In" : "Sign Up"}
+                      <button
+                        type="submit"
+                        className="btn btn-primary"
+                        disabled={isLoading}
+                      >
+                        {isLoading ? (
+                          <span className="loading loading-spinner loading-md"></span>
+                        ) : isLogin ? (
+                          "Sign In"
+                        ) : (
+                          "Sign Up"
+                        )}
                       </button>
                     </div>
                   </form>
