@@ -102,7 +102,7 @@ const MainAbout = () => {
         {/* Image Section */}
         <div className="hidden lg:block w-full bg-white pt-10">
           <motion.img
-            src="https://media.istockphoto.com/id/1045876492/photo/signing-a-contract.jpg?s=612x612&w=0&k=20&c=XO7Jr4UkBunpLox_e8PXSo0Fcr3T8EhwMDJ8mRsSGCA="
+            src="https://media.istockphoto.com/id/1068876946/photo/business-lawyer-team-working-together-of-lawyer-in-the-meeting.jpg?s=612x612&w=0&k=20&c=Jo9c5iPYi_62JLKqGeDXSDVONTu6rmRI9HVh7fSMD6Q="
             alt="leftimage"
             className="w-[55%] ml-20 h-96"
             initial={{ opacity: 0, x: -50 }}

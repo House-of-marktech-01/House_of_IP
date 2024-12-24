@@ -39,7 +39,29 @@ const OurStory = () => {
                   />
                 </video>
                 {/* Custom Controls */}
-                <div className="absolute bottom-0 left-0 w-full bg-slate-900 py-3 flex justify-center items-center ">
+                <div className="absolute bottom-0 left-0 w-full bg-slate-900 py-3 flex justify-center items-center gap-4">
+                  {/* Backward Button */}
+                  <button
+                    onClick={() => (videoRef.current.currentTime -= 10)}
+                    className="flex items-center justify-center w-10 h-10 bg-white rounded-full shadow-lg hover:scale-105 transition-transform"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={2}
+                      stroke="currentColor"
+                      className="w-6 h-6 text-black"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M10 15l-6-6m0 0l6-6m-6 6h12"
+                      />
+                    </svg>
+                  </button>
+
+                  {/* Play/Pause Button */}
                   <button
                     onClick={togglePlayPause}
                     className="flex items-center justify-center w-10 h-10 bg-white rounded-full shadow-lg hover:scale-105 transition-transform"
@@ -76,6 +98,37 @@ const OurStory = () => {
                       </svg>
                     )}
                   </button>
+
+                  {/* Forward Button */}
+                  <button
+                    onClick={() => (videoRef.current.currentTime += 10)}
+                    className="flex items-center justify-center w-10 h-10 bg-white rounded-full shadow-lg hover:scale-105 transition-transform"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={2}
+                      stroke="currentColor"
+                      className="w-6 h-6 text-black"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M14 15l6-6m0 0l-6-6m6 6H8"
+                      />
+                    </svg>
+                  </button>
+
+                  {/* Volume Control */}
+                  <input
+                    type="range"
+                    min="0"
+                    max="1"
+                    step="0.1"
+                    onChange={(e) => (videoRef.current.volume = e.target.value)}
+                    className="w-1/4 h-2 bg-gray-300 rounded-lg appearance-none cursor-pointer"
+                  />
                 </div>
               </div>
 
@@ -90,9 +143,19 @@ const OurStory = () => {
                   provide comprehensive solutions to protect your ideas and
                   innovations. With a focus on precision and trust, we ensure
                   your creations are safeguarded, giving you the confidence to
-                  thrive in a competitive world. For more details, visit 
-                  <NavLink to="/about"><span className="text-bold pl-1 pr-1 text-blue-700">About</span></NavLink>
-                   or <NavLink to="/contact"><span className="text-bold pl-1 pr-1 text-blue-700">Contact</span></NavLink> our experts to get started today!
+                  thrive in a competitive world. For more details, visit
+                  <NavLink to="/about">
+                    <span className="text-bold pl-1 pr-1 text-blue-700">
+                      About
+                    </span>
+                  </NavLink>
+                  or{" "}
+                  <NavLink to="/contact">
+                    <span className="text-bold pl-1 pr-1 text-blue-700">
+                      Contact
+                    </span>
+                  </NavLink>{" "}
+                  our experts to get started today!
                 </p>
               </div>
             </div>

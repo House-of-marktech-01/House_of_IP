@@ -73,6 +73,31 @@ const Navbar = () => {
       id: 8,
       title: "Practice Areas",
       description: "practice,copyright,trademark,design,patent",
+      url: "/practice",
+    },
+    {
+      id: 9,
+      title: "FAQs on Trademark",
+      description: "FAQs",
+      url: "/trademark",
+    },
+    {
+      id: 9,
+      title: "FAQs on Patent",
+      description: "FAQs",
+      url: "/patent",
+    },
+    {
+      id: 9,
+      title: "FAQs on Design",
+      description: "FAQs",
+      url: "/design",
+    },
+    {
+      id: 9,
+      title: "FAQs on Copyright",
+      description: "FAQs",
+      url: "/copyright",
     },
   ];
 
@@ -267,7 +292,7 @@ const Navbar = () => {
                     <div className="modal-action flex flex-col">
                       <form
                         onSubmit={(e) => e.preventDefault()} // Prevent page reload on submit
-                        className="m-auto"
+                        className="m-auto flex flex-row space-x-3"
                       >
                         <label className="input input-bordered flex items-center">
                           <input
@@ -277,17 +302,15 @@ const Navbar = () => {
                             value={searchQuery}
                             onChange={handleSearch} // Bind input to state
                           />
-                          <kbd className="kbd kbd-sm">⌘</kbd>
-                          <kbd className="kbd kbd-sm">K</kbd>
                         </label>
                         <button
                           type="button"
-                          className="btn"
+                          className="btn bg-gray-800"
                           onClick={() =>
                             document.getElementById("modal3").close()
                           }
                         >
-                          Esc
+                          X
                         </button>
                       </form>
 

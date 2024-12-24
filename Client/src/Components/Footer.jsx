@@ -19,11 +19,6 @@ const Footer = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/payment" className="hover:underline">
-                  Online Payment
-                </NavLink>
-              </li>
-              <li>
                 <NavLink to="/practice" className="hover:underline">
                   Practice Areas
                 </NavLink>
@@ -43,9 +38,7 @@ const Footer = () => {
 
           {/* Column 2 */}
           <div className="pl-5">
-            <h4 className="text-lg font-semibold mb-3 text-white">
-              Platforms
-            </h4>
+            <h4 className="text-lg font-semibold mb-3 text-white">Platforms</h4>
             <ul className="space-y-2 text-white">
               <li>
                 <NavLink to="#" className="hover:underline">
@@ -53,7 +46,7 @@ const Footer = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="#" className="hover:underline">
+                <NavLink to="/trademark" className="hover:underline">
                   Trademark Search
                 </NavLink>
               </li>
@@ -62,39 +55,47 @@ const Footer = () => {
 
           {/* Column 3 */}
           <div className="pl-5">
-            <h4 className="text-lg font-semibold mb-3 text-white">Usage</h4>
-            <ul className="space-y-2 text-white">
-              <li>
-                <NavLink to="#" className="hover:underline">
-                  Terms & Conditions
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="#" className="hover:underline">
-                  Privacy Policy
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="#" className="hover:underline">
-                  Refund Policy
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="#" className="hover:underline">
-                  Confidentiality Policy
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="#" className="hover:underline">
-                  Disclaimer Policy
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="#" className="hover:underline">
-                  House of IP Review
-                </NavLink>
-              </li>
-            </ul>
+            <div className="flex items-center gap-4">
+              {/* LinkedIn Button */}
+              {/* Mail Button */}
+              <NavLink
+                to="mailto:houseofintellectualproperty@gmail.com"
+                target="_blank"
+              >
+                <div className="social-button">
+                  <button className="relative w-12 h-12 rounded-full group">
+                    <div className="floater w-full h-full absolute top-0 left-0 bg-gray-500 rounded-full duration-300 group-hover:-top-8 group-hover:shadow-2xl"></div>
+                    <div className="icon relative z-10 w-full h-full flex items-center justify-center border-2 border-gray-500 rounded-full">
+                      <i class="fa-solid fa-envelope"></i>
+                    </div>
+                  </button>
+                </div>
+              </NavLink>
+
+              {/* Instagram Button */}
+              <NavLink
+                to="https://www.instagram.com/houseofintellectualproperty/"
+                target="_blank"
+              >
+                <div className="social-button">
+                  <button className="relative w-12 h-12 rounded-full group">
+                    <div className="floater w-full h-full absolute top-0 left-0 bg-pink-500 rounded-full duration-300 group-hover:-top-8 group-hover:shadow-2xl"></div>
+                    <div className="icon relative z-10 w-full h-full flex items-center justify-center border-2 border-pink-500 rounded-full">
+                      <i class="fa-brands fa-instagram"></i>
+                    </div>
+                  </button>
+                </div>
+              </NavLink>
+
+              <div className="social-button">
+                <button className="relative w-12 h-12 rounded-full group">
+                  <div className="floater w-full h-full absolute top-0 left-0 bg-blue-500 rounded-full duration-300 group-hover:-top-8 group-hover:shadow-2xl"></div>
+                  <div className="icon relative z-10 w-full h-full flex items-center justify-center border-2 border-blue-500 rounded-full">
+                    <i class="fa-brands fa-linkedin"></i>
+                  </div>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -105,42 +106,9 @@ const Footer = () => {
           </p>
           <p className="mt-1">
             Unless otherwise indicated, all materials on these pages are
-            copyrighted by House of IP. No part of these pages,
-            either text or image, may be used for any purpose.
+            copyrighted by House of IP. No part of these pages, either text or
+            image, may be used for any purpose.
           </p>
-
-          {/* Social Media Icons */}
-          <div className="flex justify-center space-x-4 mt-4 text-white">
-            <NavLink
-              to="#"
-              aria-label="Facebook"
-              className="hover:text-blue-600"
-            >
-              <i className="fab fa-facebook-f"></i>
-            </NavLink>
-            <NavLink
-              to="#"
-              aria-label="WhatsApp"
-              className="hover:text-green-500"
-            >
-              <i className="fab fa-whatsapp"></i>
-            </NavLink>
-            <NavLink
-              to="https://www.instagram.com/houseofintellectualproperty/"
-              target="_blank"
-              aria-label="Twitter"
-              className="hover:text-pink-600"
-            >
-              <i className="fab fa-instagram"></i>
-            </NavLink>
-            <NavLink
-              to="#"
-              aria-label="YouTube"
-              className="hover:text-red-600"
-            >
-              <i className="fab fa-youtube"></i>
-            </NavLink>
-          </div>
         </div>
       </div>
     </footer>

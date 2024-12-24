@@ -134,9 +134,14 @@ const ContactForm = () => {
                     placeholder="Full Name*"
                     required
                     value={fullName}
-                    onChange={(e) => setFullName(e.target.value)}
-                    className="w-full px-4 py-3 border text-sm text-black bg-transparent bg-white placeholder:text-gray-900 border-gray-300 rounded-md focus:outline-none focus:ring-[#294160] focus:ring-2 "
+                    onChange={(e) => {
+                      const value = e.target.value;
+                      const filteredValue = value.replace(/[0-9]/g, ""); // Remove numeric characters
+                      setFullName(filteredValue);
+                    }}
+                    className="w-full px-4 py-3 border text-sm text-black bg-transparent bg-white placeholder:text-gray-900 border-gray-300 rounded-md focus:outline-none focus:ring-[#294160] focus:ring-2"
                   />
+
                   <input
                     type="email"
                     name="your-email"
