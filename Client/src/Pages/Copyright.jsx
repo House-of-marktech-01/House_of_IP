@@ -7,7 +7,6 @@ import { useDropzone } from "react-dropzone";
 import axios from "axios";
 import { toast } from "react-toastify";
 
-
 const Copyright = () => {
   const [token, setToken] = useState(Cookies.get("jwtToken"));
   const [email, setEmail] = useState("");
@@ -18,7 +17,11 @@ const Copyright = () => {
 
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -92,6 +95,11 @@ const Copyright = () => {
       setIsUploading(false);
     }
   };
+   const [selectedOption, setSelectedOption] = useState("Book");
+  
+    const handleChange = (event) => {
+      setSelectedOption(event.target.value);
+    };
   return (
     <>
       <div id="copyright" className="w-full" style={{ position: "relative" }}>
@@ -107,7 +115,7 @@ const Copyright = () => {
           </ul>
         </div>
         <div className="lg:flex gap-5 border p-3 bg-white lg:px-20">
-          <div className="relative w-7/10 shrink-0 flex justify-center items-center">
+          <div className="relative w-7/10 shrink-0 flex justify-center items-center h-full lg:sticky lg:top-20">
             <div className="sticky">
               <img
                 src="https://blog.ipleaders.in/wp-content/uploads/2021/06/1_copyright-designs-and-patents-act-1988-1.jpg"
@@ -129,31 +137,129 @@ const Copyright = () => {
                 author’s lifetime plus an additional 60 years after the author’s
                 death
               </p>
+              <div className="container mx-auto p-4">
+                {/* Dropdown toggler */}
+                <div className="mb-4">
+                  <select
+                    className="w-full px-4 py-2 border rounded-md bg-white focus:outline-none text-gray-800 focus:ring focus:ring-blue-300"
+                    value={selectedOption}
+                    onChange={handleChange}
+                  >
+                    <option value="Software">Software</option>
+                    <option value="Book">Book</option>
+                    <option value="Video">
+                      Video
+                    </option>
+                    <option value="Music">
+                      Music
+                    </option>
+                    <option value="Logo">
+                      Logo
+                    </option>
+                    <option value="Sound">
+                      Sound
+                    </option>
+                  </select>
+                </div>
 
-              <div className="flex items-center justify-between flex-wrap gap-2 border-y-2 mt-4 pt-4 pb-4 mb-5">
-                <NavLink className="btn btn-link flex-none" to="/">
-                  Terms and conditions
-                </NavLink>
-                <div className="flex -space-x-2 pl-5 lg:justify-end">
-                  <div className="flex">
-                    <RWebShare
-                      data={{
-                        url: "http://localhost:5173/copyright",
-                        title: "Copyright",
-                      }}
-                      onClick={() => console.log("shared successfully!")}
-                    >
-                      <button className="text-blue-500 hover:underline">
-                        Share with friends 🔗
-                      </button>
-                    </RWebShare>
-                  </div>
+                {/* Grid layout */}
+                <div className="grid grid-cols-1 gap-4">
+                  {/* Patent Search Card */}
+                  {selectedOption === "Book" && (
+                    <div className="border rounded-md p-4 bg-white text-gray-800 ">
+                      <h2 className="font-semibold text-lg mb-2">
+                        Book
+                      </h2>
+                      <ul className="list-disc list-inside space-y-1">
+                        <li>Book Catalogues </li>
+                        <li>Poems</li>
+                        <li>Stories </li>
+                        <li>Business plans</li>
+                        <li>market strategies</li>
+                      </ul>
+                    </div>
+                  )}
+
+                  {/* Provisional Filing Card */}
+                  {selectedOption === "Video" && (
+                    <div className="border rounded-md p-4 text-gray-800 bg-white ">
+                      <h2 className="font-semibold text-lg mb-2">
+                        Video
+                      </h2>
+                      <ul className="list-disc list-inside space-y-1">
+                        <li>Video</li>
+                      </ul>
+                    </div>
+                  )}
+
+                  {/* Regular Card */}
+                  {selectedOption === "Software" && (
+                    <div className="border rounded-md p-4 text-gray-800 bg-white">
+                      <h2 className="font-semibold text-lg mb-2">
+                        Software
+                      </h2>
+                      <ul className="list-disc list-inside space-y-1">
+                        <li>Mobile application</li>
+                        <li>Computer application </li>
+                        <li>Website</li>
+                        <li>softwares</li>
+                      </ul>
+                    </div>
+                  )}
+                  {selectedOption === "Music" && (
+                    <div className="border rounded-md p-4 text-gray-800 bg-white">
+                      <h2 className="font-semibold text-lg mb-2">
+                        Music
+                      </h2>
+                      <ul className="list-disc list-inside space-y-1">
+                        <li>Tunes</li>
+                      </ul>
+                    </div>
+                  )}
+                  {selectedOption === "Sound" && (
+                    <div className="border rounded-md p-4 text-gray-800 bg-white">
+                      <h2 className="font-semibold text-lg mb-2">
+                        Sound
+                      </h2>
+                      <ul className="list-disc list-inside space-y-1">
+                        <li>Songs</li>
+                        <li>Voice along with music </li>
+                      </ul>
+                    </div>
+                  )}
+                  {selectedOption === "Logo" && (
+                    <div className="border rounded-md p-4 text-gray-800 bg-white">
+                      <h2 className="font-semibold text-lg mb-2">
+                        Logo
+                      </h2>
+                      <ul className="list-disc list-inside space-y-1">
+                        <li>Logo</li>
+                        <li>Device</li>
+                        <li>Photographs</li>
+                        <li>Architecture work</li>
+                        <li>any kind of art forms </li>
+                      </ul>
+                    </div>
+                  )}
+                </div>
+                <div>
+                  <RWebShare
+                    data={{
+                      url: "http://localhost:5173/trademark",
+                      title: "Trademark",
+                    }}
+                    onClick={() => toast.success("shared successfully!")}
+                  >
+                    <button className="text-blue-500 hover:underline">
+                      Share with friends
+                    </button>
+                  </RWebShare>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="max-w-lg mx-auto p-6 bg-slate-800 rounded-lg shadow-md">
+          <div className="max-w-lg mx-auto p-6 bg-slate-800 rounded-lg shadow-md h-full lg:sticky lg:top-20">
             <h2 className="text-2xl font-bold mb-4 text-center">
               Upload Document
             </h2>

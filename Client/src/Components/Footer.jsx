@@ -126,11 +126,12 @@ const Footer = () => {
               <i className="fab fa-whatsapp"></i>
             </NavLink>
             <NavLink
-              to="#"
+              to="https://www.instagram.com/houseofintellectualproperty/"
+              target="_blank"
               aria-label="Twitter"
-              className="hover:text-blue-400"
+              className="hover:text-pink-600"
             >
-              <i className="fab fa-twitter"></i>
+              <i className="fab fa-instagram"></i>
             </NavLink>
             <NavLink
               to="#"

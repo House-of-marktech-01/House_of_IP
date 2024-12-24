@@ -115,6 +115,11 @@ const Patent = () => {
       setIsUploading(false);
     }
   };
+  const [selectedOption, setSelectedOption] = useState("patent-search");
+
+  const handleChange = (event) => {
+    setSelectedOption(event.target.value);
+  };
 
   return (
     <>
@@ -131,22 +136,24 @@ const Patent = () => {
           </ul>
         </div>
         <div className="lg:flex gap-5 border p-3 bg-white lg:px-20">
-          <div className="relative w-7/10 shrink-0 flex justify-center items-center">
-            <div className="sticky">
+          {/* Left Image Section */}
+          <div className=" w-7/10 shrink-0 lg:sticky lg:top-20 flex justify-center items-center h-full">
+            <div className="sticky top-0">
               <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI9Ngiq_F5HPP39UxsluGMvOiMx4-aZrO1vg&s"
                 className="rounded-lg w-80"
                 alt="Patent"
               />
+              
             </div>
           </div>
 
+          {/* Middle Content Section */}
           <div className="flex flex-col lg:w-2/3">
             <div className="my-auto w-full pt-10 px-5 sm:w-full">
               <h2 className="text-base font-black mb-2 text-gray-700 lg:mb-4">
                 Patent
               </h2>
-
               <p className="prod_description text-sm text-gray-700 mt-2">
                 Patents are pivotal in protecting the intellectual property
                 rights of fresh innovations, be they products, services, or
@@ -155,34 +162,80 @@ const Patent = () => {
                 patent registration.
               </p>
 
-              <div className="flex items-center justify-between flex-wrap gap-2 border-y-2 mt-4 pt-4 pb-4 mb-5">
-                <NavLink className="btn btn-link flex-none" to="/">
-                  Terms and conditions
-                </NavLink>
-                <div className="flex -space-x-2 pl-5 lg:justify-end">
-                  <div className="flex">
-                    <RWebShare
-                      data={{
-                        url: "http://localhost:5173/copyright",
-                        title: "Copyright",
-                      }}
-                      onClick={() => console.log("shared successfully!")}
-                    >
-                      <button className="text-blue-500 hover:underline">
-                        Share with friends 🔗
-                      </button>
-                    </RWebShare>
-                  </div>
+              <div className="container mx-auto p-4">
+                {/* Dropdown toggler */}
+                <div className="mb-4">
+                  <select
+                    className="w-full px-4 py-2 border rounded-md bg-white focus:outline-none text-gray-800 focus:ring focus:ring-blue-300"
+                    value={selectedOption}
+                    onChange={handleChange}
+                  >
+                    <option value="patent-search">Patent search</option>
+                    <option value="provisional-filing">
+                      Provisional filing
+                    </option>
+                    <option value="regular">Regular</option>
+                  </select>
+                </div>
+
+                {/* Grid layout */}
+                <div className="grid grid-cols-1 gap-4">
+                  {/* Patent Search Card */}
+                  {selectedOption === "patent-search" && (
+                    <div className="border rounded-md p-4 bg-white text-gray-800">
+                      <h2 className="font-semibold text-lg mb-2">
+                        Patent search
+                      </h2>
+                      <ul className="list-disc list-inside space-y-1">
+                        <li>Application Preparation</li>
+                        <li>Full Protection</li>
+                        <li>Filing on IPINDIA</li>
+                        <li>Patent Search Report</li>
+                      </ul>
+                    </div>
+                  )}
+
+                  {/* Provisional Filing Card */}
+                  {selectedOption === "provisional-filing" && (
+                    <div className="border rounded-md p-4 text-gray-800 bg-white ">
+                      <h2 className="font-semibold text-lg mb-2">
+                        PROVISIONAL FILING
+                      </h2>
+                      <ul className="list-disc list-inside space-y-1">
+                        <li>PROVISIONAL FILING</li>
+                        <li>Application Preparation</li>
+                        <li>Temporary Protection</li>
+                        <li>Filing on IPINDIA</li>
+                      </ul>
+                    </div>
+                  )}
+
+                  {/* Regular Card */}
+                  {selectedOption === "regular" && (
+                    <div className="border rounded-md p-4 text-gray-800 bg-white">
+                      <h2 className="font-semibold text-lg mb-2">Regular</h2>
+                      <ul className="list-disc list-inside space-y-1">
+                        <li>Search report</li>
+                        <li>Attorney Prepared</li>
+                        <li>1 article</li>
+                        <li>Full protection</li>
+                        <li>Filing on IPINDIA</li>
+                      </ul>
+                    </div>
+                  )}
+                </div>
+                <div>
+                  <p className="text-blue-500 hover:underline pt-2 pl-2">Refer a friend</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="max-w-lg mx-auto p-6 bg-slate-800 rounded-lg shadow-md">
+          {/* Right Uploader Section */}
+          <div className="max-w-lg mx-auto p-6 bg-slate-800 rounded-lg shadow-md h-full sticky top-20">
             <h2 className="text-2xl font-bold mb-4 text-center">
               Upload Document
             </h2>
-
             <div
               {...getRootProps()}
               className="border-2 border-dashed border-slate-700 p-6 mb-4 text-center cursor-pointer bg-state-700 rounded-md"
@@ -285,7 +338,7 @@ const Patent = () => {
             </p>
           </motion.div>
         </div>
-        <div className="bg-white px-5 text-justify flex lg:px-20 ">
+        <div id="docs" className="bg-white px-5 text-justify flex lg:px-20 ">
           <div className="w-full lg:w-3/4">
             <h1 className="text-start text-2xl text-black pb-4">
               Documents Required

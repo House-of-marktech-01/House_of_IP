@@ -5,7 +5,7 @@ import Cookies from "js-cookie";
 import { useDropzone } from "react-dropzone";
 import axios from "axios";
 import { toast } from "react-toastify";
-import {motion} from 'framer-motion'
+import { motion } from "framer-motion";
 
 const Trademark = () => {
   const [token, setToken] = useState(Cookies.get("jwtToken"));
@@ -111,6 +111,11 @@ const Trademark = () => {
       setIsUploading(false);
     }
   };
+  const [selectedOption, setSelectedOption] = useState("Individual & MSME");
+
+  const handleChange = (event) => {
+    setSelectedOption(event.target.value);
+  };
   return (
     <>
       <div id="trademark" className="w-full" style={{ position: "relative" }}>
@@ -126,7 +131,7 @@ const Trademark = () => {
           </ul>
         </div>
         <div className="lg:flex gap-5 border p-3 bg-white lg:px-20">
-          <div className="relative w-7/10 shrink-0 flex justify-center items-center">
+          <div className="relative w-7/10 shrink-0 flex justify-center items-center h-full lg:sticky lg:top-20">
             <div className="sticky">
               <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVKc6eE_WPmaSRuSzcabfmXNHoIYn-GoGNAA&s"
@@ -148,30 +153,88 @@ const Trademark = () => {
                 for trademark applications filed by IndiaFilings. Inclusive of
                 government fee and service tax.
               </p>
+              <div className="container mx-auto p-4">
+                {/* Dropdown toggler */}
+                <div className="mb-4">
+                  <select
+                    className="w-full px-4 py-2 border rounded-md bg-white focus:outline-none text-gray-800 focus:ring focus:ring-blue-300"
+                    value={selectedOption}
+                    onChange={handleChange}
+                  >
+                    <option value="Individual & MSME">Individual & MSME</option>
+                    <option value="Trademark + Udyam">Trademark + Udyam</option>
+                    <option value="Corporates & Foreigners">
+                      Corporates & Foreigners
+                    </option>
+                  </select>
+                </div>
 
-              <div className="flex items-center justify-between flex-wrap gap-2 border-y-2 mt-4 pt-4 pb-4 mb-5">
-                <NavLink className="btn btn-link flex-none" to="/">
-                  Terms and conditions
-                </NavLink>
-                <div className="flex -space-x-2 pl-5 lg:justify-end">
-                  <div className="flex">
-                    <RWebShare
-                      data={{
-                        url: "http://localhost:5173/trademark",
-                        title: "Trademark",
-                      }}
-                      onClick={() => console.log("shared successfully!")}
-                    >
-                      <button className="text-blue-500 hover:underline">
-                        Share with friends 🔗
-                      </button>
-                    </RWebShare>
-                  </div>
+                {/* Grid layout */}
+                <div className="grid grid-cols-1 gap-4">
+                  {/* Patent Search Card */}
+                  {selectedOption === "Individual & MSME" && (
+                    <div className="border rounded-md p-4 bg-white text-gray-800 ">
+                      <h2 className="font-semibold text-lg mb-2">
+                        Individual & MSME
+                      </h2>
+                      <ul className="list-disc list-inside space-y-1">
+                        <li>Government Fee </li>
+                        <li>Trademark Filing </li>
+                        <li>1 Trademark Class </li>
+                        <li>Individuals & MSMEs </li>
+                      </ul>
+                    </div>
+                  )}
+
+                  {/* Provisional Filing Card */}
+                  {selectedOption === "Trademark + Udyam" && (
+                    <div className="border rounded-md p-4 text-gray-800 bg-white ">
+                      <h2 className="font-semibold text-lg mb-2">
+                        Trademark + Udyam
+                      </h2>
+                      <ul className="list-disc list-inside space-y-1">
+                        <li>Government Fee </li>
+                        <li>Trademark Filing </li>
+                        <li>1 Trademark Class </li>
+                        <li>Non-MSMEs </li>
+                        <li>Udyam Registration </li>
+                      </ul>
+                    </div>
+                  )}
+
+                  {/* Regular Card */}
+                  {selectedOption === "Corporates & Foreigners" && (
+                    <div className="border rounded-md p-4 text-gray-800 bg-white">
+                      <h2 className="font-semibold text-lg mb-2">
+                        Corporates & Foreigners
+                      </h2>
+                      <ul className="list-disc list-inside space-y-1">
+                        <li>Government Fee </li>
+                        <li>Trademark Filing </li>
+                        <li>1 Trademark Class </li>
+                        <li>Full protection</li>
+                        <li>Non-MSMEs </li>
+                      </ul>
+                    </div>
+                  )}
+                </div>
+                <div>
+                  <RWebShare
+                    data={{
+                      url: "http://localhost:5173/trademark",
+                      title: "Trademark",
+                    }}
+                    onClick={() => toast.success("shared successfully!")}
+                  >
+                    <button className="text-blue-500 hover:underline">
+                      Share with friends
+                    </button>
+                  </RWebShare>
                 </div>
               </div>
             </div>
           </div>
-          <div className="max-w-lg mx-auto p-6 bg-slate-800 rounded-lg shadow-md">
+          <div className="max-w-lg mx-auto p-6 bg-slate-800 rounded-lg shadow-md h-full sticky top-20">
             <h2 className="text-2xl font-bold mb-4 text-center">
               Upload Document
             </h2>
