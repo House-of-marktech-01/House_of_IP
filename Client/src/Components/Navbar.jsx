@@ -14,11 +14,11 @@ const Navbar = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [token, setToken] = useState(Cookies.get("jwtToken"));
+  const [token, setToken] = useState(() => Cookies.get("jwtToken"));
+
   const [searchQuery, setSearchQuery] = useState("");
   const [results, setResults] = useState([]);
   const navigate = useNavigate();
-  const [selectedLanguage, setSelectedLanguage] = useState("English");
 
   const handleLanguageChange = (e) => {
     setSelectedLanguage(e.target.value);
@@ -151,14 +151,12 @@ const Navbar = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsLoading(true); // Start loading
+    setIsLoading(true);
 
-    // Prepare the data based on login or signup
     const formData = isLogin
       ? { email, password }
       : { username, email, password };
 
-    // Define the endpoint based on the form type (sign-in or sign-up)
     const endpoint = isLogin
       ? `${BaseUrl}api/users/signin`
       : `${BaseUrl}api/users/signup`;
@@ -171,15 +169,15 @@ const Navbar = () => {
         },
         body: JSON.stringify(formData),
       });
+
       if (response.ok) {
         const data = await response.json();
-        Cookies.set("jwtToken", data.token);
-        setToken(data.token); // Update the token state
-        setIsLogin(false);
+        Cookies.set("jwtToken", data.token, { path: "/" });
+        setToken(data.token);
         toast.success("Successfully submitted");
-        // Perform actions on success like redirecting or storing token
       } else {
-        alert(`Error: ${data.message}`);
+        const errorData = await response.json();
+        alert(`Error: ${errorData.message}`);
       }
     } catch (error) {
       console.error("Error:", error);
@@ -198,8 +196,7 @@ const Navbar = () => {
   };
   const handleLogout = () => {
     Cookies.remove("jwtToken");
-    setToken(null); // Remove token from state
-    setIsLogin(true); // Switch to login state
+    setToken(null); // Update the state to reflect logged-out status
   };
 
   return (
@@ -356,6 +353,7 @@ const Navbar = () => {
                   {isLogin ? "Login" : "Sign Up"}
                 </button>
               )}
+
               <dialog id="my_modal_1" className="modal">
                 <div className="modal-box bg-slate-900">
                   <h3 className="font-bold text-lg">
