@@ -172,8 +172,8 @@ const Navbar = () => {
 
       if (response.ok) {
         const data = await response.json();
-        Cookies.set("jwtToken", data.token, { path: "/" });
-        setToken(data.token);
+        Cookies.set("jwtToken", data.token, { path: "/" }); // Save token in cookies
+        setToken(data.token); // Update state immediately
         toast.success("Successfully submitted");
       } else {
         const errorData = await response.json();
@@ -195,9 +195,15 @@ const Navbar = () => {
     }
   };
   const handleLogout = () => {
-    Cookies.remove("jwtToken");
-    setToken(null); // Update the state to reflect logged-out status
+    Cookies.remove("jwtToken"); // Remove token from cookies
+    setToken(null); // Update token state
+    toast.success("Logged out successfully");
+    navigate("/"); // Redirect to the home page or login
   };
+  useEffect(() => {
+    const jwtToken = Cookies.get("jwtToken");
+    setToken(jwtToken);
+  }, []);
 
   return (
     <>
