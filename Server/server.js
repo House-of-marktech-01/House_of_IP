@@ -16,7 +16,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 // Your routes here
-app.post("/api/users/signin", (req, res) => {
+app.post("/api", (req, res) => {
   res.json({ message: "Success" });
 });
 
