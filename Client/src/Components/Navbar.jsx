@@ -188,6 +188,7 @@ const Navbar = () => {
   const handleLogout = () => {
     Cookies.remove("jwtToken"); // Remove token from cookies
     setToken(null); // Update token state
+    setAuthenticated(false); // Update authenticated state
     toast.success("Logged out successfully");
     navigate("/"); // Redirect to the home page or login
   };
