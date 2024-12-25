@@ -16,8 +16,8 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 // Your routes here
-app.post("/api", (req, res) => {
-  res.json({ message: "Success" });
+app.get("/api", (req, res) => {
+  res.send("update");
 });
 
 app.use(bodyParser.json());
