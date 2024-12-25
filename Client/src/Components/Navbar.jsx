@@ -14,7 +14,12 @@ const Navbar = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [token, setToken] = useState("");
+  const [token, setToken] = useState(Cookies.get("jwtToken") || null);
+
+  useEffect(() => {
+    const jwtToken = Cookies.get("jwtToken");
+    setToken(jwtToken);
+  }, []);
 
   const [searchQuery, setSearchQuery] = useState("");
   const [results, setResults] = useState([]);
@@ -125,7 +130,6 @@ const Navbar = () => {
     };
   }, []);
 
-
   const handleSearch = (e) => {
     const input = e.target.value;
     setSearchQuery(input); // Update search query
@@ -189,10 +193,6 @@ const Navbar = () => {
     toast.success("Logged out successfully");
     navigate("/"); // Redirect to the home page or login
   };
-  useEffect(() => {
-    const jwtToken = Cookies.get("jwtToken");
-    setToken(jwtToken);
-  }, []);
 
   return (
     <>
