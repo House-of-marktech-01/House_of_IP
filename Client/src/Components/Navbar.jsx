@@ -173,11 +173,13 @@ const Navbar = () => {
       if (response.ok) {
         const data = await response.json();
         Cookies.set("jwtToken", data.token, { path: "/" }); // Save token in cookies
-        setToken(data.token); // Update state immediately
-        toast.success("Successfully submitted");
+        setToken(data.token); // Update token state immediately
+        setIsLogin(false); // Switch to "Logout" button
+        toast.success("Successfully logged in");
+        document.getElementById("my_modal_1").close(); // Close modal after successful login
       } else {
         const errorData = await response.json();
-        alert(`Error: ${errorData.message}`);
+        toast.error(`Error: ${errorData.message}`);
       }
     } catch (error) {
       console.error("Error:", error);
