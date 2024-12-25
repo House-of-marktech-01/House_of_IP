@@ -345,7 +345,7 @@ const Navbar = () => {
                     document.getElementById("my_modal_1").showModal()
                   }
                 >
-                  {isLogin ? "Login" : "Sign Up"}
+                  Login
                 </button>
               )}
 
