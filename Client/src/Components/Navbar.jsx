@@ -15,6 +15,7 @@ const Navbar = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [token, setToken] = useState(Cookies.get("jwtToken") || null);
+  const [authenticated, setAuthenticated] = useState(false);
 
   useEffect(() => {
     const jwtToken = Cookies.get("jwtToken");
@@ -24,10 +25,6 @@ const Navbar = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [results, setResults] = useState([]);
   const navigate = useNavigate();
-
-  const handleLanguageChange = (e) => {
-    setSelectedLanguage(e.target.value);
-  };
 
   const searchIndex = [
     {
@@ -173,6 +170,7 @@ const Navbar = () => {
         const data = await response.json();
         Cookies.set("jwtToken", data.token, { path: "/" }); // Save token in cookies
         setToken(data.token); // Update token state immediately
+        setAuthenticated(true); // Update authenticated state
         setIsLogin(false); // Switch to "Logout" button
         toast.success("Successfully logged in");
         document.getElementById("my_modal_1").close(); // Close modal after successful login
@@ -334,7 +332,7 @@ const Navbar = () => {
                 </dialog>
               </div>
               {/* Open the modal using document.getElementById('ID').showModal() method */}
-              {token ? (
+              {authenticated ? (
                 <button className="btn bg-slate-800" onClick={handleLogout}>
                   Logout
                 </button>
