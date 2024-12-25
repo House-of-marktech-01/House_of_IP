@@ -14,7 +14,7 @@ const Navbar = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [token, setToken] = useState(() => Cookies.get("jwtToken"));
+  const [token, setToken] = useState("");
 
   const [searchQuery, setSearchQuery] = useState("");
   const [results, setResults] = useState([]);
@@ -129,7 +129,7 @@ const Navbar = () => {
     const token = Cookies.get("jwtToken");
     setToken(token);
     setIsLogin(!token); // If no token, set to login
-  }, [token]); // Only run on component mount
+  }, []); // Only run on component mount
 
   const handleSearch = (e) => {
     const input = e.target.value;
