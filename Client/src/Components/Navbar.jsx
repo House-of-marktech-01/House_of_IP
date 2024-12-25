@@ -125,11 +125,6 @@ const Navbar = () => {
     };
   }, []);
 
-  useEffect(() => {
-    const token = Cookies.get("jwtToken");
-    setToken(token);
-    setIsLogin(!token); // If no token, set to login
-  }, []); // Only run on component mount
 
   const handleSearch = (e) => {
     const input = e.target.value;
@@ -186,14 +181,6 @@ const Navbar = () => {
       toast.error("An error occurred. Please try again.");
     } finally {
       setIsLoading(false);
-    }
-  };
-
-  const modalRef = useRef(null);
-
-  const closeModal = () => {
-    if (modalRef.current) {
-      modalRef.current.close();
     }
   };
   const handleLogout = () => {
