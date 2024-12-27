@@ -70,10 +70,12 @@ const Stats = () => {
               </div>
               <div className="flip-card-back">
                 <div className="Description">
-                  <p className="description pt-8">
-                    Protect your brand identity with trademark registration,
-                    ensuring exclusive rights to your logo, name, or slogan.
-                    Safeguard your business's unique reputation and recognition.
+                  <p className="description pt-3">
+                    Protect your original works, such as art, music, and
+                    literature, with copyright registration. Ensure exclusive
+                    rights to your creations and prevent unauthorized use,
+                    allowing you to control and monetize your intellectual
+                    property.
                   </p>
                 </div>
               </div>
@@ -91,9 +93,10 @@ const Stats = () => {
               <div className="flip-card-back">
                 <div className="Description">
                   <p className="description pt-8">
-                    Protect your brand identity with trademark registration,
-                    ensuring exclusive rights to your logo, name, or slogan.
-                    Safeguard your business's unique reputation and recognition.
+                    Secure the unique look of your products with design
+                    registration. Protect the visual elements of your designs,
+                    ensuring that others cannot copy or imitate your distinct
+                    creations in the market.
                   </p>
                 </div>
               </div>
@@ -113,10 +116,11 @@ const Stats = () => {
               </div>
               <div className="flip-card-back">
                 <div className="Description">
-                  <p className="description pt-8">
-                    Protect your brand identity with trademark registration,
-                    ensuring exclusive rights to your logo, name, or slogan.
-                    Safeguard your business's unique reputation and recognition.
+                  <p className="description pt-3">
+                    Protect your innovative inventions with patent registration.
+                    Secure exclusive rights to your invention, preventing others
+                    from making, using, or selling it without your permission,
+                    and gain the legal backing to bring your idea to life.
                   </p>
                 </div>
               </div>
