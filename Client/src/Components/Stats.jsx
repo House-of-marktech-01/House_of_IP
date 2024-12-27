@@ -37,97 +37,91 @@ const Stats = () => {
           variants={gridVariants}
         >
           {/* Card 1 */}
-          <NavLink to="/trademark">
-            <div className="flip-card">
-              <div className="flip-card-inner">
-                <div className="flip-card-front">
-                  <div className="profile-image">
-                    <img src="/trademarks.png" className="mt-8" alt="" />
-                    <div className="name relative right-3">Trademark</div>
-                  </div>
+          <div className="flip-card">
+            <div className="flip-card-inner">
+              <div className="flip-card-front">
+                <div className="profile-image">
+                  <img src="/trademarks.png" className="mt-8" alt="" />
+                  <div className="name relative right-3">Trademark</div>
                 </div>
-                <div className="flip-card-back">
-                  <div className="Description">
-                    <p className="description pt-8">
-                      Protect your brand identity with trademark registration,
-                      ensuring exclusive rights to your logo, name, or slogan.
-                      Safeguard your business's unique reputation and
-                      recognition.
-                    </p>
-                  </div>
+              </div>
+              <div className="flip-card-back">
+                <div className="Description">
+                  <p className="description pt-8">
+                    Protect your brand identity with trademark registration,
+                    ensuring exclusive rights to your logo, name, or slogan.
+                    Safeguard your business's unique reputation and recognition.
+                  </p>
                 </div>
               </div>
             </div>
-          </NavLink>
+          </div>
 
           {/* Card 2 */}
-          <NavLink to="/copyright">
-            <div className="flip-card">
-              <div className="flip-card-inner">
-                <div className="flip-card-front">
-                  <div className="profile-image">
-                    <img src="/copyright.png" className="mt-14" alt="" />
-                    <div className="name relative right-3 top-2 pt-5">Copyright</div>
-                  </div>
-                </div>
-                <div className="flip-card-back">
-                  <div className="Description">
-                    <p className="description pt-8">
-                      Protect your brand identity with trademark registration,
-                      ensuring exclusive rights to your logo, name, or slogan.
-                      Safeguard your business's unique reputation and
-                      recognition.
-                    </p>
+          <div className="flip-card">
+            <div className="flip-card-inner">
+              <div className="flip-card-front">
+                <div className="profile-image">
+                  <img src="/copyright.png" className="mt-14" alt="" />
+                  <div className="name relative right-3 top-2 pt-5">
+                    Copyright
                   </div>
                 </div>
               </div>
+              <div className="flip-card-back">
+                <div className="Description">
+                  <p className="description pt-8">
+                    Protect your brand identity with trademark registration,
+                    ensuring exclusive rights to your logo, name, or slogan.
+                    Safeguard your business's unique reputation and recognition.
+                  </p>
+                </div>
+              </div>
             </div>
-          </NavLink>
+          </div>
           {/* Card 3 */}
-          <NavLink to="/design">
-            <div className="flip-card">
-              <div className="flip-card-inner">
-                <div className="flip-card-front">
-                  <div className="profile-image">
-                    <img src="/design.png" alt="" />
-                    <div className="name relative top-3 right-3 ml-3">Design</div>
-                  </div>
+          <div className="flip-card">
+            <div className="flip-card-inner">
+              <div className="flip-card-front">
+                <div className="profile-image">
+                  <img src="/design.png" alt="" />
+                  <div className="name relative top-3 right-3 ml-3">Design</div>
                 </div>
-                <div className="flip-card-back">
-                  <div className="Description">
-                    <p className="description pt-8">
-                      Protect your brand identity with trademark registration,
-                      ensuring exclusive rights to your logo, name, or slogan.
-                      Safeguard your business's unique reputation and
-                      recognition.
-                    </p>
-                  </div>
+              </div>
+              <div className="flip-card-back">
+                <div className="Description">
+                  <p className="description pt-8">
+                    Protect your brand identity with trademark registration,
+                    ensuring exclusive rights to your logo, name, or slogan.
+                    Safeguard your business's unique reputation and recognition.
+                  </p>
                 </div>
               </div>
             </div>
-          </NavLink>
-          <NavLink to="/patent">
-            <div className="flip-card">
-              <div className="flip-card-inner">
-                <div className="flip-card-front">
-                  <div className="profile-image">
-                    <img src="/patent.png" className="lg:h-24 mt-12 lg:ml-3" alt="" />
-                    <div className="name pr-5 ml-2">Patent</div>
-                  </div>
+          </div>
+          <div className="flip-card">
+            <div className="flip-card-inner">
+              <div className="flip-card-front">
+                <div className="profile-image">
+                  <img
+                    src="/patent.png"
+                    className="lg:h-24 mt-12 lg:ml-3"
+                    alt=""
+                  />
+                  <div className="name pr-5 ml-2">Patent</div>
                 </div>
-                <div className="flip-card-back">
-                  <div className="Description">
-                    <p className="description pt-8">
-                      Protect your brand identity with trademark registration,
-                      ensuring exclusive rights to your logo, name, or slogan.
-                      Safeguard your business's unique reputation and
-                      recognition.
-                    </p>
-                  </div>
+              </div>
+              <div className="flip-card-back">
+                <div className="Description">
+                  <p className="description pt-8">
+                    Protect your brand identity with trademark registration,
+                    ensuring exclusive rights to your logo, name, or slogan.
+                    Safeguard your business's unique reputation and recognition.
+                  </p>
                 </div>
               </div>
             </div>
-          </NavLink>
+          </div>
         </motion.div>
       </div>
     </>
