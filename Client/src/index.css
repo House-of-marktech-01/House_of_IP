@@ -68,3 +68,97 @@ body {
     rgba(4, 0, 59, 0.6)
   );
 }
+
+/* Flip Card CSS */
+.flip-card {
+  background-color: transparent;
+  width: 245px;
+  height: 270px;
+  perspective: 1000px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  border-radius: 2em;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #1e293b; /* bg-slate-900 */
+  border: 4px solid #334155; /* bg-slate-800 */
+}
+
+.profile-image {
+  background-color: transparent;
+  border: none;
+  margin-top: 15px;
+  border-radius: 5em;
+  width: 120px;
+  height: 120px;
+  margin-left: 50px;
+}
+
+.pfp {
+  border-radius: 35em;
+  fill: #94a3b8; /* Slate color */
+}
+
+.name {
+  margin-top: 15px;
+  font-size: 27px;
+  color: #f1f5f9; /* White */
+  font-weight: bold;
+}
+
+.flip-card-back {
+  background-color: #1e293b; /* bg-slate-900 */
+  border: 4px solid #94a3b8; /* Slate color */
+  transform: rotateY(180deg);
+  padding: 11px;
+}
+
+.description {
+  margin-top: 10px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #f1f5f9; /* White */
+}
+
+.socialbar {
+  background-color: transparent;
+  border-radius: 3em;
+  width: 90%;
+  padding: 14px;
+  margin-top: 11px;
+  margin-left: 10px;
+  word-spacing: 24px;
+  color: #f1f5f9; /* White */
+}
+
+.socialbar svg {
+  transition: 0.4s;
+  width: 20px;
+  height: 20px;
+  color: #94a3b8; /* Slate color */
+}
+
+.socialbar svg:hover {
+  color: #f1f5f9; /* White */
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}

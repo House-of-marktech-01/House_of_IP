@@ -56,7 +56,7 @@ const ContactForm = () => {
   return (
     <div
       id="consult"
-      className="py-20 md:py-28 bg-cover bg-center bg-no-repeat bg-gray-200"
+      className="pt-20 md:pt-28 bg-cover bg-center bg-no-repeat bg-gray-200"
     >
       <h1 className="text-3xl text-black text-center font-semibold">
         Contact Us
@@ -78,16 +78,6 @@ const ContactForm = () => {
                 the way.
               </p>
               <ul>
-                <li className="flex items-center mb-3">
-                  <i className="fas fa-phone text-blue-600 text-xl mr-3"></i>
-                  <span className="text-sm text-black">+91-99141-31579</span>
-                </li>
-                <li className="flex items-center mb-3">
-                  <i className="fas fa-envelope text-red-600 text-xl mr-3"></i>
-                  <span className="text-sm text-black">
-                    houseofintellectualproperty@gmail.com
-                  </span>
-                </li>
                 <li className="flex items-center">
                   <i className="fas fa-clock text-purple-700 text-xl mr-3"></i>
                   <span className="text-sm text-black">
