@@ -476,7 +476,7 @@ const Patent = () => {
         </div>
 
         <h1 className="text-center text-3xl text-black pb-4 bg-white">
-          Copyright FAQ's
+          Patent FAQ's
         </h1>
         <div className="space-y-4 px-2 pt-8 bg-white lg:px-8">
           {/* FAQ Section */}
@@ -501,8 +501,8 @@ const Patent = () => {
                       &#9660;
                     </span>
                   </summary>
-                  <div className="transition-all duration-300 bg-gray-500 rounded-b-xl ease-in-out overflow-hidden max-h-0 group-open:max-h-96">
-                    <p className="mt-2 px-4 text-black text-sm">
+                  <div className="transition-all duration-300 bg-gray-900 rounded-b-xl pb-5 ease-in-out overflow-hidden max-h-0 group-open:max-h-96">
+                    <p className="mt-2 px-4 text-white text-sm">
                       At House of IP, our multidisciplinary team of technical
                       experts and patent agents assists in drafting,
                       prosecuting, and litigating patents across a wide range of
@@ -523,11 +523,11 @@ const Patent = () => {
                       &#9660;
                     </span>
                   </summary>
-                  <div className="transition-all duration-300 bg-gray-500 rounded-b-xl ease-in-out overflow-hidden max-h-96 group-open:max-h-96 px-12 text-justify text-black font-montserrat font-thin overflow-y-auto">
-                    <p className="mt-2 px-4 text-black text-sm">
+                  <div className="transition-all duration-300 bg-gray-900 pb-5 rounded-b-xl ease-in-out overflow-hidden max-h-96 group-open:max-h-96 px-12 text-justify text-black font-montserrat font-thin overflow-y-auto">
+                    <p className="mt-2 px-4 text-white text-sm">
                       Our patent filing process is comprehensive and includes:
                     </p>
-                    <ul className="mt-2 px-4 list-disc list-inside text-black text-sm">
+                    <ul className="mt-2 px-4 list-disc list-inside text-white text-sm">
                       <li>
                         <strong>
                           Prior art search and landscape analysis:
@@ -568,8 +568,8 @@ const Patent = () => {
                       &#9660;
                     </span>
                   </summary>
-                  <div className="transition-all duration-300 ease-in-out bg-gray-500 rounded-b-xl overflow-hidden max-h-0 group-open:max-h-96">
-                    <p className="mt-2 px-4 text-black text-sm">
+                  <div className="transition-all duration-300 ease-in-out bg-gray-900 pb-5 rounded-b-xl overflow-hidden max-h-0 group-open:max-h-96">
+                    <p className="mt-2 px-4 text-white text-sm">
                       At House of IP, our dedicated litigation team is
                       well–versed in handling patent disputes. We thoroughly
                       analyse the challenge, prepare strong counter–arguments
@@ -589,12 +589,12 @@ const Patent = () => {
                       &#9660;
                     </span>
                   </summary>
-                  <div className="transition-all duration-300 ease-in-out bg-gray-500 rounded-b-xl overflow-hidden max-h-0 group-open:max-h-96 text-sm">
-                    <p className="mt-2 px-4 text-black">
+                  <div className="transition-all duration-300 ease-in-out bg-gray-900 pb-5 rounded-b-xl overflow-hidden max-h-0 group-open:max-h-96 text-sm">
+                    <p className="mt-2 px-4 text-white">
                       Our IP commercialization team provides expert services,
                       including:
                     </p>
-                    <ul className="mt-2 px-4 list-disc list-inside text-black text-sm">
+                    <ul className="mt-2 px-4 list-disc list-inside text-whites text-sm">
                       <li>
                         <strong> Landscape mapping: </strong>
                         Identifying markets and competitors for your patent.
@@ -625,8 +625,8 @@ const Patent = () => {
                       &#9660;
                     </span>
                   </summary>
-                  <div className="transition-all duration-300 bg-gray-500 rounded-b-xl ease-in-out overflow-hidden max-h-0 group-open:max-h-96">
-                    <p className="mt-2 px-4 text-black text-sm">
+                  <div className="transition-all duration-300 bg-gray-900 pb-5 rounded-b-xl ease-in-out overflow-hidden max-h-0 group-open:max-h-96">
+                    <p className="mt-2 px-4 text-white text-sm">
                       House of IP is a distinguished IP law firm with a proven
                       track record of securing and leveraging patents for
                       businesses, academic institutions, and research

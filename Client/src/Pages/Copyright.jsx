@@ -461,11 +461,11 @@ const Copyright = () => {
                       &#9660;
                     </span>
                   </summary>
-                  <div className="transition-all duration-300 ease-in-out overflow-hidden bg-gray-500 rounded-b-xl max-h-0 group-open:max-h-96">
-                    <p className="mt-2 px-4 text-black text-sm">
+                  <div className="transition-all duration-300 ease-in-out overflow-hidden bg-gray-900 pb-5 rounded-b-xl max-h-0 group-open:max-h-96">
+                    <p className="mt-2 px-4 text-white text-sm">
                       House of IP safeguards a wide range of creative content:
                     </p>
-                    <ul className="mt-2 px-4 list-disc list-inside text-black text-sm">
+                    <ul className="mt-2 px-4 list-disc list-inside text-white text-sm">
                       <li>
                         <strong>Software:</strong> Handling ownership
                         complexities and infringement issues in custom software.
@@ -499,8 +499,8 @@ const Copyright = () => {
                       &#9660;
                     </span>
                   </summary>
-                  <div className="transition-all duration-300 ease-in-out overflow-hidden bg-gray-500 rounded-b-xl max-h-96 group-open:max-h-96 px-12 text-justify text-black font-montserrat font-thin overflow-y-auto">
-                    <p className="mt-2 px-4 text-black text-sm">
+                  <div className="transition-all duration-300 ease-in-out overflow-hidden bg-gray-900 pb-5 rounded-b-xl max-h-96 group-open:max-h-96 px-12 text-justify text-black font-montserrat font-thin overflow-y-auto">
+                    <p className="mt-2 text-white text-sm">
                       Our expert team guides you through the copyright
                       registration process, ensuring that your work is quickly
                       protected in the appropriate category—whether it’s text,
@@ -520,8 +520,8 @@ const Copyright = () => {
                       &#9660;
                     </span>
                   </summary>
-                  <div className="transition-all duration-300 ease-in-out bg-gray-500 rounded-b-xl overflow-hidden max-h-0 group-open:max-h-96">
-                    <p className="mt-2 px-4 text-black text-sm">
+                  <div className="transition-all duration-300 ease-in-out bg-gray-900 rounded-b-xl pb-5 overflow-hidden max-h-0 group-open:max-h-96">
+                    <p className="mt-2 px-4 text-white text-sm">
                       House of IP has a proven track record in copyright dispute
                       resolution. We represent clients in court, using
                       compelling oral arguments, robust evidence, and strategic
@@ -541,8 +541,8 @@ const Copyright = () => {
                       &#9660;
                     </span>
                   </summary>
-                  <div className="transition-all duration-300 ease-in-out bg-gray-500 rounded-b-xl overflow-hidden max-h-0 group-open:max-h-96 text-sm">
-                    <p className="mt-2 px-4 text-black">
+                  <div className="transition-all duration-300 ease-in-out bg-gray-900 rounded-b-xl pb-5 overflow-hidden max-h-0 group-open:max-h-96 text-sm">
+                    <p className="mt-2 px-4 text-white">
                       We provide guidance on the use of third–party copyrighted
                       material through licenses, assignments, or fair–use
                       guidelines. Our lawyers ensure you can leverage content ly
@@ -559,8 +559,8 @@ const Copyright = () => {
                       &#9660;
                     </span>
                   </summary>
-                  <div className="transition-all duration-300 bg-gray-500 rounded-b-xl ease-in-out overflow-hidden max-h-0 group-open:max-h-96 text-sm">
-                    <p className="mt-2 px-4 text-black">
+                  <div className="transition-all duration-300 bg-gray-900 rounded-b-xl pb-5  ease-in-out overflow-hidden max-h-0 group-open:max-h-96 text-sm">
+                    <p className="mt-2 px-4 text-white">
                       For high–value content, including music, software, and
                       literary works, offers comprehensive valuation services.
                       Our team of and technical experts evaluates the commercial

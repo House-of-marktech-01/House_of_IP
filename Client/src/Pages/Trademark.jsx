@@ -450,12 +450,12 @@ const Trademark = () => {
                       &#9660;
                     </span>
                   </summary>
-                  <div className="transition-all duration-300 bg-slate-600 rounded-b-xl ease-in-out overflow-hidden max-h-0 group-open:max-h-96">
-                    <p className="mt-2 px-4 text-black text-sm">
+                  <div className="transition-all duration-300 bg-slate-900 text-white pb-6 rounded-b-xl ease-in-out overflow-hidden max-h-0 group-open:max-h-96">
+                    <p className="mt-2 px-4 text-sm">
                       At House of IP, we go beyond protection by offering a
                       full-service solution that includes:
                     </p>
-                    <ul className="mt-2 px-4 list-disc list-inside text-black text-sm">
+                    <ul className="mt-2 px-4 list-disc list-inside  text-sm">
                       <li>
                         Industry research and strategic brand development to
                         strengthen your trademark.
@@ -483,8 +483,8 @@ const Trademark = () => {
                       &#9660;
                     </span>
                   </summary>
-                  <div className="transition-all duration-300 ease-in-out overflow-hidden max-h-96 rounded-b-xl bg-slate-600 pb-6 group-open:max-h-96 px-12 text-justify text-black font-montserrat font-thin overflow-y-auto">
-                    <p className="mt-2 px-4 text-black text-sm">
+                  <div className="transition-all duration-300 ease-in-out overflow-hidden max-h-96 rounded-b-xl bg-slate-900 pb-6 group-open:max-h-96 px-12 text-justify text-black font-montserrat font-thin overflow-y-auto">
+                    <p className="mt-2 px-4 text-white text-sm">
                       We begin by understanding your brand’s objectives,
                       followed by conducting comprehensive availability searches
                       to identify potential conflicts and evaluate registration
@@ -505,8 +505,8 @@ const Trademark = () => {
                       &#9660;
                     </span>
                   </summary>
-                  <div className="transition-all duration-300 ease-in-out overflow-hidden rounded-b-xl bg-slate-600 pb-6 max-h-0 group-open:max-h-96">
-                    <p className="mt-2 px-4 text-black text-sm">
+                  <div className="transition-all duration-300 ease-in-out overflow-hidden rounded-b-xl bg-slate-900 pb-6 max-h-0 group-open:max-h-96">
+                    <p className="mt-2 px-4 text-white text-sm">
                       With a meticulous process that includes well-prepared
                       applications, comprehensive examination responses, and
                       evidence-backed arguments, we consistently achieve high
@@ -525,13 +525,13 @@ const Trademark = () => {
                       &#9660;
                     </span>
                   </summary>
-                  <div className="transition-all duration-300 ease-in-out overflow-hidden bg-slate-600 rounded-b-xl pb-6 max-h-0 group-open:max-h-96 text-sm">
-                    <p className="mt-2 px-4 text-black">
+                  <div className="transition-all duration-300 ease-in-out overflow-hidden bg-slate-900 rounded-b-xl pb-6 max-h-0 group-open:max-h-96 text-sm">
+                    <p className="mt-2 px-4 text-white">
                       Our 360-degree service doesn’t stop at registration. We
                       also manage renewals, recordals, and continuous monitoring
                       to safeguard your trademark. Additionally, we offer:
                     </p>
-                    <ul className="mt-2 px-4 list-disc list-inside text-black">
+                    <ul className="mt-2 px-4 list-disc list-inside text-white">
                       <li>
                         Trademark valuation guidance for licensing agreements,
                         IP transfers, or mergers.
@@ -616,7 +616,7 @@ const Trademark = () => {
                     <img
                       src="https://thelawcodes.com/wp-content/uploads/2023/10/What-is-Patent-Basics-Overview.webp"
                       alt="Patent"
-                      className="h-44 w-52"
+                      className="h-44 w-full"
                     />
                   </figure>
                   <div className="card-body bg-white text-black">
@@ -632,7 +632,7 @@ const Trademark = () => {
                     <img
                       src="https://blog.ipleaders.in/wp-content/uploads/2021/06/1_copyright-designs-and-patents-act-1988-1.jpg"
                       alt="Copyright"
-                      className="h-44"
+                      className="h-44 w-full"
                     />
                   </figure>
                   <div className="card-body bg-white text-black">
@@ -646,7 +646,7 @@ const Trademark = () => {
                     <img
                       src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEaE-xi5291DEKz_fKdeE3LxPyxsovjgdojg&s"
                       alt="Design"
-                      className="h-44"
+                      className="h-44 w-full"
                     />
                   </figure>
                   <div className="card-body bg-white text-black">

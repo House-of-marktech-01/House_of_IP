@@ -431,12 +431,12 @@ const Design = () => {
                       &#9660;
                     </span>
                   </summary>
-                  <div className="transition-all duration-300 ease-in-out overflow-hidden max-h-0 group-open:max-h-96 bg-gray-500 rounded-b-xl">
-                    <p className="mt-2 px-4 text-black text-sm">
+                  <div className="transition-all duration-300 ease-in-out overflow-hidden pb-5 max-h-0 group-open:max-h-96 bg-gray-900 rounded-b-xl">
+                    <p className="mt-2 px-4 text-white text-sm">
                       We assist with registering a wide range of product
                       designs, including but not limited to:
                     </p>
-                    <ul className="mt-2 px-4 list-disc list-inside text-black text-sm">
+                    <ul className="mt-2 px-4 list-disc list-inside text-white text-sm">
                       <li>
                         <strong>Product shapes and configurations</strong>{" "}
                         (e.g., furniture, gadgets)
@@ -450,7 +450,7 @@ const Design = () => {
                         elements on products)
                       </li>
                     </ul>
-                    <p className="mt-2 px-4 text-black text-sm">
+                    <p className="mt-2 px-4 text-white text-sm">
                       Our expertise spans multiple industries, allowing us to
                       provide tailored solutions for your specific design
                       protection needs.
@@ -470,35 +470,35 @@ const Design = () => {
                       &#9660;
                     </span>
                   </summary>
-                  <div className="transition-all duration-300 ease-in-out overflow-hidden max-h-96 bg-gray-500 rounded-b-xl group-open:max-h-96 px-12 text-justify text-black font-montserrat font-thin overflow-y-auto">
-                    <p className="mt-2 px-4 text-black text-sm">
+                  <div className="transition-all duration-300 ease-in-out overflow-hidden max-h-96 pb-5 bg-gray-900 rounded-b-xl group-open:max-h-96 px-12 text-justify text-black font-base overflow-y-auto">
+                    <p className="mt-2 px-4 text-white text-sm">
                       Our design registration process is straightforward and
                       includes:
                     </p>
-                    <p className="mt-2 px-4 text-black text-sm">
+                    <p className="mt-2 px-4 text-white text-sm">
                       <strong>1. Consultation and Design Assessment:</strong> We
                       start by understanding your product and its design
                       elements to ensure eligibility under the Designs Act,
                       2000.
                     </p>
-                    <p className="mt-2 px-4 text-black text-sm">
+                    <p className="mt-2 px-4 text-white text-sm">
                       <strong>2. Design Search:</strong> We conduct a search to
                       ensure that your design is unique and not already
                       registered by another entity.
                     </p>
-                    <p className="mt-2 px-4 text-black text-sm">
+                    <p className="mt-2 px-4 text-white text-sm">
                       <strong>3. Application Drafting:</strong> Our team
                       prepares and files the design application with the Indian
                       Patent Office, ensuring that all necessary documents are
                       in order.
                     </p>
-                    <p className="mt-2 px-4 text-black text-sm">
+                    <p className="mt-2 px-4 text-white text-sm">
                       <strong>4. Filing and Registration:</strong> We manage the
                       entire filing process, from submitting your application to
                       addressing any queries raised by the Design Office until
                       your design is successfully registered.
                     </p>
-                    <p className="mt-2 px-4 text-black text-sm">
+                    <p className="mt-2 px-4 text-white text-sm">
                       <strong>5. Post–Registration Support:</strong> Once your
                       design is registered, we provide support to help you
                       enforce your rights in case of infringement and assist
@@ -518,8 +518,8 @@ const Design = () => {
                       &#9660;
                     </span>
                   </summary>
-                  <div className="transition-all duration-300 ease-in-out overflow-hidden bg-gray-500 rounded-b-xl max-h-0 group-open:max-h-96">
-                    <p className="mt-2 px-4 text-black text-sm">
+                  <div className="transition-all duration-300 ease-in-out overflow-hidden pb-5 bg-gray-900 rounded-b-xl max-h-0 group-open:max-h-96">
+                    <p className="mt-2 px-4 text-white text-sm">
                       At House of IP, we help you take swift action if your
                       registered design is copied. Our team assists in filing
                       design infringement cases, preparing documents, and
@@ -538,13 +538,13 @@ const Design = () => {
                       &#9660;
                     </span>
                   </summary>
-                  <div className="transition-all duration-300 ease-in-out overflow-hidden bg-gray-500 rounded-b-xl max-h-0 group-open:max-h-96 text-sm">
-                    <p className="mt-2 px-4 text-black">
+                  <div className="transition-all duration-300 ease-in-out overflow-hidden bg-gray-900 pb-5 rounded-b-xl max-h-0 group-open:max-h-96 text-sm">
+                    <p className="mt-2 px-4 text-white">
                       Registering your design not only protects it but also
                       allows you to explore commercialization opportunities. Our
                       experts at House of IP help you:
                     </p>
-                    <ul className="mt-2 px-4 list-disc list-inside text-black">
+                    <ul className="mt-2 px-4 list-disc list-inside text-white">
                       <li>
                         License your design to other manufacturers or
                         businesses.
@@ -569,8 +569,8 @@ const Design = () => {
                       &#9660;
                     </span>
                   </summary>
-                  <div className="transition-all duration-300 ease-in-out overflow-hidden bg-gray-500 rounded-b-xl max-h-0 group-open:max-h-96 text-sm">
-                    <p className="mt-2 px-4 text-black">
+                  <div className="transition-all duration-300 ease-in-out overflow-hidden bg-gray-900 pb-5 rounded-b-xl max-h-0 group-open:max-h-96 text-sm">
+                    <p className="mt-2 px-4 text-white">
                       With a proven track record in IP law and extensive
                       experience in design protection, House of IP is a trusted
                       partner for securing your product’s design. Our dedicated
