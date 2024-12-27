@@ -10,6 +10,7 @@ import ScrollToTopButton from "./Components/ScrollTop";
 import Chatbot from "./Components/Chatbot";
 import CustomCursor from "./Components/Cursor";
 import ScrollProgress from "./Components/ScrollProgress";
+import {Helmet} from "react-helmet";
 
 // Lazy load the page components
 const Home = lazy(() => import("./Pages/Home"));
@@ -25,19 +26,22 @@ const Trademark = lazy(() => import("./Pages/Trademark"));
 function App() {
   return (
     <>
-      <CustomCursor/>
-      <Router>
-        <ToastContainer />
-        <Navbar />
-        {/* Suspense component to handle loading state */}
-        <ScrollProgress/>
-        <Suspense
-          fallback={
-            <div className="flex justify-center items-center min-h-screen">
-              <span className="loading loading-infinity loading-lg"></span>
-            </div>
-          }
-        >
+      <Suspense
+        fallback={
+          <div className="flex justify-center items-center min-h-screen">
+            <span className="loading loading-infinity loading-lg"></span>
+          </div>
+        }
+      >
+        <Helmet>
+        <title>House of IP</title>
+        </Helmet>
+        <Router>
+          <CustomCursor />
+          <ToastContainer />
+          <Navbar />
+          {/* Suspense component to handle loading state */}
+          <ScrollProgress />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -49,11 +53,11 @@ function App() {
             <Route path="/patent" element={<Patent />} />
             <Route path="/trademark" element={<Trademark />} />
           </Routes>
-        </Suspense>
-        <ScrollToTopButton />
-        <Chatbot />
-        <Footer />
-      </Router>
+          <ScrollToTopButton />
+          <Chatbot />
+          <Footer />
+        </Router>
+      </Suspense>
     </>
   );
 }

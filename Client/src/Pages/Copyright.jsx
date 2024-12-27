@@ -6,6 +6,7 @@ import Cookies from "js-cookie";
 import { useDropzone } from "react-dropzone";
 import axios from "axios";
 import { toast } from "react-toastify";
+import {Helmet} from "react-helmet";
 
 const Copyright = () => {
   const [token, setToken] = useState(Cookies.get("jwtToken"));
@@ -102,6 +103,11 @@ const Copyright = () => {
     };
   return (
     <>
+    <Helmet>
+      <title>
+        House of IP - Copyright
+      </title>
+    </Helmet>
       <div id="copyright" className="w-full" style={{ position: "relative" }}>
         <div className="breadcrumbs text-xs sm:text-sm pl-4 sm:pl-6 bg-white text-black pt-20 lg:pt-20">
           <ul>

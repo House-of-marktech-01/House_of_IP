@@ -1,10 +1,14 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import TestimonialCard from "../Components/Testimonials";
+import { Helmet } from "react-helmet";
 
 const About = () => {
   return (
     <>
+    <Helmet>
+      <title>House of IP - About</title>
+    </Helmet>
       <div className="w-full" style={{ position: "relative" }}>
         <div className="breadcrumbs text-xs pl-4 sm:pl-6 bg-white text-black pt-20">
           <ul>

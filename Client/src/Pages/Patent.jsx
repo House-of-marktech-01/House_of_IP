@@ -7,6 +7,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import {Helmet} from "react-helmet";
 
 const Patent = () => {
   const [email, setEmail] = useState("");
@@ -123,6 +124,9 @@ const Patent = () => {
 
   return (
     <>
+    <Helmet>
+      <title>House of IP - Patent</title>
+    </Helmet>
       <div id="patent" className="w-full" style={{ position: "relative" }}>
         <div className="breadcrumbs text-xs sm:text-sm pl-4 sm:pl-6 bg-white text-black pt-20 lg:pt-20">
           <ul>

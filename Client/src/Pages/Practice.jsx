@@ -3,10 +3,14 @@ import { motion } from "framer-motion";
 import ContactForm from "../Components/ContactForm";
 import { NavLink } from "react-router-dom";
 import Card from "../Components/Card";
+import { Helmet } from "react-helmet";
 
 const Practice = () => {
   return (
     <>
+    <Helmet>
+      <title>House of IP - Service</title>
+    </Helmet>
       <div>
         {/* Breadcrumbs */}
         <div className="breadcrumbs text-sm pl-6 bg-white text-black pt-20">
