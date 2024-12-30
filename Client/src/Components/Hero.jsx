@@ -36,10 +36,13 @@ const Hero = () => {
             tailored solutions for individuals and businesses alike.
           </p>
           <button
-            className="ml-20 bg-green-500 p-4 rounded-full my-10 text-black font-semibold"
+            className="ml-20 bg-green-500 p-4 rounded-full my-10 text-black font-semibold flex items-center gap-2 transition-all duration-300 group"
             onClick={handleClick}
           >
             Book an Appointment
+            <span className="inline-block transform transition-transform duration-300 group-hover:translate-x-2">
+              →
+            </span>
           </button>
         </div>
         {/* Carousel Div */}

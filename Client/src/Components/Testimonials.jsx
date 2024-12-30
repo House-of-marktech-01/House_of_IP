@@ -48,86 +48,70 @@ const TestimonialCard = () => {
   };
 
   return (
-    <>
-      <div className="hidden lg:flex flex-col items-center bg-slate-100 justify-center px-4 py-10">
-        {/* Heading */}
-        <h2 className="text-2xl font-semibold font-playfair underline text-blue-900 text-center">
-          What our clients have to say
-        </h2>
+    <div className="bg-slate-900">
+  {/* Carousel for Larger Screens */}
+  <div className="hidden lg:flex mx-auto relative items-center text-center justify-center w-full max-w-6xl py-10 lg:mt-0 overflow-hidden">
+    {/* Left Arrow */}
+    <button
+      onClick={handlePrev}
+      className="absolute left-4 text-white text-5xl font-bold hover:text-gray-300 z-10"
+      aria-label="Previous"
+    >
+      &#8249; {/* Left Arrow Symbol */}
+    </button>
 
-        {/* Swiper Container */}
-        <div className="relative flex items-center text-center justify-center w-full max-w-4xl mt-8 overflow-hidden">
-          {/* Left Arrow */}
-          <button
-            onClick={handlePrev}
-            className="absolute left-2 text-blue-900 text-5xl font-bold hover:text-blue-700 z-10"
-          >
-            &#8249;
-          </button>
-
-          {/* Sliding Wrapper */}
-          <div
-            className="flex transition-transform duration-300 ease-in-out"
-            style={{
-              transform: `translateX(-${currentIndex * 100}%)`,
-            }}
-          >
-            {testimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                className="w-full flex-shrink-0 px-6 py-4 bg-white border rounded-lg shadow-lg text-center sm:text-left"
-                style={{
-                  marginLeft: index === 0 ? "16px" : 0, // Add space before the first card
-                  marginRight: index === testimonials.length - 1 ? "16px" : 0, // Add space after the last card
-                }}
-              >
-                <p className="text-gray-800 text-sm sm:text-base leading-relaxed">
-                  {testimonial.text}
-                </p>
-                <div className="mt-4 flex flex-row justify-between">
-                  <p className="font-semibold text-blue-800 font-cabin">
-                    - {testimonial.author}
-                  </p>
-                </div>
-              </div>
-            ))}
+    {/* Sliding Wrapper */}
+    <div
+      className="flex transition-transform duration-300 ease-in-out"
+      style={{
+        transform: `translateX(-${currentIndex * 100}%)`,
+      }}
+    >
+      {testimonials.map((testimonial, index) => (
+        <div
+          key={index}
+          className="w-full flex-shrink-0 px-8 py-6 bg-slate-800 border rounded-lg shadow-lg"
+        >
+          <p className="text-white text-base sm:text-lg leading-relaxed">
+            {testimonial.text}
+          </p>
+          <div className="mt-4">
+            <p className="font-semibold text-white font-cabin">
+              - {testimonial.author}
+            </p>
           </div>
-
-          {/* Right Arrow */}
-          <button
-            onClick={handleNext}
-            className="absolute right-2 text-blue-900 text-5xl font-bold hover:text-blue-700 z-10"
-          >
-            &#8250;
-          </button>
         </div>
-      </div>
-      <div className="lg:hidden bg-white">
-        <h1 className="text-2xl text-center pb-7 text-slate-900 lg:font-bold">
-          Lets here what our clients say
-        </h1>
+      ))}
+    </div>
 
-        <div className="grid grid-cols-1 gap-4 p-4 lg:grid-cols-2 lg:px-20 pb-5">
-          {testimonials.map((testimonial, index) => (
-            <motion.div
-              key={index}
-              className="bg-slate-900 p-6 rounded-md shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
-              initial={{ opacity: 0, y: 50 }} // Initial state
-              whileInView={{ opacity: 1, y: 0 }} // Animate when in view
-              viewport={{ once: true, amount: 0.2 }} // Trigger once when 20% of the element is visible
-              transition={{ duration: 0.6, delay: index * 0.2 }} // Add stagger effect
-            >
-              <p className=" text-white text-xs italic mb-4">
-                "{testimonial.text}"
-              </p>
-              <p className="text-right font-bold text-xs text-white">
-                - {testimonial.author}
-              </p>
-            </motion.div>
-          ))}
-        </div>
+    {/* Right Arrow */}
+    <button
+      onClick={handleNext}
+      className="absolute right-4 text-white text-5xl font-bold hover:text-gray-300 z-10"
+      aria-label="Next"
+    >
+      &#8250; {/* Right Arrow Symbol */}
+    </button>
+  </div>
+
+  {/* Grid for Mobile Devices */}
+  <div className="lg:hidden grid grid-cols-1 gap-4 p-4">
+    {testimonials.map((testimonial, index) => (
+      <div
+        key={index}
+        className="bg-slate-800 p-6 rounded-md shadow-lg"
+      >
+        <p className="text-white text-sm sm:text-base italic leading-relaxed mb-4">
+          "{testimonial.text}"
+        </p>
+        <p className="font-semibold text-white font-cabin text-right">
+          - {testimonial.author}
+        </p>
       </div>
-    </>
+    ))}
+  </div>
+</div>
+
   );
 };
 

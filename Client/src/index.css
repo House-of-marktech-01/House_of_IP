@@ -27,15 +27,14 @@ body {
 }
 
 @media (max-width: 768px) {
-  
   .parallax-container {
-    padding-top: 200px;
-    background-size: contain; /* Change to 'contain' to fit the image */
-    background-attachment: scroll; /* Disable fixed to improve performance on mobile */
-    height: auto; /* Adjust height to content for smaller screens */
-    padding: 50px 20px; /* Add padding for better spacing */
+    background-attachment: scroll; /* Disable fixed attachment for mobile */
+    background-position: top; /* Adjust position for better mobile fit */
+    height: auto; /* Adjust height for better scaling */
+    padding: 20px; /* Add padding for content spacing */
   }
 }
+
 
 /* Media query for extra small devices (phones) */
 @media (max-width: 480px) {

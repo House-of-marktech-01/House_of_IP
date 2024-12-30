@@ -62,11 +62,11 @@ const ContactForm = () => {
         Contact Us
       </h1>
       <div className="py-10">
-        <div className="container mx-auto px-4 md:px-8">
+        <div className="container mx-auto lg:px-4 md:px-8">
           <div className="flex flex-col lg:flex-row">
             {/* Left Column */}
             <div className="lg:w-1/2 px-4 mb-12 lg:mb-0">
-              <h3 className="text-4xl font-light text-white mb-4">
+              <h3 className="text-2xl lg:text-4xl font-light text-white mb-4">
                 Free Consultation
               </h3>
               <p className="text-sm text-white mb-6">

@@ -1,0 +1,134 @@
+body.search-open {
+  overflow: hidden;
+}
+
+.close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background: none;
+  border: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  display: block;
+  cursor: pointer;
+  color: white; /* Changed to white for better contrast */
+  padding: 1rem 1.25rem;
+  background: black;
+  border-radius: 50%;
+  outline: none;
+}
+
+.close:hover {
+  background: #D62839;
+}
+
+.search-box {
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background: #1e293b; /* Slate-900 background */
+  transform: scale(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.search-box.search-open {
+  transform: scale(1);
+}
+
+.search-box .inner {
+  width: 70%;
+  margin: 0 auto;
+  position: relative;
+  top: 30%;
+  transform: translateY(-50%);
+}
+
+.search-box label {
+  color: white; /* Light color for the label text */
+  font-weight: 300;
+  font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+  .search-box label.placeholder {
+    font-size: 24px; /* Smaller font size for small devices */
+  }
+
+  .search-box button.submit {
+    margin-bottom: 40px;
+    right: 40px;
+  }
+}
+
+.search-box button.submit {
+  outline: none;
+  position: absolute;
+  top: 0;
+  right: 15px;
+  height: 70px;
+  padding: 10px 2rem;
+  background: #00A896; /* Green */
+  font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+  font-size: 1rem;
+  color: white;
+}
+
+.search-box button.submit:disabled {
+  background: #ccc;
+  color: #32213A; /* Purple */
+}
+
+.search-box input[type="text"] {
+  padding: 20px;
+  height: 72px;
+  font-size: 32px;
+  font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+  font-weight: 300;
+  background-color: #1e293b;
+  border: none;
+  border-bottom: solid 2px #999; /* Gray */
+  transition: border 0.3s;
+}
+.search-box input[type="text"]:focus {
+  border-bottom: solid 2px #00A896; /* Green */
+  box-shadow: none;
+}
+
+.search-box label.placeholder {
+  position: absolute;
+  top: 10px;
+  left: 2rem;
+  font-size: 32px;
+  font-weight: 300;
+  font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+  color: #999; /* Gray */
+  transition: all 0.3s;
+}
+
+.search-box label.placeholder.move-up {
+  top: -25px;
+  color: white;
+  font-size: 1rem;
+}
+
+.search-btn {
+  text-transform: uppercase;
+  font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+  font-size: 0.875rem;
+  padding: 0.75rem;
+  display: inline-block;
+  background: #1e293b;
+}
+
+.search-btn:hover {
+  color: #324ba7; /* Green */
+}
+
+.search-btn i {
+  margin-left: 0.5rem;
+}
