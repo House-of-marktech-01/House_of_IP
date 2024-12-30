@@ -20,7 +20,7 @@ const Navbar = () => {
   useEffect(() => {
     const jwtToken = Cookies.get("jwtToken");
     setToken(jwtToken);
-    setAuthenticated(true);
+    setAuthenticated(false);
   }, []);
 
   const [searchQuery, setSearchQuery] = useState("");
