@@ -107,7 +107,7 @@ const ContactForm = () => {
 
             {/* Right Column (Contact Form) */}
             <motion.div
-              className="lg:w-1/2 px-4 "
+              className="lg:w-1/2 lg:px-4 "
               initial={{ opacity: 0, y: 50 }} // Initial state: hidden and moved down
               whileInView={{ opacity: 1, y: 0 }} // Animates to visible and center position
               viewport={{ once: true }} // Animation triggers once when in the viewport

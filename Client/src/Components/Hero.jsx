@@ -24,9 +24,9 @@ const Hero = () => {
 
   return (
     <>
-      <div className="grid lg:grid-cols-2 grid-cols-1 pt-16 bg-slate-900 relative">
+      <div className="grid lg:grid-cols-2 grid-cols-1  bg-slate-900 relative">
         {/* Content Div */}
-        <div className="pt-28 lg:w-[80%] text-white">
+        <div className="pt-44 lg:w-[80%] text-white">
           <h1 className="text-5xl font-semibold pl-5 lg:pl-20">
             Your Trusted <br /> IPR Agent
           </h1>
@@ -43,7 +43,7 @@ const Hero = () => {
           </button>
         </div>
         {/* Carousel Div */}
-        <div className="hidden lg:block relative h-full">
+        <div className="hidden lg:block relative min-h-screen">
           <div className="carousel w-full h-full py-0 relative overflow-hidden">
             <div
               className="flex transition-transform duration-500 ease-in-out h-full"
