@@ -27,7 +27,10 @@ const Stats = () => {
   return (
     <>
       <h1 className="text-2xl pt-10 font-bold bg-slate-900 text-white text-center sm:pl-2">
-        Explore our digital services stack.
+        Our digital services
+      </h1>
+      <h1 className="text-xl pt-5 font-normal bg-slate-900 text-white text-center sm:pl-2">
+      Unmatched Services & Excellence
       </h1>
       <div className="card-body bg-slate-900 lg:px-20 py-10" ref={ref}>
         <motion.div

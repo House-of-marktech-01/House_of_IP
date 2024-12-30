@@ -4,16 +4,30 @@ import { NavLink } from "react-router-dom";
 const OurStory = () => {
   const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isButtonVisible, setIsButtonVisible] = useState(true);
 
   const togglePlayPause = () => {
-    if (videoRef.current) {
-      if (videoRef.current.paused) {
-        videoRef.current.play();
-        setIsPlaying(true);
-      } else {
-        videoRef.current.pause();
-        setIsPlaying(false);
-      }
+    if (videoRef.current.paused) {
+      videoRef.current.play();
+      setIsPlaying(true);
+      setIsButtonVisible(false);
+      setTimeout(() => {
+        setIsButtonVisible(false); // Hide button after a few seconds
+      }, 3000);
+    } else {
+      videoRef.current.pause();
+      setIsPlaying(false);
+      setIsButtonVisible(true); // Show button if paused
+    }
+  };
+
+  const handleMouseEnter = () => {
+    setIsButtonVisible(true); // Show button on hover
+  };
+
+  const handleMouseLeave = () => {
+    if (isPlaying) {
+      setIsButtonVisible(false); // Hide button when not hovered and playing
     }
   };
 
@@ -24,7 +38,11 @@ const OurStory = () => {
           <div className="w-full">
             <div className="flex flex-wrap md:flex-nowrap items-center gap-6 md:gap-10 lg:px-10 px-5">
               {/* Custom Video Player */}
-              <div className="relative w-full lg:w-2/3">
+              <div
+                className="relative w-full lg:w-2/3"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+              >
                 <video
                   ref={videoRef}
                   width="auto"
@@ -38,33 +56,16 @@ const OurStory = () => {
                     type="video/mp4"
                   />
                 </video>
-                {/* Custom Controls */}
-                <div className="absolute bottom-0 left-0 w-full bg-slate-900 py-3 flex justify-center items-center gap-4">
-                  {/* Backward Button */}
-                  <button
-                    onClick={() => (videoRef.current.currentTime -= 10)}
-                    className="flex items-center justify-center w-10 h-10 bg-white rounded-full shadow-lg hover:scale-105 transition-transform"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={2}
-                      stroke="currentColor"
-                      className="w-6 h-6 text-black"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M10 15l-6-6m0 0l6-6m-6 6h12"
-                      />
-                    </svg>
-                  </button>
 
-                  {/* Play/Pause Button */}
+                {/* Play/Pause Button in the center */}
+                <div
+                  className={`absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 transition-opacity duration-300 ${
+                    isButtonVisible ? "opacity-100" : "opacity-0"
+                  }`}
+                >
                   <button
                     onClick={togglePlayPause}
-                    className="flex items-center justify-center w-10 h-10 bg-white rounded-full shadow-lg hover:scale-105 transition-transform"
+                    className="flex items-center justify-center w-16 h-16 bg-white rounded-full shadow-lg transition-transform hover:scale-110"
                   >
                     {isPlaying ? (
                       <svg
@@ -73,7 +74,7 @@ const OurStory = () => {
                         viewBox="0 0 24 24"
                         strokeWidth={2}
                         stroke="currentColor"
-                        className="w-6 h-6 text-black"
+                        className="w-8 h-8 text-black"
                       >
                         <path
                           strokeLinecap="round"
@@ -88,7 +89,7 @@ const OurStory = () => {
                         viewBox="0 0 24 24"
                         strokeWidth={2}
                         stroke="currentColor"
-                        className="w-6 h-6 text-black"
+                        className="w-8 h-8 text-black"
                       >
                         <path
                           strokeLinecap="round"
@@ -98,37 +99,6 @@ const OurStory = () => {
                       </svg>
                     )}
                   </button>
-
-                  {/* Forward Button */}
-                  <button
-                    onClick={() => (videoRef.current.currentTime += 10)}
-                    className="flex items-center justify-center w-10 h-10 bg-white rounded-full shadow-lg hover:scale-105 transition-transform"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={2}
-                      stroke="currentColor"
-                      className="w-6 h-6 text-black"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M14 15l6-6m0 0l-6-6m6 6H8"
-                      />
-                    </svg>
-                  </button>
-
-                  {/* Volume Control */}
-                  <input
-                    type="range"
-                    min="0"
-                    max="1"
-                    step="0.1"
-                    onChange={(e) => (videoRef.current.volume = e.target.value)}
-                    className="w-1/4 h-2 bg-gray-300 rounded-lg appearance-none cursor-pointer"
-                  />
                 </div>
               </div>
 

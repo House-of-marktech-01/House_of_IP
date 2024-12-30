@@ -20,6 +20,7 @@ const Navbar = () => {
   useEffect(() => {
     const jwtToken = Cookies.get("jwtToken");
     setToken(jwtToken);
+    setAuthenticated(true);
   }, []);
 
   const [searchQuery, setSearchQuery] = useState("");
@@ -97,7 +98,7 @@ const Navbar = () => {
     },
     {
       id: 9,
-      title: "FAQs on Copyright",
+      title: "FAQs on Copyright", 
       description: "FAQs",
       url: "/copyright",
     },
