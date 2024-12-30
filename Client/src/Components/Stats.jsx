@@ -26,10 +26,10 @@ const Stats = () => {
 
   return (
     <>
-      <h1 className="text-2xl pt-10 font-bold bg-slate-200 text-gray-900 text-center sm:pl-2">
+      <h1 className="text-2xl pt-10 font-bold bg-slate-900 text-white text-center sm:pl-2">
         Explore our digital services stack.
       </h1>
-      <div className="card-body bg-slate-200 lg:px-20 py-10" ref={ref}>
+      <div className="card-body bg-slate-900 lg:px-20 py-10" ref={ref}>
         <motion.div
           className="grid grid-cols-1 gap-y-14 sm:grid-cols-2 lg:grid-cols-4 gap-10 px-10 lg:px-10 py-1.5 mx-auto"
           initial="initial"

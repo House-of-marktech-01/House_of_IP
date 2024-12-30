@@ -18,12 +18,10 @@ body {
 }
 
 .parallax-container {
-  background-image: url("https://www.constantcontact.com/blog/wp-content/uploads/2020/10/Blog-header-lawyer.jpg"); /* Replace with your image URL */
-  height: 100vh;
+  background-image: url("https://img.freepik.com/premium-photo/customer-service-good-cooperation-consultation-businessman-male-lawyer-judge-consult-having-team-meeting-with-client-law-legal-services-concept_265022-54630.jpg"); 
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  display: flex;
   align-items: center;
   color: white;
 }
@@ -97,7 +95,7 @@ body {
 }
 
 .flip-card-front {
-  background-color: #1e293b; /* bg-slate-900 */
+  background-color: #303c50; /* bg-slate-900 */
   border: 4px solid #334155; /* bg-slate-800 */
 }
 

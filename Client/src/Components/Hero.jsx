@@ -1,79 +1,76 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import React, { useState, useEffect } from "react";
 
 const Hero = () => {
-  const { ref, inView } = useInView({
-    triggerOnce: true, // Trigger animation once
-    threshold: 0.2, // Trigger when 20% of the element is visible
-  });
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const images = [
+    "https://media.istockphoto.com/id/1181406993/photo/lawyer-working-in-office-law-and-justice-concept.jpg?s=612x612&w=0&k=20&c=DAb5Ive3Otp2PBtQyZl01acM-XKDvJRW0QqYXezm6UE=",
+    "https://laterallink.com/wp-content/uploads/2019/11/shutterstock_391762705.jpg",
+    "https://www.yarmolaw.com/wp-content/uploads/2017/03/lawyer-at-work-881x588.jpg",
+  ];
 
   const handleClick = () => {
     window.open("https://calendly.com/houseofintellectualproperty/30min");
   };
 
+  // Auto-scroll functionality
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % images.length);
+    }, 3000); // Change slide every 3 seconds
+
+    return () => clearInterval(interval); // Cleanup on component unmount
+  }, [images.length]);
+
   return (
     <>
-      <div className="carousel w-full pt-16">
-        {/* Hero Slide */}
-        <div id="slide1" className="carousel-item relative w-full">
-          <div className="hero bg-slate-900 min-h-[70vh] sm:min-h-[80vh] lg:min-h-[70vh] px-4 sm:px-8">
-            <div className="hero-content flex-col lg:flex-row-reverse w-full">
-              <motion.div
-                ref={ref} // Hook for tracking visibility
-                initial={{ opacity: 0, x: 200 }} // Starting position and opacity
-                animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : 200 }} // Animation on entering view
-                transition={{ duration: 0.5 }} // Duration of the animation
-                className="absolute top-0 left-0 w-full h-full"
-              ></motion.div>
-
-              <div className="lg:max-w-lg relative z-10 text-left lg:text-center text-white w-full lg:w-1/2">
-                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold relative">
-                  Protect Your Creations. Secure Your Future.
-                </h1>
-                <p className="py-4 sm:py-6 text-sm sm:text-base text-white">
-                  Welcome to House of IP, your trusted partner in intellectual
-                  property registration. Whether you're an inventor, artist, or
-                  entrepreneur, we help you safeguard your ideas and
-                  innovations.
-                </p>
-              </div>
-
-              {/* Book Appointment button on the right side */}
-              <div className="lg:max-w-lg relative z-10 text-center lg:text-left mt-4 lg:mt-0 lg:absolute pb-6 bottom-0">
-                <div className="flex items-center justify-center">
-                  <div className="relative group">
-                    <button
-                      className="relative inline-block p-px font-semibold leading-6  text-white bg-gray-800 shadow-2xl cursor-pointer rounded-xl shadow-zinc-900 transition-transform duration-300 ease-in-out hover:scale-105 active:scale-95"
-                      onClick={handleClick}
-                    >
-                      <span className="absolute inset-0 rounded-xl bg-gradient-to-r from-teal-400 via-blue-500 to-purple-500 p-[2px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
-
-                      <span className="relative z-10 block px-6 py-3 rounded-xl bg-gray-950">
-                        <div className="relative z-10 flex items-center space-x-2">
-                          <span className="transition-all duration-500 group-hover:translate-x-1">
-                            Book an Appointment
-                          </span>
-                          <svg
-                            className="w-6 h-6 transition-transform duration-500 group-hover:translate-x-1"
-                            data-slot="icon"
-                            aria-hidden="true"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              clipRule="evenodd"
-                              d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
-                              fillRule="evenodd"
-                            ></path>
-                          </svg>
-                        </div>
-                      </span>
-                    </button>
-                  </div>
-                </div>
-              </div>
+      <div className="grid lg:grid-cols-2 grid-cols-1 pt-16 bg-slate-900 relative">
+        {/* Content Div */}
+        <div className="pt-28 lg:w-[80%] text-white">
+          <h1 className="text-5xl font-semibold pl-5 lg:pl-20">
+            Your Trusted <br /> IPR Agent
+          </h1>
+          <p className="pl-5 lg:pl-20 pt-8 font-normal">
+            Welcome to House of IP —your trusted partner for expert services in
+            intellectual property and matrimonial law. We’re here to provide
+            tailored solutions for individuals and businesses alike.
+          </p>
+          <button
+            className="ml-20 bg-green-500 p-4 rounded-full my-10 text-black font-semibold"
+            onClick={handleClick}
+          >
+            Book an Appointment
+          </button>
+        </div>
+        {/* Carousel Div */}
+        <div className="hidden lg:block relative h-full">
+          <div className="carousel w-full h-full py-0 relative overflow-hidden">
+            <div
+              className="flex transition-transform duration-500 ease-in-out h-full"
+              style={{
+                transform: `translateX(-${currentSlide * 100}%)`,
+              }}
+            >
+              {images.map((image, index) => (
+                <img
+                  key={index}
+                  src={image}
+                  className="w-full h-full object-cover flex-shrink-0"
+                  alt={`Carousel Slide ${index + 1}`}
+                />
+              ))}
+            </div>
+            {/* Navigation Circles */}
+            <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-2 z-50">
+              {images.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`w-4 h-4 rounded-full ${
+                    currentSlide === index ? "bg-black" : "bg-gray-400"
+                  }`}
+                />
+              ))}
             </div>
           </div>
         </div>

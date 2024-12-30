@@ -8,7 +8,6 @@ import "react-toastify/dist/ReactToastify.css"; // Import styles
 import Footer from "./Components/Footer";
 import ScrollToTopButton from "./Components/ScrollTop";
 import Chatbot from "./Components/Chatbot";
-import CustomCursor from "./Components/Cursor";
 import ScrollProgress from "./Components/ScrollProgress";
 import {Helmet} from "react-helmet";
 
@@ -37,7 +36,6 @@ function App() {
         <title>House of IP</title>
         </Helmet>
         <Router>
-          <CustomCursor />
           <ToastContainer />
           <Navbar />
           {/* Suspense component to handle loading state */}

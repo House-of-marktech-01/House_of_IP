@@ -18,7 +18,7 @@ const OurStory = () => {
   };
 
   return (
-    <div className="w-full mx-auto bg-slate-100 lg:px-12">
+    <div className="w-full mx-auto bg-slate-900 lg:px-24">
       <div className="lg:grid lg:grid-cols-2">
         <div className="lg:col-span-2 flex flex-col items-center">
           <div className="w-full">
@@ -132,11 +132,11 @@ const OurStory = () => {
                 </div>
               </div>
 
-              <div className="flex flex-col items-start lg:w-[90%] gap-3">
-                <h2 className="text-2xl font-semibold text-slate-900">
+              <div className="flex flex-col items-start gap-3 lg:w-3/4">
+                <h2 className="text-4xl font-semibold text-white">
                   Our Story!
                 </h2>
-                <p className="text-md text-gray-800 leading-relaxed mb-2.5">
+                <p className="text-md text-white leading-relaxed mb-2.5">
                   At House of IP, we empower creators, innovators, and
                   entrepreneurs by securing their intellectual property rights.
                   From trademarks and copyrights to designs and patents, we

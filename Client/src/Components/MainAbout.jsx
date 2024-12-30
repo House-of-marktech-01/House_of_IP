@@ -27,15 +27,15 @@ const MainAbout = () => {
   ];
 
   return (
-    <div>
-      <h1 className="pb-10 text-2xl bg-white text-black text-center pt-10">
+    <div className="bg-slate-900">
+      <h1 className="pb-10  text-white text-center text-4xl pt-10">
         Why Choose Us
       </h1>
 
       {/* First Section */}
       <div className="relative flex flex-row">
         {/* Image Section */}
-        <div className="hidden lg:block w-full bg-white pt-10">
+        <div className="hidden lg:block w-full bg-slate-900 pt-10">
           <motion.img
             src="https://st2.depositphotos.com/1007283/6930/i/450/depositphotos_69306965-stock-photo-rubber-stamp-printed-with-trademark.jpg"
             alt="leftimage"
@@ -65,7 +65,7 @@ const MainAbout = () => {
       </div>
 
       {/* Second Section */}
-      <div className="relative flex flex-row-reverse bg-white lg:pt-20">
+      <div className="relative flex flex-row-reverse bg-slate-900 lg:pt-20">
         {/* Content Section */}
         <motion.div
           className="lg:absolute lg:top-28 lg:left-20 z-10 lg:rounded-xl bg-slate-900 lg:bg-opacity-80 backdrop-blur-md p-6 lg:w-[45%]"
@@ -100,7 +100,7 @@ const MainAbout = () => {
       {/* third section */}
       <div className="relative flex flex-row">
         {/* Image Section */}
-        <div className="hidden lg:block w-full bg-white pt-10">
+        <div className="hidden lg:block w-full bg-slate-900 pt-10">
           <motion.img
             src="https://media.istockphoto.com/id/1068876946/photo/business-lawyer-team-working-together-of-lawyer-in-the-meeting.jpg?s=612x612&w=0&k=20&c=Jo9c5iPYi_62JLKqGeDXSDVONTu6rmRI9HVh7fSMD6Q="
             alt="leftimage"
@@ -131,7 +131,7 @@ const MainAbout = () => {
 
       {/* forth section */}
 
-      <div className="relative flex flex-row-reverse bg-white lg:pt-20">
+      <div className="relative flex flex-row-reverse bg-slate-900 lg:pt-20">
         {/* Content Section */}
         <motion.div
           className="lg:absolute lg:top-28 lg:left-20 z-10 lg:rounded-xl bg-slate-900 shadow-lg lg:bg-opacity-80 backdrop-blur-md p-6 lg:w-[45%]"

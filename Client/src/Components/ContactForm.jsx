@@ -56,9 +56,9 @@ const ContactForm = () => {
   return (
     <div
       id="consult"
-      className="pt-20 md:pt-28 bg-cover bg-center bg-no-repeat bg-gray-200"
+      className="pt-20 md:pt-28 bg-cover bg-center bg-no-repeat parallax-container "
     >
-      <h1 className="text-3xl text-black text-center font-semibold">
+      <h1 className="text-3xl text-white text-center font-semibold">
         Contact Us
       </h1>
       <div className="py-10">
@@ -66,10 +66,10 @@ const ContactForm = () => {
           <div className="flex flex-col lg:flex-row">
             {/* Left Column */}
             <div className="lg:w-1/2 px-4 mb-12 lg:mb-0">
-              <h3 className="text-4xl font-light text-black mb-4">
+              <h3 className="text-4xl font-light text-white mb-4">
                 Free Consultation
               </h3>
-              <p className="text-sm text-black mb-6">
+              <p className="text-sm text-white mb-6">
                 At House of Intellectual Property, we are committed to
                 empowering individuals and businesses with expert guidance and
                 intellectual property solutions. Whether you're looking to
@@ -80,25 +80,25 @@ const ContactForm = () => {
               <ul>
                 <li className="flex items-center">
                   <i className="fas fa-clock text-purple-700 text-xl mr-3"></i>
-                  <span className="text-sm text-black">
+                  <span className="text-sm text-white">
                     Mon - Sat 11.00-19.00
                   </span>
                 </li>
               </ul>
               <div className="mt-2">
                 <div className="mr-3 max-w-[300px] rounded-xl hover:scale-110 duration-700 p-5">
-                  <h4 className="py-2 text-slate-900 font-bold">
+                  <h4 className="py-2 text-white font-bold">
                     <i className="fa-solid fa-location-dot"></i> Uttar Pradesh
                   </h4>
-                  <p className="text-base leading-7 text-slate-900 font-thin space-y-4">
+                  <p className="text-base leading-7 text-white font-thin space-y-4">
                     Rajrooppur, Prayagraj, Uttar Pradesh - 211011
                   </p>
                 </div>
                 <div className="mr-3 max-w-[300px] rounded-xl hover:scale-110 duration-700 p-5">
-                  <h4 className="py-2 text-slate-900 font-bold">
+                  <h4 className="py-2 text-white font-bold">
                     <i className="fa-solid fa-location-dot"></i> South Delhi
                   </h4>
-                  <p className="text-base leading-7 text-slate-900 font-thin space-y-4">
+                  <p className="text-base leading-7 text-white font-thin space-y-4">
                     Malviya Nagar, South Delhi - 110017
                   </p>
                 </div>
@@ -107,7 +107,7 @@ const ContactForm = () => {
 
             {/* Right Column (Contact Form) */}
             <motion.div
-              className="lg:w-1/2 px-4"
+              className="lg:w-1/2 px-4 "
               initial={{ opacity: 0, y: 50 }} // Initial state: hidden and moved down
               whileInView={{ opacity: 1, y: 0 }} // Animates to visible and center position
               viewport={{ once: true }} // Animation triggers once when in the viewport
@@ -115,7 +115,7 @@ const ContactForm = () => {
             >
               <form
                 onSubmit={handleSubmit} // Handle form submission
-                className="space-y-6 bg-white p-5 rounded-lg shadow-lg"
+                className="space-y-6 bg-transparent p-5 rounded-lg"
               >
                 <div className="space-y-4">
                   <input
