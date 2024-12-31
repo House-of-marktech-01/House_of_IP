@@ -86,7 +86,7 @@ const SearchBox = () => {
               id="search-field"
               value={searchText}
               onChange={handleInputChange}
-              className="lg:w-[100%] focus:outline-none w-[90%] relative bottom-32 lg:bottom-0 lg:right-0 right-10"
+              className="lg:w-[100%] focus:outline-none w-[90%] relative bottom-24 lg:bottom-0 lg:right-0 right-10"
             />
             <button
               className="submit hidden lg:block bg-"
@@ -96,7 +96,7 @@ const SearchBox = () => {
               Search
             </button>
             <button
-              className="bg-transparent lg:hidden bottom-48 p-4 rounded-md py-6 left-36 relative"
+              className="bg-transparent lg:hidden bottom-40  p-4 rounded-md py-6 left-36 relative"
               type="submit"
               disabled={!searchText.trim()}>
               Search

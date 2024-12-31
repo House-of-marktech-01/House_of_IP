@@ -124,6 +124,13 @@ body.search-open {
   display: inline-block;
   background: #1e293b;
 }
+@media screen and (max-width: 768px) {
+  .search-btn {
+    margin-top: 2px;
+    margin-left: 4px;
+  }
+  
+}
 
 .search-btn:hover {
   color: #324ba7; /* Green */
