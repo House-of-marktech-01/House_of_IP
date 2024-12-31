@@ -26,7 +26,7 @@ const Stats = () => {
 
   return (
     <>
-      <h1 className="text-2xl pt-10 font-bold bg-slate-900 text-white text-center sm:pl-2">
+      <h1 className="text-2xl pt-10 font-serif font-bold bg-slate-900 text-white text-center sm:pl-2">
         Our digital services
       </h1>
       <h1 className="text-xl pt-5 font-normal bg-slate-900 text-white text-center sm:pl-2">

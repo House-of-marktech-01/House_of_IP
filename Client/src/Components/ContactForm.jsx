@@ -58,7 +58,7 @@ const ContactForm = () => {
       id="consult"
       className="pt-20 md:pt-28 bg-cover bg-center bg-no-repeat parallax-container "
     >
-      <h1 className="text-3xl text-white text-center font-semibold">
+      <h1 className="text-3xl font-serif text-white text-center font-semibold">
         Contact Us
       </h1>
       <div className="py-10">

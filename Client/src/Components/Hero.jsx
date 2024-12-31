@@ -27,7 +27,7 @@ const Hero = () => {
       <div className="grid lg:grid-cols-2 grid-cols-1  bg-slate-900 relative">
         {/* Content Div */}
         <div className="pt-44 lg:w-[80%] text-white">
-          <h1 className="text-5xl font-semibold pl-5 lg:pl-20">
+          <h1 className="text-5xl font-semibold font-serif pl-5 lg:pl-20">
             Your Trusted <br /> IPR Agent
           </h1>
           <p className="pl-5 lg:pl-20 pt-8 font-normal">
@@ -55,7 +55,10 @@ const Hero = () => {
               }}
             >
               {images.map((image, index) => (
-                <div key={index} className="relative w-full h-full flex-shrink-0">
+                <div
+                  key={index}
+                  className="relative w-full h-full flex-shrink-0"
+                >
                   <img
                     src={image}
                     className="w-full h-full object-cover"

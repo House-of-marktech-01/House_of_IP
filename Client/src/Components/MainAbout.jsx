@@ -28,7 +28,7 @@ const MainAbout = () => {
 
   return (
     <div className="bg-slate-900">
-      <h1 className="pb-10  text-white text-center text-4xl pt-10">
+      <h1 className="pb-10 font-serif text-white text-center text-4xl pt-10">
         Why Choose Us
       </h1>
 
@@ -55,7 +55,7 @@ const MainAbout = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true, amount: 0.5 }}
         >
-          <h1 className="text-white text-base lg:text-3xl font-semibold">
+          <h1 className="text-white font-sans text-base lg:text-3xl font-semibold">
             {whyChooseUsData[0].title}
           </h1>
           <p className="text-xs lg:text-base text-white">
@@ -74,7 +74,7 @@ const MainAbout = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true, amount: 0.5 }}
         >
-          <h1 className="text-white text-base lg:text-3xl font-semibold">
+          <h1 className="text-white text-base font-sans lg:text-3xl font-semibold">
             {whyChooseUsData[1].title}
           </h1>
           <p className="text-xs lg:text-base text-white">
@@ -120,7 +120,7 @@ const MainAbout = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true, amount: 0.5 }}
         >
-          <h1 className="text-white text-base lg:text-3xl font-semibold">
+          <h1 className="text-white font-sans text-base lg:text-3xl font-semibold">
             {whyChooseUsData[2].title}
           </h1>
           <p className="text-xs lg:text-base text-white">
@@ -140,7 +140,7 @@ const MainAbout = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true, amount: 0.5 }}
         >
-          <h1 className="text-white text-base lg:text-3xl font-semibold">
+          <h1 className="text-white font-sans text-base lg:text-3xl font-semibold">
             {whyChooseUsData[3].title}
           </h1>
           <p className="text-xs lg:text-base text-white">

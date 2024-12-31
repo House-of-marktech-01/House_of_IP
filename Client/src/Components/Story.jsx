@@ -103,7 +103,7 @@ const OurStory = () => {
               </div>
 
               <div className="flex flex-col items-start gap-3 lg:w-3/4">
-                <h2 className="text-4xl font-semibold text-white">
+                <h2 className="text-4xl font-serif font-semibold text-white">
                   Our Story!
                 </h2>
                 <p className="text-md text-white leading-relaxed mb-2.5">

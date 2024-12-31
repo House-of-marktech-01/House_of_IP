@@ -40,7 +40,7 @@ const FunFact = () => {
 
   return (
     <div className="bg-slate-900 py-12 px-5 sm:px-10 lg:px-20">
-      <h2 className="text-center text-3xl font-bold text-white mb-8">
+      <h2 className="text-center font-serif text-3xl font-bold text-white mb-8">
         {" "}
         Fun Facts
       </h2>
