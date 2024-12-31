@@ -126,7 +126,7 @@ const Design = () => {
       </title>
     </Helmet>
       <div id="design" className="w-full" style={{ position: "relative" }}>
-        <div className="breadcrumbs text-xs sm:text-sm pl-4 sm:pl-6 bg-white text-black pt-20 lg:pt-20">
+        <div className="breadcrumbs text-xs sm:text-sm pl-4 sm:pl-6 bg-slate-900 text-white pt-20 lg:pt-20">
           <ul>
             <li>
               <NavLink to="/">Home</NavLink>
@@ -137,7 +137,7 @@ const Design = () => {
             <li>Design</li>
           </ul>
         </div>
-        <div className="lg:flex gap-5 border p-3 bg-white lg:px-20">
+        <div className="lg:flex gap-5  p-3 bg-slate-900 text-white lg:px-20">
           <div className="relative w-7/10 shrink-0 flex justify-center items-center h-full lg:sticky lg:top-20">
             <div className="sticky">
               <img
@@ -150,11 +150,11 @@ const Design = () => {
 
           <div className="flex flex-col lg:w-2/3">
             <div className="my-auto w-full pt-10 px-5 sm:w-full">
-              <h2 className="text-base font-black mb-2 lg:mb-4 text-gray-800">
+              <h2 className="text-base font-black mb-2 lg:mb-4 ">
                 Design
               </h2>
 
-              <p className="prod_description text-sm text-gray-700 mt-2">
+              <p className="prod_description text-sm  mt-2">
                 Design registration offers a shield for your unique design,
                 classifying it as intellectual property and ensuring it's safe
                 from imitation. It grants the creator exclusive rights to use
@@ -165,7 +165,7 @@ const Design = () => {
                 {/* Dropdown toggler */}
                 <div className="mb-4">
                   <select
-                    className="w-full px-4 py-2 border rounded-md bg-white focus:outline-none text-gray-800 focus:ring focus:ring-blue-300"
+                    className="w-full px-4 py-2 border rounded-md bg-slate-900 focus:outline-none "
                     value={selectedOption}
                     onChange={handleChange}
                   >
@@ -178,7 +178,7 @@ const Design = () => {
                 <div className="grid grid-cols-1 gap-4">
                   {/* Patent Search Card */}
                   {selectedOption === "MSME" && (
-                    <div className="border rounded-md p-4 bg-white text-gray-800">
+                    <div className="border rounded-md p-4 bg-slate-900">
                       <h2 className="font-semibold text-lg mb-2">MSME</h2>
                       <ul className="list-disc list-inside space-y-1">
                         <li>One Article </li>
@@ -193,7 +193,7 @@ const Design = () => {
 
                   {/* Provisional Filing Card */}
                   {selectedOption === "Regular" && (
-                    <div className="border rounded-md p-4 text-gray-800 bg-white">
+                    <div className="border rounded-md p-4 bg-slate-900">
                       <h2 className="font-semibold text-lg mb-2">Regular</h2>
                       <ul className="list-disc list-inside space-y-1">
                         <li>One Article </li>
@@ -208,7 +208,7 @@ const Design = () => {
 
                   {/* Regular Card */}
                   {selectedOption === "Corporates & Foreigners" && (
-                    <div className="border rounded-md p-4 text-gray-800 bg-white shadow-md">
+                    <div className="border rounded-md p-4 bg-slate-900 shadow-md">
                       <h2 className="font-semibold text-lg mb-2">
                         Corporates & Foreigners
                       </h2>
@@ -282,9 +282,9 @@ const Design = () => {
           </div>
         </div>
 
-        <div className="bg-white px-5 text-justify lg:px-20">
+        <div className="bg-slate-900 text-white px-5 text-justify lg:px-20">
           <motion.h1
-            className="text-center text-3xl text-black pb-4 pt-4"
+            className="text-center text-3xl lg:font-semibold pb-4 pt-4"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
@@ -309,7 +309,7 @@ const Design = () => {
           ].map((text, index) => (
             <motion.p
               key={index}
-              className="pb-8 text-gray-800 text-sm"
+              className="pb-8  text-sm"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
@@ -319,28 +319,28 @@ const Design = () => {
             </motion.p>
           ))}
         </div>
-        <div className="bg-white px-5 text-justify flex lg:px-20">
+        <div className="bg-slate-900 text-white px-5 text-justify flex lg:px-20">
           <div className="w-full lg:w-3/4">
-            <h1 className="text-start text-2xl text-black pb-4">
+            <h1 className="text-start text-2xl  pb-4">
               Documents Required
             </h1>
 
             {/* Applicant's Details */}
             <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
-              <h1 className="text-start text-xl text-black pb-4">
+              <h1 className="text-start text-xl  pb-4">
                 Applicant's Details
               </h1>
-              <p className="pb-8 text-black text-sm">
+              <p className="pb-8  text-sm">
                 Name and complete address of the applicant.
               </p>
             </div>
 
             {/* Applicant's Nature/Status */}
             <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
-              <h1 className="text-start text-xl text-black pb-4">
+              <h1 className="text-start text-xl pb-4">
                 Applicant's Nature/Status
               </h1>
-              <p className="pb-8 text-black text-sm">
+              <p className="pb-8  text-sm">
                 Clear indication of the status of the applicant, specifying
                 whether the applicant is an individual, a company, etc.
               </p>
@@ -348,20 +348,20 @@ const Design = () => {
 
             {/* Startup Certificate (if applicable) */}
             <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
-              <h1 className="text-start text-xl text-black pb-4">
+              <h1 className="text-start text-xl pb-4">
                 Startup Certificate (if applicable)
               </h1>
-              <p className="pb-8 text-black text-sm">
+              <p className="pb-8  text-sm">
                 Startups must provide a registration certificate.
               </p>
             </div>
 
             {/* Description of the Article */}
             <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
-              <h1 className="text-start text-xl text-black pb-4">
+              <h1 className="text-start text-xl pb-4">
                 Description of the Article
               </h1>
-              <p className="pb-8 text-black text-sm">
+              <p className="pb-8 text-sm">
                 A detailed description of the 'article' to which the design
                 pertains, accompanied by its classification according to the
                 prescribed categories.
@@ -370,10 +370,10 @@ const Design = () => {
 
             {/* Visual Representation */}
             <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
-              <h1 className="text-start text-xl text-black pb-4">
+              <h1 className="text-start text-xl  pb-4">
                 Visual Representation
               </h1>
-              <p className="pb-8 text-black text-sm">
+              <p className="pb-8 text-sm">
                 A minimum of four visuals (images or drawings) showing the
                 article from all angles should be included with the application.
               </p>
@@ -381,10 +381,10 @@ const Design = () => {
           </div>
 
           <div className="hidden lg:block lg:w-1/3 px-10 pl-16">
-            <h2 className="text-slate-900 font-medium text-2xl pb-5 bg-white pl-4 pt-4 rounded-t-xl rounded-b-xl">
+            <h2 className=" font-medium text-2xl pb-5 bg-slate-900 pl-4 pt-4 rounded-t-xl rounded-b-xl">
               Related Links
             </h2>
-            <nav className="space-y-4 sticky top-24 bg-slate-900 pl-4 rounded-xl mt-5 pt-5">
+            <nav className="space-y-4 sticky top-24 bg-slate-800 pl-4 rounded-xl mt-5 pt-5">
               <NavLink
                 to="/patent"
                 className="block text-white font-montserrat hover:text-blue-800 hover:underline text-lg font-medium"
@@ -413,10 +413,10 @@ const Design = () => {
           </div>
         </div>
 
-        <h1 className="text-center text-3xl text-black pb-4 bg-white">
+        <h1 className="text-center text-3xl text-white pb-4 bg-slate-900">
           Design FAQ's
         </h1>
-        <div className="space-y-4 px-2 pt-8 bg-white lg:px-10">
+        <div className="space-y-4 px-2 pt-8 bg-slate-900 lg:px-10">
           {/* FAQ Section */}
           <div className="flex-1">
             {/* Your FAQ Content */}
@@ -426,10 +426,10 @@ const Design = () => {
                 alt=""
                 className="h-96 hidden lg:block"
               />
-              <div className="space-y-4 pr-2 pt-4 w-full h-full bg-slate-200 pb-10 pl-2 rounded-md lg:bg-white lg:px-10">
+              <div className="space-y-4 pr-2 pt-4 w-full h-full bg-slate-900 pb-10 pl-2 rounded-md lg:bg-slate-900 lg:px-10">
                 {/* FAQ Item 1 */}
                 <details className="group overflow-hidden ">
-                  <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg transition">
+                  <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-800 rounded-t-lg transition">
                     <span className="font-medium text-white">
                       What types of designs can be registered with House of IP ?
                     </span>
@@ -437,7 +437,7 @@ const Design = () => {
                       &#9660;
                     </span>
                   </summary>
-                  <div className="transition-all duration-300 ease-in-out overflow-hidden pb-5 max-h-0 group-open:max-h-96 bg-gray-900 rounded-b-xl">
+                  <div className="transition-all duration-300 ease-in-out overflow-hidden pb-5 max-h-0 group-open:max-h-96 bg-gray-800 rounded-b-xl">
                     <p className="mt-2 px-4 text-white text-sm">
                       We assist with registering a wide range of product
                       designs, including but not limited to:
@@ -467,7 +467,7 @@ const Design = () => {
                 {/* Add the other FAQ items here */}
                 {/* FAQ Item 2 */}
                 <details className="group overflow-hidden">
-                  <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg transition">
+                  <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-800 rounded-t-lg transition">
                     <span className="font-medium text-white">
                       What is the process of registering a design with House of
                       IP?
@@ -476,7 +476,7 @@ const Design = () => {
                       &#9660;
                     </span>
                   </summary>
-                  <div className="transition-all duration-300 ease-in-out overflow-hidden max-h-96 pb-5 bg-gray-900 rounded-b-xl group-open:max-h-96 px-12 text-justify text-black font-base overflow-y-auto">
+                  <div className="transition-all duration-300 ease-in-out overflow-hidden max-h-96 pb-5 bg-gray-800 rounded-b-xl group-open:max-h-96 px-12 text-justify text-black font-base overflow-y-auto">
                     <p className="mt-2 px-4 text-white text-sm">
                       Our design registration process is straightforward and
                       includes:
@@ -515,7 +515,7 @@ const Design = () => {
 
                 {/* FAQ Item 3 */}
                 <details className="group overflow-hidden">
-                  <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg transition">
+                  <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-800 rounded-t-lg transition">
                     <span className="font-medium text-white">
                       Prices & FeesWhat happens if someone copies my registered
                       design?
@@ -524,7 +524,7 @@ const Design = () => {
                       &#9660;
                     </span>
                   </summary>
-                  <div className="transition-all duration-300 ease-in-out overflow-hidden pb-5 bg-gray-900 rounded-b-xl max-h-0 group-open:max-h-96">
+                  <div className="transition-all duration-300 ease-in-out overflow-hidden pb-5 bg-gray-800 rounded-b-xl max-h-0 group-open:max-h-96">
                     <p className="mt-2 px-4 text-white text-sm">
                       At House of IP, we help you take swift action if your
                       registered design is copied. Our team assists in filing
@@ -536,7 +536,7 @@ const Design = () => {
                 </details>
 
                 <details className="group overflow-hidden">
-                  <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg transition">
+                  <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-800 rounded-t-lg transition">
                     <span className="font-medium text-white">
                       How can I monetize my registered design?
                     </span>
@@ -544,7 +544,7 @@ const Design = () => {
                       &#9660;
                     </span>
                   </summary>
-                  <div className="transition-all duration-300 ease-in-out overflow-hidden bg-gray-900 pb-5 rounded-b-xl max-h-0 group-open:max-h-96 text-sm">
+                  <div className="transition-all duration-300 ease-in-out overflow-hidden bg-gray-800 pb-5 rounded-b-xl max-h-0 group-open:max-h-96 text-sm">
                     <p className="mt-2 px-4 text-white">
                       Registering your design not only protects it but also
                       allows you to explore commercialization opportunities. Our
@@ -566,7 +566,7 @@ const Design = () => {
 
                 {/* FAQ Item 4 */}
                 <details className="group overflow-hidden pb-10">
-                  <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg transition">
+                  <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-800 rounded-t-lg transition">
                     <span className="font-medium text-white">
                       How do I know if House of IP is the right firm for design
                       protection?
@@ -575,7 +575,7 @@ const Design = () => {
                       &#9660;
                     </span>
                   </summary>
-                  <div className="transition-all duration-300 ease-in-out overflow-hidden bg-gray-900 pb-5 rounded-b-xl max-h-0 group-open:max-h-96 text-sm">
+                  <div className="transition-all duration-300 ease-in-out overflow-hidden bg-gray-800 pb-5 rounded-b-xl max-h-0 group-open:max-h-96 text-sm">
                     <p className="mt-2 px-4 text-white">
                       With a proven track record in IP law and extensive
                       experience in design protection, House of IP is a trusted
@@ -592,52 +592,52 @@ const Design = () => {
           </div>
 
           <div className="lg:flex flex-row lg:px-10">
-            <div className="px-2 text-justify lg:w-3/4">
-              <h1 className="text-xl text-center text-black font-montserrat font-semibold lg:text-2xl">
+            <div className="px-2 text-justify text-white lg:w-3/4">
+              <h1 className="text-xl text-center text-white font-montserrat font-semibold lg:text-2xl">
                 Registering a Design in India – A Simplified Process
               </h1>
-              <p className="text-gray-800 pt-5 text-sm">
+              <p className="pt-5 text-sm">
                 Securing the visual identity of your product through design
                 registration is a valuable investment. Here’s a simplified
                 breakdown of the process:
               </p>
-              <h3 className="font-bold text-gray-900 pt-3">
+              <h3 className="font-bold pt-3">
                 1. Consultation & Design Search
               </h3>
-              <p className="text-gray-800 pt-2 text-sm">
+              <p className="pt-2 text-sm">
                 Before applying, it’s essential to determine if your design
                 qualifies for protection under the Designs Act, 2000. We’ll
                 assess your design and conduct a search to ensure that it hasn’t
                 already been registered by someone else.
               </p>
-              <h3 className="font-bold text-gray-900 pt-3">
+              <h3 className="font-bold  pt-3">
                 2.Drafting the Design Application
               </h3>
-              <p className="text-gray-800 pt-2 text-sm">
+              <p className=" pt-2 text-sm">
                 Once your design passes the eligibility check, we’ll prepare and
                 file the application with the Indian Patent Office. This
                 includes submitting illustrations and a detailed description of
                 your design.
               </p>
-              <h3 className="font-bold text-gray-900 pt-3">
+              <h3 className="font-bold  pt-3">
                 3. Filing the Application
               </h3>
-              <p className="text-gray-800 pt-2 text-sm">
+              <p className=" pt-2 text-sm">
                 After drafting, we submit the design application on your behalf,
                 making sure all required documents and fees are in order.
               </p>
-              <h3 className="font-bold text-gray-900 pt-3">
+              <h3 className="font-bold  pt-3">
                 4. Examination & Registration
               </h3>
-              <p className="text-gray-800 pt-2 text-sm">
+              <p className=" pt-2 text-sm">
                 The Design Office will review your application. If they have any
                 objections, we’ll respond on your behalf, ensuring that your
                 design gets registered smoothly.
               </p>
-              <h3 className="font-bold text-gray-900 pt-3">
+              <h3 className="font-bold  pt-3">
                 5. Post–Registration Management
               </h3>
-              <p className="text-gray-800 pt-2 text-sm">
+              <p className=" pt-2 text-sm">
                 Once registered, your design is protected for 10 years, with the
                 option to renew for an additional 5 years. We assist with
                 managing renewals and handling any infringement issues that may
@@ -657,7 +657,7 @@ const Design = () => {
                       className="h-44 w-full"
                     />
                   </figure>
-                  <div className="card-body bg-white text-black">
+                  <div className="card-body bg-slate-800 text-white">
                     <h2 className="card-title">Patent</h2>
                   </div>
                 </div>
@@ -673,7 +673,7 @@ const Design = () => {
                       className="h-44 w-full"
                     />
                   </figure>
-                  <div className="card-body bg-white text-black">
+                  <div className="card-body bg-slate-800 text-white">
                     <h2 className="card-title">Copyright</h2>
                   </div>
                 </div>
@@ -687,7 +687,7 @@ const Design = () => {
                       className="h-44 w-full"
                     />
                   </figure>
-                  <div className="card-body bg-white text-black">
+                  <div className="card-body bg-slate-800 text-white">
                     <h2 className="card-title">Trademark</h2>
                   </div>
                 </div>

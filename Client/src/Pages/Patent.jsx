@@ -128,7 +128,7 @@ const Patent = () => {
       <title>House of IP - Patent</title>
     </Helmet>
       <div id="patent" className="w-full" style={{ position: "relative" }}>
-        <div className="breadcrumbs text-xs sm:text-sm pl-4 sm:pl-6 bg-white text-black pt-20 lg:pt-20">
+        <div className="breadcrumbs text-xs sm:text-sm pl-4 sm:pl-6 bg-slate-900 text-white pt-20 lg:pt-20">
           <ul>
             <li>
               <NavLink to="/">Home</NavLink>
@@ -139,7 +139,7 @@ const Patent = () => {
             <li>Patent</li>
           </ul>
         </div>
-        <div className="lg:flex gap-5 border p-3 bg-white lg:px-20">
+        <div className="lg:flex gap-5  p-3 bg-slate-900 text-white lg:px-20">
           {/* Left Image Section */}
           <div className=" w-7/10 shrink-0 lg:sticky lg:top-20 flex justify-center items-center h-full">
             <div className="sticky top-0">
@@ -155,10 +155,10 @@ const Patent = () => {
           {/* Middle Content Section */}
           <div className="flex flex-col lg:w-2/3">
             <div className="my-auto w-full pt-10 px-5 sm:w-full">
-              <h2 className="text-base font-black mb-2 text-gray-700 lg:mb-4">
+              <h2 className="text-base font-black mb-2 lg:mb-4">
                 Patent
               </h2>
-              <p className="prod_description text-sm text-gray-700 mt-2">
+              <p className="prod_description text-sm  mt-2">
                 Patents are pivotal in protecting the intellectual property
                 rights of fresh innovations, be they products, services, or
                 processes. In India, to ensure these rights are recognized and
@@ -170,7 +170,7 @@ const Patent = () => {
                 {/* Dropdown toggler */}
                 <div className="mb-4">
                   <select
-                    className="w-full px-4 py-2 border rounded-md bg-white focus:outline-none text-gray-800 focus:ring focus:ring-blue-300"
+                    className="w-full px-4 py-2 border rounded-md bg-slate-900 focus:outline-none text-white"
                     value={selectedOption}
                     onChange={handleChange}
                   >
@@ -186,7 +186,7 @@ const Patent = () => {
                 <div className="grid grid-cols-1 gap-4">
                   {/* Patent Search Card */}
                   {selectedOption === "patent-search" && (
-                    <div className="border rounded-md p-4 bg-white text-gray-800">
+                    <div className="border rounded-md p-4 text-white bg-slate-900 ">
                       <h2 className="font-semibold text-lg mb-2">
                         Patent search
                       </h2>
@@ -201,7 +201,7 @@ const Patent = () => {
 
                   {/* Provisional Filing Card */}
                   {selectedOption === "provisional-filing" && (
-                    <div className="border rounded-md p-4 text-gray-800 bg-white ">
+                    <div className="border rounded-md p-4 text-white bg-slate-900  ">
                       <h2 className="font-semibold text-lg mb-2">
                         PROVISIONAL FILING
                       </h2>
@@ -216,7 +216,7 @@ const Patent = () => {
 
                   {/* Regular Card */}
                   {selectedOption === "regular" && (
-                    <div className="border rounded-md p-4 text-gray-800 bg-white">
+                    <div className="border rounded-md p-4 text-white bg-slate-900 ">
                       <h2 className="font-semibold text-lg mb-2">Regular</h2>
                       <ul className="list-disc list-inside space-y-1">
                         <li>Search report</li>
@@ -278,7 +278,7 @@ const Patent = () => {
           </div>
         </div>
 
-        <div className="bg-white px-5 text-justify lg:px-20">
+        <div className="bg-slate-900 text-white px-5 text-justify lg:px-20">
           <motion.div
             ref={ref}
             initial="hidden"
@@ -289,10 +289,10 @@ const Patent = () => {
               backgroundImage: "url('your-image-url.jpg')", // Replace with your image URL
             }}
           >
-            <h1 className="text-center text-3xl text-black pb-4 pt-4">
+            <h1 className="text-center text-3xl text-white pb-4 pt-4">
               Patents
             </h1>
-            <p className="pb-8 text-gray-800 text-sm">
+            <p className="pb-8  text-sm">
               As a premier Intellectual Property (IP) law firm, House of IP
               offers comprehensive patent filing and protection services
               tailored for companies and inventors across a wide array of
@@ -301,7 +301,7 @@ const Patent = () => {
               ensures top–tier patent drafting, prosecution, and litigation
               support.
             </p>
-            <p className="pb-8 text-gray-800 text-sm">
+            <p className="pb-8 text-sm">
               Our patent drafting services are meticulously crafted to suit the
               uniqueness of each invention. This process involves conducting
               exhaustive prior art and landscape searches, followed by in–depth
@@ -314,14 +314,14 @@ const Patent = () => {
               patent prosecution by addressing examiner objections with strong,
               ly sound arguments.
             </p>
-            <p className="pb-8 text-gray-800 text-sm">
+            <p className="pb-8 text-sm">
               For patent prosecution, our team excels in responding to examiner
               queries and building compelling cases that highlight the inventive
               merit of your application. We provide end-to-end guidance during
               patent office hearings, ensuring inventors are thoroughly briefed
               to navigate these critical moments confidently.
             </p>
-            <p className="pb-8 text-gray-800 text-sm">
+            <p className="pb-8  text-sm">
               On the litigation front, we analyse cited prior art in opposition
               and revocation cases, prepare robust written responses,
               affidavits, and deliver compelling arguments during oral hearings.
@@ -331,7 +331,7 @@ const Patent = () => {
               experienced in nullifying opposition filings and revocation
               requests through solid evidence and courtroom advocacy.
             </p>
-            <p className="pb-8 text-gray-800 text-sm">
+            <p className="pb-8  text-sm">
               To maximize the value of your patents, our IP commercialization
               experts provide services such as landscape mapping, patent
               valuation, due diligence, and the development of monetization
@@ -342,26 +342,26 @@ const Patent = () => {
             </p>
           </motion.div>
         </div>
-        <div id="docs" className="bg-white px-5 text-justify flex lg:px-20 ">
+        <div id="docs" className="bg-slate-900 text-white px-5 text-justify flex lg:px-20 ">
           <div className="w-full lg:w-3/4">
-            <h1 className="text-start text-2xl text-black pb-4">
+            <h1 className="text-start text-2xl pb-4">
               Documents Required
             </h1>
 
             {/* Patent Registration */}
             <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
-              <h1 className="text-start text-xl text-black pb-4">
+              <h1 className="text-start text-xl  pb-4">
                 Patent Registration Application
               </h1>
-              <p className="pb-8 text-black text-sm">Form-1.</p>
+              <p className="pb-8  text-sm">Form-1.</p>
             </div>
 
             {/* Complete Specifications */}
             <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
-              <h1 className="text-start text-xl text-black pb-4">
+              <h1 className="text-start text-xl  pb-4">
                 Complete Specifications
               </h1>
-              <p className="pb-8 text-black text-sm">
+              <p className="pb-8  text-sm">
                 Form-2. In the absence of complete specifications, a provisional
                 specification can be submitted.
               </p>
@@ -369,18 +369,18 @@ const Patent = () => {
 
             {/* Statement and Undertaking */}
             <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
-              <h1 className="text-start text-xl text-black pb-4">
+              <h1 className="text-start text-xl pb-4">
                 Statement and Undertaking
               </h1>
-              <p className="pb-8 text-black text-sm">Form-3.</p>
+              <p className="pb-8  text-sm">Form-3.</p>
             </div>
 
             {/* Inventor's Declaration */}
             <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
-              <h1 className="text-start text-xl text-black pb-4">
+              <h1 className="text-start text-xl  pb-4">
                 Inventor's Declaration
               </h1>
-              <p className="pb-8 text-black text-sm">
+              <p className="pb-8  text-sm">
                 A declaration from the inventor clarifying the details of the
                 invention and its originality, provided in Form-5.
               </p>
@@ -388,10 +388,10 @@ const Patent = () => {
 
             {/* Proof of Right */}
             <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
-              <h1 className="text-start text-xl text-black pb-4">
+              <h1 className="text-start text-xl  pb-4">
                 Proof of Right
               </h1>
-              <p className="pb-8 text-black text-sm">
+              <p className="pb-8 text-sm">
                 Documentation from the inventor confirming the applicant's right
                 to apply for the patent registration.
               </p>
@@ -399,10 +399,10 @@ const Patent = () => {
 
             {/* Power of Authority */}
             <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
-              <h1 className="text-start text-xl text-black pb-4">
+              <h1 className="text-start text-xl  pb-4">
                 Power of Authority
               </h1>
-              <p className="pb-8 text-black text-sm">
+              <p className="pb-8  text-sm">
                 If a patent agent or representative is submitting the patent
                 application, then Form-26, a power of authority, is required.
               </p>
@@ -410,10 +410,10 @@ const Patent = () => {
 
             {/* Priority Documents */}
             <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
-              <h1 className="text-start text-xl text-black pb-4">
+              <h1 className="text-start text-xl  pb-4">
                 Priority Documents
               </h1>
-              <p className="pb-8 text-black text-sm">
+              <p className="pb-8 text-sm">
                 For convention applications (from the Paris Convention) or PCT
                 (Patent Cooperation Treaty) national phase applications, it's
                 imperative to present priority documents. These can be provided
@@ -424,10 +424,10 @@ const Patent = () => {
 
             {/* Permission from National Biodiversity Authority */}
             <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
-              <h1 className="text-start text-xl text-black pb-4">
+              <h1 className="text-start text-xl  pb-4">
                 Permission from National Biodiversity Authority
               </h1>
-              <p className="pb-8 text-black text-sm">
+              <p className="pb-8  text-sm">
                 If the application involves biological material sourced from
                 India, obtaining permission from the National Biodiversity
                 Authority is mandatory.
@@ -436,10 +436,10 @@ const Patent = () => {
 
             {/* Source of Biological Material */}
             <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
-              <h1 className="text-start text-xl text-black pb-4">
+              <h1 className="text-start text-xl  pb-4">
                 Source of Biological Material
               </h1>
-              <p className="pb-8 text-black text-sm">
+              <p className="pb-8 text-sm">
                 The patent application should specify the source or origin of
                 any biological material mentioned in the specifications.
               </p>
@@ -447,10 +447,10 @@ const Patent = () => {
           </div>
 
           <div className="hidden lg:block lg:w-1/3 px-10 pl-16">
-            <h2 className="text-slate-900 font-medium text-2xl pb-5 bg-white pl-4 pt-4 rounded-t-xl rounded-b-xl">
+            <h2 className="text-white font-medium text-2xl pb-5 bg-slate-900 pl-4 pt-4 rounded-t-xl rounded-b-xl">
               Related Links
             </h2>
-            <nav className="space-y-4 sticky top-24 bg-slate-900 pl-4 rounded-xl mt-5 pt-5">
+            <nav className="space-y-4 sticky top-24 bg-slate-800 pl-4 rounded-xl mt-5 pt-5">
               <NavLink
                 to="/patent"
                 className="block text-white font-montserrat hover:text-blue-800 hover:underline text-lg font-medium"
@@ -479,10 +479,10 @@ const Patent = () => {
           </div>
         </div>
 
-        <h1 className="text-center text-3xl text-black pb-4 bg-white">
+        <h1 className="text-center text-3xl text-white pb-4 bg-slate-900">
           Patent FAQ's
         </h1>
-        <div className="space-y-4 px-2 pt-8 bg-white lg:px-8">
+        <div className="space-y-4 px-2 pt-8 bg-slate-900 lg:px-8">
           {/* FAQ Section */}
           <div className="flex-1">
             {/* Your FAQ Content */}
@@ -494,10 +494,10 @@ const Patent = () => {
                   className="hidden lg:block"
                 />
               </div>
-              <div className="space-y-4 pr-2 pt-4 h-full w-full bg-slate-200 pb-10 pl-2 rounded-md lg:bg-white lg:px-10">
+              <div className="space-y-4 pr-2 pt-4 h-full w-full bg-slate-900 pb-10 pl-2 rounded-md lg:bg-slate-900 lg:px-10">
                 {/* FAQ Item 1 */}
                 <details className="group overflow-hidden ">
-                  <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg transition">
+                  <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-800 rounded-t-lg transition">
                     <span className="font-medium text-white">
                       What types of patents does House of IP handle?
                     </span>
@@ -505,7 +505,7 @@ const Patent = () => {
                       &#9660;
                     </span>
                   </summary>
-                  <div className="transition-all duration-300 bg-gray-900 rounded-b-xl pb-5 ease-in-out overflow-hidden max-h-0 group-open:max-h-96">
+                  <div className="transition-all duration-300 bg-gray-800 rounded-b-xl pb-5 ease-in-out overflow-hidden max-h-0 group-open:max-h-96">
                     <p className="mt-2 px-4 text-white text-sm">
                       At House of IP, our multidisciplinary team of technical
                       experts and patent agents assists in drafting,
@@ -519,7 +519,7 @@ const Patent = () => {
                 {/* Add the other FAQ items here */}
                 {/* FAQ Item 2 */}
                 <details className="group overflow-hidden">
-                  <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg transition">
+                  <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-800 rounded-t-lg transition">
                     <span className="font-medium text-white">
                       What is the process of filing a patent with House of IP ?
                     </span>
@@ -527,7 +527,7 @@ const Patent = () => {
                       &#9660;
                     </span>
                   </summary>
-                  <div className="transition-all duration-300 bg-gray-900 pb-5 rounded-b-xl ease-in-out overflow-hidden max-h-96 group-open:max-h-96 px-12 text-justify text-black font-montserrat font-thin overflow-y-auto">
+                  <div className="transition-all duration-300 bg-gray-800 pb-5 rounded-b-xl ease-in-out overflow-hidden max-h-96 group-open:max-h-96 px-12 text-justify text-black font-montserrat font-thin overflow-y-auto">
                     <p className="mt-2 px-4 text-white text-sm">
                       Our patent filing process is comprehensive and includes:
                     </p>
@@ -564,7 +564,7 @@ const Patent = () => {
 
                 {/* FAQ Item 3 */}
                 <details className="group overflow-hidden">
-                  <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg transition">
+                  <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-800 rounded-t-lg transition">
                     <span className="font-medium text-white">
                       What happens if my patent application is challenged?
                     </span>
@@ -572,7 +572,7 @@ const Patent = () => {
                       &#9660;
                     </span>
                   </summary>
-                  <div className="transition-all duration-300 ease-in-out bg-gray-900 pb-5 rounded-b-xl overflow-hidden max-h-0 group-open:max-h-96">
+                  <div className="transition-all duration-300 ease-in-out bg-gray-800 pb-5 rounded-b-xl overflow-hidden max-h-0 group-open:max-h-96">
                     <p className="mt-2 px-4 text-white text-sm">
                       At House of IP, our dedicated litigation team is
                       well–versed in handling patent disputes. We thoroughly
@@ -585,7 +585,7 @@ const Patent = () => {
 
                 {/* FAQ Item 4 */}
                 <details className="group overflow-hidden">
-                  <summary className="flex justify-between items-center cursor-pointer p-4  bg-slate-900 rounded-t-lg transition">
+                  <summary className="flex justify-between items-center cursor-pointer p-4  bg-slate-800 rounded-t-lg transition">
                     <span className="font-medium text-white">
                       How can I monetize my patent?
                     </span>
@@ -593,7 +593,7 @@ const Patent = () => {
                       &#9660;
                     </span>
                   </summary>
-                  <div className="transition-all duration-300 ease-in-out bg-gray-900 pb-5 rounded-b-xl overflow-hidden max-h-0 group-open:max-h-96 text-sm">
+                  <div className="transition-all duration-300 ease-in-out bg-gray-800 pb-5 rounded-b-xl overflow-hidden max-h-0 group-open:max-h-96 text-sm">
                     <p className="mt-2 px-4 text-white">
                       Our IP commercialization team provides expert services,
                       including:
@@ -620,7 +620,7 @@ const Patent = () => {
                   </div>
                 </details>
                 <details className="group overflow-hidden">
-                  <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg transition">
+                  <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-800 rounded-t-lg transition">
                     <span className="font-medium text-white">
                       How do I know if House of IP is the right patent law firm
                       for me?
@@ -629,7 +629,7 @@ const Patent = () => {
                       &#9660;
                     </span>
                   </summary>
-                  <div className="transition-all duration-300 bg-gray-900 pb-5 rounded-b-xl ease-in-out overflow-hidden max-h-0 group-open:max-h-96">
+                  <div className="transition-all duration-300 bg-gray-800 pb-5 rounded-b-xl ease-in-out overflow-hidden max-h-0 group-open:max-h-96">
                     <p className="mt-2 px-4 text-white text-sm">
                       House of IP is a distinguished IP law firm with a proven
                       track record of securing and leveraging patents for
@@ -646,57 +646,57 @@ const Patent = () => {
             </div>
           </div>
           <div className="lg:flex flex-row">
-            <div className="px-2 text-justify lg:w-3/4 lg:pl-10">
-              <h1 className="text-xl text-center text-black font-montserrat font-semibold lg:text-2xl">
+            <div className="px-2 text-justify text-white lg:w-3/4 lg:pl-10">
+              <h1 className="text-xl text-center text-white font-montserrat font-semibold lg:text-2xl">
                 Securing a Patent in India – A Step-by-Step Guide
               </h1>
-              <p className="text-gray-800 pt-5 text-sm">
+              <p className=" pt-5 text-sm">
                 Protecting your innovation with a patent is a vital process.
                 Here’s a streamlined overview of the patent filing process in
                 India:
               </p>
-              <h3 className="font-bold text-gray-900 pt-3">
+              <h3 className="font-bold  pt-3">
                 1. Prior Art Search & Disclosure
               </h3>
-              <p className="text-gray-800 pt-2 text-sm">
+              <p className=" pt-2 text-sm">
                 Before filing, it’s essential to conduct a thorough search to
                 identify similar patents that could affect yours. This ensures
                 that your invention meets the criteria for novelty and
                 non–obviousness. We’ll also guide you on whether to keep your
                 invention confidential before filing.
               </p>
-              <h3 className="font-bold text-gray-900 pt-3">
+              <h3 className="font-bold  pt-3">
                 2. Drafting the Patent Application
               </h3>
-              <p className="text-gray-800 pt-2 text-sm">
+              <p className=" pt-2 text-sm">
                 Our team will work closely with you to capture the technical
                 details of your invention, preparing a clear and concise patent
                 specification with detailed descriptions and illustrations.
                 Depending on your needs, we’ll determine whether a provisional
                 or complete specification is best.
               </p>
-              <h3 className="font-bold text-gray-900 pt-3">
+              <h3 className="font-bold  pt-3">
                 3. Filing at the Indian Patent Office (IPO)
               </h3>
-              <p className="text-gray-800 pt-2 text-sm">
+              <p className="pt-2 text-sm">
                 We handle the entire filing process on your behalf at the IPO
                 through our expert patent agents team, ensuring the timely
                 submission of all necessary documents and payment of required
                 fees.
               </p>
-              <h3 className="font-bold text-gray-900 pt-3">
+              <h3 className="font-bold  pt-3">
                 4. Patent Prosecution & Examination
               </h3>
-              <p className="text-gray-800 pt-2 text-sm">
+              <p className="pt-2 text-sm">
                 After filing, your application will be examined by the IPO. Our
                 experts manage all communications with the examiner, addressing
                 any objections and making amendments to ensure a smooth approval
                 process.
               </p>
-              <h3 className="font-bold text-gray-900 pt-3">
+              <h3 className="font-bold  pt-3">
                 5. Grant & Post–Grant Management
               </h3>
-              <p className="text-gray-800 pt-2 text-sm">
+              <p className=" pt-2 text-sm">
                 Once your patent is granted, we provide ongoing support in
                 maintaining it, including payment of renewal fees and addressing
                 any infringement issues that may arise. Each invention is
@@ -717,7 +717,7 @@ const Patent = () => {
                       className="h-44 w-72"
                     />
                   </figure>
-                  <div className="card-body bg-white text-black">
+                  <div className="card-body bg-slate-800 text-white">
                     <h2 className="card-title">Trademark</h2>
                   </div>
                 </div>
@@ -733,7 +733,7 @@ const Patent = () => {
                       className="h-44 w-full"
                     />
                   </figure>
-                  <div className="card-body bg-white text-black">
+                  <div className="card-body bg-slate-800 text-white">
                     <h2 className="card-title">Copyright</h2>
                   </div>
                 </div>
@@ -747,7 +747,7 @@ const Patent = () => {
                       className="h-44 w-72"
                     />
                   </figure>
-                  <div className="card-body bg-white text-black">
+                  <div className="card-body bg-slate-800 text-white">
                     <h2 className="card-title">Design</h2>
                   </div>
                 </div>

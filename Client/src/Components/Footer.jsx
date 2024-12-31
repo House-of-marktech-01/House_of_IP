@@ -66,7 +66,7 @@ const Footer = () => {
                   <button className="relative w-12 h-12 rounded-full group">
                     <div className="floater w-full h-full absolute top-0 left-0 bg-gray-500 rounded-full duration-300 group-hover:-top-8 group-hover:shadow-2xl"></div>
                     <div className="icon relative z-10 w-full h-full flex items-center justify-center border-2 border-gray-500 rounded-full">
-                      <i class="fa-solid fa-envelope"></i>
+                      <i className="fa-solid fa-envelope"></i>
                     </div>
                   </button>
                 </div>
@@ -81,7 +81,7 @@ const Footer = () => {
                   <button className="relative w-12 h-12 rounded-full group">
                     <div className="floater w-full h-full absolute top-0 left-0 bg-pink-500 rounded-full duration-300 group-hover:-top-8 group-hover:shadow-2xl"></div>
                     <div className="icon relative z-10 w-full h-full flex items-center justify-center border-2 border-pink-500 rounded-full">
-                      <i class="fa-brands fa-instagram"></i>
+                      <i className="fa-brands fa-instagram"></i>
                     </div>
                   </button>
                 </div>
@@ -91,7 +91,7 @@ const Footer = () => {
                 <button className="relative w-12 h-12 rounded-full group">
                   <div className="floater w-full h-full absolute top-0 left-0 bg-blue-500 rounded-full duration-300 group-hover:-top-8 group-hover:shadow-2xl"></div>
                   <div className="icon relative z-10 w-full h-full flex items-center justify-center border-2 border-blue-500 rounded-full">
-                    <i class="fa-brands fa-linkedin"></i>
+                    <i className="fa-brands fa-linkedin"></i>
                   </div>
                 </button>
               </div>

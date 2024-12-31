@@ -109,7 +109,7 @@ const Copyright = () => {
       </title>
     </Helmet>
       <div id="copyright" className="w-full" style={{ position: "relative" }}>
-        <div className="breadcrumbs text-xs sm:text-sm pl-4 sm:pl-6 bg-white text-black pt-20 lg:pt-20">
+        <div className="breadcrumbs text-xs sm:text-sm pl-4 sm:pl-6 bg-slate-900 text-white pt-20 lg:pt-20">
           <ul>
             <li>
               <NavLink to="/">Home</NavLink>
@@ -120,7 +120,7 @@ const Copyright = () => {
             <li>Copyright</li>
           </ul>
         </div>
-        <div className="lg:flex gap-5 border p-3 bg-white lg:px-20">
+        <div className="lg:flex gap-5  p-3 bg-slate-900 text-white lg:px-20">
           <div className="relative w-7/10 shrink-0 flex justify-center items-center h-full lg:sticky lg:top-20">
             <div className="sticky">
               <img
@@ -133,11 +133,11 @@ const Copyright = () => {
 
           <div className="flex flex-col lg:w-2/3">
             <div className="my-auto w-full pt-10 px-5 sm:w-full">
-              <h2 className="text-base font-black mb-2 text-gray-700 lg:mb-4">
+              <h2 className="text-base font-black mb-2 lg:mb-4">
                 Copyright
               </h2>
 
-              <p className="prod_description text-sm text-gray-700 mt-2">
+              <p className="prod_description text-sm  mt-2">
                 Copyright is a entitlement granted to the owner of intellectual
                 property. Copyright protection typically endures for the
                 author’s lifetime plus an additional 60 years after the author’s
@@ -147,7 +147,7 @@ const Copyright = () => {
                 {/* Dropdown toggler */}
                 <div className="mb-4">
                   <select
-                    className="w-full px-4 py-2 border rounded-md bg-white focus:outline-none text-gray-800 focus:ring focus:ring-blue-300"
+                    className="w-full px-4 py-2 border rounded-md bg-slate-900  focus:outline-none"
                     value={selectedOption}
                     onChange={handleChange}
                   >
@@ -172,7 +172,7 @@ const Copyright = () => {
                 <div className="grid grid-cols-1 gap-4">
                   {/* Patent Search Card */}
                   {selectedOption === "Book" && (
-                    <div className="border rounded-md p-4 bg-white text-gray-800 ">
+                    <div className="border rounded-md p-4 bg-slate-900  ">
                       <h2 className="font-semibold text-lg mb-2">
                         Book
                       </h2>
@@ -188,7 +188,7 @@ const Copyright = () => {
 
                   {/* Provisional Filing Card */}
                   {selectedOption === "Video" && (
-                    <div className="border rounded-md p-4 text-gray-800 bg-white ">
+                    <div className="border rounded-md p-4 text-white bg-slate-900 ">
                       <h2 className="font-semibold text-lg mb-2">
                         Video
                       </h2>
@@ -200,7 +200,7 @@ const Copyright = () => {
 
                   {/* Regular Card */}
                   {selectedOption === "Software" && (
-                    <div className="border rounded-md p-4 text-gray-800 bg-white">
+                    <div className="border rounded-md p-4 text-white bg-slate-900 ">
                       <h2 className="font-semibold text-lg mb-2">
                         Software
                       </h2>
@@ -213,7 +213,7 @@ const Copyright = () => {
                     </div>
                   )}
                   {selectedOption === "Music" && (
-                    <div className="border rounded-md p-4 text-gray-800 bg-white">
+                    <div className="border rounded-md p-4 text-white bg-slate-900 ">
                       <h2 className="font-semibold text-lg mb-2">
                         Music
                       </h2>
@@ -223,7 +223,7 @@ const Copyright = () => {
                     </div>
                   )}
                   {selectedOption === "Sound" && (
-                    <div className="border rounded-md p-4 text-gray-800 bg-white">
+                    <div className="border rounded-md p-4 text-white bg-slate-900 ">
                       <h2 className="font-semibold text-lg mb-2">
                         Sound
                       </h2>
@@ -234,7 +234,7 @@ const Copyright = () => {
                     </div>
                   )}
                   {selectedOption === "Logo" && (
-                    <div className="border rounded-md p-4 text-gray-800 bg-white">
+                    <div className="border rounded-md p-4 text-white bg-slate-900 ">
                       <h2 className="font-semibold text-lg mb-2">
                         Logo
                       </h2>
@@ -308,7 +308,7 @@ const Copyright = () => {
           </div>
         </div>
 
-        <div className="bg-white px-5 text-justify lg:px-20 grid grid-cols-1 lg:grid-cols-4">
+        <div className="bg-slate-900 text-white px-5 text-justify lg:px-20 grid grid-cols-1 lg:grid-cols-4">
           <motion.div
             className="lg:col-span-3"
             initial="hidden"
@@ -316,7 +316,7 @@ const Copyright = () => {
             viewport={{ once: true, amount: 0.2 }}
           >
             <motion.h1
-              className="text-center text-3xl text-black pb-4 pt-4"
+              className="text-center text-3xl font-semibold pb-4 pt-4"
               variants={fadeInUp}
             >
               Copyright
@@ -328,7 +328,7 @@ const Copyright = () => {
             ].map((text, index) => (
               <motion.p
                 key={index}
-                className="pb-8 text-gray-800 text-sm"
+                className="pb-8  text-sm"
                 variants={fadeInUp}
               >
                 {text}
@@ -336,14 +336,14 @@ const Copyright = () => {
             ))}
 
             <motion.h2
-              className="text-lg font-medium text-black pb-5"
+              className="text-lg font-medium  pb-5"
               variants={fadeInUp}
             >
               Comprehensive Copyright Solutions
             </motion.h2>
 
             <motion.p
-              className="pb-8 text-gray-800 text-sm"
+              className="pb-8  text-sm"
               variants={fadeInUp}
             >
               Our dedicated copyright registration team ensures rapid and
@@ -356,14 +356,14 @@ const Copyright = () => {
             </motion.p>
 
             <motion.h2
-              className="text-lg font-medium text-black pb-5"
+              className="text-lg font-medium pb-5"
               variants={fadeInUp}
             >
               Our Expertise Includes:
             </motion.h2>
 
             <motion.p
-              className="pb-8 text-gray-800 text-sm"
+              className="pb-8 text-sm"
               variants={fadeInUp}
             >
               <strong>• Determining Copyright Eligibility:</strong> We assess if
@@ -376,7 +376,7 @@ const Copyright = () => {
             </motion.p>
 
             <motion.p
-              className="pb-8 text-gray-800 text-sm"
+              className="pb-8 text-sm"
               variants={fadeInUp}
             >
               Whether you are an artist or a business, we advise on licensing,
@@ -389,14 +389,14 @@ const Copyright = () => {
             </motion.p>
 
             <motion.h2
-              className="text-lg font-medium text-black pb-5"
+              className="text-lg font-medium pb-5"
               variants={fadeInUp}
             >
               Expert Representation in Copyright Disputes
             </motion.h2>
 
             <motion.p
-              className="pb-8 text-gray-800 text-sm"
+              className="pb-8  text-sm"
               variants={fadeInUp}
             >
               Our experienced copyright attorneys represent clients in cases
@@ -411,10 +411,10 @@ const Copyright = () => {
           </motion.div>
 
           <div className="hidden lg:block lg:col-span-1 lg:px-10 pl-16">
-            <h2 className="text-slate-900 font-medium text-2xl pb-5 bg-white pl-4 pt-4 rounded-t-xl rounded-b-xl">
+            <h2 className="font-medium text-2xl pb-5 bg-slate-900 pl-4 pt-4 rounded-t-xl rounded-b-xl">
               Related Links
             </h2>
-            <nav className="space-y-4 sticky top-24 bg-slate-900 pl-4 rounded-xl mt-5 pt-5">
+            <nav className="space-y-4 sticky top-24 bg-slate-800 pl-4 rounded-xl mt-5 pt-5">
               <NavLink
                 to="/patent"
                 className="block text-white font-montserrat hover:text-blue-800 hover:underline text-lg font-medium"
@@ -435,7 +435,7 @@ const Copyright = () => {
               </NavLink>
               <NavLink
                 to="#trademark"
-                className="block text-white font-montserrat hover:text-blue-800 hover:underline text-lg font-medium"
+                className="block text-white font-montserrat pb-4 hover:text-blue-800 hover:underline text-lg font-medium"
               >
                 Trademark
               </NavLink>
@@ -443,10 +443,10 @@ const Copyright = () => {
           </div>
         </div>
 
-        <h1 className="text-center text-3xl text-black pb-4 bg-white">
+        <h1 className="text-center text-3xl text-white pb-4 bg-slate-900">
           Copyright FAQ's
         </h1>
-        <div className="space-y-4 px-2 pt-8 bg-white lg:px-8">
+        <div className="space-y-4 px-2 pt-8 bg-slate-900 text-white lg:px-8">
           {/* FAQ Section */}
           <div className="flex-1">
             {/* Your FAQ Content */}
@@ -456,10 +456,10 @@ const Copyright = () => {
                 alt=""
                 className="h-96 hidden lg:block"
               />
-              <div className="space-y-4 pr-2 pt-4 h-full w-full bg-slate-200 pb-10 pl-2 rounded-md lg:bg-white lg:px-10">
+              <div className="space-y-4 pr-2 pt-4 h-full w-full bg-slate-900 pb-10 pl-2 rounded-md lg:bg-slate-900 lg:px-10">
                 {/* FAQ Item 1 */}
                 <details className="group overflow-hidden ">
-                  <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg transition">
+                  <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-800 rounded-t-lg transition">
                     <span className="font-medium text-white">
                       What Copyrighted Works Do We Protect?
                     </span>
@@ -467,7 +467,7 @@ const Copyright = () => {
                       &#9660;
                     </span>
                   </summary>
-                  <div className="transition-all duration-300 ease-in-out overflow-hidden bg-gray-900 pb-5 rounded-b-xl max-h-0 group-open:max-h-96">
+                  <div className="transition-all duration-300 ease-in-out overflow-hidden bg-gray-800 pb-5 rounded-b-xl max-h-0 group-open:max-h-96">
                     <p className="mt-2 px-4 text-white text-sm">
                       House of IP safeguards a wide range of creative content:
                     </p>
@@ -497,7 +497,7 @@ const Copyright = () => {
                 {/* Add the other FAQ items here */}
                 {/* FAQ Item 2 */}
                 <details className="group overflow-hidden">
-                  <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg transition">
+                  <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-800 rounded-t-lg transition">
                     <span className="font-medium text-white">
                       How to Register Your Copyright?
                     </span>
@@ -505,7 +505,7 @@ const Copyright = () => {
                       &#9660;
                     </span>
                   </summary>
-                  <div className="transition-all duration-300 ease-in-out overflow-hidden bg-gray-900 pb-5 rounded-b-xl max-h-96 group-open:max-h-96 px-12 text-justify text-black font-montserrat font-thin overflow-y-auto">
+                  <div className="transition-all duration-300 ease-in-out overflow-hidden bg-gray-800 pb-5 rounded-b-xl max-h-96 group-open:max-h-96 px-12 text-justify text-black font-montserrat font-thin overflow-y-auto">
                     <p className="mt-2 text-white text-sm">
                       Our expert team guides you through the copyright
                       registration process, ensuring that your work is quickly
@@ -518,7 +518,7 @@ const Copyright = () => {
 
                 {/* FAQ Item 3 */}
                 <details className="group overflow-hidden">
-                  <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg transition">
+                  <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-800 rounded-t-lg transition">
                     <span className="font-medium text-white">
                       What if Your Copyright is Infringed?
                     </span>
@@ -526,7 +526,7 @@ const Copyright = () => {
                       &#9660;
                     </span>
                   </summary>
-                  <div className="transition-all duration-300 ease-in-out bg-gray-900 rounded-b-xl pb-5 overflow-hidden max-h-0 group-open:max-h-96">
+                  <div className="transition-all duration-300 ease-in-out bg-gray-800 rounded-b-xl pb-5 overflow-hidden max-h-0 group-open:max-h-96">
                     <p className="mt-2 px-4 text-white text-sm">
                       House of IP has a proven track record in copyright dispute
                       resolution. We represent clients in court, using
@@ -539,7 +539,7 @@ const Copyright = () => {
 
                 {/* FAQ Item 4 */}
                 <details className="group overflow-hidden">
-                  <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg transition">
+                  <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-800 rounded-t-lg transition">
                     <span className="font-medium text-white">
                       Using Copyrighted Content
                     </span>
@@ -547,7 +547,7 @@ const Copyright = () => {
                       &#9660;
                     </span>
                   </summary>
-                  <div className="transition-all duration-300 ease-in-out bg-gray-900 rounded-b-xl pb-5 overflow-hidden max-h-0 group-open:max-h-96 text-sm">
+                  <div className="transition-all duration-300 ease-in-out bg-gray-800 rounded-b-xl pb-5 overflow-hidden max-h-0 group-open:max-h-96 text-sm">
                     <p className="mt-2 px-4 text-white">
                       We provide guidance on the use of third–party copyrighted
                       material through licenses, assignments, or fair–use
@@ -557,7 +557,7 @@ const Copyright = () => {
                   </div>
                 </details>
                 <details className="group overflow-hidden pb-10">
-                  <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-900 rounded-t-lg transition">
+                  <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-800 rounded-t-lg transition">
                     <span className="font-medium text-white">
                       Protecting High-Value Copyrighted Works
                     </span>
@@ -565,7 +565,7 @@ const Copyright = () => {
                       &#9660;
                     </span>
                   </summary>
-                  <div className="transition-all duration-300 bg-gray-900 rounded-b-xl pb-5  ease-in-out overflow-hidden max-h-0 group-open:max-h-96 text-sm">
+                  <div className="transition-all duration-300 bg-gray-800 rounded-b-xl pb-5  ease-in-out overflow-hidden max-h-0 group-open:max-h-96 text-sm">
                     <p className="mt-2 px-4 text-white">
                       For high–value content, including music, software, and
                       literary works, offers comprehensive valuation services.
@@ -579,54 +579,54 @@ const Copyright = () => {
             </div>
           </div>
 
-          <div className="lg:flex flex-row">
+          <div className="lg:flex flex-row text-white">
             <div className="px-2 text-justify lg:w-3/4 lg:pl-10">
-              <h1 className="text-xl text-center text-black font-montserrat font-semibold lg:text-2xl">
+              <h1 className="text-xl text-center  font-montserrat font-semibold lg:text-2xl">
                 Your Copyright Registration Process – Simplified
               </h1>
-              <p className="text-gray-800 pt-5 text-sm">
+              <p className=" pt-5 text-sm">
                 Copyright protects your original creations, from literary works
                 to artistic expressions. Here’s a step–by–step guide to the
                 registration process in India:
               </p>
-              <h3 className="font-bold text-gray-900 pt-3">
+              <h3 className="font-bold  pt-3">
                 1. Determine Eligibility:
               </h3>
-              <p className="text-gray-800 pt-2 text-sm">
+              <p className=" pt-2 text-sm">
                 Not every work qualifies for copyright. Our initial consultation
                 will help determine if your work, whether literary, musical,
                 dramatic, artistic, or cinematographic, meets the originality
                 criteria for protection.
               </p>
-              <h3 className="font-bold text-gray-900 pt-3">
+              <h3 className="font-bold  pt-3">
                 2. Application Preparation:
               </h3>
-              <p className="text-gray-800 pt-2 text-sm">
+              <p className=" pt-2 text-sm">
                 Once eligibility is established, we’ll assist you in completing
                 the required forms, providing all necessary details about your
                 work (title, creator information, format) to ensure a flawless
                 application.
               </p>
-              <h3 className="font-bold text-gray-900 pt-3">
+              <h3 className="font-bold  pt-3">
                 3. Submission & Examination:
               </h3>
-              <p className="text-gray-800 pt-2 text-sm">
+              <p className=" pt-2 text-sm">
                 The application is then submitted to the Copyright Office, along
                 with any required fees and a copy of your work. The office will
                 review the submission for accuracy and completeness.
               </p>
-              <h3 className="font-bold text-gray-900 pt-3">
+              <h3 className="font-bold  pt-3">
                 4. Registration & Certification:
               </h3>
-              <p className="text-gray-800 pt-2 text-sm">
+              <p className=" pt-2 text-sm">
                 If no objections arise, your copyright will be officially
                 registered, and you’ll receive a certificate of registration,
                 serving as prima facie evidence of ownership.
               </p>
-              <h3 className="font-bold text-gray-900 pt-3">
+              <h3 className="font-bold  pt-3">
                 5. Post–Registration Protection:
               </h3>
-              <p className="text-gray-800 pt-2 text-sm">
+              <p className=" pt-2 text-sm">
                 While registration is a crucial step, it is only the beginning.
                 We offer ongoing advice on protecting your rights, issuing
                 cease-and-desist notices, or pursuing action in case of
@@ -646,7 +646,7 @@ const Copyright = () => {
                       className="h-44 w-72"
                     />
                   </figure>
-                  <div className="card-body bg-white text-black">
+                  <div className="card-body bg-slate-800 text-white">
                     <h2 className="card-title">Trademark</h2>
                   </div>
                 </div>
@@ -662,7 +662,7 @@ const Copyright = () => {
                       className="h-44 w-full"
                     />
                   </figure>
-                  <div className="card-body bg-white text-black">
+                  <div className="card-body bg-slate-900 text-white">
                     <h2 className="card-title">Patent</h2>
                   </div>
                 </div>
@@ -676,7 +676,7 @@ const Copyright = () => {
                       className="h-44 w-72"
                     />
                   </figure>
-                  <div className="card-body bg-white text-black">
+                  <div className="card-body bg-slate-900 text-white">
                     <h2 className="card-title">Design</h2>
                   </div>
                 </div>

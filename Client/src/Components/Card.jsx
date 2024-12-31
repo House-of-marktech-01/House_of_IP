@@ -4,8 +4,8 @@ import { NavLink } from "react-router-dom";
 
 const Card = () => {
   return (
-    <div className="w-full bg-white grid grid-cols-1 lg:grid-cols-2 space-y-3 px-5 pb-10 pt-5">
-      <div className="group max-w-sm mx-auto bg-white rounded-lg shadow-lg overflow-hidden md:max-w-md lg:max-w-lg relative">
+    <div className="w-full bg-slate-900 grid grid-cols-1 lg:grid-cols-2 space-y-3 px-5 pb-10 pt-5">
+      <div className="group max-w-sm mx-auto w-3/4 bg-slate-900 rounded-lg shadow-lg overflow-hidden md:max-w-md lg:max-w-lg relative">
         {/* Image Section */}
         <div className="relative">
           <img
@@ -24,12 +24,12 @@ const Card = () => {
         </div>
 
         {/* Content Section with Hover Effect */}
-        <div className="p-5 bg-white group-hover:bg-slate-900 group-hover:text-white transition-all duration-700 relative z-10">
+        <div className="p-5 bg-slate-800 group-hover:bg-slate-900 group-hover:text-white transition-all duration-700 relative z-10">
           <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-          <h3 className="text-lg font-semibold uppercase text-gray-700 group-hover:text-white mb-2 relative z-20">
+          <h3 className="text-lg font-semibold uppercase text-white group-hover:text-white mb-2 relative z-20">
             Trademark
           </h3>
-          <p className="text-sm text-gray-600 group-hover:text-gray-300 leading-relaxed mb-4 relative z-20">
+          <p className="text-sm text-white group-hover:text-gray-300 leading-relaxed mb-4 relative z-20">
             Protect your brand with our expert trademark registration and
             defense services.
           </p>
@@ -38,7 +38,7 @@ const Card = () => {
           </NavLink>
         </div>
       </div>
-      <div className="group max-w-sm mx-auto bg-white rounded-lg shadow-lg overflow-hidden md:max-w-md lg:max-w-lg relative">
+      <div className="group max-w-sm mx-auto lg:w-3/4 bg-white rounded-lg shadow-lg overflow-hidden md:max-w-md lg:max-w-lg relative">
         {/* Image Section */}
         <div className="relative">
           <img
@@ -57,12 +57,12 @@ const Card = () => {
         </div>
 
         {/* Content Section with Hover Effect */}
-        <div className="p-5 bg-white group-hover:bg-slate-900 group-hover:text-white transition-all duration-700 relative z-10">
+        <div className="p-5 bg-slate-800  group-hover:bg-slate-900 group-hover:text-white transition-all duration-700 relative z-10">
           <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-          <h3 className="text-lg font-semibold uppercase text-gray-700 group-hover:text-white mb-2 relative z-20">
+          <h3 className="text-lg font-semibold uppercase text-white group-hover:text-white mb-2 relative z-20">
             CopyRight
           </h3>
-          <p className="text-sm text-gray-600 group-hover:text-gray-300 leading-relaxed mb-4 relative z-20">
+          <p className="text-sm text-white group-hover:text-gray-300 leading-relaxed mb-4 relative z-20">
             Safeguard your creative works with our specialized copyright
             registration.
           </p>
@@ -71,7 +71,7 @@ const Card = () => {
           </NavLink>
         </div>
       </div>
-      <div className="group max-w-sm mx-auto bg-white rounded-lg shadow-lg overflow-hidden md:max-w-md lg:max-w-lg relative">
+      <div className="group max-w-sm mx-auto bg-slate-900 lg:w-3/4 rounded-lg shadow-lg overflow-hidden md:max-w-md lg:max-w-lg relative">
         {/* Image Section */}
         <div className="relative">
           <img
@@ -90,12 +90,12 @@ const Card = () => {
         </div>
 
         {/* Content Section with Hover Effect */}
-        <div className="p-5 bg-white group-hover:bg-slate-900 group-hover:text-white transition-all duration-700 relative z-10">
+        <div className="p-5 bg-slate-800 group-hover:bg-slate-900 group-hover:text-white transition-all duration-700 relative z-10">
           <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-          <h3 className="text-lg font-semibold uppercase text-gray-700 group-hover:text-white mb-2 relative z-20">
+          <h3 className="text-lg font-semibold uppercase text-white group-hover:text-white mb-2 relative z-20">
             Design
           </h3>
-          <p className="text-sm text-gray-600 group-hover:text-gray-300 leading-relaxed mb-4 relative z-20">
+          <p className="text-sm text-white group-hover:text-gray-300 leading-relaxed mb-4 relative z-20">
             Protect your unique product designs with our expert  services.
           </p>
           <NavLink to="/design">
@@ -103,7 +103,7 @@ const Card = () => {
           </NavLink>
         </div>
       </div>
-      <div className="group max-w-sm mx-auto bg-white rounded-lg shadow-lg overflow-hidden md:max-w-md lg:max-w-lg relative">
+      <div className="group max-w-sm mx-auto lg:w-3/4 bg-white rounded-lg shadow-lg overflow-hidden md:max-w-md lg:max-w-lg relative">
         {/* Image Section */}
         <div className="relative">
           <img
@@ -122,12 +122,12 @@ const Card = () => {
         </div>
 
         {/* Content Section with Hover Effect */}
-        <div className="p-5 bg-white group-hover:bg-slate-900 group-hover:text-white transition-all duration-700 relative z-10">
+        <div className="p-5 bg-slate-800  group-hover:bg-slate-900 group-hover:text-white transition-all duration-700 relative z-10">
           <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-          <h3 className="text-lg font-semibold uppercase text-gray-700 group-hover:text-white mb-2 relative z-20">
+          <h3 className="text-lg font-semibold uppercase text-white group-hover:text-white mb-2 relative z-20">
             Patent
           </h3>
-          <p className="text-sm text-gray-600 group-hover:text-gray-300 leading-relaxed mb-4 relative z-20">
+          <p className="text-sm text-white group-hover:text-gray-300 leading-relaxed mb-4 relative z-20">
             Secure your innovations with our comprehensive patent filing and
             protection.
           </p>
