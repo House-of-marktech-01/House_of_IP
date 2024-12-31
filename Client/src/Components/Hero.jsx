@@ -55,12 +55,15 @@ const Hero = () => {
               }}
             >
               {images.map((image, index) => (
-                <img
-                  key={index}
-                  src={image}
-                  className="w-full h-full object-cover flex-shrink-0"
-                  alt={`Carousel Slide ${index + 1}`}
-                />
+                <div key={index} className="relative w-full h-full flex-shrink-0">
+                  <img
+                    src={image}
+                    className="w-full h-full object-cover"
+                    alt={`Carousel Slide ${index + 1}`}
+                  />
+                  {/* Dark Overlay */}
+                  <div className="absolute top-0 left-0 w-full h-full bg-black opacity-60"></div>
+                </div>
               ))}
             </div>
             {/* Navigation Circles */}
