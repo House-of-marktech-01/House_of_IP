@@ -56,7 +56,7 @@ const ContactForm = () => {
   return (
     <div
       id="consult"
-      className="pt-20 md:pt-28 bg-cover bg-center bg-no-repeat parallax-container "
+      className="pt-20 md:pt-28 bg-cover bg-center font-roboto bg-no-repeat parallax-container "
     >
       <h1 className="text-3xl font-serif text-white text-center font-semibold">
         Contact Us
@@ -81,25 +81,18 @@ const ContactForm = () => {
                 <li className="flex items-center">
                   <i className="fas fa-clock text-purple-700 text-xl mr-3"></i>
                   <span className="text-sm text-white">
-                    Mon - Sat 11.00-19.00
+                    Mon - Sat 10.00 Am - 8.00 Pm 
                   </span>
                 </li>
               </ul>
               <div className="mt-2">
                 <div className="mr-3 max-w-[300px] rounded-xl hover:scale-110 duration-700 p-5">
                   <h4 className="py-2 text-white font-bold">
-                    <i className="fa-solid fa-location-dot"></i> Uttar Pradesh
-                  </h4>
-                  <p className="text-base leading-7 text-white font-thin space-y-4">
-                    Rajrooppur, Prayagraj, Uttar Pradesh - 211011
-                  </p>
-                </div>
-                <div className="mr-3 max-w-[300px] rounded-xl hover:scale-110 duration-700 p-5">
-                  <h4 className="py-2 text-white font-bold">
                     <i className="fa-solid fa-location-dot"></i> South Delhi
                   </h4>
                   <p className="text-base leading-7 text-white font-thin space-y-4">
-                    Malviya Nagar, South Delhi - 110017
+                  293, Lane-2, Westend Marg, Near Saket Metro Station <br />
+                  Gate No. 2, Saket, New Delhi, Delhi
                   </p>
                 </div>
               </div>

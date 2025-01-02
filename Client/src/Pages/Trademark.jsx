@@ -154,7 +154,7 @@ const Trademark = () => {
               <p className="prod_description text-sm text-white mt-2">
                 Drafting and filing of rectification for applications marked
                 Formalities Check Fail by Trademark Examiner. Exclusive pricing
-                for trademark applications filed by IndiaFilings. Inclusive of
+                for trademark applications filed by House of IP. Inclusive of
                 government fee and service tax.
               </p>
               <div className="container mx-auto p-4">
@@ -292,7 +292,7 @@ const Trademark = () => {
             Trademark
           </motion.h1>
           {[
-            `At House of IP, our dedicated team of trademark attorneys offers
+            `Trademark agents offers
         more than just protection. We deliver comprehensive business value
         by integrating industry insights, brand strategy, and global
         trademark registration services. Our approach begins with a deep

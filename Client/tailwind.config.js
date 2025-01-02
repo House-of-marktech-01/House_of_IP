@@ -18,6 +18,7 @@ export default {
         poppins: ["Poppins", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
         serif: ['Merriweather', 'serif'],
+        roboto: ['Roboto', 'sans-serif'],
       },
     },
   },

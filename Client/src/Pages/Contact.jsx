@@ -21,7 +21,7 @@ const Contact = () => {
               />
               <h3 className="text-lg font-bold text-white mb-2">Email</h3>
               <p className="text-white text-center">
-                houseofintellectualproperty@gmail.com
+              info@houseofip.in
               </p>
             </div>
 
@@ -36,8 +36,7 @@ const Contact = () => {
                 Open hours
               </h3>
               <p className="text-white text-center">
-                Monday to Saturday 8 am - 6pm <br />
-                Sunday 11am - 4pm
+                Monday to Saturday 10 AM - 8PM <br />
               </p>
             </div>
 
@@ -50,9 +49,7 @@ const Contact = () => {
               />
               <h3 className="text-lg font-bold text-white mb-2">Call</h3>
               <p className="text-white text-center">
-                +91 790 572 6029
-                <br />
-                +91 880 098 5175
+              +91 7843814636
               </p>
             </div>
           </div>

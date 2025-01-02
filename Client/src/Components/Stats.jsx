@@ -29,7 +29,7 @@ const Stats = () => {
       <h1 className="text-2xl pt-10 font-serif font-bold bg-slate-900 text-white text-center sm:pl-2">
         Our digital services
       </h1>
-      <h1 className="text-xl pt-5 font-normal bg-slate-900 text-white text-center sm:pl-2">
+      <h1 className="text-xl pt-5 font-normal font-roboto bg-slate-900 text-white text-center sm:pl-2">
       Unmatched Services & Excellence
       </h1>
       <div className="card-body bg-slate-900 lg:px-20 py-10" ref={ref}>
@@ -44,7 +44,7 @@ const Stats = () => {
             <div className="flip-card-inner">
               <div className="flip-card-front">
                 <div className="profile-image">
-                  <img src="/trademarks.png" className="mt-8" alt="" />
+                  <img src="/trademark.png" className="mt-8 " alt="" />
                   <div className="name relative right-3">Trademark</div>
                 </div>
               </div>
@@ -66,7 +66,7 @@ const Stats = () => {
               <div className="flip-card-front">
                 <div className="profile-image">
                   <img src="/copyright.png" className="mt-14" alt="" />
-                  <div className="name relative right-3 top-2 pt-5">
+                  <div className="name relative right-3 top-0 pt-5">
                     Copyright
                   </div>
                 </div>
@@ -89,7 +89,7 @@ const Stats = () => {
             <div className="flip-card-inner">
               <div className="flip-card-front">
                 <div className="profile-image">
-                  <img src="/design.png" alt="" />
+                  <img src="/design.png" className="w-20 mt-14 ml-5" alt="" />
                   <div className="name relative top-3 right-3 ml-3">Design</div>
                 </div>
               </div>

@@ -99,7 +99,7 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`${"bg-slate-900"} shadow-md fixed w-full z-50 transition-all duration-300 ease-in-out`}
+        className={`${"bg-slate-900"} font-roboto shadow-md fixed w-full z-50 transition-all duration-300 ease-in-out`}
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">

@@ -1,4 +1,4 @@
-import React,{useState,useRef} from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import TestimonialCard from "../Components/Testimonials";
 import { Helmet } from "react-helmet";
@@ -32,6 +32,32 @@ const About = () => {
       setIsButtonVisible(false); // Hide button when not hovered and playing
     }
   };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          videoRef.current.play();
+          setIsPlaying(true);
+        } else {
+          videoRef.current.pause();
+          setIsPlaying(false);
+        }
+      },
+      { threshold: 0.5 } // Trigger when 50% of the video is visible
+    );
+
+    if (videoRef.current) {
+      observer.observe(videoRef.current);
+    }
+
+    return () => {
+      if (videoRef.current) {
+        observer.unobserve(videoRef.current);
+      }
+    };
+  }, []);
+
   return (
     <>
       <Helmet>
@@ -62,7 +88,7 @@ const About = () => {
                 height="auto"
                 loop
                 muted
-                className="w-full lg:h-80 lg:w-[100%]"
+                className="w-full lg:h-96"
               >
                 <source
                   src="https://www.w3schools.com/html/mov_bbb.mp4"
@@ -150,7 +176,7 @@ const About = () => {
               <p className=" text-sm lg:text-base leading-relaxed">
                 Our journey started with a simple goal: to make intellectual
                 property accessible to everyone. Founded by a group of IP
-                enthusiasts and experts, House of IP was born from a shared
+                enthusiasts, House of IP was born from a shared
                 passion for innovation and creativity. We realized that while
                 ideas have the power to change the world, they often remain
                 vulnerable without proper protection. This insight drove us to

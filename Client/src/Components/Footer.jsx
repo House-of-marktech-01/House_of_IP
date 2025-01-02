@@ -20,7 +20,7 @@ const Footer = () => {
               </li>
               <li>
                 <NavLink to="/practice" className="hover:underline">
-                  Practice Areas
+                  Services
                 </NavLink>
               </li>
               <li>
@@ -38,16 +38,26 @@ const Footer = () => {
 
           {/* Column 2 */}
           <div className="pl-5">
-            <h4 className="text-lg font-semibold mb-3 text-white">Platforms</h4>
+            <h4 className="text-lg font-semibold mb-3 text-white">Services</h4>
             <ul className="space-y-2 text-white">
               <li>
-                <NavLink to="#" className="hover:underline">
-                  Business Search
+                <NavLink to="/trademark" className="hover:underline">
+                  Trademark
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/trademark" className="hover:underline">
-                  Trademark Search
+                <NavLink to="/copyright" className="hover:underline">
+                  Copyright
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/design" className="hover:underline">
+                  Design
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/patent" className="hover:underline">
+                  Patent
                 </NavLink>
               </li>
             </ul>

@@ -5,24 +5,24 @@ import { useInView } from "react-intersection-observer";
 const MainAbout = () => {
   const whyChooseUsData = [
     {
-      title: "Get Your Advice",
+      title: "Expert IPR Guidance",
       details:
-        "Seeking expert advice? Our experienced attorneys at House of IP are dedicated to helping you navigate complex matters with confidence. Whether you are dealing with civil disputes, criminal allegations, or matrimonial issues, we offer tailored advice and actionable steps to resolve your case. We understand the stress and uncertainty that comes with challenges, which is why our team is committed to providing practical, clear, and results-driven guidance. With House of IP, you are never alone in your journey—reach out today and take the first step toward peace of mind.",
+        "Navigating the complexities of Intellectual Property Rights (IPR) can be challenging, but House of IP makes it seamless. Our team of certified experts and registered agents specializes in guiding individuals and businesses through every step of the IPR registration process. From trademark applications to copyright protections and patent filings, we provide precise, reliable advice tailored to your specific needs. Trust us to safeguard your intellectual assets with professionalism and efficiency.",
     },
     {
-      title: "Work With Experts",
+      title: "Work With Certified Professionals",
       details:
-        "At House of IP, our team of seasoned experts brings decades of combined experience to the table. Each member of our team is specialized in their field, ensuring that you receive unparalleled expertise in civil law, criminal defense, and matrimonial matters. We believe that every case is unique, and our tailored approach ensures that your specific concerns are addressed with precision and care. From in-depth case analysis to rigorous representation in court, our experts work collaboratively to achieve the best possible outcomes for our clients. Trust us to provide you with the expertise and dedication you deserve.",
+        "At House of IP, our dedication to excellence is reflected in our team of highly skilled professionals. Each member is extensively trained and certified in IPR processes, ensuring you receive unparalleled expertise. Whether you are a startup, an established business, or an individual creator, we offer a meticulous approach to protect your intellectual property. With a focus on accuracy and compliance, we are committed to delivering results that exceed expectations.",
     },
     {
-      title: "Comprehensive Expertise",
+      title: "Comprehensive IPR Solutions",
       details:
-        "matters are rarely one-dimensional, and that’s where House of IP truly stands out. We offer a comprehensive range of services that extend beyond traditional boundaries. Whether you are facing challenges in civil law, criminal cases, or matrimonial disputes, our team combines in-depth knowledge with strategic planning to address even the most intricate aspects of your case. By leveraging our multidisciplinary expertise, we deliver holistic solutions that not only resolve immediate issues but also secure your long-term interests.",
+        "Intellectual property protection requires a multidimensional approach, and House of IP excels at providing holistic solutions. From identifying the right type of registration to handling the paperwork and follow-ups, we cover all aspects of IPR services. Our comprehensive approach ensures that your creations, innovations, and brand identities are secure, empowering you to focus on growth while we manage the details.",
     },
     {
-      title: "Efficiency",
+      title: "Efficiency and Reliability",
       details:
-        "Time is often a critical factor in matters, and at House of IP, we understand the importance of swift and effective resolutions. Our commitment to efficiency is reflected in every aspect of our practice, from meticulous case preparation to prompt client communication. We utilize cutting-edge tools and streamlined processes to ensure that no time is wasted and that every action we take moves your case forward. Our coordinated approach minimizes delays and optimizes outcomes, allowing you to focus on your life while we handle the complexities of your  issues. Experience the difference that efficiency can make with House of IP.",
+        "Time is of the essence when it comes to intellectual property registration, and House of IP is committed to delivering swift and effective services. Utilizing advanced tools and streamlined workflows, we minimize delays and ensure a hassle-free process. Our reliable team stays with you at every step, providing timely updates and addressing any concerns promptly. Experience a stress-free journey to IPR protection with our efficient and dependable services.",
     },
   ];
 

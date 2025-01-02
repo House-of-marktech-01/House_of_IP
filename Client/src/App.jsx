@@ -9,6 +9,7 @@ import Footer from "./Components/Footer";
 import ScrollToTopButton from "./Components/ScrollTop";
 import Chatbot from "./Components/Chatbot";
 import ScrollProgress from "./Components/ScrollProgress";
+import ScrolltoTop from "./Components/ScrolltoTop";
 import {Helmet} from "react-helmet";
 
 // Lazy load the page components
@@ -36,6 +37,7 @@ function App() {
         <title>House of IP</title>
         </Helmet>
         <Router>
+          <ScrolltoTop/>
           <ToastContainer />
           <Navbar />
           {/* Suspense component to handle loading state */}

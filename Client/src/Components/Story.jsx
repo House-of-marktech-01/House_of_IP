@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
 const OurStory = () => {
@@ -31,8 +31,33 @@ const OurStory = () => {
     }
   };
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          videoRef.current.play();
+          setIsPlaying(true);
+        } else {
+          videoRef.current.pause();
+          setIsPlaying(false);
+        }
+      },
+      { threshold: 0.5 } // Trigger when 50% of the video is visible
+    );
+
+    if (videoRef.current) {
+      observer.observe(videoRef.current);
+    }
+
+    return () => {
+      if (videoRef.current) {
+        observer.unobserve(videoRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <div className="w-full mx-auto bg-slate-900 lg:px-24">
+    <div className="w-full mx-auto font-roboto bg-slate-900 lg:px-24">
       <div className="lg:grid lg:grid-cols-2">
         <div className="lg:col-span-2 flex flex-col items-center">
           <div className="w-full">
@@ -102,7 +127,7 @@ const OurStory = () => {
                 </div>
               </div>
 
-              <div className="flex flex-col items-start gap-3 lg:w-3/4">
+              <div className="flex flex-col font-roboto items-start gap-3 lg:w-3/4">
                 <h2 className="text-4xl font-serif font-semibold text-white">
                   Our Story!
                 </h2>

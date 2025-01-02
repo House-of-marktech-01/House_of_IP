@@ -24,32 +24,6 @@ const Copyright = () => {
       transition: { duration: 0.6, ease: "easeOut" },
     },
   };
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    try {
-      const response = await fetch("http://localhost:5000/api/users/signin", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email, password }),
-      });
-
-      if (!response.ok) {
-        const errorData = await response.json();
-        alert(`Error: ${errorData.message}`);
-      } else {
-        const data = await response.json();
-        Cookies.set("jwtToken", data.token);
-        alert("Login successful!");
-        console.log("Response Data:", data);
-      }
-    } catch (error) {
-      console.error("Error during login:", error);
-      alert("An error occurred. Please try again.");
-    }
-  };
   const { getRootProps, getInputProps } = useDropzone({
     accept: ".pdf, .doc, .docx, .txt", // Additional file types if needed
     onDrop: (acceptedFiles) => {
