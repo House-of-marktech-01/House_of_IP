@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 const Card = () => {
   return (
     <div className="w-full bg-slate-900 grid grid-cols-1 lg:grid-cols-2 space-y-3 px-5 pb-10 pt-5">
-      <div className="group max-w-sm mx-auto w-3/4 bg-slate-900 rounded-lg shadow-lg overflow-hidden md:max-w-md lg:max-w-lg relative">
+      <div className="group max-w-sm mx-auto lg:w-3/4 bg-slate-900 rounded-lg shadow-lg overflow-hidden md:max-w-md lg:max-w-lg relative">
         {/* Image Section */}
         <div className="relative">
           <img

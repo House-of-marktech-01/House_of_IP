@@ -169,21 +169,21 @@ const About = () => {
         <div className="bg-slate-900 py-8 px-4 lg:px-16">
           <div className="flex flex-col lg:flex-row items-start justify-between space-y-6 lg:space-y-0">
             {/* Left Div */}
-            <div className="w-full lg:w-2/3 pr-0 lg:pr-6 relative text-white lg:sticky top-16 self-start">
+            <div className="w-full lg:w-2/3 pr-0 lg:pr-6 relative text-white lg:sticky lg:top-16 self-start">
               <h2 className="text-xl lg:text-2xl font-bold mb-4">
                 How We Began
               </h2>
               <p className=" text-sm lg:text-base leading-relaxed">
                 Our journey started with a simple goal: to make intellectual
                 property accessible to everyone. Founded by a group of IP
-                enthusiasts, House of IP was born from a shared
-                passion for innovation and creativity. We realized that while
-                ideas have the power to change the world, they often remain
-                vulnerable without proper protection. This insight drove us to
-                establish a platform that bridges the gap between creators and
-                the safeguards they need. From humble beginnings, we’ve grown
-                into a leading IP service provider trusted by inventors,
-                entrepreneurs, and businesses alike.
+                enthusiasts, House of IP was born from a shared passion for
+                innovation and creativity. We realized that while ideas have the
+                power to change the world, they often remain vulnerable without
+                proper protection. This insight drove us to establish a platform
+                that bridges the gap between creators and the safeguards they
+                need. From humble beginnings, we’ve grown into a leading IP
+                service provider trusted by inventors, entrepreneurs, and
+                businesses alike.
               </p>
               <p className="text-lg  lg:text-2xl pt-4 font-bold text-start mb-6">
                 Our Evolution
@@ -219,11 +219,11 @@ const About = () => {
 
             {/* Right Div */}
             <div className="w-full lg:w-1/2 grid grid-cols-1 sm:grid-cols-1 gap-4 pt-10 mt-10">
-              <div className="p-4 bg-white rounded-lg shadow-md lg:bg-slate-800 pt-5">
-                <h3 className="text-lg font-semibold text-gray-800 mb-2 lg:text-white">
+              <div className="p-4  rounded-lg shadow-md bg-slate-800 pt-5">
+                <h3 className="text-lg font-semibold  mb-2 text-white">
                   Vision
                 </h3>
-                <p className="text-gray-600 text-sm lg:text-white">
+                <p className="text-sm text-white">
                   To create a world where every innovation, creation, and idea
                   is protected and nurtured. We aim to be the catalyst that
                   bridges creativity and commerce, enabling individuals and
@@ -232,11 +232,11 @@ const About = () => {
               </div>
 
               {/* Child Div 3 */}
-              <div className="p-4 bg-white rounded-lg shadow-md lg:bg-slate-800">
-                <h3 className="text-lg font-semibold text-slate-900 mb-2 lg:text-white">
+              <div className="p-4  rounded-lg shadow-md bg-slate-800">
+                <h3 className="text-lg font-semibold  mb-2 text-white">
                   Mission
                 </h3>
-                <ul className="list-disc text-sm text-gray-600 pl-6 mb-4 lg:text-base lg:text-white">
+                <ul className="list-disc text-sm  pl-6 mb-4 lg:text-base text-white">
                   <li>
                     Empower Innovators: Equip creators with the tools and
                     resources to protect their intellectual property.
@@ -253,25 +253,25 @@ const About = () => {
               </div>
 
               {/* Child Div 4 */}
-              <div className="p-4 bg-white rounded-lg shadow-md lg:bg-slate-800 ">
-                <h2 className="text-xl text-slate-900  font-bold text-start mb-6 lg:text-white lg:text-2xl">
+              <div className="p-4  rounded-lg shadow-md bg-slate-800 ">
+                <h2 className="text-xl   font-bold text-start mb-6 text-white lg:text-2xl">
                   Our Work Process
                 </h2>
                 <div className="space-y-6">
-                  <div className="flex items-start text-gray-600 lg:text-white ">
+                  <div className="flex items-start  text-white ">
                     <p>
                       <strong>Consultation:</strong> We start by understanding
                       your unique IP needs through personalized consultations.
                     </p>
                   </div>
-                  <div className="flex items-start text-gray-600 lg:text-white">
+                  <div className="flex items-start  text-white">
                     <p>
                       <strong>Research & Strategy:</strong> Conduct
                       comprehensive prior art searches and landscape analyses to
                       build a robust IP protection strategy.
                     </p>
                   </div>
-                  <div className="flex items-start text-gray-600 lg:text-white">
+                  <div className="flex items-start  text-white">
                     <p>
                       <strong>Filing & Documentation:</strong> Handle all
                       paperwork, filings, and submissions with meticulous
@@ -279,28 +279,28 @@ const About = () => {
                       laws.
                     </p>
                   </div>
-                  <div className="flex items-start text-gray-600 lg:text-white">
+                  <div className="flex items-start  text-white">
                     <p>
                       <strong>Prosecution:</strong> Represent clients during
                       patent/trademark examinations and address objections with
                       sound arguments.
                     </p>
                   </div>
-                  <div className="flex items-start text-gray-600 lg:text-white">
+                  <div className="flex items-start  text-white">
                     <p>
                       <strong>Protection & Litigation:</strong> Provide expert
                       support for opposition, revocation, and IP infringement
                       cases.
                     </p>
                   </div>
-                  <div className="flex items-start text-gray-600 lg:text-white">
+                  <div className="flex items-start  text-white">
                     <p>
                       <strong>Commercialization:</strong> Assist in monetizing
                       your intellectual property through licensing, technology
                       transfer, or strategic partnerships.
                     </p>
                   </div>
-                  <div className="flex items-start text-gray-600 lg:text-white">
+                  <div className="flex items-start  text-white">
                     <p>
                       <strong>Ongoing Support:</strong> Offer continuous IP
                       management, ensuring your rights are maintained and
