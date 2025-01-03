@@ -8,7 +8,7 @@ import { toast } from "react-toastify";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet";
 
-const Trademark = () => {
+const TMHearing = () => {
   const [token, setToken] = useState(Cookies.get("jwtToken"));
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -112,7 +112,7 @@ const Trademark = () => {
       setIsUploading(false);
     }
   };
-  const [selectedOption, setSelectedOption] = useState("Individual & MSME");
+  const [selectedOption, setSelectedOption] = useState("Basic");
 
   const handleChange = (event) => {
     setSelectedOption(event.target.value);
@@ -120,7 +120,7 @@ const Trademark = () => {
   return (
     <>
       <Helmet>
-        <title>House of IP - Trademark</title>
+        <title>House of IP - Trademark Opposition</title>
       </Helmet>
       <div id="trademark" className="w-full" style={{ position: "relative" }}>
         <div className="breadcrumbs text-xs sm:text-sm pl-4 sm:pl-6 bg-slate-900 text-white pt-20 lg:pt-20">
@@ -131,14 +131,14 @@ const Trademark = () => {
             <li>
               <NavLink to="/practice">Practice Areas</NavLink>
             </li>
-            <li>Trademark Registration</li>
+            <li>Trademark Hearing</li>
           </ul>
         </div>
         <div className="lg:flex gap-5  p-3 bg-slate-900 lg:px-20">
           <div className="relative w-7/10 shrink-0 flex justify-center items-center h-full lg:sticky lg:top-20">
             <div className="sticky">
               <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVKc6eE_WPmaSRuSzcabfmXNHoIYn-GoGNAA&s"
+                src="https://compliancecalendar.s3.ap-south-1.amazonaws.com/website_pages_assets/banners/241018104243462750-Trademark-hearing.png"
                 className="rounded-lg w-80"
                 alt="Trademark Rectification"
               />
@@ -148,14 +148,12 @@ const Trademark = () => {
           <div className="flex flex-col lg:w-2/3">
             <div className="my-auto w-full pt-10 px-5 sm:w-full">
               <h2 className="text-base font-black mb-2 lg:mb-4 text-white">
-                Trademark Registration
+                Trademark Hearing
               </h2>
 
               <p className="prod_description text-sm text-white mt-2">
-                Drafting and filing of rectification for applications marked
-                Formalities Check Fail by Trademark Examiner. Exclusive pricing
-                for trademark applications filed by House of IP. Inclusive of
-                government fee and service tax.
+                Trademark hearing appearance by an experienced attorney before
+                the Trademark Register.
               </p>
               <div className="container mx-auto p-4">
                 {/* Dropdown toggler */}
@@ -165,42 +163,34 @@ const Trademark = () => {
                     value={selectedOption}
                     onChange={handleChange}
                   >
-                    <option value="Individual & MSME">Individual & MSME</option>
-                    <option value="Corporates & Foreigners">
-                      Corporates & Foreigners
-                    </option>
+                    <option value="Basic">Basic </option>
+                    <option value="Standard">Standard</option>
                   </select>
                 </div>
 
                 {/* Grid layout */}
                 <div className="grid grid-cols-1 gap-4">
                   {/* Patent Search Card */}
-                  {selectedOption === "Individual & MSME" && (
+                  {selectedOption === "Basic" && (
                     <div className="border rounded-md p-4 bg-slate-900 text-white">
-                      <h2 className="font-semibold text-lg mb-2">
-                        Individual & MSME
-                      </h2>
+                      <h2 className="font-semibold text-lg mb-2">Basic</h2>
                       <ul className="list-disc list-inside space-y-1">
-                        <li>Government Fee </li>
-                        <li>Trademark Filing </li>
-                        <li>1 Trademark Class </li>
-                        <li>Individuals & MSMEs </li>
+                        <li>Attorney Apperance </li>
+                        <li>ATTENDING Hearing </li>
+                        <li>Filing On IPINDIA </li>
                       </ul>
                     </div>
                   )}
 
-                  {/* Regular Card */}
-                  {selectedOption === "Corporates & Foreigners" && (
-                    <div className="border rounded-md p-4 text-white bg-slate-900">
-                      <h2 className="font-semibold text-lg mb-2">
-                        Corporates & Foreigners
-                      </h2>
+                  {/* Provisional Filing Card */}
+                  {selectedOption === "Standard" && (
+                    <div className="border rounded-md p-4 text-white bg-slate-900 ">
+                      <h2 className="font-semibold text-lg mb-2">Standard</h2>
                       <ul className="list-disc list-inside space-y-1">
-                        <li>Government Fee </li>
-                        <li>Trademark Filing </li>
-                        <li>1 Trademark Class </li>
-                        <li>Full protection</li>
-                        <li>Non-MSMEs </li>
+                        <li>Attorney Apperance </li>
+                        <li>ATTENDING Hearing </li>
+                        <li>Filing On IPINDIA </li>
+                        <li>Attorney Change </li>
                       </ul>
                     </div>
                   )}
@@ -208,8 +198,8 @@ const Trademark = () => {
                 <div>
                   <RWebShare
                     data={{
-                      url: "https://house-of-ip.vercel.app/trademark",
-                      title: "Trademark",
+                      url: "https://house-of-ip.vercel.app//trademarkopposition",
+                      title: "Trademark Opposition",
                     }}
                     onClick={() => toast.success("shared successfully!")}
                   >
@@ -264,17 +254,17 @@ const Trademark = () => {
           </div>
         </div>
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-5 p-3 bg-slate-900 lg:px-20">
-          <NavLink to="/trademarkobjection">
+          <NavLink to="/trademark">
             <div className="card card-compact bg-base-100 w-72 shadow-xl">
               <figure>
                 <img
-                  src="https://compliancecalendar.s3.ap-south-1.amazonaws.com/website_pages_assets/banners/241018104121562997-Trademark-Objection.png"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVKc6eE_WPmaSRuSzcabfmXNHoIYn-GoGNAA&s"
                   alt="Patent"
                   className="h-44 w-full"
                 />
               </figure>
               <div className="card-body bg-slate-800 rounded-b-xl text-white">
-                <h2 className="card-title">Trademark Objection</h2>
+                <h2 className="card-title">Trademark Registration</h2>
               </div>
             </div>
           </NavLink>
@@ -292,17 +282,17 @@ const Trademark = () => {
               </div>
             </div>
           </NavLink>
-          <NavLink to="/trademarkhearing">
+          <NavLink to="/trademarkobjection">
             <div className="card card-compact bg-base-100 w-72 shadow-xl">
               <figure>
                 <img
-                  src="https://compliancecalendar.s3.ap-south-1.amazonaws.com/website_pages_assets/banners/241018104243462750-Trademark-hearing.png"
+                  src="https://compliancecalendar.s3.ap-south-1.amazonaws.com/website_pages_assets/banners/241018104121562997-Trademark-Objection.png"
                   alt="Patent"
                   className="h-44 w-full"
                 />
               </figure>
               <div className="card-body bg-slate-800 rounded-b-xl text-white">
-                <h2 className="card-title">Trademark Hearing</h2>
+                <h2 className="card-title">Trademark Objection</h2>
               </div>
             </div>
           </NavLink>
@@ -402,39 +392,12 @@ const Trademark = () => {
             viewport={{ once: true, amount: 0.2 }}
             variants={fadeInUp}
           >
-            Trademark
+            Trademark Hearing
           </motion.h1>
           {[
-            `Trademark agents offers
-        more than just protection. We deliver comprehensive business value
-        by integrating industry insights, brand strategy, and global
-        trademark registration services. Our approach begins with a deep
-        understanding of your brand’s goals and conducting extensive
-        trademark availability searches to ensure success.`,
-            `We provide clear guidance on the feasibility of trademark
-        registration across multiple regions while offering strategic advice
-        to avoid potential conflicts. Our expertise also extends to securing
-        domain names, hashtags, taglines, and social media handles, ensuring
-        a seamless digital presence that aligns with your brand’s identity.`,
-            `When it comes to filing, our in-depth knowledge of trademark
-        classifications ensures optimal protection. Our experience in
-        representing clients in disputes such as oppositions, cancellations,
-        and rectifications allows us to defend your trademarks effectively
-        with evidence-based arguments and expert responses to examination
-        queries.`,
-            `For trademark enforcement, we monitor both physical and online
-        markets to detect potential infringement. We act swiftly by issuing
-        cease-and-desist and take-down notices, and in cases where
-        violations persist, we collaborate with authorities to confiscate
-        counterfeit or infringing products.`,
-            `Our success is driven by detailed documentation, well-constructed
-        responses, and a commitment to resolving disputes amicably. This
-        meticulous approach contributes to high approval rates for trademark
-        applications. Beyond registration, we manage renewals, recordals,
-        and monitor your brand for unauthorized use. Additionally, we
-        provide guidance on trademark valuation during licensing, IP
-        transfers, and mergers, empowering both startups and multinationals
-        to leverage their trademarks effectively.`,
+            `A Trademark Hearing in India is an administrative proceeding conducted by the Registrar of Trademarks to resolve disputes between two parties regarding the registration, renewal, or infringement of a Trademark. During the trademark hearing process, each party has the opportunity to present their case, which may include testimony from witnesses, legal arguments, and other evidence. The Registrar will then decide based on the evidence presented. The final decision will significantly impact the Trademark in question. When you receive a trademark hearing notice, it's crucial to respond promptly to protect your intellectual rights. It is essential to have experienced legal counsel present to ensure the best possible outcome.`,
+            `Trademark Hearings in India are vital as they provide an opportunity for trademark applicants to defend their applications against objections raised by the Trademarks Registry or third parties. After an examiner assigns the trademark application with a status of 'ready for show cause hearing', then the application needs further review. These hearings enable applicants to provide further evidence and arguments supporting their applications, which can help ensure that they are accepted. They also provide an important forum for resolving disputes over the rights to use trademarks in the country, helping to ensure that trademark owners are adequately protected. Failing to address a trademark hearing notice can result in the loss of your trademark rights.`,
+            `The concerned director may postpone a trademark hearing to allow for an appearance, or it may be stopped or postponed unilaterally by filing a TM-M application at least three days prior to the hearing period. If an applicant fails to appear for a scheduled trademark hearing often referred to as being 'ready for show cause hearing', the concerned administrator may postpone it up to three times before rejecting their application.`,
           ].map((text, index) => (
             <motion.p
               key={index}
@@ -455,56 +418,56 @@ const Trademark = () => {
             {/* Applicant's Name */}
             <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
               <h1 className="text-start text-xl  pb-4 cursor-pointer">
-                Applicant's Name
+                Power of Attorney
               </h1>
-              <p className="pb-8  text-sm">
-                The name of the individual, company, or entity applying for the
-                trademark registration.
-              </p>
             </div>
 
             {/* Business Type */}
             <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
               <h1 className="text-start text-xl  pb-4 cursor-pointer">
-                Business Type
+                Authorisation Letter
               </h1>
-              <p className="pb-8  text-sm">
-                Specify the type of business entity, such as sole
-                proprietorship, partnership, private limited company, etc.
-              </p>
             </div>
 
             {/* Business Objectives */}
             <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
               <h1 className="text-start text-xl  pb-4 cursor-pointer">
-                Business Objectives
+                Proof of Usage
               </h1>
-              <p className="pb-8  text-sm">
-                Provide a brief description of your business objectives or
-                activities.
-              </p>
             </div>
 
             {/* Brand/Logo/Slogan Name */}
             <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
               <h1 className="text-start text-xl  pb-4 cursor-pointer">
-                Brand/Logo/Slogan Name
+                Process
               </h1>
-              <p className="pb-8  text-sm">
-                Clearly mention the name, logo, or slogan that you intend to
-                trademark.
-              </p>
             </div>
 
             {/* Registration Address */}
             <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
               <h1 className="text-start text-xl  pb-4 cursor-pointer">
-                Registration Address
+                Examination Report Issuance
               </h1>
-              <p className="pb-8  text-sm">
-                Furnish the official address of the entity applying for the
-                trademark.
-              </p>
+            </div>
+            <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
+              <h1 className="text-start text-xl  pb-4 cursor-pointer">
+                Hearing Request
+              </h1>
+            </div>
+            <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
+              <h1 className="text-start text-xl  pb-4 cursor-pointer">
+                Evidence Filing
+              </h1>
+            </div>
+            <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
+              <h1 className="text-start text-xl  pb-4 cursor-pointer">
+                Hearing
+              </h1>
+            </div>
+            <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
+              <h1 className="text-start text-xl  pb-4 cursor-pointer">
+                Decision
+              </h1>
             </div>
           </div>
 
@@ -542,7 +505,7 @@ const Trademark = () => {
         </div>
 
         <h1 className="text-center text-3xl text-white lg:font-semibold pb-4 bg-slate-900">
-          Trademark FAQ's
+          Trademark Objection FAQ's
         </h1>
         <div className="space-y-4 px-2 pt-8 bg-slate-900 lg:px-10">
           {/* FAQ Section */}
@@ -559,7 +522,7 @@ const Trademark = () => {
                 <details className="group overflow-hidden ">
                   <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-800 rounded-t-lg rounded-b-sm transition">
                     <span className="font-medium text-white">
-                      Why Choose House of IP for Trademark Registration?
+                      What is trademark hearing ?
                     </span>
                     <span className="transition-transform group-open:rotate-180">
                       &#9660;
@@ -567,23 +530,12 @@ const Trademark = () => {
                   </summary>
                   <div className="transition-all duration-300 bg-slate-800 text-white pb-6 rounded-b-xl ease-in-out overflow-hidden max-h-0 group-open:max-h-96">
                     <p className="mt-2 px-4 text-sm">
-                      At House of IP, we go beyond protection by offering a
-                      full-service solution that includes:
+                      A trademark hearing is a formal meeting between the
+                      trademark applicant and the trademark Examiner from the
+                      Trademark Office, in which the Examiner reviews the
+                      trademark application to determine whether it meets the
+                      requirements for registration.
                     </p>
-                    <ul className="mt-2 px-4 list-disc list-inside  text-sm">
-                      <li>
-                        Industry research and strategic brand development to
-                        strengthen your trademark.
-                      </li>
-                      <li>
-                        Alignment and registration capabilities across national
-                        and international territories.
-                      </li>
-                      <li>
-                        Expert advice on domain names, hashtags, and social
-                        media handles for cohesive digital branding.
-                      </li>
-                    </ul>
                   </div>
                 </details>
 
@@ -592,7 +544,7 @@ const Trademark = () => {
                 <details className="group overflow-hidden">
                   <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-800 rounded-t-lg rounded-b-sm transition">
                     <span className="font-medium text-white">
-                      How Do We Ensure Successful Trademark Registration?
+                      Why to attend a trademark hearing?
                     </span>
                     <span className="transition-transform group-open:rotate-180">
                       &#9660;
@@ -600,12 +552,10 @@ const Trademark = () => {
                   </summary>
                   <div className="transition-all duration-300 ease-in-out overflow-hidden max-h-96 rounded-b-xl bg-slate-800 pb-6 group-open:max-h-96 px-12 text-justify text-black font-montserrat font-thin overflow-y-auto">
                     <p className="mt-2 px-4 text-white text-sm">
-                      We begin by understanding your brand’s objectives,
-                      followed by conducting comprehensive availability searches
-                      to identify potential conflicts and evaluate registration
-                      feasibility. Our thorough knowledge of trademark classes
-                      enables strategic protection, and we have a proven track
-                      record in oppositions, cancellations, and rectifications.
+                      Attending a trademark hearing is important because it
+                      allows the applicant to provide additional information to
+                      the Examiner, which may help address any concerns the
+                      Examiner may have.
                     </p>
                   </div>
                 </details>
@@ -614,7 +564,7 @@ const Trademark = () => {
                 <details className="group overflow-hidden">
                   <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-800 rounded-t-lg rounded-b-sm transition">
                     <span className="font-medium text-white">
-                      What Are Our Success Rates for Trademark Approvals?
+                      Who should attend a trademark hearing ?
                     </span>
                     <span className="transition-transform group-open:rotate-180">
                       &#9660;
@@ -622,10 +572,10 @@ const Trademark = () => {
                   </summary>
                   <div className="transition-all duration-300 ease-in-out overflow-hidden rounded-b-xl bg-slate-800 pb-6 max-h-0 group-open:max-h-96">
                     <p className="mt-2 px-4 text-white text-sm">
-                      With a meticulous process that includes well-prepared
-                      applications, comprehensive examination responses, and
-                      evidence-backed arguments, we consistently achieve high
-                      approval rates for our clients.
+                      The applicant should attend the trademark hearing. If the
+                      applicant cannot participate in the hearing, they may
+                      designate an authorized representative, such as an
+                      attorney, to attend the hearing on their behalf.
                     </p>
                   </div>
                 </details>
@@ -634,7 +584,7 @@ const Trademark = () => {
                 <details className="group overflow-hidden pb-10">
                   <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-800 rounded-t-lg rounded-b-sm transition">
                     <span className="font-medium text-white">
-                      Support Beyond Registration
+                      What formalities occur post hearing ?
                     </span>
                     <span className="transition-transform group-open:rotate-180">
                       &#9660;
@@ -642,129 +592,15 @@ const Trademark = () => {
                   </summary>
                   <div className="transition-all duration-300 ease-in-out overflow-hidden bg-slate-800 rounded-b-xl pb-6 max-h-0 group-open:max-h-96 text-sm">
                     <p className="mt-2 px-4 text-white">
-                      Our 360-degree service doesn’t stop at registration. We
-                      also manage renewals, recordals, and continuous monitoring
-                      to safeguard your trademark. Additionally, we offer:
+                      After the hearing, the Examiner will make a determination
+                      as to whether the trademark application meets the
+                      requirements for registration. A Certificate of
+                      Registration will be issued if the Examiner decides to
+                      register the trademark.
                     </p>
-                    <ul className="mt-2 px-4 list-disc list-inside text-white">
-                      <li>
-                        Trademark valuation guidance for licensing agreements,
-                        IP transfers, or mergers.
-                      </li>
-                      <li>
-                        Strategic advice to help startups and established
-                        businesses maximize the potential of their trademarks,
-                        ensuring alignment with evolving brand objectives.
-                      </li>
-                    </ul>
                   </div>
                 </details>
               </div>
-            </div>
-          </div>
-
-          <div className="lg:flex flex-row lg:px-10">
-            <div className="px-2 text-justify text-white lg:w-3/4">
-              <h1 className="text-xl text-center text-white  font-montserrat font-semibold lg:text-2xl">
-                Trademark Filing and Protection
-              </h1>
-              <p className=" pt-5 text-sm">
-                Your brand represents your reputation and the trust of your
-                customers. Here’s a streamlined process for registering a
-                trademark in India:
-              </p>
-              <h3 className="font-bold pt-3">
-                1. Trademark Search & Selection
-              </h3>
-              <p className=" pt-2 text-sm">
-                A unique and registrable trademark is the cornerstone of a solid
-                brand strategy. We conduct thorough searches to ensure your
-                chosen mark is not already in use, avoiding potential conflicts
-                for a smoother registration process.
-              </p>
-              <h3 className="font-bold  pt-3">
-                2.Application Preparation & Filing
-              </h3>
-              <p className=" pt-2 text-sm">
-                Once a suitable trademark is identified, we draft a detailed
-                application for the Indian Trademark registry, defining the
-                class of goods or services your mark will cover. We also guide
-                you in selecting the most appropriate representation—be it a
-                logo, wordmark, or a combination of both.
-              </p>
-              <h3 className="font-bold  pt-3">3. Examination & Response</h3>
-              <p className=" pt-2 text-sm">
-                The IPO will review your application, and we handle all
-                communications on your behalf. Should any objections arise, we
-                provide clear, ly sound responses to support your trademark’s
-                registrability, backed by additional documentation and
-                clarifications as needed.
-              </p>
-              <h3 className="font-bold  pt-3">4. Registration & Publication</h3>
-              <p className=" pt-2 text-sm">
-                After a successful examination, your trademark will be published
-                in the Trademark Journal, allowing third parties to raise any
-                objections within a specified period. If no objections are
-                raised, your trademark will proceed to official registration.
-              </p>
-              <h3 className="font-bold  pt-3">
-                5. Post-Registration Management
-              </h3>
-              <p className=" pt-2 text-sm">
-                Congratulations! Your brand identity is now ly protected. House
-                of IP will continue to support you by advising on renewal
-                strategies, managing infringement disputes, and maintaining your
-                trademark throughout its validity period.
-              </p>
-            </div>
-
-            {/* Card Section */}
-            <div className="flex flex-col justify-center space-y-4 items-center space-x-3 lg:flex-col">
-              {/* Card 1 */}
-              <NavLink to="/patent">
-                <div className="card card-compact bg-base-100 w-72 shadow-xl">
-                  <figure>
-                    <img
-                      src="https://thelawcodes.com/wp-content/uploads/2023/10/What-is-Patent-Basics-Overview.webp"
-                      alt="Patent"
-                      className="h-44 w-full"
-                    />
-                  </figure>
-                  <div className="card-body bg-slate-800 text-white">
-                    <h2 className="card-title">Patent</h2>
-                  </div>
-                </div>
-              </NavLink>
-
-              {/* Card 2 */}
-              <NavLink to="/copyright">
-                <div className="card card-compact bg-base-100 w-72 shadow-xl">
-                  <figure>
-                    <img
-                      src="https://blog.ipleaders.in/wp-content/uploads/2021/06/1_copyright-designs-and-patents-act-1988-1.jpg"
-                      alt="Copyright"
-                      className="h-44 w-full"
-                    />
-                  </figure>
-                  <div className="card-body bg-slate-800 text-white">
-                    <h2 className="card-title">Copyright</h2>
-                  </div>
-                </div>
-              </NavLink>
-              <NavLink to="/design">
-                <div className="card card-compact bg-base-100 w-72 shadow-xl">
-                  <figure>
-                    <img
-                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEaE-xi5291DEKz_fKdeE3LxPyxsovjgdojg&s"
-                      alt="Design"
-                      className="h-44 w-full"
-                    />
-                  </figure>
-                  <div className="card-body bg-slate-800 text-white">
-                    <h2 className="card-title">Design</h2>
-                  </div>
-                </div>
-              </NavLink>
             </div>
           </div>
         </div>
@@ -773,4 +609,4 @@ const Trademark = () => {
   );
 };
 
-export default Trademark;
+export default TMHearing;

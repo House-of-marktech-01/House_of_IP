@@ -8,7 +8,7 @@ import { toast } from "react-toastify";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet";
 
-const Design = () => {
+const DRObjection = () => {
   const [token, setToken] = useState(Cookies.get("jwtToken"));
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -112,7 +112,7 @@ const Design = () => {
       setIsUploading(false);
     }
   };
-  const [selectedOption, setSelectedOption] = useState("MSME");
+  const [selectedOption, setSelectedOption] = useState("Basic ");
 
   const handleChange = (event) => {
     setSelectedOption(event.target.value);
@@ -139,7 +139,7 @@ const Design = () => {
           <div className="relative w-7/10 shrink-0 flex justify-center items-center h-full lg:sticky lg:top-20">
             <div className="sticky">
               <img
-                src="https://www.bdslegalserv.com/assets/img/design_registration.jpg"
+                src="https://img.indiafilings.com/catalog/Design-Objection.jpg"
                 className="rounded-lg w-56"
                 alt="Trademark Rectification"
               />
@@ -167,39 +167,20 @@ const Design = () => {
                     value={selectedOption}
                     onChange={handleChange}
                   >
-                    <option value="MSME">MSME</option>
-                    <option value="Regular">Regular</option>
+                    <option value="Basic ">Basic </option>
                   </select>
                 </div>
 
                 {/* Grid layout */}
                 <div className="grid grid-cols-1 gap-4">
                   {/* Patent Search Card */}
-                  {selectedOption === "MSME" && (
+                  {selectedOption === "Basic " && (
                     <div className="border rounded-md p-4 bg-slate-900">
-                      <h2 className="font-semibold text-lg mb-2">MSME</h2>
+                      <h2 className="font-semibold text-lg mb-2">Basic </h2>
                       <ul className="list-disc list-inside space-y-1">
-                        <li>One Article </li>
                         <li>Attorney Prepared </li>
-                        <li>Representation sheets </li>
-                        <li>Power of Attorney format </li>
+                        <li>Reply to Design Objection</li>
                         <li>Filings on IPINDIA </li>
-                        <li>Individuals & MSMEs </li>
-                      </ul>
-                    </div>
-                  )}
-
-                  {/* Provisional Filing Card */}
-                  {selectedOption === "Regular" && (
-                    <div className="border rounded-md p-4 bg-slate-900">
-                      <h2 className="font-semibold text-lg mb-2">Regular</h2>
-                      <ul className="list-disc list-inside space-y-1">
-                        <li>One Article </li>
-                        <li>Attorney Prepared </li>
-                        <li>Representation sheets </li>
-                        <li>Power of Attorney format </li>
-                        <li>Filings on IPINDIA </li>
-                        <li>Non-MSMEs </li>
                       </ul>
                     </div>
                   )}
@@ -207,10 +188,11 @@ const Design = () => {
                 <div>
                   <RWebShare
                     data={{
-                      url: "https://house-of-ip.vercel.app//trademark",
+                      url: "https://house-of-ip.vercel.app//designobjection",
                       title: "Trademark",
                     }}
                     onClick={() => toast.success("shared successfully!")}
+                    trademark
                   >
                     <button className="text-blue-500 hover:underline">
                       Share with friends
@@ -269,13 +251,13 @@ const Design = () => {
             <div className="card card-compact bg-base-100 w-72 shadow-xl">
               <figure>
                 <img
-                  src="https://img.indiafilings.com/catalog/Design-Objection.jpg"
+                  src="https://www.bdslegalserv.com/assets/img/design_registration.jpg"
                   alt="Patent"
                   className="h-44 w-full"
                 />
               </figure>
               <div className="card-body bg-slate-800 rounded-b-xl text-white">
-                <h2 className="card-title">Design Objection</h2>
+                <h2 className="card-title">Design Registration</h2>
               </div>
             </div>
           </NavLink>
@@ -302,26 +284,16 @@ const Design = () => {
             viewport={{ once: true, amount: 0.2 }}
             variants={fadeInUp}
           >
-            Design Registration
+            Design Objection
           </motion.h1>
+
           {[
-            `At House of IP, we offer comprehensive design registration services
-        to help protect the visual aspects of your product. A registered
-        design under the Designs Act, 2000 safeguards the unique shape,
-        pattern, configuration, or ornamentation of your product, ensuring
-        that others cannot replicate its appearance without permission.
-        Whether you are a designer, manufacturer, or business owner,
-        securing your product’s design is a crucial step in protecting your
-        creative efforts.`,
-            `Our team has extensive experience across a variety of industries,
-        assisting clients in registering their designs and enforcing their
-        rights in case of infringement. We make the process seamless, from
-        filing to protection, ensuring that your design rights are fully
-        secured.`,
+            `During the Design registration process in India, facing a design objection is a critical stage where the examiner assesses your submitted design against specific criteria to ensure its originality and conformity to the Designs Act. If any issues arise, such as similarities to existing designs or non-compliance with the legal definitions of a design, these objections must be addressed promptly and effectively. Resolving these objections is essential for successfully registering your design, ensuring it is protected under intellectual property laws.`,
+            `With the support of House of IPexperts, navigating through and resolving design objections becomes more manageable, facilitating a smoother path towards securing your Design Registration.`,
           ].map((text, index) => (
             <motion.p
               key={index}
-              className="pb-8  text-sm"
+              className="pb-8 text-sm"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
@@ -330,95 +302,108 @@ const Design = () => {
               {text}
             </motion.p>
           ))}
-        </div>
-        <div className="bg-slate-900 text-white px-5 text-justify flex lg:px-20">
-          <div className="w-full lg:w-3/4">
-            <h1 className="text-start text-2xl  pb-4">Documents Required</h1>
 
-            {/* Applicant's Details */}
-            <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
-              <h1 className="text-start text-xl  pb-4">Applicant's Details</h1>
-              <p className="pb-8  text-sm">
-                Name and complete address of the applicant.
-              </p>
-            </div>
+          <motion.h2
+            className="text-lg font-medium pb-5"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={fadeInUp}
+          >
+            Grounds for Design Application Objections
+          </motion.h2>
 
-            {/* Applicant's Nature/Status */}
-            <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
-              <h1 className="text-start text-xl pb-4">
-                Applicant's Nature/Status
-              </h1>
-              <p className="pb-8  text-sm">
-                Clear indication of the status of the applicant, specifying
-                whether the applicant is an individual, a company, etc.
-              </p>
-            </div>
+          <motion.p
+            className="pb-8 text-sm"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={fadeInUp}
+          >
+            Objections to a design application by the examination officer can
+            arise from various grounds, primarily focusing on ensuring the
+            design's uniqueness and adherence to procedural requirements. Some
+            common reasons for objections include:
+          </motion.p>
 
-            {/* Startup Certificate (if applicable) */}
-            <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
-              <h1 className="text-start text-xl pb-4">
-                Startup Certificate (if applicable)
-              </h1>
-              <p className="pb-8  text-sm">
-                Startups must provide a registration certificate.
-              </p>
-            </div>
+          <motion.ul
+            className="pl-5 pb-8 text-sm list-disc"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={fadeInUp}
+          >
+            <li>
+              <strong>Lack of Novelty:</strong> The design may be deemed not new
+              or original, meaning it may closely resemble existing designs
+              already in the public domain, thus lacking the uniqueness required
+              for protection.
+            </li>
+            <li>
+              <strong>Improper Documentation:</strong> The submitted documents
+              and representations might not meet the standards or formats
+              required by the Patent Office, leading to objections regarding
+              their acceptability.
+            </li>
+            <li>
+              <strong>Unclear Visuals:</strong> The photos or sketches attached
+              to the application might be unclear, improperly presented, or fail
+              to adequately represent the design, making it difficult for the
+              examination officer to assess its distinctiveness and originality.
+            </li>
+            <li>
+              <strong>Non-Submission of Power of Attorney:</strong> If the
+              application is filed by an agent or a representative on behalf of
+              the designer, the failure to submit a Power of Attorney can lead
+              to objections, as this document authorises the representative to
+              act on behalf of the applicant.
+            </li>
+          </motion.ul>
 
-            {/* Description of the Article */}
-            <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
-              <h1 className="text-start text-xl pb-4">
-                Description of the Article
-              </h1>
-              <p className="pb-8 text-sm">
-                A detailed description of the 'article' to which the design
-                pertains, accompanied by its classification according to the
-                prescribed categories.
-              </p>
-            </div>
+          <motion.h2
+            className="text-lg font-medium pb-5"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={fadeInUp}
+          >
+            How to File a Reply to Design Objection
+          </motion.h2>
 
-            {/* Visual Representation */}
-            <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
-              <h1 className="text-start text-xl  pb-4">
-                Visual Representation
-              </h1>
-              <p className="pb-8 text-sm">
-                A minimum of four visuals (images or drawings) showing the
-                article from all angles should be included with the application.
-              </p>
-            </div>
-          </div>
-
-          <div className="hidden lg:block lg:w-1/3 px-10 pl-16">
-            <h2 className=" font-medium text-2xl pb-5 bg-slate-900 pl-4 pt-4 rounded-t-xl rounded-b-xl">
-              Related Links
-            </h2>
-            <nav className="space-y-4 sticky top-24 bg-slate-800 pl-4 rounded-xl mt-5 pt-5">
-              <NavLink
-                to="/patent"
-                className="block text-white font-montserrat hover:text-blue-800 hover:underline text-lg font-medium"
-              >
-                Patent
-              </NavLink>
-              <NavLink
-                to="/design"
-                className="block text-white font-montserrat hover:text-blue-800 hover:underline text-lg font-medium"
-              >
-                Design
-              </NavLink>
-              <NavLink
-                to="/copyright"
-                className="block text-white font-montserrat hover:text-blue-800 hover:underline text-lg font-medium"
-              >
-                Copyright
-              </NavLink>
-              <NavLink
-                to="#trademark"
-                className="block text-white pb-5 font-montserrat hover:text-blue-800 hover:underline text-lg font-medium"
-              >
-                Trademark
-              </NavLink>
-            </nav>
-          </div>
+          <motion.ol
+            className="pl-5 pb-8 text-sm list-decimal"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={fadeInUp}
+          >
+            <li>
+              <strong>Review the Objection Notice:</strong> Carefully read
+              through the objection notice issued by the Patent Office, ensuring
+              a clear understanding of the raised concerns.
+            </li>
+            <li>
+              <strong>Assess the Objections:</strong> Evaluate each objection
+              mentioned in the notice, noting specific points that must be
+              addressed in your response.
+            </li>
+            <li>
+              <strong>Gather Supporting Documents:</strong> Collect all relevant
+              documents, evidence, and information that support your response to
+              each objection.
+            </li>
+            <li>
+              <strong>Draft Your Response:</strong> Prepare a detailed and
+              comprehensive reply addressing each objection individually.
+              Clearly articulate how you intend to rectify or counter each
+              objection, providing explanations and evidence where necessary.
+            </li>
+            <li>
+              <strong>Submit Your Reply:</strong> Submit your response to the
+              Patent Office within the specified timeframe mentioned in the
+              objection notice.
+            </li>
+          </motion.ol>
         </div>
 
         <h1 className="text-center text-3xl text-white pb-4 bg-slate-900">
@@ -439,7 +424,7 @@ const Design = () => {
                 <details className="group overflow-hidden ">
                   <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-800 rounded-t-lg transition">
                     <span className="font-medium text-white">
-                      What types of designs can be registered with House of IP ?
+                      What is design Objection?
                     </span>
                     <span className="transition-transform group-open:rotate-180">
                       &#9660;
@@ -447,27 +432,10 @@ const Design = () => {
                   </summary>
                   <div className="transition-all duration-300 ease-in-out overflow-hidden pb-5 max-h-0 group-open:max-h-96 bg-gray-800 rounded-b-xl">
                     <p className="mt-2 px-4 text-white text-sm">
-                      We assist with registering a wide range of product
-                      designs, including but not limited to:
-                    </p>
-                    <ul className="mt-2 px-4 list-disc list-inside text-white text-sm">
-                      <li>
-                        <strong>Product shapes and configurations</strong>{" "}
-                        (e.g., furniture, gadgets)
-                      </li>
-                      <li>
-                        <strong>Surface patterns</strong> (e.g., textiles,
-                        wallpaper)
-                      </li>
-                      <li>
-                        <strong>Ornamentation</strong> (e.g., decorative
-                        elements on products)
-                      </li>
-                    </ul>
-                    <p className="mt-2 px-4 text-white text-sm">
-                      Our expertise spans multiple industries, allowing us to
-                      provide tailored solutions for your specific design
-                      protection needs.
+                      Design objection refers to concerns or issues raised
+                      during the review process of a design application, related
+                      to aspects like originality, documentation clarity, or
+                      compliance with standards.
                     </p>
                   </div>
                 </details>
@@ -477,8 +445,7 @@ const Design = () => {
                 <details className="group overflow-hidden">
                   <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-800 rounded-t-lg transition">
                     <span className="font-medium text-white">
-                      What is the process of registering a design with House of
-                      IP?
+                      What is the design registration process at House of IP?
                     </span>
                     <span className="transition-transform group-open:rotate-180">
                       &#9660;
@@ -486,37 +453,10 @@ const Design = () => {
                   </summary>
                   <div className="transition-all duration-300 ease-in-out overflow-hidden max-h-96 pb-5 bg-gray-800 rounded-b-xl group-open:max-h-96 px-12 text-justify text-black font-base overflow-y-auto">
                     <p className="mt-2 px-4 text-white text-sm">
-                      Our design registration process is straightforward and
-                      includes:
-                    </p>
-                    <p className="mt-2 px-4 text-white text-sm">
-                      <strong>1. Consultation and Design Assessment:</strong> We
-                      start by understanding your product and its design
-                      elements to ensure eligibility under the Designs Act,
-                      2000.
-                    </p>
-                    <p className="mt-2 px-4 text-white text-sm">
-                      <strong>2. Design Search:</strong> We conduct a search to
-                      ensure that your design is unique and not already
-                      registered by another entity.
-                    </p>
-                    <p className="mt-2 px-4 text-white text-sm">
-                      <strong>3. Application Drafting:</strong> Our team
-                      prepares and files the design application with the Indian
-                      Patent Office, ensuring that all necessary documents are
-                      in order.
-                    </p>
-                    <p className="mt-2 px-4 text-white text-sm">
-                      <strong>4. Filing and Registration:</strong> We manage the
-                      entire filing process, from submitting your application to
-                      addressing any queries raised by the Design Office until
-                      your design is successfully registered.
-                    </p>
-                    <p className="mt-2 px-4 text-white text-sm">
-                      <strong>5. Post–Registration Support:</strong> Once your
-                      design is registered, we provide support to help you
-                      enforce your rights in case of infringement and assist
-                      with renewals to keep your design protected.
+                      The design registration process in India involves
+                      meticulous examination to meet standards. Approved designs
+                      receive confirmation, a registration certificate, and
+                      publication in the Patent Office's journal.
                     </p>
                   </div>
                 </details>
@@ -525,8 +465,7 @@ const Design = () => {
                 <details className="group overflow-hidden">
                   <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-800 rounded-t-lg transition">
                     <span className="font-medium text-white">
-                      Prices & FeesWhat happens if someone copies my registered
-                      design?
+                      When to reply to design Objection?
                     </span>
                     <span className="transition-transform group-open:rotate-180">
                       &#9660;
@@ -534,11 +473,10 @@ const Design = () => {
                   </summary>
                   <div className="transition-all duration-300 ease-in-out overflow-hidden pb-5 bg-gray-800 rounded-b-xl max-h-0 group-open:max-h-96">
                     <p className="mt-2 px-4 text-white text-sm">
-                      At House of IP, we help you take swift action if your
-                      registered design is copied. Our team assists in filing
-                      design infringement cases, preparing documents, and
-                      representing you in court to ensure your design rights are
-                      upheld.
+                      Applicants have a six-month window from receiving the
+                      objection notice, extendable by three months upon request
+                      submission, to address concerns. Failure to do so may
+                      result in application abandonment.
                     </p>
                   </div>
                 </details>
@@ -546,7 +484,7 @@ const Design = () => {
                 <details className="group overflow-hidden">
                   <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-800 rounded-t-lg transition">
                     <span className="font-medium text-white">
-                      How can I monetize my registered design?
+                      How to file a reply to design objection?
                     </span>
                     <span className="transition-transform group-open:rotate-180">
                       &#9660;
@@ -554,21 +492,10 @@ const Design = () => {
                   </summary>
                   <div className="transition-all duration-300 ease-in-out overflow-hidden bg-gray-800 pb-5 rounded-b-xl max-h-0 group-open:max-h-96 text-sm">
                     <p className="mt-2 px-4 text-white">
-                      Registering your design not only protects it but also
-                      allows you to explore commercialization opportunities. Our
-                      experts at House of IP help you:
+                      Steps include reviewing the objection notice, assessing
+                      objections, gathering supporting documents, drafting a
+                      response, and timely submission to the Patent Office.
                     </p>
-                    <ul className="mt-2 px-4 list-disc list-inside text-white">
-                      <li>
-                        License your design to other manufacturers or
-                        businesses.
-                      </li>
-                      <li>Negotiate design rights transfer agreements.</li>
-                      <li>
-                        Maximize the commercial value of your design through
-                        strategic partnerships.
-                      </li>
-                    </ul>
                   </div>
                 </details>
 
@@ -576,8 +503,7 @@ const Design = () => {
                 <details className="group overflow-hidden pb-10">
                   <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-800 rounded-t-lg transition">
                     <span className="font-medium text-white">
-                      How do I know if House of IP is the right firm for design
-                      protection?
+                      What is design according to design act 2001
                     </span>
                     <span className="transition-transform group-open:rotate-180">
                       &#9660;
@@ -585,13 +511,9 @@ const Design = () => {
                   </summary>
                   <div className="transition-all duration-300 ease-in-out overflow-hidden bg-gray-800 pb-5 rounded-b-xl max-h-0 group-open:max-h-96 text-sm">
                     <p className="mt-2 px-4 text-white">
-                      With a proven track record in IP law and extensive
-                      experience in design protection, House of IP is a trusted
-                      partner for securing your product’s design. Our dedicated
-                      team of experts provides personalized guidance through
-                      every step of the design registration process, ensuring
-                      that your creative work is safeguarded and leveraged for
-                      its full potential.
+                      A design encompasses visual aspects like shape, pattern,
+                      or ornamentation applied to any article, excluding
+                      functional aspects and purely mechanical elements.
                     </p>
                   </div>
                 </details>
@@ -602,50 +524,57 @@ const Design = () => {
           <div className="lg:flex flex-row lg:px-10">
             <div className="px-2 text-justify text-white lg:w-3/4">
               <h1 className="text-xl text-center text-white font-montserrat font-semibold lg:text-2xl">
-                Registering a Design in India – A Simplified Process
+                Procedure After Filing a Reply to Design Objection
               </h1>
               <p className="pt-5 text-sm">
-                Securing the visual identity of your product through design
-                registration is a valuable investment. Here’s a simplified
-                breakdown of the process:
+                After submitting a reply to a design objection, the subsequent
+                procedure entails the following steps:
               </p>
-              <h3 className="font-bold pt-3">
-                1. Consultation & Design Search
-              </h3>
+              <h3 className="font-bold pt-3">1. Review of Response</h3>
               <p className="pt-2 text-sm">
-                Before applying, it’s essential to determine if your design
-                qualifies for protection under the Designs Act, 2000. We’ll
-                assess your design and conduct a search to ensure that it hasn’t
-                already been registered by someone else.
+                The Patent Office carefully examines the applicant's response to
+                the objection notice to assess its adequacy in addressing raised
+                concerns.
+              </p>
+              <h3 className="font-bold  pt-3">2.Assessment of Response</h3>
+              <p className=" pt-2 text-sm">
+                Each point of objection is evaluated against the provided
+                response to determine if the concerns have been satisfactorily
+                resolved. The response is scrutinised for clarity, completeness,
+                and compliance with regulatory requirements.
               </p>
               <h3 className="font-bold  pt-3">
-                2.Drafting the Design Application
+                3. Registration and Publication
               </h3>
               <p className=" pt-2 text-sm">
-                Once your design passes the eligibility check, we’ll prepare and
-                file the application with the Indian Patent Office. This
-                includes submitting illustrations and a detailed description of
-                your design.
-              </p>
-              <h3 className="font-bold  pt-3">3. Filing the Application</h3>
-              <p className=" pt-2 text-sm">
-                After drafting, we submit the design application on your behalf,
-                making sure all required documents and fees are in order.
-              </p>
-              <h3 className="font-bold  pt-3">4. Examination & Registration</h3>
-              <p className=" pt-2 text-sm">
-                The Design Office will review your application. If they have any
-                objections, we’ll respond on your behalf, ensuring that your
-                design gets registered smoothly.
+                Once all issues highlighted in the Examination Report are
+                addressed and the Controller is satisfied that the design is
+                indeed new and/or original, they will instruct the registration
+                and subsequent publication of the design details. This includes
+                a representation of the article that best showcases the design.
+                Following acceptance, the Patent Office issues a registration
+                certificate and announces the registration in its journal.
               </p>
               <h3 className="font-bold  pt-3">
-                5. Post–Registration Management
+                4. Hearing and Public Inspection
               </h3>
               <p className=" pt-2 text-sm">
-                Once registered, your design is protected for 10 years, with the
-                option to renew for an additional 5 years. We assist with
-                managing renewals and handling any infringement issues that may
-                arise.
+                If the objections are not adequately resolved, the applicant is
+                granted a personal hearing to discuss the application further.
+                Post-hearing, the Controller decides on whether the application
+                should proceed. Registered designs become available for public
+                inspection after publication in the official gazette, which can
+                be accessed upon payment of a specified fee and submission of a
+                formal request.
+              </p>
+              <h3 className="font-bold  pt-3">5. Term of Protection</h3>
+              <p className=" pt-2 text-sm">
+                In India, design registration is protected for ten years from
+                the design's registration date. This initial term can be
+                extended for an additional five years, subject to the submission
+                of an extension application along with the requisite fee,
+                ensuring continued protection of the design under Indian
+                intellectual property laws.
               </p>
             </div>
 
@@ -704,4 +633,4 @@ const Design = () => {
   );
 };
 
-export default Design;
+export default DRObjection;

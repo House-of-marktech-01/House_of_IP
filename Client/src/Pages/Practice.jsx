@@ -8,9 +8,9 @@ import { Helmet } from "react-helmet";
 const Practice = () => {
   return (
     <>
-    <Helmet>
-      <title>House of IP - Service</title>
-    </Helmet>
+      <Helmet>
+        <title>House of IP - Service</title>
+      </Helmet>
       <div>
         {/* Breadcrumbs */}
         <div className="breadcrumbs text-sm pl-6 bg-slate-900 text-white pt-20">
@@ -18,7 +18,7 @@ const Practice = () => {
             <li>
               <NavLink to="/">Home</NavLink>
             </li>
-            <li>Practice Areas</li> 
+            <li>Practice Areas</li>
           </ul>
         </div>
       </div>
@@ -30,27 +30,30 @@ const Practice = () => {
       </h1>
       <div></div>
       <p className="bg-slate-900 py-4 pt-10 text-white px-3 text-sm lg:px-24">
-        <span className="text-xl font-bold">House of IP</span>{" "}
-        offers a comprehensive suite of  services across key areas catering
-        to the evolving needs of inventors, creators and businesses. Our core
+        <span className="text-xl font-bold">House of IP</span> offers a
+        comprehensive suite of services across key areas catering to the
+        evolving needs of inventors, creators and businesses. Our core
         specialization lies in Intellectual Property protection, litigation and
         licensing across patents, trademarks, copyrights, designs leveraging
         in-house technical experts
       </p>
       <p className="bg-slate-900 text-white lg:px-24 px-3 text-sm py-4 ">
-        Further, we provide allied corporate and commercial advisory
-        encompassing dispute resolution, regulatory compliance, entity
-        structuring and transactions support. For personal clients, we offer
-        specialized assistance in family disputes, inheritance matters and
-        immigration needs.
+        We simplify the IP registration process, ensuring accuracy and
+        compliance with regulatory standards, whether for trademarks, industrial
+        designs, literary works, or innovative inventions. Our team is dedicated
+        to safeguarding your creations and maximizing their commercial value.
       </p>
       <p className="bg-slate-900 lg:px-24 px-3 text-sm py-4 text-white">
-        Having handled over 2200+ cases, our seasoned lawyers provide litigation
-        assistance across criminal, civil and commercial conflicts. We also
-        cover alternative resolution mechanisms including seamless arbitration
-        and mediation services. With diverse competencies and client-first
-        approach, House of IP strives to deliver  excellence with
-        responsibility.
+        In addition, we provide advisory services for corporate and commercial
+        needs, including regulatory compliance, entity structuring, and
+        transactional support. We also assist personal clients with inheritance
+        matters and immigration needs.
+      </p>
+      <p className="bg-slate-900 lg:px-24 px-3 text-sm py-4 text-white">
+        With a client-first approach and a focus on innovation, House of IP aims
+        to deliver excellence in protecting and enhancing intellectual property
+        rights, empowering creators and businesses to thrive in a competitive
+        landscape.
       </p>
       <Card />
       <div className="flex flex-col lg:flex-row items-center justify-center p-6 bg-slate-900">

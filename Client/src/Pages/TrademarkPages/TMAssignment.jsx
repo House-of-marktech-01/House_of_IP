@@ -8,7 +8,7 @@ import { toast } from "react-toastify";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet";
 
-const Trademark = () => {
+const TMAssignent = () => {
   const [token, setToken] = useState(Cookies.get("jwtToken"));
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -112,7 +112,7 @@ const Trademark = () => {
       setIsUploading(false);
     }
   };
-  const [selectedOption, setSelectedOption] = useState("Individual & MSME");
+  const [selectedOption, setSelectedOption] = useState("Basic");
 
   const handleChange = (event) => {
     setSelectedOption(event.target.value);
@@ -131,14 +131,14 @@ const Trademark = () => {
             <li>
               <NavLink to="/practice">Practice Areas</NavLink>
             </li>
-            <li>Trademark Registration</li>
+            <li>Trademark Assignment</li>
           </ul>
         </div>
         <div className="lg:flex gap-5  p-3 bg-slate-900 lg:px-20">
           <div className="relative w-7/10 shrink-0 flex justify-center items-center h-full lg:sticky lg:top-20">
             <div className="sticky">
               <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVKc6eE_WPmaSRuSzcabfmXNHoIYn-GoGNAA&s"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI1i9d-m1W0AMmxXX6lWL0DcpdGNW1WS7BQw&s"
                 className="rounded-lg w-80"
                 alt="Trademark Rectification"
               />
@@ -148,14 +148,11 @@ const Trademark = () => {
           <div className="flex flex-col lg:w-2/3">
             <div className="my-auto w-full pt-10 px-5 sm:w-full">
               <h2 className="text-base font-black mb-2 lg:mb-4 text-white">
-                Trademark Registration
+                Trademark Assignment
               </h2>
 
               <p className="prod_description text-sm text-white mt-2">
-                Drafting and filing of rectification for applications marked
-                Formalities Check Fail by Trademark Examiner. Exclusive pricing
-                for trademark applications filed by House of IP. Inclusive of
-                government fee and service tax.
+                Transfer of trademark ownership rights to another party.
               </p>
               <div className="container mx-auto p-4">
                 {/* Dropdown toggler */}
@@ -165,42 +162,21 @@ const Trademark = () => {
                     value={selectedOption}
                     onChange={handleChange}
                   >
-                    <option value="Individual & MSME">Individual & MSME</option>
-                    <option value="Corporates & Foreigners">
-                      Corporates & Foreigners
-                    </option>
+                    <option value="Basic">Basic</option>
                   </select>
                 </div>
 
                 {/* Grid layout */}
                 <div className="grid grid-cols-1 gap-4">
                   {/* Patent Search Card */}
-                  {selectedOption === "Individual & MSME" && (
+                  {selectedOption === "Basic" && (
                     <div className="border rounded-md p-4 bg-slate-900 text-white">
-                      <h2 className="font-semibold text-lg mb-2">
-                        Individual & MSME
-                      </h2>
+                      <h2 className="font-semibold text-lg mb-2">Basic</h2>
                       <ul className="list-disc list-inside space-y-1">
-                        <li>Government Fee </li>
-                        <li>Trademark Filing </li>
-                        <li>1 Trademark Class </li>
-                        <li>Individuals & MSMEs </li>
-                      </ul>
-                    </div>
-                  )}
-
-                  {/* Regular Card */}
-                  {selectedOption === "Corporates & Foreigners" && (
-                    <div className="border rounded-md p-4 text-white bg-slate-900">
-                      <h2 className="font-semibold text-lg mb-2">
-                        Corporates & Foreigners
-                      </h2>
-                      <ul className="list-disc list-inside space-y-1">
-                        <li>Government Fee </li>
-                        <li>Trademark Filing </li>
-                        <li>1 Trademark Class </li>
-                        <li>Full protection</li>
-                        <li>Non-MSMEs </li>
+                        <li>Attorney Prepared </li>
+                        <li>Filing on IP India </li>
+                        <li>Assignment Deed </li>
+                        <li>Ownership change </li>
                       </ul>
                     </div>
                   )}
@@ -208,7 +184,7 @@ const Trademark = () => {
                 <div>
                   <RWebShare
                     data={{
-                      url: "https://house-of-ip.vercel.app/trademark",
+                      url: "https://house-of-ip.vercel.app//trademark",
                       title: "Trademark",
                     }}
                     onClick={() => toast.success("shared successfully!")}
@@ -348,17 +324,17 @@ const Trademark = () => {
               </div>
             </div>
           </NavLink>
-          <NavLink to="/trademarkassignment">
+          <NavLink to="/trademark">
             <div className="card card-compact bg-base-100 w-72 shadow-xl">
               <figure>
                 <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI1i9d-m1W0AMmxXX6lWL0DcpdGNW1WS7BQw&s"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVKc6eE_WPmaSRuSzcabfmXNHoIYn-GoGNAA&s"
                   alt="Patent"
                   className="h-44 w-full"
                 />
               </figure>
               <div className="card-body bg-slate-800 rounded-b-xl text-white">
-                <h2 className="card-title">Trademark Assignment</h2>
+                <h2 className="card-title">Trademark Registration</h2>
               </div>
             </div>
           </NavLink>
@@ -402,39 +378,27 @@ const Trademark = () => {
             viewport={{ once: true, amount: 0.2 }}
             variants={fadeInUp}
           >
-            Trademark
+            Trademark Assignment
           </motion.h1>
           {[
-            `Trademark agents offers
-        more than just protection. We deliver comprehensive business value
-        by integrating industry insights, brand strategy, and global
-        trademark registration services. Our approach begins with a deep
-        understanding of your brand’s goals and conducting extensive
-        trademark availability searches to ensure success.`,
-            `We provide clear guidance on the feasibility of trademark
-        registration across multiple regions while offering strategic advice
-        to avoid potential conflicts. Our expertise also extends to securing
-        domain names, hashtags, taglines, and social media handles, ensuring
-        a seamless digital presence that aligns with your brand’s identity.`,
-            `When it comes to filing, our in-depth knowledge of trademark
-        classifications ensures optimal protection. Our experience in
-        representing clients in disputes such as oppositions, cancellations,
-        and rectifications allows us to defend your trademarks effectively
-        with evidence-based arguments and expert responses to examination
-        queries.`,
-            `For trademark enforcement, we monitor both physical and online
-        markets to detect potential infringement. We act swiftly by issuing
-        cease-and-desist and take-down notices, and in cases where
-        violations persist, we collaborate with authorities to confiscate
-        counterfeit or infringing products.`,
-            `Our success is driven by detailed documentation, well-constructed
-        responses, and a commitment to resolving disputes amicably. This
-        meticulous approach contributes to high approval rates for trademark
-        applications. Beyond registration, we manage renewals, recordals,
-        and monitor your brand for unauthorized use. Additionally, we
-        provide guidance on trademark valuation during licensing, IP
-        transfers, and mergers, empowering both startups and multinationals
-        to leverage their trademarks effectively.`,
+            `Trademark Transfer, also known as Trademark Assignment, is a legal procedure encompassing the transfer of trademark rights from one entity to another. It is a pivotal component of intellectual property administration, enabling businesses to utilize their trademarks or facilitate the seamless transfer of trademark ownership.`,
+            `AtHouse of IP, we understand the importance of safeguarding and managing your intellectual property, particularly regarding trademarks. Whether you are an individual or a business entity looking to transfer your trademark rights to another party, we are here to streamline the process for you. Our expert team is well-versed in the complexities of trademark transfers in India, ensuring that your rights are protected and the transfer is executed seamlessly. WithHouse of IP, you can confidently embark on your trademark transfer journey, knowing that your brand is in capable hands.`,
+            `A trademark, whether a unique symbol, word, or phrase, serves as the identifier that sets a company's products or services apart from those of others in the market. Trademarks are the cornerstone of establishing brand recognition, fostering consumer confidence, and enhancing competitiveness within the marketplace. Nevertheless, situations can arise where businesses or individuals need to transfer their trademark rights to another entity, and during these moments, the process of Trademark Assignment becomes pivotal.`,
+            <strong className="text-xl">
+              Benefits of Trademark Assignment
+            </strong>,
+            `Trademark assignment offers several advantages:`,
+            `It enables the trademark owner to realize the value of their brand.`,
+            `The assignee gains rights to an established brand through the assignment.`,
+            `Both the assignor and assignee can expand their respective businesses.`,
+            `In disputes, the trademark assignment agreement establishes legal rights for both parties.`,
+            <strong className="text-xl">Types of Trademark Assignment</strong>,
+            `There are four primary types of trademark assignments:`,
+            `Partial Assignment:In a partial assignment, the assignor transfers limited ownership rights about specific products or services.`,
+            `Complete Assignment: A complete assignment involves the assignor transferring all rights related to the registered trademark to the assignee.`,
+            `Assignment with Goodwill: In an assignment with goodwill, the assignor transfers the trademark rights and conveys the intrinsic value and reputation associated with the trademark to the assignee.`,
+            `Gross Assignment or Assignment without Goodwill: In this trademark assignment, the assignor restricts the buyer's usage rights. Specifically, the assignor prevents the buyer from using a product brand already used by the assignor. In essence, the goodwill linked to the brand is not transferred to the assignee`,
+            `House of IPcan provide invaluable assistance when it comes to filing a Trademark Assignment. Our expert team is well-versed in the intricate processes and legalities involved in trademark transfer in India. We ensure that all documentation is prepared meticulously, adhering to legal requirements and guidelines. From drafting the Trademark Assignment Agreement to navigating the paperwork required for registration with the Registrar of Trademarks, House of IPsimplifies the entire process, ensuring a hassle-free and efficient experience for both assignors and assignees.`,
           ].map((text, index) => (
             <motion.p
               key={index}
@@ -455,56 +419,29 @@ const Trademark = () => {
             {/* Applicant's Name */}
             <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
               <h1 className="text-start text-xl  pb-4 cursor-pointer">
-                Applicant's Name
+                Trademark Assignment Agreement
               </h1>
-              <p className="pb-8  text-sm">
-                The name of the individual, company, or entity applying for the
-                trademark registration.
-              </p>
             </div>
 
             {/* Business Type */}
             <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
               <h1 className="text-start text-xl  pb-4 cursor-pointer">
-                Business Type
+                Trademark Certificate
               </h1>
-              <p className="pb-8  text-sm">
-                Specify the type of business entity, such as sole
-                proprietorship, partnership, private limited company, etc.
-              </p>
             </div>
 
             {/* Business Objectives */}
             <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
               <h1 className="text-start text-xl  pb-4 cursor-pointer">
-                Business Objectives
+                No Objection Certificate (NOC) from the assignor
               </h1>
-              <p className="pb-8  text-sm">
-                Provide a brief description of your business objectives or
-                activities.
-              </p>
             </div>
 
             {/* Brand/Logo/Slogan Name */}
             <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
               <h1 className="text-start text-xl  pb-4 cursor-pointer">
-                Brand/Logo/Slogan Name
+                Identification documents of both the assignor and assignee
               </h1>
-              <p className="pb-8  text-sm">
-                Clearly mention the name, logo, or slogan that you intend to
-                trademark.
-              </p>
-            </div>
-
-            {/* Registration Address */}
-            <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
-              <h1 className="text-start text-xl  pb-4 cursor-pointer">
-                Registration Address
-              </h1>
-              <p className="pb-8  text-sm">
-                Furnish the official address of the entity applying for the
-                trademark.
-              </p>
             </div>
           </div>
 
@@ -559,7 +496,7 @@ const Trademark = () => {
                 <details className="group overflow-hidden ">
                   <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-800 rounded-t-lg rounded-b-sm transition">
                     <span className="font-medium text-white">
-                      Why Choose House of IP for Trademark Registration?
+                      What is trademark transfer?
                     </span>
                     <span className="transition-transform group-open:rotate-180">
                       &#9660;
@@ -567,23 +504,10 @@ const Trademark = () => {
                   </summary>
                   <div className="transition-all duration-300 bg-slate-800 text-white pb-6 rounded-b-xl ease-in-out overflow-hidden max-h-0 group-open:max-h-96">
                     <p className="mt-2 px-4 text-sm">
-                      At House of IP, we go beyond protection by offering a
-                      full-service solution that includes:
+                      A trademark transfer, also known as Trademark Assignment,
+                      is the legal process of transferring trademark rights from
+                      one entity to another.
                     </p>
-                    <ul className="mt-2 px-4 list-disc list-inside  text-sm">
-                      <li>
-                        Industry research and strategic brand development to
-                        strengthen your trademark.
-                      </li>
-                      <li>
-                        Alignment and registration capabilities across national
-                        and international territories.
-                      </li>
-                      <li>
-                        Expert advice on domain names, hashtags, and social
-                        media handles for cohesive digital branding.
-                      </li>
-                    </ul>
                   </div>
                 </details>
 
@@ -592,7 +516,7 @@ const Trademark = () => {
                 <details className="group overflow-hidden">
                   <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-800 rounded-t-lg rounded-b-sm transition">
                     <span className="font-medium text-white">
-                      How Do We Ensure Successful Trademark Registration?
+                      Why is trademark transfer is important?
                     </span>
                     <span className="transition-transform group-open:rotate-180">
                       &#9660;
@@ -600,12 +524,10 @@ const Trademark = () => {
                   </summary>
                   <div className="transition-all duration-300 ease-in-out overflow-hidden max-h-96 rounded-b-xl bg-slate-800 pb-6 group-open:max-h-96 px-12 text-justify text-black font-montserrat font-thin overflow-y-auto">
                     <p className="mt-2 px-4 text-white text-sm">
-                      We begin by understanding your brand’s objectives,
-                      followed by conducting comprehensive availability searches
-                      to identify potential conflicts and evaluate registration
-                      feasibility. Our thorough knowledge of trademark classes
-                      enables strategic protection, and we have a proven track
-                      record in oppositions, cancellations, and rectifications.
+                      Trademark transfer is crucial for protecting and managing
+                      intellectual property rights, allowing businesses to
+                      utilize trademarks effectively and facilitate ownership
+                      changes.
                     </p>
                   </div>
                 </details>
@@ -614,7 +536,7 @@ const Trademark = () => {
                 <details className="group overflow-hidden">
                   <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-800 rounded-t-lg rounded-b-sm transition">
                     <span className="font-medium text-white">
-                      What Are Our Success Rates for Trademark Approvals?
+                      How is trademark assignment defined in indian law?
                     </span>
                     <span className="transition-transform group-open:rotate-180">
                       &#9660;
@@ -622,10 +544,10 @@ const Trademark = () => {
                   </summary>
                   <div className="transition-all duration-300 ease-in-out overflow-hidden rounded-b-xl bg-slate-800 pb-6 max-h-0 group-open:max-h-96">
                     <p className="mt-2 px-4 text-white text-sm">
-                      With a meticulous process that includes well-prepared
-                      applications, comprehensive examination responses, and
-                      evidence-backed arguments, we consistently achieve high
-                      approval rates for our clients.
+                      Trademark Assignment is defined in Section 37 of the
+                      Trademark Act 1999 as the transfer of a trademark owner's
+                      rights, interests, and title to another individual or
+                      entity.
                     </p>
                   </div>
                 </details>
@@ -634,7 +556,8 @@ const Trademark = () => {
                 <details className="group overflow-hidden pb-10">
                   <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-800 rounded-t-lg rounded-b-sm transition">
                     <span className="font-medium text-white">
-                      Support Beyond Registration
+                      What are the common scenarios for transferring trademark
+                      ownership?
                     </span>
                     <span className="transition-transform group-open:rotate-180">
                       &#9660;
@@ -642,21 +565,11 @@ const Trademark = () => {
                   </summary>
                   <div className="transition-all duration-300 ease-in-out overflow-hidden bg-slate-800 rounded-b-xl pb-6 max-h-0 group-open:max-h-96 text-sm">
                     <p className="mt-2 px-4 text-white">
-                      Our 360-degree service doesn’t stop at registration. We
-                      also manage renewals, recordals, and continuous monitoring
-                      to safeguard your trademark. Additionally, we offer:
+                      Common scenarios include succession planning, business
+                      sales, standalone trademark sales, corporate
+                      restructuring, name changes, structural modifications,
+                      legal mandates, and business acquisitions.
                     </p>
-                    <ul className="mt-2 px-4 list-disc list-inside text-white">
-                      <li>
-                        Trademark valuation guidance for licensing agreements,
-                        IP transfers, or mergers.
-                      </li>
-                      <li>
-                        Strategic advice to help startups and established
-                        businesses maximize the potential of their trademarks,
-                        ensuring alignment with evolving brand objectives.
-                      </li>
-                    </ul>
                   </div>
                 </details>
               </div>
@@ -666,55 +579,51 @@ const Trademark = () => {
           <div className="lg:flex flex-row lg:px-10">
             <div className="px-2 text-justify text-white lg:w-3/4">
               <h1 className="text-xl text-center text-white  font-montserrat font-semibold lg:text-2xl">
-                Trademark Filing and Protection
+                Process of Trademark Transfer /Assignment
               </h1>
               <p className=" pt-5 text-sm">
-                Your brand represents your reputation and the trust of your
-                customers. Here’s a streamlined process for registering a
-                trademark in India:
+                The process of trademark assignment in India involves the
+                following steps:
               </p>
               <h3 className="font-bold pt-3">
-                1. Trademark Search & Selection
+                1.Trademark Assignment Agreement
               </h3>
               <p className=" pt-2 text-sm">
-                A unique and registrable trademark is the cornerstone of a solid
-                brand strategy. We conduct thorough searches to ensure your
-                chosen mark is not already in use, avoiding potential conflicts
-                for a smoother registration process.
+                The assignor (owner of the trademark) assigns their rights in
+                the trademark to the assignee through a trademark assignment
+                agreement.
               </p>
-              <h3 className="font-bold  pt-3">
-                2.Application Preparation & Filing
-              </h3>
+              <h3 className="font-bold  pt-3">2.Application Submission</h3>
               <p className=" pt-2 text-sm">
-                Once a suitable trademark is identified, we draft a detailed
-                application for the Indian Trademark registry, defining the
-                class of goods or services your mark will cover. We also guide
-                you in selecting the most appropriate representation—be it a
-                logo, wordmark, or a combination of both.
+                The assignor, assignee, or both can jointly apply to register
+                the assignment by submitting a trademark application in Form
+                TM-24 or Form TM-23 to the Registrar of Trademarks.
               </p>
-              <h3 className="font-bold  pt-3">3. Examination & Response</h3>
+              <h3 className="font-bold  pt-3">3. Form TM- P</h3>
               <p className=" pt-2 text-sm">
-                The IPO will review your application, and we handle all
-                communications on your behalf. Should any objections arise, we
-                provide clear, ly sound responses to support your trademark’s
-                registrability, backed by additional documentation and
-                clarifications as needed.
+                To submit your trademark assignment application to the
+                Registrar, you must fulfill the requirements outlined in Form
+                TM-P and make the necessary payment. <br />
+                Form TM-P must be filed within six months from the date of the
+                assignment. While filing after six months is possible, the fees
+                may vary accordingly.
               </p>
-              <h3 className="font-bold  pt-3">4. Registration & Publication</h3>
+              <h3 className="font-bold  pt-3">4. Advertisement</h3>
               <p className=" pt-2 text-sm">
-                After a successful examination, your trademark will be published
-                in the Trademark Journal, allowing third parties to raise any
-                objections within a specified period. If no objections are
-                raised, your trademark will proceed to official registration.
+                The assignment must be advertised as directed by the Registrar
+                of Trademarks within the specified timeframe.
               </p>
-              <h3 className="font-bold  pt-3">
-                5. Post-Registration Management
-              </h3>
+              <h3 className="font-bold  pt-3">5. Registrar's Office</h3>
               <p className=" pt-2 text-sm">
-                Congratulations! Your brand identity is now ly protected. House
-                of IP will continue to support you by advising on renewal
-                strategies, managing infringement disputes, and maintaining your
-                trademark throughout its validity period.
+                Provide a copy of the advertisement and the Registrar's
+                directions to the Registrar of Trademarks.
+              </p>
+              <h3 className="font-bold  pt-3">6. Registration</h3>
+              <p className="pt-2 text-sm">
+                Upon receipt of the trademark assignment application (Form TM-P)
+                and the necessary documents, the Registrar of Trademarks will
+                register the assignee as the new owner of the trademark and
+                record the assignment details in the register.
               </p>
             </div>
 
@@ -773,4 +682,4 @@ const Trademark = () => {
   );
 };
 
-export default Trademark;
+export default TMAssignent;

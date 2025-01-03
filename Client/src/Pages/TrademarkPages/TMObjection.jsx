@@ -8,7 +8,7 @@ import { toast } from "react-toastify";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet";
 
-const Trademark = () => {
+const TMObjection = () => {
   const [token, setToken] = useState(Cookies.get("jwtToken"));
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -112,7 +112,7 @@ const Trademark = () => {
       setIsUploading(false);
     }
   };
-  const [selectedOption, setSelectedOption] = useState("Individual & MSME");
+  const [selectedOption, setSelectedOption] = useState("Objection ");
 
   const handleChange = (event) => {
     setSelectedOption(event.target.value);
@@ -131,14 +131,14 @@ const Trademark = () => {
             <li>
               <NavLink to="/practice">Practice Areas</NavLink>
             </li>
-            <li>Trademark Registration</li>
+            <li>Trademark Objection</li>
           </ul>
         </div>
         <div className="lg:flex gap-5  p-3 bg-slate-900 lg:px-20">
           <div className="relative w-7/10 shrink-0 flex justify-center items-center h-full lg:sticky lg:top-20">
             <div className="sticky">
               <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVKc6eE_WPmaSRuSzcabfmXNHoIYn-GoGNAA&s"
+                src="https://compliancecalendar.s3.ap-south-1.amazonaws.com/website_pages_assets/banners/241018104121562997-Trademark-Objection.png"
                 className="rounded-lg w-80"
                 alt="Trademark Rectification"
               />
@@ -148,14 +148,13 @@ const Trademark = () => {
           <div className="flex flex-col lg:w-2/3">
             <div className="my-auto w-full pt-10 px-5 sm:w-full">
               <h2 className="text-base font-black mb-2 lg:mb-4 text-white">
-                Trademark Registration
+                Trademark Objection
               </h2>
 
               <p className="prod_description text-sm text-white mt-2">
-                Drafting and filing of rectification for applications marked
-                Formalities Check Fail by Trademark Examiner. Exclusive pricing
-                for trademark applications filed by House of IP. Inclusive of
-                government fee and service tax.
+                Drafting and filing of reply for objection raised by Trademark
+                Examiner. Exclusive pricing for trademark applications filed by
+               House of IP.
               </p>
               <div className="container mx-auto p-4">
                 {/* Dropdown toggler */}
@@ -165,42 +164,33 @@ const Trademark = () => {
                     value={selectedOption}
                     onChange={handleChange}
                   >
-                    <option value="Individual & MSME">Individual & MSME</option>
-                    <option value="Corporates & Foreigners">
-                      Corporates & Foreigners
-                    </option>
+                    <option value="Objection ">Objection</option>
+                    <option value="Hearing ">Hearing</option>
                   </select>
                 </div>
 
                 {/* Grid layout */}
                 <div className="grid grid-cols-1 gap-4">
                   {/* Patent Search Card */}
-                  {selectedOption === "Individual & MSME" && (
+                  {selectedOption === "Objection " && (
                     <div className="border rounded-md p-4 bg-slate-900 text-white">
-                      <h2 className="font-semibold text-lg mb-2">
-                        Individual & MSME
-                      </h2>
+                      <h2 className="font-semibold text-lg mb-2">Objection </h2>
                       <ul className="list-disc list-inside space-y-1">
-                        <li>Government Fee </li>
-                        <li>Trademark Filing </li>
-                        <li>1 Trademark Class </li>
-                        <li>Individuals & MSMEs </li>
+                        <li>Attorney Prepared </li>
+                        <li>Reply to Objection </li>
+                        <li>Filing on IPIndia </li>
                       </ul>
                     </div>
                   )}
 
-                  {/* Regular Card */}
-                  {selectedOption === "Corporates & Foreigners" && (
-                    <div className="border rounded-md p-4 text-white bg-slate-900">
-                      <h2 className="font-semibold text-lg mb-2">
-                        Corporates & Foreigners
-                      </h2>
+                  {/* Provisional Filing Card */}
+                  {selectedOption === "Hearing " && (
+                    <div className="border rounded-md p-4 text-white bg-slate-900 ">
+                      <h2 className="font-semibold text-lg mb-2">Hearing </h2>
                       <ul className="list-disc list-inside space-y-1">
-                        <li>Government Fee </li>
-                        <li>Trademark Filing </li>
-                        <li>1 Trademark Class </li>
-                        <li>Full protection</li>
-                        <li>Non-MSMEs </li>
+                        <li>Attorney Appearance </li>
+                        <li>Attorney TM Hearing </li>
+                        <li>Representing Client </li>
                       </ul>
                     </div>
                   )}
@@ -208,7 +198,7 @@ const Trademark = () => {
                 <div>
                   <RWebShare
                     data={{
-                      url: "https://house-of-ip.vercel.app/trademark",
+                      url: "https://house-of-ip.vercel.app//trademarkobjection",
                       title: "Trademark",
                     }}
                     onClick={() => toast.success("shared successfully!")}
@@ -264,17 +254,17 @@ const Trademark = () => {
           </div>
         </div>
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-5 p-3 bg-slate-900 lg:px-20">
-          <NavLink to="/trademarkobjection">
+          <NavLink to="/trademark">
             <div className="card card-compact bg-base-100 w-72 shadow-xl">
               <figure>
                 <img
-                  src="https://compliancecalendar.s3.ap-south-1.amazonaws.com/website_pages_assets/banners/241018104121562997-Trademark-Objection.png"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVKc6eE_WPmaSRuSzcabfmXNHoIYn-GoGNAA&s"
                   alt="Patent"
                   className="h-44 w-full"
                 />
               </figure>
               <div className="card-body bg-slate-800 rounded-b-xl text-white">
-                <h2 className="card-title">Trademark Objection</h2>
+                <h2 className="card-title">Trademark Registration</h2>
               </div>
             </div>
           </NavLink>
@@ -402,39 +392,14 @@ const Trademark = () => {
             viewport={{ once: true, amount: 0.2 }}
             variants={fadeInUp}
           >
-            Trademark
+            Trademark Objection
           </motion.h1>
           {[
-            `Trademark agents offers
-        more than just protection. We deliver comprehensive business value
-        by integrating industry insights, brand strategy, and global
-        trademark registration services. Our approach begins with a deep
-        understanding of your brand’s goals and conducting extensive
-        trademark availability searches to ensure success.`,
-            `We provide clear guidance on the feasibility of trademark
-        registration across multiple regions while offering strategic advice
-        to avoid potential conflicts. Our expertise also extends to securing
-        domain names, hashtags, taglines, and social media handles, ensuring
-        a seamless digital presence that aligns with your brand’s identity.`,
-            `When it comes to filing, our in-depth knowledge of trademark
-        classifications ensures optimal protection. Our experience in
-        representing clients in disputes such as oppositions, cancellations,
-        and rectifications allows us to defend your trademarks effectively
-        with evidence-based arguments and expert responses to examination
-        queries.`,
-            `For trademark enforcement, we monitor both physical and online
-        markets to detect potential infringement. We act swiftly by issuing
-        cease-and-desist and take-down notices, and in cases where
-        violations persist, we collaborate with authorities to confiscate
-        counterfeit or infringing products.`,
-            `Our success is driven by detailed documentation, well-constructed
-        responses, and a commitment to resolving disputes amicably. This
-        meticulous approach contributes to high approval rates for trademark
-        applications. Beyond registration, we manage renewals, recordals,
-        and monitor your brand for unauthorized use. Additionally, we
-        provide guidance on trademark valuation during licensing, IP
-        transfers, and mergers, empowering both startups and multinationals
-        to leverage their trademarks effectively.`,
+            `In India, the trademark objection step is significant during the process of registering a trademark. At this point, the officer carefully checks your chosen brand name to ensure it meets all the rules. If there are any problems or issues, they will let you know. It's essential to fix these issues to ensure your brand name gets registered without problems. This ensures your brand name follows the trademark law and isn't too similar to other brand names. With help fromHouse of IP, dealing with these issues is easier, helping you get your trademark registered smoothly.`,
+            `Before diving into trademark objections, let's understand what a trademark is. In India, a trademark can be a unique sign, picture, or name that shows people who made a product or offered a service. It is a business's special ID showing its brand and quality. Registering your trademark means you get special rights to use it, and others can't use it without your approval.`,
+            `As mentioned above, Upon submitting a trademark application to the Indian Trademark Office, it undergoes a rigorous examination. If the officer identifies inconsistencies or potential overlaps with existing trademarks during this scrutiny, they will issue an objection. In the business context, it's essential to understand that an objection isn't a denial but a request for clarification or adjustment. Addressing this promptly and adequately is vital for ensuring smooth trademark registration.`,
+            `The Indian Trademark Office might object to a trademark application based on specific grounds detailed in Section 9 and Section 11 of the Indian Trademarks Act. The primary reasons are when the submitted trademarks lack uniqueness, are too descriptive and generic, or clash with previously registered or pending trademarks.`,
+            `The reviewing officer must confirm that the trademark application meets all necessary standards and regulations. If it doesn't, the applicant will receive a notification, prompting a response within 30 days. The application may be denied if the response does not meet the expected standards. However, the applicant can appeal to the Intellectual Property Appellate Board if rejected.`,
           ].map((text, index) => (
             <motion.p
               key={index}
@@ -455,56 +420,36 @@ const Trademark = () => {
             {/* Applicant's Name */}
             <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
               <h1 className="text-start text-xl  pb-4 cursor-pointer">
-                Applicant's Name
+                Advertisement Copy
               </h1>
-              <p className="pb-8  text-sm">
-                The name of the individual, company, or entity applying for the
-                trademark registration.
-              </p>
             </div>
 
             {/* Business Type */}
             <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
               <h1 className="text-start text-xl  pb-4 cursor-pointer">
-                Business Type
+                Product Images
               </h1>
-              <p className="pb-8  text-sm">
-                Specify the type of business entity, such as sole
-                proprietorship, partnership, private limited company, etc.
-              </p>
             </div>
 
             {/* Business Objectives */}
             <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
               <h1 className="text-start text-xl  pb-4 cursor-pointer">
-                Business Objectives
+                Sales Invoice
               </h1>
-              <p className="pb-8  text-sm">
-                Provide a brief description of your business objectives or
-                activities.
-              </p>
             </div>
 
             {/* Brand/Logo/Slogan Name */}
             <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
               <h1 className="text-start text-xl  pb-4 cursor-pointer">
-                Brand/Logo/Slogan Name
+                Domain Registration copy
               </h1>
-              <p className="pb-8  text-sm">
-                Clearly mention the name, logo, or slogan that you intend to
-                trademark.
-              </p>
             </div>
 
             {/* Registration Address */}
             <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
               <h1 className="text-start text-xl  pb-4 cursor-pointer">
-                Registration Address
+                Website Screenshot
               </h1>
-              <p className="pb-8  text-sm">
-                Furnish the official address of the entity applying for the
-                trademark.
-              </p>
             </div>
           </div>
 
@@ -559,7 +504,7 @@ const Trademark = () => {
                 <details className="group overflow-hidden ">
                   <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-800 rounded-t-lg rounded-b-sm transition">
                     <span className="font-medium text-white">
-                      Why Choose House of IP for Trademark Registration?
+                      Why is the trademark objection step is crucial in india?
                     </span>
                     <span className="transition-transform group-open:rotate-180">
                       &#9660;
@@ -567,23 +512,13 @@ const Trademark = () => {
                   </summary>
                   <div className="transition-all duration-300 bg-slate-800 text-white pb-6 rounded-b-xl ease-in-out overflow-hidden max-h-0 group-open:max-h-96">
                     <p className="mt-2 px-4 text-sm">
-                      At House of IP, we go beyond protection by offering a
-                      full-service solution that includes:
+                      The trademark objection step is pivotal during the
+                      trademark registration process. It involves an officer
+                      meticulously checking the chosen brand name to ensure
+                      compliance with all rules. Objections indicate issues or
+                      conflicts, which need rectification for successful
+                      registration.
                     </p>
-                    <ul className="mt-2 px-4 list-disc list-inside  text-sm">
-                      <li>
-                        Industry research and strategic brand development to
-                        strengthen your trademark.
-                      </li>
-                      <li>
-                        Alignment and registration capabilities across national
-                        and international territories.
-                      </li>
-                      <li>
-                        Expert advice on domain names, hashtags, and social
-                        media handles for cohesive digital branding.
-                      </li>
-                    </ul>
                   </div>
                 </details>
 
@@ -592,7 +527,7 @@ const Trademark = () => {
                 <details className="group overflow-hidden">
                   <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-800 rounded-t-lg rounded-b-sm transition">
                     <span className="font-medium text-white">
-                      How Do We Ensure Successful Trademark Registration?
+                      What happen if there's a trademark objection ?
                     </span>
                     <span className="transition-transform group-open:rotate-180">
                       &#9660;
@@ -600,12 +535,11 @@ const Trademark = () => {
                   </summary>
                   <div className="transition-all duration-300 ease-in-out overflow-hidden max-h-96 rounded-b-xl bg-slate-800 pb-6 group-open:max-h-96 px-12 text-justify text-black font-montserrat font-thin overflow-y-auto">
                     <p className="mt-2 px-4 text-white text-sm">
-                      We begin by understanding your brand’s objectives,
-                      followed by conducting comprehensive availability searches
-                      to identify potential conflicts and evaluate registration
-                      feasibility. Our thorough knowledge of trademark classes
-                      enables strategic protection, and we have a proven track
-                      record in oppositions, cancellations, and rectifications.
+                      Upon submitting a trademark application, it undergoes
+                      rigorous examination. If any inconsistencies or overlaps
+                      with existing trademarks are found, an objection is
+                      issued. It's vital to note that an objection isn't a
+                      denial but a request for clarification or adjustment.
                     </p>
                   </div>
                 </details>
@@ -614,7 +548,7 @@ const Trademark = () => {
                 <details className="group overflow-hidden">
                   <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-800 rounded-t-lg rounded-b-sm transition">
                     <span className="font-medium text-white">
-                      What Are Our Success Rates for Trademark Approvals?
+                      Why do i need to pay trademark objection reply fees?
                     </span>
                     <span className="transition-transform group-open:rotate-180">
                       &#9660;
@@ -622,10 +556,10 @@ const Trademark = () => {
                   </summary>
                   <div className="transition-all duration-300 ease-in-out overflow-hidden rounded-b-xl bg-slate-800 pb-6 max-h-0 group-open:max-h-96">
                     <p className="mt-2 px-4 text-white text-sm">
-                      With a meticulous process that includes well-prepared
-                      applications, comprehensive examination responses, and
-                      evidence-backed arguments, we consistently achieve high
-                      approval rates for our clients.
+                      These fees cover the administrative costs of processing
+                      your reply and the jurisdiction in which the trademark
+                      application is filed. We offers exclusive and competitive
+                      pricing for responding to trademark objections.
                     </p>
                   </div>
                 </details>
@@ -634,7 +568,8 @@ const Trademark = () => {
                 <details className="group overflow-hidden pb-10">
                   <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-800 rounded-t-lg rounded-b-sm transition">
                     <span className="font-medium text-white">
-                      Support Beyond Registration
+                      What is the difference between trademark objection and
+                      trademark opposition?
                     </span>
                     <span className="transition-transform group-open:rotate-180">
                       &#9660;
@@ -642,135 +577,22 @@ const Trademark = () => {
                   </summary>
                   <div className="transition-all duration-300 ease-in-out overflow-hidden bg-slate-800 rounded-b-xl pb-6 max-h-0 group-open:max-h-96 text-sm">
                     <p className="mt-2 px-4 text-white">
-                      Our 360-degree service doesn’t stop at registration. We
-                      also manage renewals, recordals, and continuous monitoring
-                      to safeguard your trademark. Additionally, we offer:
+                      While the terms are sometimes used interchangeably, they
+                      are different. An "objection" relates to concerns raised
+                      by the reviewing officer about the registration process.
+                      In contrast, "trademark opposition" involves challenges by
+                      third parties disputing the trademark's validity.
                     </p>
-                    <ul className="mt-2 px-4 list-disc list-inside text-white">
-                      <li>
-                        Trademark valuation guidance for licensing agreements,
-                        IP transfers, or mergers.
-                      </li>
-                      <li>
-                        Strategic advice to help startups and established
-                        businesses maximize the potential of their trademarks,
-                        ensuring alignment with evolving brand objectives.
-                      </li>
-                    </ul>
                   </div>
                 </details>
               </div>
             </div>
           </div>
 
-          <div className="lg:flex flex-row lg:px-10">
-            <div className="px-2 text-justify text-white lg:w-3/4">
-              <h1 className="text-xl text-center text-white  font-montserrat font-semibold lg:text-2xl">
-                Trademark Filing and Protection
-              </h1>
-              <p className=" pt-5 text-sm">
-                Your brand represents your reputation and the trust of your
-                customers. Here’s a streamlined process for registering a
-                trademark in India:
-              </p>
-              <h3 className="font-bold pt-3">
-                1. Trademark Search & Selection
-              </h3>
-              <p className=" pt-2 text-sm">
-                A unique and registrable trademark is the cornerstone of a solid
-                brand strategy. We conduct thorough searches to ensure your
-                chosen mark is not already in use, avoiding potential conflicts
-                for a smoother registration process.
-              </p>
-              <h3 className="font-bold  pt-3">
-                2.Application Preparation & Filing
-              </h3>
-              <p className=" pt-2 text-sm">
-                Once a suitable trademark is identified, we draft a detailed
-                application for the Indian Trademark registry, defining the
-                class of goods or services your mark will cover. We also guide
-                you in selecting the most appropriate representation—be it a
-                logo, wordmark, or a combination of both.
-              </p>
-              <h3 className="font-bold  pt-3">3. Examination & Response</h3>
-              <p className=" pt-2 text-sm">
-                The IPO will review your application, and we handle all
-                communications on your behalf. Should any objections arise, we
-                provide clear, ly sound responses to support your trademark’s
-                registrability, backed by additional documentation and
-                clarifications as needed.
-              </p>
-              <h3 className="font-bold  pt-3">4. Registration & Publication</h3>
-              <p className=" pt-2 text-sm">
-                After a successful examination, your trademark will be published
-                in the Trademark Journal, allowing third parties to raise any
-                objections within a specified period. If no objections are
-                raised, your trademark will proceed to official registration.
-              </p>
-              <h3 className="font-bold  pt-3">
-                5. Post-Registration Management
-              </h3>
-              <p className=" pt-2 text-sm">
-                Congratulations! Your brand identity is now ly protected. House
-                of IP will continue to support you by advising on renewal
-                strategies, managing infringement disputes, and maintaining your
-                trademark throughout its validity period.
-              </p>
-            </div>
-
-            {/* Card Section */}
-            <div className="flex flex-col justify-center space-y-4 items-center space-x-3 lg:flex-col">
-              {/* Card 1 */}
-              <NavLink to="/patent">
-                <div className="card card-compact bg-base-100 w-72 shadow-xl">
-                  <figure>
-                    <img
-                      src="https://thelawcodes.com/wp-content/uploads/2023/10/What-is-Patent-Basics-Overview.webp"
-                      alt="Patent"
-                      className="h-44 w-full"
-                    />
-                  </figure>
-                  <div className="card-body bg-slate-800 text-white">
-                    <h2 className="card-title">Patent</h2>
-                  </div>
-                </div>
-              </NavLink>
-
-              {/* Card 2 */}
-              <NavLink to="/copyright">
-                <div className="card card-compact bg-base-100 w-72 shadow-xl">
-                  <figure>
-                    <img
-                      src="https://blog.ipleaders.in/wp-content/uploads/2021/06/1_copyright-designs-and-patents-act-1988-1.jpg"
-                      alt="Copyright"
-                      className="h-44 w-full"
-                    />
-                  </figure>
-                  <div className="card-body bg-slate-800 text-white">
-                    <h2 className="card-title">Copyright</h2>
-                  </div>
-                </div>
-              </NavLink>
-              <NavLink to="/design">
-                <div className="card card-compact bg-base-100 w-72 shadow-xl">
-                  <figure>
-                    <img
-                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEaE-xi5291DEKz_fKdeE3LxPyxsovjgdojg&s"
-                      alt="Design"
-                      className="h-44 w-full"
-                    />
-                  </figure>
-                  <div className="card-body bg-slate-800 text-white">
-                    <h2 className="card-title">Design</h2>
-                  </div>
-                </div>
-              </NavLink>
-            </div>
-          </div>
         </div>
       </div>
     </>
   );
 };
 
-export default Trademark;
+export default TMObjection;

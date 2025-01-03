@@ -8,7 +8,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { Helmet } from "react-helmet";
 
-const Copyright = () => {
+const CRObjection = () => {
   const [token, setToken] = useState(Cookies.get("jwtToken"));
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -70,7 +70,7 @@ const Copyright = () => {
       setIsUploading(false);
     }
   };
-  const [selectedOption, setSelectedOption] = useState("Book");
+  const [selectedOption, setSelectedOption] = useState("Copyright Objection ");
 
   const handleChange = (event) => {
     setSelectedOption(event.target.value);
@@ -89,14 +89,14 @@ const Copyright = () => {
             <li>
               <NavLink to="/practice">Practice Areas</NavLink>
             </li>
-            <li>Copyright Registration</li>
+            <li>Copyright Objection</li>
           </ul>
         </div>
         <div className="lg:flex gap-5  p-3 bg-slate-900 text-white lg:px-20">
           <div className="relative w-7/10 shrink-0 flex justify-center items-center h-full lg:sticky lg:top-20">
             <div className="sticky">
               <img
-                src="https://blog.ipleaders.in/wp-content/uploads/2021/06/1_copyright-designs-and-patents-act-1988-1.jpg"
+                src="https://img.indiafilings.com/catalog/copyright-objection-india.png"
                 className="rounded-lg w-80"
                 alt="Copyright"
               />
@@ -106,14 +106,13 @@ const Copyright = () => {
           <div className="flex flex-col lg:w-2/3">
             <div className="my-auto w-full pt-10 px-5 sm:w-full">
               <h2 className="text-base font-black mb-2 lg:mb-4">
-                Copyright Registration
+                Copyright Objection
               </h2>
 
               <p className="prod_description text-sm  mt-2">
-                Copyright is a entitlement granted to the owner of intellectual
-                property. Copyright protection typically endures for the
-                author’s lifetime plus an additional 60 years after the author’s
-                death
+                Drafting and filing of reply for Copyright objection raised by
+                Copyright Office. Exclusive pricing for copyright applications
+                filed throughHouse of IP.
               </p>
               <div className="container mx-auto p-4">
                 {/* Dropdown toggler */}
@@ -123,37 +122,41 @@ const Copyright = () => {
                     value={selectedOption}
                     onChange={handleChange}
                   >
-                    <option value="Software">Software</option>
-                    <option value="Book">Book</option>
-                    <option value="Video">Video</option>
-                    <option value="Music">Music</option>
-                    <option value="Logo">Logo</option>
-                    <option value="Sound">Sound</option>
+                    <option value="Copyright Objection ">
+                      Copyright Objection{" "}
+                    </option>
+                    <option value="Copyright Hearing ">
+                      Copyright Hearing{" "}
+                    </option>
                   </select>
                 </div>
 
                 {/* Grid layout */}
                 <div className="grid grid-cols-1 gap-4">
                   {/* Patent Search Card */}
-                  {selectedOption === "Book" && (
+                  {selectedOption === "Copyright Objection " && (
                     <div className="border rounded-md p-4 bg-slate-900  ">
-                      <h2 className="font-semibold text-lg mb-2">Book</h2>
+                      <h2 className="font-semibold text-lg mb-2">
+                        Copyright Objection{" "}
+                      </h2>
                       <ul className="list-disc list-inside space-y-1">
-                        <li>Book Catalogues </li>
-                        <li>Poems</li>
-                        <li>Stories </li>
-                        <li>Business plans</li>
-                        <li>market strategies</li>
+                        <li>Attorney Prepared </li>
+                        <li>Reply to Objection </li>
+                        <li>Filing on IPIndia </li>
                       </ul>
                     </div>
                   )}
 
                   {/* Provisional Filing Card */}
-                  {selectedOption === "Video" && (
+                  {selectedOption === "Copyright Hearing " && (
                     <div className="border rounded-md p-4 text-white bg-slate-900 ">
-                      <h2 className="font-semibold text-lg mb-2">Video</h2>
+                      <h2 className="font-semibold text-lg mb-2">
+                        Copyright Hearing{" "}
+                      </h2>
                       <ul className="list-disc list-inside space-y-1">
-                        <li>Video</li>
+                        <li>Attorney Appearance </li>
+                        <li>Attending TM Hearing </li>
+                        <li>Representing Client </li>
                       </ul>
                     </div>
                   )}
@@ -261,17 +264,17 @@ const Copyright = () => {
         </div>
 
         <div className="flex flex-row justify-start space-x-10 bg-slate-900 text-white px-5 lg:px-20">
-          <NavLink to="/copyrightobjection">
+          <NavLink to="/copyright">
             <div className="card card-compact bg-base-100 w-72 shadow-xl">
               <figure>
                 <img
-                  src="https://img.indiafilings.com/catalog/copyright-objection-india.png"
+                  src="https://blog.ipleaders.in/wp-content/uploads/2021/06/1_copyright-designs-and-patents-act-1988-1.jpg"
                   alt="Patent"
                   className="h-44 w-full"
                 />
               </figure>
               <div className="card-body bg-slate-800 rounded-b-xl text-white">
-                <h2 className="card-title">Copyright Objection</h2>
+                <h2 className="card-title">Copyright Registration</h2>
               </div>
             </div>
           </NavLink>
@@ -285,7 +288,7 @@ const Copyright = () => {
                 />
               </figure>
               <div className="card-body bg-slate-800 rounded-b-xl text-white">
-                <h2 className="card-title">Copyright Assignment</h2>
+                <h2 className="card-title">Trademark Objection</h2>
               </div>
             </div>
           </NavLink>
@@ -302,77 +305,49 @@ const Copyright = () => {
               className="text-center text-3xl font-semibold pb-4 pt-4"
               variants={fadeInUp}
             >
-              Copyright Registration
+              Copyright Objection
             </motion.h1>
 
             {[
-              `As the importance of safeguarding creative content continues to grow, House of IP provides comprehensive advisory and dispute management services tailored for copyright protection. Our highly regarded team of copyright attorneys supports authors, musicians, filmmakers, software developers, and media companies in defending their original creations and addressing infringement issues.`,
-              `We specialize in a full suite of copyright services, including registration, licensing, assignment, enforcement, and dispute resolution, spanning various industries. Understanding the complexities brought by technology and the surge in copyright violations, we have effectively assisted clients in safeguarding custom software, architectural designs, literary works, and multimedia content.`,
+              `Copyright refers to the ownership rights to literature, theatre, music, artwork, sound recordings, and other works. Copyright registration grants a set of rights to the work, including reproduction, public communication, adaptation, and translation. Copyright registration ensures that the writers' rights to ownership and enjoyment of their works are protected and rewarded, which protects and rewards creativity.`,
+              `Copyright registration is required since it allows you to communicate with the public, reproduce the rights, adapt, and translate the works.`,
+              `The Copyright Act of 1957 governs the process of copyright registration. The author's creative work cannot be replicated since no one is permitted to use it without the author's or creator's consent. The author has the right to charge for the use or modification of their work. The copyright is usually protected for 60 years.`,
             ].map((text, index) => (
               <motion.p
                 key={index}
-                className="pb-8  text-sm"
+                className="pb-8 text-sm"
                 variants={fadeInUp}
               >
                 {text}
               </motion.p>
             ))}
 
-            <motion.h2
-              className="text-lg font-medium  pb-5"
-              variants={fadeInUp}
-            >
-              Comprehensive Copyright Solutions
-            </motion.h2>
-
-            <motion.p className="pb-8  text-sm" variants={fadeInUp}>
-              Our dedicated copyright registration team ensures rapid and
-              thorough protection for your work, covering text, images, sound,
-              and video documentation. We excel in representing clients before
-              courts, employing strategic oral arguments, compelling evidence,
-              and counterclaims. Additionally, we advise on best practices for
-              using third-party content, helping clients avoid copyright
-              pitfalls.
-            </motion.p>
-
             <motion.h2 className="text-lg font-medium pb-5" variants={fadeInUp}>
-              Our Expertise Includes:
+              Benefits of Acquiring Copyright Registration
             </motion.h2>
 
-            <motion.p className="pb-8 text-sm" variants={fadeInUp}>
-              <strong>• Determining Copyright Eligibility:</strong> We assess if
-              your work qualifies for copyright protection under applicable
-              laws. <br />
-              <strong>• Resolving Evidence–Focused Disputes:</strong> Tackling
-              copyright disputes with jurisdiction–specific approaches. <br />
-              <strong>• Guiding Safer Content Usage:</strong> Offering clear
-              guidelines to ensure secure use of third-party content.
-            </motion.p>
-
-            <motion.p className="pb-8 text-sm" variants={fadeInUp}>
-              Whether you are an artist or a business, we advise on licensing,
-              assignments, and permitted usage of copyrighted works. Our team
-              monitors both online and offline spaces for unauthorized use of
-              movies, music, books, software, and more. If necessary, we pursue
-              action, including filing civil and criminal complaints and
-              coordinating with cybercrime units to swiftly seize infringing
-              materials.
-            </motion.p>
-
-            <motion.h2 className="text-lg font-medium pb-5" variants={fadeInUp}>
-              Expert Representation in Copyright Disputes
-            </motion.h2>
-
-            <motion.p className="pb-8  text-sm" variants={fadeInUp}>
-              Our experienced copyright attorneys represent clients in cases
-              involving ownership disputes, royalty claims, co–authorship
-              conflicts, and adaptation rights. For high–value copyrighted
-              content, such as music, software, or literary works, we offer
-              valuation services, assisting producers, publishers, and tech
-              companies in funding rounds and M&A transactions. Our technical
-              experts assess code quality, vulnerability metrics, and
-              architecture strength for reliable valuation.
-            </motion.p>
+            {[
+              {
+                title: "Provides Legal Protection",
+                description: `The creators enjoy legal protection when their work is reproduced without authorization. Registering a Copyright makes it much easier to protect the original work against infringement.`,
+              },
+              {
+                title: "Market Presence",
+                description: `Copyright registration creates a public record of the work, and proof of ownership is established for the creative work.`,
+              },
+              {
+                title: "Rights Of The Owner",
+                description: `The owner of registered copyright gets the rights to reproduce, disseminate and adapt and translate the work.`,
+              },
+            ].map((item, index) => (
+              <motion.p
+                key={index}
+                className="pb-8 text-sm"
+                variants={fadeInUp}
+              >
+                <strong>{item.title}:</strong> {item.description}
+              </motion.p>
+            ))}
           </motion.div>
 
           <div className="hidden lg:block lg:col-span-1 lg:px-10 pl-16">
@@ -409,7 +384,7 @@ const Copyright = () => {
         </div>
 
         <h1 className="text-center text-3xl text-white pb-4 bg-slate-900">
-          Copyright FAQ's
+          Copyright Objection FAQ's
         </h1>
         <div className="space-y-4 px-2 pt-8 bg-slate-900 text-white lg:px-8">
           {/* FAQ Section */}
@@ -426,7 +401,7 @@ const Copyright = () => {
                 <details className="group overflow-hidden ">
                   <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-800 rounded-t-lg transition">
                     <span className="font-medium text-white">
-                      What Copyrighted Works Do We Protect?
+                      What is Copyright Objection?
                     </span>
                     <span className="transition-transform group-open:rotate-180">
                       &#9660;
@@ -434,28 +409,10 @@ const Copyright = () => {
                   </summary>
                   <div className="transition-all duration-300 ease-in-out overflow-hidden bg-gray-800 pb-5 rounded-b-xl max-h-0 group-open:max-h-96">
                     <p className="mt-2 px-4 text-white text-sm">
-                      House of IP safeguards a wide range of creative content:
+                      Copyright Objection is a formal challenge raised during
+                      the process of copyright registration when potential
+                      issues or discrepancies are identified.
                     </p>
-                    <ul className="mt-2 px-4 list-disc list-inside text-white text-sm">
-                      <li>
-                        <strong>Software:</strong> Handling ownership
-                        complexities and infringement issues in custom software.
-                      </li>
-                      <li>
-                        <strong>Architectural Works:</strong> Defending
-                        architects’ and designers’ rights to their original
-                        creations.
-                      </li>
-                      <li>
-                        <strong>Literary Works:</strong> Assisting authors,
-                        publishers, and stakeholders in protecting their written
-                        works.
-                      </li>
-                      <li>
-                        <strong>Multimedia Content:</strong> Managing copyright
-                        matters related to music, films, videos, and more.
-                      </li>
-                    </ul>
                   </div>
                 </details>
 
@@ -464,7 +421,7 @@ const Copyright = () => {
                 <details className="group overflow-hidden">
                   <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-800 rounded-t-lg transition">
                     <span className="font-medium text-white">
-                      How to Register Your Copyright?
+                      How does Copyright Objection occur?
                     </span>
                     <span className="transition-transform group-open:rotate-180">
                       &#9660;
@@ -472,11 +429,10 @@ const Copyright = () => {
                   </summary>
                   <div className="transition-all duration-300 ease-in-out overflow-hidden bg-gray-800 pb-5 rounded-b-xl max-h-96 group-open:max-h-96 px-12 text-justify text-black font-montserrat font-thin overflow-y-auto">
                     <p className="mt-2 text-white text-sm">
-                      Our expert team guides you through the copyright
-                      registration process, ensuring that your work is quickly
-                      protected in the appropriate category—whether it’s text,
-                      image, sound, or video. We handle the documentation and
-                      filing efficiently, so you can focus on your creativity.
+                      Copyright Objection can occur due to reasons like
+                      similarities with existing copyrighted material, potential
+                      conflicts in originality, or lack of distinctiveness in
+                      the new work.
                     </p>
                   </div>
                 </details>
@@ -485,7 +441,8 @@ const Copyright = () => {
                 <details className="group overflow-hidden">
                   <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-800 rounded-t-lg transition">
                     <span className="font-medium text-white">
-                      What if Your Copyright is Infringed?
+                      What is the eligiblity criteria to replying to a Copyright
+                      Objection in India ?
                     </span>
                     <span className="transition-transform group-open:rotate-180">
                       &#9660;
@@ -493,11 +450,8 @@ const Copyright = () => {
                   </summary>
                   <div className="transition-all duration-300 ease-in-out bg-gray-800 rounded-b-xl pb-5 overflow-hidden max-h-0 group-open:max-h-96">
                     <p className="mt-2 px-4 text-white text-sm">
-                      House of IP has a proven track record in copyright dispute
-                      resolution. We represent clients in court, using
-                      compelling oral arguments, robust evidence, and strategic
-                      counterclaims to protect your rights. We also assist in
-                      recovering damages for copyright infringement.
+                      The primary requirement is to provide substantial evidence
+                      of the originality of your work.
                     </p>
                   </div>
                 </details>
@@ -506,7 +460,7 @@ const Copyright = () => {
                 <details className="group overflow-hidden">
                   <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-800 rounded-t-lg transition">
                     <span className="font-medium text-white">
-                      Using Copyrighted Content
+                      How does Copyright Registration protect my work?
                     </span>
                     <span className="transition-transform group-open:rotate-180">
                       &#9660;
@@ -514,17 +468,18 @@ const Copyright = () => {
                   </summary>
                   <div className="transition-all duration-300 ease-in-out bg-gray-800 rounded-b-xl pb-5 overflow-hidden max-h-0 group-open:max-h-96 text-sm">
                     <p className="mt-2 px-4 text-white">
-                      We provide guidance on the use of third–party copyrighted
-                      material through licenses, assignments, or fair–use
-                      guidelines. Our lawyers ensure you can leverage content ly
-                      and ethically while minimizing risks.
+                      Copyright registration provides legal evidence of
+                      ownership, safeguards your original creative work from
+                      unauthorized use, and establishes your rights as a
+                      creator.
                     </p>
                   </div>
                 </details>
                 <details className="group overflow-hidden pb-10">
                   <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-800 rounded-t-lg transition">
                     <span className="font-medium text-white">
-                      Protecting High-Value Copyrighted Works
+                      What are the benifits of filing a reply to a Copyright
+                      Objection?
                     </span>
                     <span className="transition-transform group-open:rotate-180">
                       &#9660;
@@ -532,11 +487,9 @@ const Copyright = () => {
                   </summary>
                   <div className="transition-all duration-300 bg-gray-800 rounded-b-xl pb-5  ease-in-out overflow-hidden max-h-0 group-open:max-h-96 text-sm">
                     <p className="mt-2 px-4 text-white">
-                      For high–value content, including music, software, and
-                      literary works, offers comprehensive valuation services.
-                      Our team of and technical experts evaluates the commercial
-                      value of your content during investment, funding rounds,
-                      or mergers and acquisitions.
+                      Filing a reply preserves legal rights, avoids application
+                      cancellation, meets legal document requirements, offers
+                      drafting flexibility, and provides strong argumentation.
                     </p>
                   </div>
                 </details>
@@ -546,51 +499,64 @@ const Copyright = () => {
 
           <div className="lg:flex flex-row text-white">
             <div className="px-2 text-justify lg:w-3/4 lg:pl-10">
-              <h1 className="text-xl text-center  font-montserrat font-semibold lg:text-2xl">
-                Your Copyright Registration Process – Simplified
+              <h1 className="text-xl text-center font-montserrat font-semibold lg:text-2xl">
+                Process for Copyright Registration
               </h1>
-              <p className=" pt-5 text-sm">
-                Copyright protects your original creations, from literary works
-                to artistic expressions. Here’s a step–by–step guide to the
-                registration process in India:
+              <p className="pt-5 text-sm">
+                Copyright registration applications can be submitted on Form IV
+                along with the required fees. It can be copyrighted whether it
+                is a published or unpublished work. Three copies of published
+                material must be supplied with the application for published
+                work.
               </p>
-              <h3 className="font-bold  pt-3">1. Determine Eligibility:</h3>
-              <p className=" pt-2 text-sm">
-                Not every work qualifies for copyright. Our initial consultation
-                will help determine if your work, whether literary, musical,
-                dramatic, artistic, or cinematographic, meets the originality
-                criteria for protection.
+              <p className="pt-5 text-sm">
+                For unpublished work, a copy of the manuscript must be supplied
+                with the application for affixing the copyright office's stamp,
+                which serves as proof that the work has been registered.
               </p>
-              <h3 className="font-bold  pt-3">2. Application Preparation:</h3>
-              <p className=" pt-2 text-sm">
-                Once eligibility is established, we’ll assist you in completing
-                the required forms, providing all necessary details about your
-                work (title, creator information, format) to ensure a flawless
-                application.
-              </p>
-              <h3 className="font-bold  pt-3">3. Submission & Examination:</h3>
-              <p className=" pt-2 text-sm">
-                The application is then submitted to the Copyright Office, along
-                with any required fees and a copy of your work. The office will
-                review the submission for accuracy and completeness.
-              </p>
-              <h3 className="font-bold  pt-3">
-                4. Registration & Certification:
+              <h3 className="font-bold pt-3">
+                The process for Copyright Registration:
               </h3>
-              <p className=" pt-2 text-sm">
-                If no objections arise, your copyright will be officially
-                registered, and you’ll receive a certificate of registration,
-                serving as prima facie evidence of ownership.
-              </p>
-              <h3 className="font-bold  pt-3">
-                5. Post–Registration Protection:
-              </h3>
-              <p className=" pt-2 text-sm">
-                While registration is a crucial step, it is only the beginning.
-                We offer ongoing advice on protecting your rights, issuing
-                cease-and-desist notices, or pursuing action in case of
-                infringement.
-              </p>
+              <ul className="list-disc pl-5 pt-3 text-sm">
+                <li>
+                  The application for copyright registration has to be filed in
+                  the concerned forms that mention the particulars of the work.
+                </li>
+                <li>
+                  Depending on the type of the work, a separate copyright
+                  application may have to be filed.
+                </li>
+                <li>
+                  The applicant needs to sign the forms, and the Advocate must
+                  submit the application under the name the POA has been
+                  executed.
+                </li>
+                <li>
+                  Meanwhile, our experts will prepare the copyright registration
+                  application and submit the necessary forms with the Registrar
+                  of copyrights.
+                </li>
+                <li>
+                  The diary number will be issued once the application is
+                  submitted online.
+                </li>
+                <li>
+                  Within the waiting period of 30 days, the copyright examiner
+                  reviews the application for potential objection or any other
+                  discrepancies.
+                </li>
+                <li>
+                  If there is an objection, a notice will be issued, and the
+                  same has to be compiled within 30 days from the date of
+                  issuance of the notice. The examiner may call both parties for
+                  a hearing.
+                </li>
+                <li>
+                  After the discrepancy has been removed or no objection, the
+                  copyright is registered, and the Copyright Office will issue
+                  the registration certificate.
+                </li>
+              </ul>
             </div>
 
             {/* Card Section */}
@@ -648,4 +614,4 @@ const Copyright = () => {
   );
 };
 
-export default Copyright;
+export default CRObjection;

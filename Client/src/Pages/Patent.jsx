@@ -136,7 +136,7 @@ const Patent = () => {
             <li>
               <NavLink to="/practice">Practice Areas</NavLink>
             </li>
-            <li>Patent</li>
+            <li>Patent Filing</li>
           </ul>
         </div>
         <div className="lg:flex gap-5  p-3 bg-slate-900 text-white lg:px-20">
@@ -156,7 +156,7 @@ const Patent = () => {
           <div className="flex flex-col lg:w-2/3">
             <div className="my-auto w-full pt-10 px-5 sm:w-full">
               <h2 className="text-base font-black mb-2 lg:mb-4">
-                Patent
+                Patent Filing
               </h2>
               <p className="prod_description text-sm  mt-2">
                 Patents are pivotal in protecting the intellectual property
@@ -290,7 +290,7 @@ const Patent = () => {
             }}
           >
             <h1 className="text-center text-3xl text-white pb-4 pt-4">
-              Patents
+              Patent Filing
             </h1>
             <p className="pb-8  text-sm">
               As a premier Intellectual Property (IP) law firm, House of IP
