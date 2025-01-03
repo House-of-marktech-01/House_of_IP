@@ -20,7 +20,11 @@ const Navbar = () => {
   useEffect(() => {
     const jwtToken = Cookies.get("jwtToken");
     setToken(jwtToken);
-    setAuthenticated(false);
+    if(jwtToken){
+      setAuthenticated(true);
+    }else{
+      setAuthenticated(false);
+    }
   }, []);
   const navigate = useNavigate();
 
