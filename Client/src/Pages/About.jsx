@@ -89,7 +89,7 @@ const About = () => {
                 height="auto"
                 loop
                 muted
-                className="w-full lg:h-96"
+                className="w-full lg:h-96 h-60"
               >
                 <source
                   src="/houseofIP.mp4"
@@ -148,7 +148,7 @@ const About = () => {
                 The story behind{""}
                 <span className="font-serif font-bold ml-2">House of IP</span>
               </h2>
-              <p className="text-white text-sm font-roboto lg:text-base leading-relaxed">
+              <p className="text-white text-sm font-roboto lg:text-base leading-relaxed lg:leading-7">
                 At <span className="font-bold">House of IP</span> we believe
                 that the foundation of any successful business lies in
                 safeguarding intellectual property (IP) and fostering
@@ -272,7 +272,7 @@ const About = () => {
             <h1 className="text-2xl font-bold font-serif lg:pb-5 ">
               The Birth of House of IP: A Perfect Partnership
             </h1>
-            <p className="text-sm lg:text-base leading-8 font-roboto text-justify"> 
+            <p className="text-sm lg:text-base lg:leading-7 font-roboto text-justify"> 
               The partnership between Tariq and Mahendra was built on mutual
               respect and shared values. While Tariq brought his creative and
               problem-solving expertise to the table, Mahendra provided the
