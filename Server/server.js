@@ -26,7 +26,7 @@ connectDB();
 
 // Routes
 app.use("/api/users", userRoutes);
-app.get("/", (req, res) => {
+app.get("/home", (req, res) => {
   res.send("running...");
 });
 

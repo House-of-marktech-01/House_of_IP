@@ -24,7 +24,7 @@ const Appointment = () => {
         <div className="breadcrumbs text-xs sm:text-sm pl-4 sm:pl-6 text-white pt-3 sm:pt-5">
           <ul>
             <li>
-              <NavLink to="/">Home</NavLink>
+              <NavLink to="/home">Home</NavLink>
             </li>
             <li>Book an Appointment</li>
           </ul>
@@ -52,10 +52,10 @@ const Appointment = () => {
           <p className="text-gray-600">
             Need help? Contact us at
             <NavLink
-              to="mailto:support@example.com"
+              to="mailto:support@houseofip.in"
               className="text-blue-500 hover:underline ml-1"
             >
-              Ownersemailid@gmail.com
+              support@houseofip.in
             </NavLink>
           </p>
         </div>

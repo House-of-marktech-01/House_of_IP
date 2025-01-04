@@ -25,6 +25,7 @@ import CRAssignment from "./Pages/CopyrightPages/CRAssignment";
 import DRAssignment from "./Pages/DesignPages/DRAssignment";
 import PExam from "./Pages/PatentPages/PExam";
 import PRenewal from "./Pages/PatentPages/PRenewal";
+import Welcome from "./Components/Welcome";
 
 // Lazy load the page components
 const Home = lazy(() => import("./Pages/Home"));
@@ -57,9 +58,10 @@ function App() {
           {/* Suspense component to handle loading state */}
           <ScrollProgress />
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Welcome />} />
+            <Route path="/home" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/practice" element={<Practice />} />
+            <Route path="/services" element={<Practice />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/appointment" element={<Appointment />} />
             <Route path="/copyright" element={<Copyright />} />

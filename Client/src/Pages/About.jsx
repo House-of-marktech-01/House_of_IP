@@ -68,7 +68,7 @@ const About = () => {
         <div className="breadcrumbs text-xs pl-4 sm:pl-6 bg-slate-900 text-white pt-20">
           <ul>
             <li>
-              <NavLink to="/">Home</NavLink>
+              <NavLink to="/home">Home</NavLink>
             </li>
             <li>About</li>
           </ul>

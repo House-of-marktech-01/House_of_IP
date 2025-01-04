@@ -20,16 +20,13 @@ const Navbar = () => {
   useEffect(() => {
     const jwtToken = Cookies.get("jwtToken");
     setToken(jwtToken);
-    if(jwtToken){
+    if (jwtToken) {
       setAuthenticated(true);
-    }else{
+    } else {
       setAuthenticated(false);
     }
   }, []);
   const navigate = useNavigate();
-
- 
-
 
   useEffect(() => {
     // Add keydown event listener
@@ -49,8 +46,6 @@ const Navbar = () => {
       window.removeEventListener("keydown", handleKeydown);
     };
   }, []);
-
- 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -75,7 +70,7 @@ const Navbar = () => {
 
       if (response.ok) {
         const data = await response.json();
-        Cookies.set("jwtToken", data.token, { path: "/" }); // Save token in cookies
+        Cookies.set("jwtToken", data.token, { path: "/home" }); // Save token in cookies
         setToken(data.token); // Update token state immediately
         setAuthenticated(true); // Update authenticated state
         setIsLogin(false); // Switch to "Logout" button
@@ -97,7 +92,7 @@ const Navbar = () => {
     setToken(null); // Update token state
     setAuthenticated(false); // Update authenticated state
     toast.success("Logged out successfully");
-    navigate("/"); // Redirect to the home page or login
+    navigate("/home"); // Redirect to the home page or login
   };
 
   return (
@@ -119,7 +114,7 @@ const Navbar = () => {
 
             {/* Logo */}
             <div className="flex items-center">
-              <NavLink to="/" className="text-2xl font-bold text-white">
+              <NavLink to="/home" className="text-2xl font-bold text-white">
                 House of IP
               </NavLink>
             </div>
@@ -127,13 +122,19 @@ const Navbar = () => {
             {/* Desktop Menu */}
             <div className="hidden md:flex space-x-8 items-center">
               <NavLink
+                to="/home"
+                className="text-white hover:text-blue-600 font-roboto font-medium"
+              >
+                Home
+              </NavLink>
+              <NavLink
                 to="/about"
                 className="text-white hover:text-blue-600 font-medium"
               >
                 About
               </NavLink>
               <div className="relative group">
-                <NavLink to="/practice">
+                <NavLink to="/services">
                   <button className="text-white hover:text-blue-600 font-medium">
                     Services
                   </button>
@@ -178,7 +179,7 @@ const Navbar = () => {
               >
                 Book an Appointment
               </NavLink>
-              <SearchBox/>
+              <SearchBox />
               {/* Open the modal using document.getElementById('ID').showModal() method */}
               {authenticated ? (
                 <button className="btn bg-slate-800" onClick={handleLogout}>
@@ -321,6 +322,12 @@ const Navbar = () => {
             </button>
             <div className="mt-4">
               <NavLink
+                to="/home"
+                className="block px-4 py-2 text-gray-500 hover:bg-slate-800"
+              >
+                Home
+              </NavLink>
+              <NavLink
                 to="/about"
                 className="block px-4 py-2 text-gray-500 hover:bg-slate-800"
               >
@@ -333,7 +340,7 @@ const Navbar = () => {
                 onMouseLeave={() => setIsServicesOpen(false)}
               >
                 <div className="flex justify-between items-center cursor-pointer">
-                  <NavLink to="/practice">
+                  <NavLink to="/services">
                     <span className="text-gray-500">Services</span>
                   </NavLink>
                   {isServicesOpen ? <FiMinus /> : <FiPlus />}
@@ -494,7 +501,7 @@ const Navbar = () => {
                     </div>
                   </div>
                 </dialog>
-                <SearchBox/>
+                <SearchBox />
               </div>
             </div>
           </div>

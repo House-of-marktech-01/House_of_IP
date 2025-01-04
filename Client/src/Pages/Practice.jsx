@@ -16,7 +16,7 @@ const Practice = () => {
         <div className="breadcrumbs text-sm pl-6 bg-slate-900 text-white pt-20">
           <ul>
             <li>
-              <NavLink to="/">Home</NavLink>
+              <NavLink to="/home">Home</NavLink>
             </li>
             <li>Practice Areas</li>
           </ul>
@@ -73,7 +73,8 @@ const Practice = () => {
           </h2>
           <p className="text-lg text-gray-100">Book an appointment with us!</p>
           <NavLink
-            to="http://calendly.com/House of IP/book-an-appointment"
+            to="https://calendly.com/houseofintellectualproperty/30min"
+            target="_blank"
             className="bg-blue-600 text-white py-3 px-6 rounded-lg shadow-md hover:bg-blue-700 transition duration-300"
           >
             BOOK APPOINTMENT

@@ -70,12 +70,7 @@ const Patent = () => {
     }
   };
 
-  const { getRootProps, getInputProps } = useDropzone({
-    accept: ".pdf, .doc, .docx, .txt", // Additional file types if needed
-    onDrop: (acceptedFiles) => {
-      setSelectedFile(acceptedFiles[0]);
-    },
-  });
+
 
   const handleUpload = async () => {
     if (!selectedFile) {
@@ -131,7 +126,7 @@ const Patent = () => {
         <div className="breadcrumbs text-xs sm:text-sm pl-4 sm:pl-6 bg-slate-900 text-white pt-20 lg:pt-20">
           <ul>
             <li>
-              <NavLink to="/">Home</NavLink>
+              <NavLink to="/home">Home</NavLink>
             </li>
             <li>
               <NavLink to="/practice">Practice Areas</NavLink>
@@ -174,10 +169,9 @@ const Patent = () => {
                     onChange={handleChange}
                   >
                     <option value="patent-search">Patent search</option>
-                    <option value="provisional-filing">
-                      Provisional filing
+                    <option value="Patent-filing">
+                      Patent filing
                     </option>
-                    <option value="regular">Regular</option>
                   </select>
                 </div>
 
@@ -199,16 +193,17 @@ const Patent = () => {
                   )}
 
                   {/* Provisional Filing Card */}
-                  {selectedOption === "provisional-filing" && (
+                  {selectedOption === "Patent-filing" && (
                     <div className="border rounded-md p-4 text-white bg-slate-900  ">
                       <h2 className="font-semibold text-lg mb-2">
-                        PROVISIONAL FILING
+                        Patent Filing - Complete
                       </h2>
                       <ul className="list-disc list-inside space-y-1">
-                        <li>PROVISIONAL FILING</li>
-                        <li>Application Preparation</li>
-                        <li>Temporary Protection</li>
-                        <li>Filing on IPINDIA</li>
+                        <li>FER</li>
+                        <li>Opposition</li>
+                        <li>Hearing included</li>
+                        <li>Full Protection</li>
+                        <li>Filing done at IPO by Registered Patent Agent</li>
                       </ul>
                     </div>
                   )}
@@ -227,7 +222,7 @@ const Patent = () => {
                     </div>
                   )}
                 </div>
-                <div>
+                <div className="flex flex-row lg:flex-row justify-between items-center mt-4">
                   <RWebShare
                     data={{
                       text: "Check out this amazing patent filing service at House of IP!",
@@ -240,52 +235,14 @@ const Patent = () => {
                       Refer a friend
                     </button>
                   </RWebShare>
+                  <p className="text-white">* excluding Government fees</p>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Right Uploader Section */}
-          <div className="max-w-lg mx-auto p-6 bg-slate-800 rounded-lg shadow-md h-full sticky top-20">
-            <h2 className="text-2xl font-bold mb-4 text-center">
-              Upload Document
-            </h2>
-            <div
-              {...getRootProps()}
-              className="border-2 border-dashed border-slate-700 p-6 mb-4 text-center cursor-pointer bg-state-700 rounded-md"
-            >
-              <input {...getInputProps()} />
-              <p className="text-gray-200">
-                Drag & drop a document here, or click to select a file
-              </p>
-              {selectedFile && (
-                <p className="mt-2 text-gray-100">
-                  Selected File: {selectedFile.name}
-                </p>
-              )}
-            </div>
-
-            <button
-              onClick={handleUpload}
-              disabled={isUploading}
-              className="relative flex items-center px-6 py-3 overflow-hidden font-medium transition-all bg-slate-700 rounded-md group w-full"
-            >
-              <span className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-slate-900 rounded group-hover:-mr-4 group-hover:-mt-4">
-                <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
-              </span>
-              <span className="absolute bottom-0 rotate-180 left-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-slate-900 rounded group-hover:-ml-4 group-hover:-mb-4">
-                <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
-              </span>
-              <span className="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full bg-slate-900 rounded-md group-hover:translate-x-0"></span>
-              <span className="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-white">
-                {isUploading ? "Uploading..." : "Upload Document"}
-              </span>
-            </button>
-
-            {uploadStatus && (
-              <p className="mt-4 text-center text-gray-700">{uploadStatus}</p>
-            )}
-          </div>
+          
         </div>
         <div className="flex flex-row justify-start space-x-10 bg-slate-900 text-white px-5 lg:px-20">
           <NavLink to="/patentexam">

@@ -70,13 +70,6 @@ const PExam = () => {
     }
   };
 
-  const { getRootProps, getInputProps } = useDropzone({
-    accept: ".pdf, .doc, .docx, .txt", // Additional file types if needed
-    onDrop: (acceptedFiles) => {
-      setSelectedFile(acceptedFiles[0]);
-    },
-  });
-
   const handleUpload = async () => {
     if (!selectedFile) {
       toast.error("Please select a document to upload!");
@@ -131,7 +124,7 @@ const PExam = () => {
         <div className="breadcrumbs text-xs sm:text-sm pl-4 sm:pl-6 bg-slate-900 text-white pt-20 lg:pt-20">
           <ul>
             <li>
-              <NavLink to="/">Home</NavLink>
+              <NavLink to="/home">Home</NavLink>
             </li>
             <li>
               <NavLink to="/practice">Practice Areas</NavLink>
@@ -164,49 +157,24 @@ const PExam = () => {
                 based on novelty, inventive step, and industrial applicability
               </p>
             </div>
+            <div className="flex flex-row lg:flex-row justify-between items-center mt-4">
+              <RWebShare
+                data={{
+                  text: "Check out this amazing patent filing service at House of IP!",
+                  url: window.location.href,
+                  title: "House of IP - Patent Filing",
+                }}
+                onClick={() => console.log("Shared successfully!")}
+              >
+                <button className="text-blue-500 hover:underline pt-2 pl-2">
+                  Refer a friend
+                </button>
+              </RWebShare>
+              <p className="text-white">* excluding Government fees</p>
+            </div>
           </div>
 
           {/* Right Uploader Section */}
-          <div className="max-w-lg mx-auto p-6 bg-slate-800 rounded-lg shadow-md h-full sticky top-20">
-            <h2 className="text-2xl font-bold mb-4 text-center">
-              Upload Document
-            </h2>
-            <div
-              {...getRootProps()}
-              className="border-2 border-dashed border-slate-700 p-6 mb-4 text-center cursor-pointer bg-state-700 rounded-md"
-            >
-              <input {...getInputProps()} />
-              <p className="text-gray-200">
-                Drag & drop a document here, or click to select a file
-              </p>
-              {selectedFile && (
-                <p className="mt-2 text-gray-100">
-                  Selected File: {selectedFile.name}
-                </p>
-              )}
-            </div>
-
-            <button
-              onClick={handleUpload}
-              disabled={isUploading}
-              className="relative flex items-center px-6 py-3 overflow-hidden font-medium transition-all bg-slate-700 rounded-md group w-full"
-            >
-              <span className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-slate-900 rounded group-hover:-mr-4 group-hover:-mt-4">
-                <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
-              </span>
-              <span className="absolute bottom-0 rotate-180 left-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-slate-900 rounded group-hover:-ml-4 group-hover:-mb-4">
-                <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
-              </span>
-              <span className="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full bg-slate-900 rounded-md group-hover:translate-x-0"></span>
-              <span className="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-white">
-                {isUploading ? "Uploading..." : "Upload Document"}
-              </span>
-            </button>
-
-            {uploadStatus && (
-              <p className="mt-4 text-center text-gray-700">{uploadStatus}</p>
-            )}
-          </div>
         </div>
         <div className="flex flex-row justify-start space-x-10 bg-slate-900 text-white px-5 lg:px-20">
           <NavLink to="/patent">
@@ -344,8 +312,6 @@ const PExam = () => {
           </motion.div>
         </div>
 
-        
-
         <h1 className="text-center text-3xl text-white pb-4 bg-slate-900">
           Patent Examination FAQ's
         </h1>
@@ -366,7 +332,7 @@ const PExam = () => {
                 <details className="group overflow-hidden ">
                   <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-800 rounded-t-lg transition">
                     <span className="font-medium text-white">
-                    How long does the patent examination process take?
+                      How long does the patent examination process take?
                     </span>
                     <span className="transition-transform group-open:rotate-180">
                       &#9660;
@@ -374,7 +340,8 @@ const PExam = () => {
                   </summary>
                   <div className="transition-all duration-300 bg-gray-800 rounded-b-xl pb-5 ease-in-out overflow-hidden max-h-0 group-open:max-h-96">
                     <p className="mt-2 px-4 text-white text-sm">
-                    Typically, it takes 12-24 months, but expedited examination can reduce this timeline.
+                      Typically, it takes 12-24 months, but expedited
+                      examination can reduce this timeline.
                     </p>
                   </div>
                 </details>
@@ -383,7 +350,7 @@ const PExam = () => {
                 <details className="group overflow-hidden">
                   <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-800 rounded-t-lg transition">
                     <span className="font-medium text-white">
-                    Can an application be revived if abandoned?
+                      Can an application be revived if abandoned?
                     </span>
                     <span className="transition-transform group-open:rotate-180">
                       &#9660;
@@ -391,7 +358,8 @@ const PExam = () => {
                   </summary>
                   <div className="transition-all duration-300 bg-gray-800 pb-5 rounded-b-xl ease-in-out overflow-hidden max-h-96 group-open:max-h-96 px-12 text-justify text-black font-montserrat font-thin overflow-y-auto">
                     <p className="mt-2 px-4 text-white text-sm">
-                    Yes, under Rule 137, a request for condonation of delay can be filed.
+                      Yes, under Rule 137, a request for condonation of delay
+                      can be filed.
                     </p>
                   </div>
                 </details>
@@ -400,7 +368,7 @@ const PExam = () => {
                 <details className="group overflow-hidden">
                   <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-800 rounded-t-lg transition">
                     <span className="font-medium text-white">
-                    What is the cost of filing a patent application in India?
+                      What is the cost of filing a patent application in India?
                     </span>
                     <span className="transition-transform group-open:rotate-180">
                       &#9660;
@@ -408,7 +376,9 @@ const PExam = () => {
                   </summary>
                   <div className="transition-all duration-300 bg-gray-800 pb-5 rounded-b-xl ease-in-out overflow-hidden max-h-96 group-open:max-h-96 px-12 text-justify text-black font-montserrat font-thin overflow-y-auto">
                     <p className="mt-2 px-4 text-white text-sm">
-                    The cost varies based on the entity type: ₹1,600 for individuals, ₹4,000 for small entities, and ₹8,000 for large entities.
+                      The cost varies based on the entity type: ₹1,600 for
+                      individuals, ₹4,000 for small entities, and ₹8,000 for
+                      large entities.
                     </p>
                   </div>
                 </details>
@@ -417,7 +387,7 @@ const PExam = () => {
                 <details className="group overflow-hidden">
                   <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-800 rounded-t-lg transition">
                     <span className="font-medium text-white">
-                    Is it mandatory to request an expedited examination?
+                      Is it mandatory to request an expedited examination?
                     </span>
                     <span className="transition-transform group-open:rotate-180">
                       &#9660;
@@ -425,7 +395,9 @@ const PExam = () => {
                   </summary>
                   <div className="transition-all duration-300 bg-gray-800 pb-5 rounded-b-xl ease-in-out overflow-hidden max-h-96 group-open:max-h-96 px-12 text-justify text-black font-montserrat font-thin overflow-y-auto">
                     <p className="mt-2 px-4 text-white text-sm">
-                    No, it is optional. Standard examination follows the regular timeline, while expedited examination is available under specific criteria.
+                      No, it is optional. Standard examination follows the
+                      regular timeline, while expedited examination is available
+                      under specific criteria.
                     </p>
                   </div>
                 </details>
@@ -434,7 +406,7 @@ const PExam = () => {
                 <details className="group overflow-hidden">
                   <summary className="flex justify-between items-center cursor-pointer p-4 bg-slate-800 rounded-t-lg transition">
                     <span className="font-medium text-white">
-                    What happens if the patent examiner raises objections?
+                      What happens if the patent examiner raises objections?
                     </span>
                     <span className="transition-transform group-open:rotate-180">
                       &#9660;
@@ -442,7 +414,9 @@ const PExam = () => {
                   </summary>
                   <div className="transition-all duration-300 bg-gray-800 pb-5 rounded-b-xl ease-in-out overflow-hidden max-h-96 group-open:max-h-96 px-12 text-justify text-black font-montserrat font-thin overflow-y-auto">
                     <p className="mt-2 px-4 text-white text-sm">
-                    The applicant has six months to respond to the First Examination Report (FER) and address objections through arguments or amendments.
+                      The applicant has six months to respond to the First
+                      Examination Report (FER) and address objections through
+                      arguments or amendments.
                     </p>
                   </div>
                 </details>
@@ -450,7 +424,6 @@ const PExam = () => {
             </div>
           </div>
         </div>
-
       </div>
     </>
   );
