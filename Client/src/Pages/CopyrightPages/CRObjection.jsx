@@ -269,7 +269,7 @@ const CRObjection = () => {
               <figure>
                 <img
                   src="https://blog.ipleaders.in/wp-content/uploads/2021/06/1_copyright-designs-and-patents-act-1988-1.jpg"
-                  alt="Patent"
+                  alt="Copyright Registration"
                   className="h-44 w-full"
                 />
               </figure>
@@ -282,13 +282,13 @@ const CRObjection = () => {
             <div className="card card-compact bg-base-100 w-72 shadow-xl">
               <figure>
                 <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzyEMHz465Z22QNVCNiNRbrImjH2qZ-gjYOg&s"
-                  alt="Patent"
+                  src="https://media.licdn.com/dms/image/C4E12AQFtVpm-q_tQgg/article-cover_image-shrink_600_2000/0/1604215607381?e=2147483647&v=beta&t=MML4g7tg5BAie55Ika9VjJce0SRDduENyldDAF1PrS8"
+                  alt="Copyright Assignment"
                   className="h-44 w-full"
                 />
               </figure>
               <div className="card-body bg-slate-800 rounded-b-xl text-white">
-                <h2 className="card-title">Trademark Objection</h2>
+                <h2 className="card-title">Copyright Assignment</h2>
               </div>
             </div>
           </NavLink>

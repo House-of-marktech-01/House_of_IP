@@ -225,8 +225,8 @@ const DRAssignment = () => {
             <div className="card card-compact bg-base-100 w-72 shadow-xl">
               <figure>
                 <img
-                  src="https://files.oaiusercontent.com/file-TPQTnBsQ4yvnpS4WTrTC5c?se=2025-01-04T06%3A34%3A25Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Df96457e3-1456-42e8-82cc-e8b201170454.webp&sig=LAp1n9twz0gUjnkYCPlg%2BDkB/NAjxqLuKRxoKgPR/9w%3D"
-                  alt="Patent"
+                  src="designobj.webp"
+                  alt="design objection"
                   className="h-44 w-full"
                 />
               </figure>
@@ -240,7 +240,7 @@ const DRAssignment = () => {
               <figure>
                 <img
                   src="https://www.bdslegalserv.com/assets/img/design_registration.jpg"
-                  alt="Patent"
+                  alt="design registration"
                   className="h-44 w-full"
                 />
               </figure>
