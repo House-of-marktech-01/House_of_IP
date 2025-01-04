@@ -77,7 +77,7 @@ const OurStory = () => {
                   className="w-full lg:h-96"
                 >
                   <source
-                    src="https://www.w3schools.com/html/mov_bbb.mp4"
+                    src="/houseofIP.mp4"
                     type="video/mp4"
                   />
                 </video>
