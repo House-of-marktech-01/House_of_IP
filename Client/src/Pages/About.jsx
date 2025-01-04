@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import TestimonialCard from "../Components/Testimonials";
 import { Helmet } from "react-helmet";
+import { motion } from "framer-motion";
 
 const About = () => {
   const videoRef = useRef(null);
@@ -143,176 +144,166 @@ const About = () => {
 
             {/* Text Section */}
             <div className="w-full lg:w-2/3 lg:pl-6">
-              <h2 className="text-xl lg:text-2xl font-bold text-white mb-4">
-                About{" "}
-                <span className="font-montserrat font-thin">House of IP</span>
+              <h2 className="text-xl font-serif lg:text-2xl font-thin text-white mb-4">
+                The story behind{""}
+                <span className="font-serif font-bold ml-2">House of IP</span>
               </h2>
-              <p className="text-white text-sm lg:text-base leading-relaxed">
-                At House of IP, we specialize in empowering individuals,
-                businesses, and institutions to secure and protect their
-                intellectual property. With a team of seasoned IPR agents and
-                experts, we offer comprehensive services tailored to meet the
-                dynamic needs of creators and innovators. Our mission is to
-                simplify the IP registration process and provide strategic
-                guidance for maximizing the value of your intellectual assets.
-                Whether it’s patents, trademarks, copyrights, or trade secrets,
-                we’re your trusted partner in navigating the complexities of
-                intellectual property law. House of IP is more than a
-                service—it’s a vision to foster innovation and safeguard
-                creativity.
+              <p className="text-white text-sm font-roboto lg:text-base leading-relaxed">
+                At <span className="font-bold">House of IP</span> we believe
+                that the foundation of any successful business lies in
+                safeguarding intellectual property (IP) and fostering
+                innovation. Our journey began with two visionary individuals,
+                hailing from distinct yet complementary professional
+                backgrounds, who shared a common passion for innovation,
+                creativity, and the growing significance of intellectual
+                property rights (IPRs) in today’s global economy. Together, they
+                set out to build a company that champions the protection of
+                ideas and innovation, empowering businesses to scale new
+                heights.
               </p>
             </div>
           </div>
         </div>
       </div>
       <div>
-        <div className="bg-slate-900 py-8 px-4 lg:px-16">
+        <div className="bg-slate-900 py-8 px-4 lg:px-20 ">
           <div className="flex flex-col lg:flex-row items-start justify-between space-y-6 lg:space-y-0">
-            {/* Left Div */}
-            <div className="w-full lg:w-2/3 pr-0 lg:pr-6 relative text-white lg:sticky lg:top-16 self-start">
-              <h2 className="text-xl lg:text-2xl font-bold mb-4">
-                How We Began
-              </h2>
-              <p className=" text-sm lg:text-base leading-relaxed">
-                Our journey started with a simple goal: to make intellectual
-                property accessible to everyone. Founded by a group of IP
-                enthusiasts, House of IP was born from a shared passion for
-                innovation and creativity. We realized that while ideas have the
-                power to change the world, they often remain vulnerable without
-                proper protection. This insight drove us to establish a platform
-                that bridges the gap between creators and the safeguards they
-                need. From humble beginnings, we’ve grown into a leading IP
-                service provider trusted by inventors, entrepreneurs, and
-                businesses alike.
-              </p>
-              <p className="text-lg  lg:text-2xl pt-4 font-bold text-start mb-6">
-                Our Evolution
-              </p>
-              <p className="mb-4 text-justify  text-sm lg:text-base">
-                Since our inception, we have continually adapted to the
-                ever-changing landscape of intellectual property laws and global
-                innovation trends.
-              </p>
-              <h3 className="text-sm font-semibold  mb-4 lg:text-base">
-                Milestones:
-              </h3>
-              <ul className="list-disc text-sm pl-6 mb-4 lg:text-base">
-                <li>
-                  Established a global filing network for patents and
-                  trademarks.
-                </li>
-                <li>
-                  Expanded our expertise to include IP commercialization
-                  support.
-                </li>
-                <li>
-                  Built a cutting-edge digital platform for streamlined IP
-                  registration and management.
-                </li>
-              </ul>
-              <p className="text-justify text-sm  lg:text-base">
-                Today, <strong>House of IP</strong> stands as a beacon for
-                creators, offering end-to-end services that span multiple
-                jurisdictions and industries.
-              </p>
+            {/* Left Div (Tariq's story) */}
+            <div className="w-full lg:w-1/2 pr-0 lg:pr-6 relative text-white lg:sticky lg:top-16 self-start">
+              <motion.h2
+                className="text-xl lg:text-2xl font-bold mb-4 text-center font-serif"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }}
+              >
+                Mohd Tariq Saeed Khan <br /> Turning Creativity into an
+                Enterprise
+              </motion.h2>
+              <motion.p
+                className="text-sm lg:text-base leading-relaxed font-roboto text-justify"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 0.2 }}
+              >
+                A retired Class 1 Civil Engineer with the Central Government of
+                India, Mohd Tariq Saeed Khan built a distinguished career in
+                engineering, collaborating with other professionals to execute
+                projects of national importance. His expertise in map drawing
+                and design gave him an intricate understanding of precision and
+                creativity, and his decades of experience exposed him to
+                countless innovative ideas. However, Tariq’s professional
+                journey wasn’t just confined to engineering. Over the years, he
+                became deeply intrigued by the process of turning raw ideas into
+                practical, protected innovations. His curiosity about
+                intellectual property rights grew as he observed how protecting
+                one’s intellectual assets could transform industries and pave
+                the way for groundbreaking progress.
+              </motion.p>
+              <motion.p
+                className="text-sm lg:text-base leading-relaxed font-roboto text-justify mt-5"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 0.4 }}
+              >
+                Upon retiring, Tariq was at a crossroad. Unwilling to rest on
+                his laurels, his inner innovator led him to an idea: why not
+                create a platform dedicated to helping others safeguard their
+                inventions, brands, and creative works? Recognizing the gap in
+                awareness and accessibility of IPR services, he envisioned a
+                company that could bridge this divide by offering top-notch
+                services through a team of IPR professionals and agents. With
+                this vision, he began laying the groundwork for “House of IP,”
+                but he realized he needed a strong business partner who could
+                help transform his idea into a viable enterprise. That’s when he
+                joined forces with Mahendra Pratap Singh, a skilled businessman
+                who shared his enthusiasm for innovation and intellectual
+                property.
+              </motion.p>
             </div>
 
-            {/* Right Div */}
-            <div className="w-full lg:w-1/2 grid grid-cols-1 sm:grid-cols-1 gap-4 pt-10 mt-10">
-              <div className="p-4  rounded-lg shadow-md bg-slate-800 pt-5">
-                <h3 className="text-lg font-semibold  mb-2 text-white">
-                  Vision
-                </h3>
-                <p className="text-sm text-white">
-                  To create a world where every innovation, creation, and idea
-                  is protected and nurtured. We aim to be the catalyst that
-                  bridges creativity and commerce, enabling individuals and
-                  organizations to thrive in an innovation-driven economy.
-                </p>
-              </div>
-
-              {/* Child Div 3 */}
-              <div className="p-4  rounded-lg shadow-md bg-slate-800">
-                <h3 className="text-lg font-semibold  mb-2 text-white">
-                  Mission
-                </h3>
-                <ul className="list-disc text-sm  pl-6 mb-4 lg:text-base text-white">
-                  <li>
-                    Empower Innovators: Equip creators with the tools and
-                    resources to protect their intellectual property.
-                  </li>
-                  <li>
-                    Simplify Complexity: Make the IP registration and protection
-                    process straightforward and accessible.
-                  </li>
-                  <li>
-                    Drive Global Impact: Foster a culture of innovation by
-                    safeguarding ideas and enabling commercialization.
-                  </li>
-                </ul>
-              </div>
-
-              {/* Child Div 4 */}
-              <div className="p-4  rounded-lg shadow-md bg-slate-800 ">
-                <h2 className="text-xl   font-bold text-start mb-6 text-white lg:text-2xl">
-                  Our Work Process
-                </h2>
-                <div className="space-y-6">
-                  <div className="flex items-start  text-white ">
-                    <p>
-                      <strong>Consultation:</strong> We start by understanding
-                      your unique IP needs through personalized consultations.
-                    </p>
-                  </div>
-                  <div className="flex items-start  text-white">
-                    <p>
-                      <strong>Research & Strategy:</strong> Conduct
-                      comprehensive prior art searches and landscape analyses to
-                      build a robust IP protection strategy.
-                    </p>
-                  </div>
-                  <div className="flex items-start  text-white">
-                    <p>
-                      <strong>Filing & Documentation:</strong> Handle all
-                      paperwork, filings, and submissions with meticulous
-                      attention to detail, ensuring compliance with global IP
-                      laws.
-                    </p>
-                  </div>
-                  <div className="flex items-start  text-white">
-                    <p>
-                      <strong>Prosecution:</strong> Represent clients during
-                      patent/trademark examinations and address objections with
-                      sound arguments.
-                    </p>
-                  </div>
-                  <div className="flex items-start  text-white">
-                    <p>
-                      <strong>Protection & Litigation:</strong> Provide expert
-                      support for opposition, revocation, and IP infringement
-                      cases.
-                    </p>
-                  </div>
-                  <div className="flex items-start  text-white">
-                    <p>
-                      <strong>Commercialization:</strong> Assist in monetizing
-                      your intellectual property through licensing, technology
-                      transfer, or strategic partnerships.
-                    </p>
-                  </div>
-                  <div className="flex items-start  text-white">
-                    <p>
-                      <strong>Ongoing Support:</strong> Offer continuous IP
-                      management, ensuring your rights are maintained and
-                      enforced.
-                    </p>
-                  </div>
-                </div>
-              </div>
+            {/* Right Div (Mahendra's story) */}
+            <div className="w-full lg:w-1/2 grid grid-cols-1 sm:grid-cols-1 gap-4">
+              <motion.h2
+                className="text-xl text-center lg:text-2xl font-bold mb-4 text-white font-serif"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }}
+              >
+                Mahendra Pratap Singh <br /> A Strategic Entrepreneur with a
+                Vision
+              </motion.h2>
+              <motion.p
+                className="text-sm lg:text-base leading-relaxed font-roboto text-white text-justify"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 0.2 }}
+              >
+                Mahendra Pratap Singh is a seasoned businessman who has spent
+                decades mastering the art of building brand value and
+                understanding its importance in the modern economy. From small
+                enterprises to large ventures, he has an eye for identifying
+                opportunities and leveraging them strategically. Over the years,
+                Mahendra observed that the backbone of sustainable business
+                success often lies in protecting a company’s intellectual
+                assets—from trademarks and patents to copyrights and designs.
+              </motion.p>
+              <motion.p
+                className="text-sm lg:text-base leading-relaxed font-roboto text-white text-justify"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 0.4 }}
+              >
+                Mahendra understood that in an increasingly competitive world,
+                businesses not only needed to create but also safeguard their
+                brand identities and innovations to stay ahead. He believed IPR
+                was not merely a legal requirement but a strategic tool for
+                growth and competitiveness. When Mahendra met Tariq Saeed Khan,
+                the connection was instant. They discovered a shared vision of
+                creating a company that would democratize access to IPR
+                services, helping businesses—both large and small—protect their
+                intellectual property. Mahendra’s extensive business acumen and
+                Tariq’s innovative mindset complemented each other perfectly.
+                Together, they decided to bring their vision to life with “House
+                of IP.”
+              </motion.p>
             </div>
+          </div>
+          <div className="py-10 text-white">
+            <h1 className="text-2xl font-bold font-serif lg:pb-5 ">
+              The Birth of House of IP: A Perfect Partnership
+            </h1>
+            <p className="text-sm lg:text-base leading-8 font-roboto text-justify"> 
+              The partnership between Tariq and Mahendra was built on mutual
+              respect and shared values. While Tariq brought his creative and
+              problem-solving expertise to the table, Mahendra provided the
+              entrepreneurial drive and strategic insight to turn their vision
+              into a thriving business.Together, they founded House of IP, a
+              company designed to make IPR services accessible, reliable, and
+              professionally managed. Recognizing that they were not IPR
+              professionals themselves, they adopted a business model that
+              allowed them to hire a team of capable and experienced IPR agents
+              and professionals. These skilled individuals handle the technical
+              aspects, such as filings, registrations, and hearings, while Tariq
+              and Mahendra focus on building the business, guiding its strategic
+              direction, and raising awareness about intellectual property’s
+              importance.Their combined leadership ensures that "House of IP" is
+              more than just a service provider—it is a bridge between
+              creativity and protection, allowing innovators and businesses to
+              thrive. Today, “House of IP” stands as a testament to their shared
+              vision: a company that not only fosters innovation but also
+              safeguards the intellectual assets that drive progress.{" "}
+              <span className="font-semibold">
+                {" "}
+                Together, Mohd Tariq Saeed Khan and Mahendra Pratap Singh have
+                built “House of IP” as a symbol of innovation, empowerment, and
+                strategic vision, helping individuals and businesses protect
+                their most valuable asset—their ideas.
+              </span>
+            </p>
           </div>
         </div>
       </div>
+      <h1 className="text-center text-2xl font-serif bg-slate-900 text-white">What our clients have to say</h1>
       <TestimonialCard />
     </>
   );

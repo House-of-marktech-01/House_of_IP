@@ -7,7 +7,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import {Helmet} from "react-helmet";
+import { Helmet } from "react-helmet";
 
 const Patent = () => {
   const [email, setEmail] = useState("");
@@ -124,9 +124,9 @@ const Patent = () => {
 
   return (
     <>
-    <Helmet>
-      <title>House of IP - Patent</title>
-    </Helmet>
+      <Helmet>
+        <title>House of IP - Patent</title>
+      </Helmet>
       <div id="patent" className="w-full" style={{ position: "relative" }}>
         <div className="breadcrumbs text-xs sm:text-sm pl-4 sm:pl-6 bg-slate-900 text-white pt-20 lg:pt-20">
           <ul>
@@ -148,7 +148,6 @@ const Patent = () => {
                 className="rounded-lg w-80"
                 alt="Patent"
               />
-              
             </div>
           </div>
 
@@ -229,7 +228,18 @@ const Patent = () => {
                   )}
                 </div>
                 <div>
-                  <p className="text-blue-500 hover:underline pt-2 pl-2">Refer a friend</p>
+                  <RWebShare
+                    data={{
+                      text: "Check out this amazing patent filing service at House of IP!",
+                      url: window.location.href,
+                      title: "House of IP - Patent Filing",
+                    }}
+                    onClick={() => console.log("Shared successfully!")}
+                  >
+                    <button className="text-blue-500 hover:underline pt-2 pl-2">
+                      Refer a friend
+                    </button>
+                  </RWebShare>
                 </div>
               </div>
             </div>
@@ -276,6 +286,36 @@ const Patent = () => {
               <p className="mt-4 text-center text-gray-700">{uploadStatus}</p>
             )}
           </div>
+        </div>
+        <div className="flex flex-row justify-start space-x-10 bg-slate-900 text-white px-5 lg:px-20">
+          <NavLink to="/patentexam">
+            <div className="card card-compact bg-base-100 w-72 shadow-xl">
+              <figure>
+                <img
+                  src="https://www.intepat.com/wp-content/uploads/2017/01/Patent-Examination-Procedure-in-India.png"
+                  alt="Patent"
+                  className="h-44 w-full"
+                />
+              </figure>
+              <div className="card-body bg-slate-800 rounded-b-xl text-white">
+                <h2 className="card-title">Patent Examination</h2>
+              </div>
+            </div>
+          </NavLink>
+          <NavLink to="/patentrenewal">
+            <div className="card card-compact bg-base-100 w-72 shadow-xl">
+              <figure>
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmOMcw6FpptphcwgoIpixiqM4-0cVmR5-opA&s"
+                  alt="Patent"
+                  className="h-44 w-full"
+                />
+              </figure>
+              <div className="card-body bg-slate-800 rounded-b-xl text-white">
+                <h2 className="card-title">Patent Renewal</h2>
+              </div>
+            </div>
+          </NavLink>
         </div>
 
         <div className="bg-slate-900 text-white px-5 text-justify lg:px-20">
@@ -342,11 +382,12 @@ const Patent = () => {
             </p>
           </motion.div>
         </div>
-        <div id="docs" className="bg-slate-900 text-white px-5 text-justify flex lg:px-20 ">
+        <div
+          id="docs"
+          className="bg-slate-900 text-white px-5 text-justify flex lg:px-20 "
+        >
           <div className="w-full lg:w-3/4">
-            <h1 className="text-start text-2xl pb-4">
-              Documents Required
-            </h1>
+            <h1 className="text-start text-2xl pb-4">Documents Required</h1>
 
             {/* Patent Registration */}
             <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
@@ -388,9 +429,7 @@ const Patent = () => {
 
             {/* Proof of Right */}
             <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
-              <h1 className="text-start text-xl  pb-4">
-                Proof of Right
-              </h1>
+              <h1 className="text-start text-xl  pb-4">Proof of Right</h1>
               <p className="pb-8 text-sm">
                 Documentation from the inventor confirming the applicant's right
                 to apply for the patent registration.
@@ -399,9 +438,7 @@ const Patent = () => {
 
             {/* Power of Authority */}
             <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
-              <h1 className="text-start text-xl  pb-4">
-                Power of Authority
-              </h1>
+              <h1 className="text-start text-xl  pb-4">Power of Authority</h1>
               <p className="pb-8  text-sm">
                 If a patent agent or representative is submitting the patent
                 application, then Form-26, a power of authority, is required.
@@ -410,9 +447,7 @@ const Patent = () => {
 
             {/* Priority Documents */}
             <div className="pt-2 hover:pl-5 rounded-lg transform transition-all duration-300 ease-in-out hover:translate-x-2">
-              <h1 className="text-start text-xl  pb-4">
-                Priority Documents
-              </h1>
+              <h1 className="text-start text-xl  pb-4">Priority Documents</h1>
               <p className="pb-8 text-sm">
                 For convention applications (from the Paris Convention) or PCT
                 (Patent Cooperation Treaty) national phase applications, it's

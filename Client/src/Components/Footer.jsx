@@ -97,6 +97,7 @@ const Footer = () => {
                 </div>
               </NavLink>
 
+              <NavLink to="https://www.linkedin.com/company/house-of-intellectual-property/" target="_blank">
               <div className="social-button">
                 <button className="relative w-12 h-12 rounded-full group">
                   <div className="floater w-full h-full absolute top-0 left-0 bg-blue-500 rounded-full duration-300 group-hover:-top-8 group-hover:shadow-2xl"></div>
@@ -105,6 +106,7 @@ const Footer = () => {
                   </div>
                 </button>
               </div>
+              </NavLink>
             </div>
           </div>
         </div>

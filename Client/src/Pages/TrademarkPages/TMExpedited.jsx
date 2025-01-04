@@ -38,32 +38,7 @@ const TMExpedited = () => {
     }));
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    try {
-      const response = await fetch("http://localhost:5000/api/users/signin", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email, password }),
-      });
-
-      if (!response.ok) {
-        const errorData = await response.json();
-        alert(`Error: ${errorData.message}`);
-      } else {
-        const data = await response.json();
-        setToken(data.token);
-        alert("Login successful!");
-        console.log("Response Data:", data);
-      }
-    } catch (error) {
-      console.error("Error during login:", error);
-      alert("An error occurred. Please try again.");
-    }
-  };
+  
 
   const { getRootProps, getInputProps } = useDropzone({
     accept: ".pdf, .doc, .docx, .txt", // Additional file types if needed
@@ -138,7 +113,7 @@ const TMExpedited = () => {
           <div className="relative w-7/10 shrink-0 flex justify-center items-center h-full lg:sticky lg:top-20">
             <div className="sticky">
               <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKNoypW3-e0pyQR2WbS0NB4dyNhcJZB2o1_g&s"
+                src="/expeditedtr.jpeg"
                 className="rounded-lg w-80"
                 alt="Trademark Rectification"
               />
@@ -257,7 +232,7 @@ const TMExpedited = () => {
             <div className="card card-compact bg-base-100 w-72 shadow-xl">
               <figure>
                 <img
-                  src="https://compliancecalendar.s3.ap-south-1.amazonaws.com/website_pages_assets/banners/241018104121562997-Trademark-Objection.png"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzyEMHz465Z22QNVCNiNRbrImjH2qZ-gjYOg&s"
                   alt="Patent"
                   className="h-44 w-full"
                 />
@@ -271,7 +246,7 @@ const TMExpedited = () => {
             <div className="card card-compact bg-base-100 w-72 shadow-xl">
               <figure>
                 <img
-                  src="https://compliancecalendar.s3.ap-south-1.amazonaws.com/website_pages_assets/banners/241018110836111944-Trademark-Opposition.png"
+                  src="https://www.abbayattorneys.co.tz/wp-content/uploads/2019/05/captura-de-pantalla-2017-11-06-a-las-13-15-49-1-750x215.png"
                   alt="Patent"
                   className="h-44 w-full"
                 />
@@ -285,7 +260,7 @@ const TMExpedited = () => {
             <div className="card card-compact bg-base-100 w-72 shadow-xl">
               <figure>
                 <img
-                  src="https://compliancecalendar.s3.ap-south-1.amazonaws.com/website_pages_assets/banners/241018104243462750-Trademark-hearing.png"
+                  src="https://legaldev.in/assets/img/Trademark-Hearing.webp"
                   alt="Patent"
                   className="h-44 w-full"
                 />
@@ -295,25 +270,12 @@ const TMExpedited = () => {
               </div>
             </div>
           </NavLink>
-          <NavLink to="/trademarkcertificates">
-            <div className="card card-compact bg-base-100 w-72 shadow-xl">
-              <figure>
-                <img
-                  src="https://img.indiafilings.com/catalog/Trademark-Certificate-Brand-Monitoring.png"
-                  alt="Patent"
-                  className="h-44 w-full"
-                />
-              </figure>
-              <div className="card-body bg-slate-800 rounded-b-xl text-white">
-                <h2 className="card-title">Trademark Certificates</h2>
-              </div>
-            </div>
-          </NavLink>
+          
           <NavLink to="/trademarkrectification">
             <div className="card card-compact bg-base-100 w-72 shadow-xl">
               <figure>
                 <img
-                  src="https://ebizfiling.com/wp-content/uploads/2023/07/Trademark-rectification-and-its-legal-aspects.png"
+                  src="https://legaldev.in/assets/img/Trademark-Rectification.webp"
                   alt="Patent"
                   className="h-44 w-full"
                 />
@@ -327,7 +289,7 @@ const TMExpedited = () => {
             <div className="card card-compact bg-base-100 w-72 shadow-xl">
               <figure>
                 <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtYFNxRJiRJDaxsBvSRWbMjzYCZcbu5ZfupQ&s"
+                  src="https://chithragupta.com/cdn/shop/products/TMrenewal-1280x720_2508be5a-7151-4758-a132-350c7fd39a1a.jpg?v=1594191997"
                   alt="Patent"
                   className="h-44 w-full"
                 />
@@ -369,7 +331,7 @@ const TMExpedited = () => {
             <div className="card card-compact bg-base-100 w-72 shadow-xl">
               <figure>
                 <img
-                  src="https://img.indiafilings.com/catalog/International-Trademark.jpg"
+                  src="https://5.imimg.com/data5/HJ/WL/BV/SELLER-3211152/international-trademark-registration.jpg"
                   alt="Patent"
                   className="h-44 w-full"
                 />

@@ -96,7 +96,7 @@ const CRObjection = () => {
           <div className="relative w-7/10 shrink-0 flex justify-center items-center h-full lg:sticky lg:top-20">
             <div className="sticky">
               <img
-                src="https://img.indiafilings.com/catalog/copyright-objection-india.png"
+                src="https://static.wixstatic.com/media/7e8b4d_9029db34314e42fea21be8843a5db7c4~mv2.jpg/v1/crop/x_0,y_19,w_484,h_473/fill/w_240,h_235,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/WhatsApp%20Image%202023-08-14%20at%203_27_edited.jpg"
                 className="rounded-lg w-80"
                 alt="Copyright"
               />
@@ -282,7 +282,7 @@ const CRObjection = () => {
             <div className="card card-compact bg-base-100 w-72 shadow-xl">
               <figure>
                 <img
-                  src="https://compliancecalendar.s3.ap-south-1.amazonaws.com/website_pages_assets/banners/241018104121562997-Trademark-Objection.png"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzyEMHz465Z22QNVCNiNRbrImjH2qZ-gjYOg&s"
                   alt="Patent"
                   className="h-44 w-full"
                 />

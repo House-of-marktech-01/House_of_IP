@@ -132,14 +132,14 @@ const DRObjection = () => {
             <li>
               <NavLink to="/practice">Practice Areas</NavLink>
             </li>
-            <li>Design Registration</li>
+            <li>Design Objection</li>
           </ul>
         </div>
         <div className="lg:flex gap-5  p-3 bg-slate-900 text-white lg:px-20">
           <div className="relative w-7/10 shrink-0 flex justify-center items-center h-full lg:sticky lg:top-20">
             <div className="sticky">
               <img
-                src="https://img.indiafilings.com/catalog/Design-Objection.jpg"
+                src="https://files.oaiusercontent.com/file-TPQTnBsQ4yvnpS4WTrTC5c?se=2025-01-04T06%3A34%3A25Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Df96457e3-1456-42e8-82cc-e8b201170454.webp&sig=LAp1n9twz0gUjnkYCPlg%2BDkB/NAjxqLuKRxoKgPR/9w%3D"
                 className="rounded-lg w-56"
                 alt="Trademark Rectification"
               />
@@ -149,7 +149,7 @@ const DRObjection = () => {
           <div className="flex flex-col lg:w-2/3">
             <div className="my-auto w-full pt-10 px-5 sm:w-full">
               <h2 className="text-base font-black mb-2 lg:mb-4 ">
-                Design Registration
+                Design Objection
               </h2>
 
               <p className="prod_description text-sm  mt-2">
@@ -247,7 +247,7 @@ const DRObjection = () => {
         </div>
 
         <div className="flex flex-row justify-start space-x-10 bg-slate-900 text-white px-5 lg:px-20">
-          <NavLink to="/designobjection">
+          <NavLink to="/design">
             <div className="card card-compact bg-base-100 w-72 shadow-xl">
               <figure>
                 <img
@@ -265,7 +265,7 @@ const DRObjection = () => {
             <div className="card card-compact bg-base-100 w-72 shadow-xl">
               <figure>
                 <img
-                  src="https://compliancecalendar.s3.ap-south-1.amazonaws.com/website_pages_assets/banners/241018104121562997-Trademark-Objection.png"
+                  src="/designassign.png"
                   alt="Patent"
                   className="h-44 w-full"
                 />
@@ -407,7 +407,7 @@ const DRObjection = () => {
         </div>
 
         <h1 className="text-center text-3xl text-white pb-4 bg-slate-900">
-          Design FAQ's
+          Design Objection FAQ's
         </h1>
         <div className="space-y-4 px-2 pt-8 bg-slate-900 lg:px-10">
           {/* FAQ Section */}
