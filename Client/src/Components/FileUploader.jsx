@@ -12,7 +12,7 @@ const FileUploader = ({ formLink }) => {
 
   return (
     <div
-      className='w-1/3 bg-slate-800 h-32 flex flex-col justify-center items-center rounded-md shadow-md sticky top-20'
+      className='lg:w-1/3 bg-slate-800 h-32 flex flex-col justify-center items-center rounded-md shadow-md sticky top-20'
     >
       <h1 className='text-white mb-5 font-roboto'>Upload Your Documents here</h1>
       <button

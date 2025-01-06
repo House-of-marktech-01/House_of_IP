@@ -175,7 +175,7 @@ const PRenewal = () => {
 
           {/* Right Uploader Section */}
         </div>
-        <div className="flex flex-row justify-start space-x-10 bg-slate-900 text-white px-5 lg:px-20">
+        <div className="flex lg:flex-row flex-col space-y-5 lg:space-y-0 justify-start lg:space-x-10 bg-slate-900 text-white px-5 lg:px-20">
           <NavLink to="/patentexam">
             <div className="card card-compact bg-base-100 w-72 shadow-xl">
               <figure>

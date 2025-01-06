@@ -2,6 +2,7 @@ import React, { useState, useMemo } from "react";
 import Fuse from "fuse.js";
 import { NavLink } from "react-router-dom"; // Import NavLink from react-router-dom
 import "./SearchBox.scss"; // Add your CSS here
+import { useNavigate } from "react-router-dom";
 
 const searchIndex = [
   { id: 1, title: "About", description: "About House of IP...", url: "/about" },
@@ -130,13 +131,14 @@ const SearchBox = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [searchText, setSearchText] = useState("");
   const [results, setResults] = useState([]);
+  const navigate = useNavigate(); // Initialize navigate hook
 
-  // Memoizing the Fuse instance so it is not recreated on every render
+  // Memoizing the Fuse instance
   const fuse = useMemo(
     () =>
       new Fuse(searchIndex, {
         keys: ["title", "description"],
-        threshold: 0.3, // Adjust for strictness of matches
+        threshold: 0.3,
       }),
     []
   );
@@ -158,6 +160,14 @@ const SearchBox = () => {
     } else {
       const searchResults = fuse.search(text);
       setResults(searchResults.map((result) => result.item));
+    }
+  };
+
+  const handleSearchButtonClick = (e) => {
+    e.preventDefault();
+    if (results.length > 0) {
+      navigate(results[0].url); // Navigate to the first suggestion
+      handleClose(); // Close the search box after navigation
     }
   };
 
@@ -198,16 +208,10 @@ const SearchBox = () => {
               className="lg:w-[100%] focus:outline-none w-[90%] relative bottom-24 lg:bottom-0 lg:right-0 right-10"
             />
             <button
-              className="submit hidden lg:block bg-"
+              className="submit hidden lg:block"
               type="submit"
-              disabled={!searchText.trim()}
-            >
-              Search
-            </button>
-            <button
-              className="bg-transparent lg:hidden bottom-40  p-4 rounded-md py-6 left-36 relative"
-              type="submit"
-              disabled={!searchText.trim()}
+              onClick={handleSearchButtonClick} // Call handleSearchButtonClick
+              disabled={!searchText.trim() || results.length === 0}
             >
               Search
             </button>
@@ -219,11 +223,7 @@ const SearchBox = () => {
           {results.length > 0 ? (
             <ul>
               {results.map((result) => (
-                <li
-                  className="text-center pt-3 pb-3"
-                  key={result.id}
-                >
-                  {/* Replace with NavLink for proper routing */}
+                <li className="text-center pt-3 pb-3" key={result.id}>
                   <NavLink
                     to={result.url}
                     className="text-xl hover:bg-slate-900 lg:p-4 rounded-xl"
