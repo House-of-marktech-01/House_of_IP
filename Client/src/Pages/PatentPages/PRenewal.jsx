@@ -200,7 +200,7 @@ const PRenewal = () => {
                 />
               </figure>
               <div className="card-body bg-slate-800 rounded-b-xl text-white">
-                <h2 className="card-title">Patent Renewal</h2>
+                <h2 className="card-title">Patent Filing</h2>
               </div>
             </div>
           </NavLink>
