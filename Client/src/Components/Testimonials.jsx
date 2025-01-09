@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 const TestimonialCard = () => {
@@ -47,6 +47,12 @@ const TestimonialCard = () => {
     }
   };
 
+  useEffect(()=>{
+    const timer = setInterval(()=>{
+      handleNext();
+    },6000);
+    return ()=> clearInterval(timer);
+  },[currentIndex]);
   return (
     <div className="bg-slate-900">
   {/* Carousel for Larger Screens */}

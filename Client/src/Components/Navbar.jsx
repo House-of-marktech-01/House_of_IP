@@ -16,6 +16,7 @@ const Navbar = () => {
   const [password, setPassword] = useState("");
   const [token, setToken] = useState(Cookies.get("jwtToken") || null);
   const [authenticated, setAuthenticated] = useState(false);
+  const modalref = useRef(null);
 
   useEffect(() => {
     const jwtToken = Cookies.get("jwtToken");
@@ -75,7 +76,9 @@ const Navbar = () => {
         setAuthenticated(true); // Update authenticated state
         setIsLogin(false); // Switch to "Logout" button
         toast.success("Successfully logged in");
-        document.getElementById("my_modal_1").close(); // Close modal after successful login
+        if (modalRef.current) {
+          modalRef.current.close(); // Closes the modal
+        }
       } else {
         const errorData = await response.json();
         toast.error(`Error: ${errorData.message}`);
@@ -120,7 +123,7 @@ const Navbar = () => {
             </div>
 
             {/* Desktop Menu */}
-            <div className="hidden md:flex space-x-8 items-center">
+            <div className="hidden md:flex space-x-12 items-center text-base">
               <NavLink
                 to="/home"
                 className="text-white hover:text-blue-600 font-roboto font-medium"
@@ -177,7 +180,7 @@ const Navbar = () => {
                 to="/appointment"
                 className="text-white hover:text-blue-600 font-medium"
               >
-                Book an Appointment
+                Appointment
               </NavLink>
               <SearchBox />
               {/* Open the modal using document.getElementById('ID').showModal() method */}
@@ -501,8 +504,8 @@ const Navbar = () => {
                     </div>
                   </div>
                 </dialog>
-                <SearchBox />
               </div>
+              <SearchBox />
             </div>
           </div>
         </div>

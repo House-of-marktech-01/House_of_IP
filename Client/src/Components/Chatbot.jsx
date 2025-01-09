@@ -4,7 +4,7 @@ import axios from "axios";
 const Chatbot = () => {
   useEffect(() => {
     const script = document.createElement("script");
-    script.src = "//code.tidio.co/2svk9jpjikexauzwatg65zz1qhf3jdzv.js"; // Use your Tidio script URL
+    <script src="//code.tidio.co/bhydbwxpzdlufdjhwczub5tmmtf8d1ya.js" async></script>
     script.async = true;
     document.body.appendChild(script);
 

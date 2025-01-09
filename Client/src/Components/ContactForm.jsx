@@ -1,62 +1,53 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { toast } from "react-toastify";
-import BaseUrl from "../../BaseUrl";
+import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
-  // State to store form values
   const [fullName, setFullName] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
+  const [phonenumber, setPhonenumber] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
-  const [responseMessage, setResponseMessage] = useState("");
 
-  // Handle form submission
   const handleSubmit = async (e) => {
-    e.preventDefault(); // Prevent default form submission behavior
-    setIsLoading(true); // Set loading state
+    e.preventDefault();
+    setLoading(true);
 
-    // Create the request body
-    const requestBody = {
+    const templateParams = {
       fullName,
       email,
+      phonenumber,
       subject,
       message,
     };
 
     try {
-      const response = await fetch(`${BaseUrl}api/users/send-mail`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(requestBody),
-      });
+      await emailjs.send(
+        "service_m2rqgdj", // Replace with your EmailJS service ID
+        "template_nta0aib", // Replace with your EmailJS template ID
+        templateParams,
+        "Z17suYTec6wmDIA0q" // Replace with your EmailJS public key
+      );
 
-      const data = await response.json();
-
-      if (response.ok) {
-        setResponseMessage("Your message has been sent successfully!");
-        toast.success("Your message has been sent successfully!");
-      } else {
-        setResponseMessage(
-          data.message || "Something went wrong, please try again."
-        );
-      }
+      toast.success("Your message has been sent successfully!");
+      setFullName("");
+      setEmail("");
+      setSubject("");
+      setMessage("");
     } catch (error) {
       console.error("Error sending email:", error);
-      setResponseMessage("Failed to send the message. Please try again later.");
+      toast.error("Failed to send the message. Please try again later.");
     } finally {
-      setIsLoading(false); // Reset loading state
+      setLoading(false);
     }
   };
 
   return (
     <div
       id="consult"
-      className="pt-20 md:pt-28 bg-cover bg-center font-roboto bg-no-repeat parallax-container "
+      className="pt-20 md:pt-28 bg-cover bg-center font-roboto bg-no-repeat parallax-container"
     >
       <h1 className="text-3xl font-serif text-white text-center font-semibold">
         Contact Us
@@ -64,7 +55,6 @@ const ContactForm = () => {
       <div className="py-10">
         <div className="container mx-auto lg:px-4 md:px-8">
           <div className="flex flex-col lg:flex-row">
-            {/* Left Column */}
             <div className="lg:w-1/2 px-4 mb-12 lg:mb-0">
               <h3 className="text-2xl lg:text-4xl font-light text-white mb-4">
                 Free Consultation
@@ -72,16 +62,13 @@ const ContactForm = () => {
               <p className="text-sm text-white mb-6">
                 At House of Intellectual Property, we are committed to
                 empowering individuals and businesses with expert guidance and
-                intellectual property solutions. Whether you're looking to
-                protect your innovations, resolve disputes, or need strategic
-                advice, our experienced team is here to assist you every step of
-                the way.
+                intellectual property solutions.
               </p>
               <ul>
                 <li className="flex items-center">
                   <i className="fas fa-clock text-purple-700 text-xl mr-3"></i>
                   <span className="text-sm text-white">
-                    Mon - Sat 10.00 Am - 8.00 Pm 
+                    Mon - Sat 10.00 Am - 8.00 Pm
                   </span>
                 </li>
               </ul>
@@ -91,43 +78,38 @@ const ContactForm = () => {
                     <i className="fa-solid fa-location-dot"></i> South Delhi
                   </h4>
                   <p className="text-base leading-7 text-white font-thin space-y-4">
-                  293, Lane-2, Westend Marg, Near Saket Metro Station <br />
-                  Gate No. 2, Saket, New Delhi, Delhi
+                    293, Lane-2, Westend Marg, Near Saket Metro Station <br />
+                    Gate No. 2, Saket, New Delhi, Delhi
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* Right Column (Contact Form) */}
             <motion.div
-              className="lg:w-1/2 lg:px-4 "
-              initial={{ opacity: 0, y: 50 }} // Initial state: hidden and moved down
-              whileInView={{ opacity: 1, y: 0 }} // Animates to visible and center position
-              viewport={{ once: true }} // Animation triggers once when in the viewport
-              transition={{ duration: 1 }} // Transition duration for animation
+              className="lg:w-1/2 lg:px-4"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1 }}
             >
               <form
-                onSubmit={handleSubmit} // Handle form submission
+                onSubmit={handleSubmit}
                 className="space-y-6 bg-transparent p-5 rounded-lg"
               >
                 <div className="space-y-4">
                   <input
                     type="text"
-                    name="your-name"
                     placeholder="Full Name*"
                     required
                     value={fullName}
                     onChange={(e) => {
-                      const value = e.target.value;
-                      const filteredValue = value.replace(/[0-9]/g, ""); // Remove numeric characters
-                      setFullName(filteredValue);
+                      const value = e.target.value.replace(/[0-9]/g, "");
+                      setFullName(value);
                     }}
                     className="w-full px-4 py-3 border text-sm text-black bg-transparent bg-white placeholder:text-gray-900 border-gray-300 rounded-md focus:outline-none focus:ring-[#294160] focus:ring-2"
                   />
-
                   <input
                     type="email"
-                    name="your-email"
                     placeholder="Email*"
                     required
                     value={email}
@@ -135,8 +117,15 @@ const ContactForm = () => {
                     className="w-full px-4 py-3 border text-black bg-transparent bg-white placeholder:text-gray-900 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#294160] text-sm"
                   />
                   <input
+                    type="number"
+                    placeholder="Phone number"
+                    required
+                    value={phonenumber}
+                    onChange={(e) => setPhonenumber(e.target.value)}
+                    className="w-full px-4 py-3 border text-black bg-transparent bg-white placeholder:text-gray-900 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#294160] text-sm"
+                  />
+                  <input
                     type="text"
-                    name="your-subject"
                     placeholder="Subject*"
                     required
                     value={subject}
@@ -144,9 +133,7 @@ const ContactForm = () => {
                     className="w-full px-4 py-3 border text-black bg-transparent bg-white placeholder:text-gray-900 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#294160] text-sm"
                   />
                 </div>
-
                 <textarea
-                  name="your-message"
                   placeholder="Message*"
                   required
                   rows="6"
@@ -160,13 +147,6 @@ const ContactForm = () => {
                   className="relative flex items-center px-6 py-3 overflow-hidden font-medium transition-all bg-slate-800 rounded-md group"
                   disabled={loading}
                 >
-                  <span className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-slate-900 rounded group-hover:-mr-4 group-hover:-mt-4">
-                    <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-slate-600"></span>
-                  </span>
-                  <span className="absolute bottom-0 rotate-180 left-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-slate-900 rounded group-hover:-ml-4 group-hover:-mb-4">
-                    <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-slate-600"></span>
-                  </span>
-                  <span className="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full bg-slate-900 rounded-md group-hover:translate-x-0"></span>
                   <span className="relative flex items-center justify-center w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-white">
                     {loading ? (
                       <>

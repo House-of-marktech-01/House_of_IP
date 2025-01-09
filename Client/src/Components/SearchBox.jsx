@@ -132,6 +132,7 @@ const SearchBox = () => {
   const [searchText, setSearchText] = useState("");
   const [results, setResults] = useState([]);
   const navigate = useNavigate(); // Initialize navigate hook
+  
 
   // Memoizing the Fuse instance
   const fuse = useMemo(
@@ -142,14 +143,6 @@ const SearchBox = () => {
       }),
     []
   );
-
-  const handleOpen = () => setIsOpen(true);
-
-  const handleClose = () => {
-    setIsOpen(false);
-    setSearchText("");
-    setResults([]);
-  };
 
   const handleInputChange = (e) => {
     const text = e.target.value;
@@ -163,83 +156,59 @@ const SearchBox = () => {
     }
   };
 
-  const handleSearchButtonClick = (e) => {
-    e.preventDefault();
-    if (results.length > 0) {
-      navigate(results[0].url); // Navigate to the first suggestion
-      handleClose(); // Close the search box after navigation
-    }
+  const handleResultClick = (url) => {
+    navigate(url);
+    setSearchText("");
+    setResults([]);
   };
 
   return (
-    <div className={`search-container ${isOpen ? "search-open" : ""}`}>
+    <div className={`search-container  mt-4 ${isOpen ? "search-open" : ""}`}>
       {/* Search Button */}
-      <a
-        href="#"
-        className="search-btn rounded-md"
-        onClick={(e) => {
-          e.preventDefault();
-          handleOpen();
-        }}
-      >
-        Search<i className="fa fa-search"></i>
-      </a>
 
       {/* Search Box */}
-      <div className={`search-box ${isOpen ? "search-open" : ""}`}>
-        <button className="close" onClick={handleClose}>
-          x
-        </button>
-        <div className="inner row">
-          <div className="small-12 columns">
-            <label
-              className={`placeholder hidden lg:block ${
-                searchText ? "move-up" : ""
-              }`}
-              htmlFor="search-field"
-            >
-              {searchText ? "searching..." : "Type something..."}
-            </label>
-            <input
-              type="text"
-              id="search-field"
-              value={searchText}
-              onChange={handleInputChange}
-              className="lg:w-[100%] focus:outline-none w-[90%] relative bottom-24 lg:bottom-0 lg:right-0 right-10"
-            />
-            <button
-              className="submit hidden lg:block"
-              type="submit"
-              onClick={handleSearchButtonClick} // Call handleSearchButtonClick
-              disabled={!searchText.trim() || results.length === 0}
-            >
-              Search
-            </button>
-          </div>
+      <div className="search ml-7 mt-3 lg:ml-0 lg:mt-0">
+        <input
+          type="text"
+          placeholder=" "
+          className=""
+          value={searchText}
+          onChange={handleInputChange}
+        />
+        <div>
+          <svg>
+            <use xlinkHref="#path" />
+          </svg>
         </div>
 
-        {/* Display Search Results */}
-        <div className="results lg:w-96 relative lg:top-36 top-36 lg:left-96">
-          {results.length > 0 ? (
-            <ul>
-              {results.map((result) => (
-                <li className="text-center pt-3 pb-3" key={result.id}>
-                  <NavLink
-                    to={result.url}
-                    className="text-xl hover:bg-slate-900 lg:p-4 rounded-xl"
-                  >
-                    {result.title}
-                  </NavLink>
-                </li>
-              ))}
-            </ul>
-          ) : searchText.trim() ? (
-            <div>
-              <p className="text-center">No results found</p>
-            </div>
-          ) : null}
-        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" style={{ display: "none" }}>
+          <symbol
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 160 28"
+            id="path"
+          >
+            <path
+              d="M32.9418651,-20.6880772 C37.9418651,-20.6880772 40.9418651,-16.6880772 40.9418651,-12.6880772 C40.9418651,-8.68807717 37.9418651,-4.68807717 32.9418651,-4.68807717 C27.9418651,-4.68807717 24.9418651,-8.68807717 24.9418651,-12.6880772 C24.9418651,-16.6880772 27.9418651,-20.6880772 32.9418651,-20.6880772 L32.9418651,-29.870624 C32.9418651,-30.3676803 33.3448089,-30.770624 33.8418651,-30.770624 C34.08056,-30.770624 34.3094785,-30.6758029 34.4782612,-30.5070201 L141.371843,76.386562"
+              transform="translate(83.156854, 22.171573) rotate(-225.000000) translate(-83.156854, -22.171573)"
+            ></path>
+          </symbol>
+        </svg>
       </div>
+      {/* Results Dropdown */}
+      {results.length > 0 && (
+        <div className="results-dropdown">
+          {results.map((result) => (
+            <div
+              key={result.id}
+              className="result-item"
+              onClick={() => handleResultClick(result.url)}
+            >
+              <h4>{result.title}</h4>
+              <p>{result.description}</p>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };
