@@ -76,8 +76,8 @@ const Navbar = () => {
         setAuthenticated(true); // Update authenticated state
         setIsLogin(false); // Switch to "Logout" button
         toast.success("Successfully logged in");
-        if (modalRef.current) {
-          modalRef.current.close(); // Closes the modal
+        if (modalref.current) {
+          modalref.current.close(); // Closes the modal
         }
       } else {
         const errorData = await response.json();
