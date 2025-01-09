@@ -504,8 +504,8 @@ const Navbar = () => {
                     </div>
                   </div>
                 </dialog>
+                <SearchBox />
               </div>
-              <SearchBox />
             </div>
           </div>
         </div>

@@ -144,17 +144,17 @@ const ContactForm = () => {
 
                 <button
                   type="submit"
-                  className="relative flex items-center px-6 py-3 overflow-hidden font-medium transition-all bg-slate-800 rounded-md group"
+                  className="relative flex items-center px-6 py-3 overflow-hidden font-medium transition-all bg-green-600 rounded-full group"
                   disabled={loading}
                 >
-                  <span className="relative flex items-center justify-center w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-white">
+                  <span className="relative flex items-center justify-center w-full text-left text-black font-semibold transition-colors duration-200 ease-in-out group-hover:text-gray-900">
                     {loading ? (
                       <>
                         <span className="loading loading-spinner loading-md mr-2"></span>
                         Submitting...
                       </>
                     ) : (
-                      "Submit Now"
+                      "Submit Now"  
                     )}
                   </span>
                 </button>
