@@ -29,9 +29,9 @@ const searchIndex = [
   },
   {
     id: 8,
-    title: "Practice Areas",
-    description: "Practice Areas...",
-    url: "/practice",
+    title: "Services",
+    description: "Services by House of IP",
+    url: "/service",
   },
 
   // Added trademark-related pages
