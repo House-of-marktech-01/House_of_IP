@@ -128,7 +128,7 @@ const TMRectification = () => {
                     </div>
                   )}
                 </div>
-                <div className="flex flex-row justify-between items-center mt-4">
+                <div className="flex flex-col lg:flex-row gap-4 justify-betweenr mt-4">
                   <RWebShare
                     data={{
                       url: "https://house-of-ip.vercel.app//trademark",

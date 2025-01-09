@@ -90,7 +90,7 @@ const TMOpposition = () => {
                 {/* Dropdown toggler */}
 
                 {/* Grid layout */}
-                <div className="flex flex-row justify-between items-center">
+                <div className="flex flex-col lg:flex-row gap-4 mt-4 justify-betweenr">
                   {/* Patent Search Card */}
 
                   <RWebShare
@@ -104,7 +104,7 @@ const TMOpposition = () => {
                       Share with friends
                     </button>
                   </RWebShare>
-                  <p className="text-white">* excluding Government fees</p>
+                  <p className="text-white text-center">* excluding Government fees</p>
                 </div>
               </div>
             </div>

@@ -69,7 +69,7 @@ const Footer = () => {
               {/* LinkedIn Button */}
               {/* Mail Button */}
               <NavLink
-                to="mailto:houseofintellectualproperty@gmail.com"
+                to="mailto:support@houseofip.in"
                 target="_blank"
               >
                 <div className="social-button">

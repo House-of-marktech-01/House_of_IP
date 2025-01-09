@@ -146,7 +146,7 @@ const Trademark = () => {
                       Share with friends
                     </button>
                   </RWebShare>
-                  <p className="text-white">* excluding Government fees</p>
+                  <p className="text-white text-center">* excluding Government fees</p>
                 </div>
               </div>
             </div>

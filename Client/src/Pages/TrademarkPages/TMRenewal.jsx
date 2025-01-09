@@ -113,7 +113,7 @@ const TMRenewal = () => {
                     </div>
                   )}
                 </div>
-                <div className="flex flex-row justify-between lg:flex-row gap-4 mt-4">
+                <div className="flex flex-col justify-between lg:flex-row gap-4 mt-4">
                   <RWebShare
                     data={{
                       url: "https://house-of-ip.vercel.app//trademarkrenewal",
@@ -125,7 +125,7 @@ const TMRenewal = () => {
                       Share with friends
                     </button>
                   </RWebShare>
-                  <p className="text-white">* excluding Government fees</p>
+                  <p className="text-white text-center">* excluding Government fees</p>
                 </div>
               </div>
             </div>

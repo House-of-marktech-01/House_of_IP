@@ -178,7 +178,7 @@ const Navbar = () => {
               </NavLink>
               <NavLink
                 to="/appointment"
-                className="text-white hover:text-blue-600 font-medium"
+                className="text-white hover:text-blue-600 font-medium z-10"
               >
                 Appointment
               </NavLink>

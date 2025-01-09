@@ -31,7 +31,7 @@ const searchIndex = [
     id: 8,
     title: "Services",
     description: "Services by House of IP",
-    url: "/service",
+    url: "/services",
   },
 
   // Added trademark-related pages
@@ -125,6 +125,11 @@ const searchIndex = [
     description: "Patent Renewal details...",
     url: "/patentrenewal",
   },
+  {
+    id:23,
+    title:"Book an Appointment",
+    url:"/appointment"
+  }
 ];
 
 const SearchBox = () => {
@@ -132,7 +137,6 @@ const SearchBox = () => {
   const [searchText, setSearchText] = useState("");
   const [results, setResults] = useState([]);
   const navigate = useNavigate(); // Initialize navigate hook
-  
 
   // Memoizing the Fuse instance
   const fuse = useMemo(
