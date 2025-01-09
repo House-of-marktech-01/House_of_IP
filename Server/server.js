@@ -5,6 +5,7 @@ import connectDB from "./config/db.js";
 import userRoutes from "./routers/userRoutes.js";
 import bodyParser from "body-parser";
 import cors from "cors";
+import axios from 'axios'
 
 const app = express();
 const PORT = 5000 || process.env.PORT;
