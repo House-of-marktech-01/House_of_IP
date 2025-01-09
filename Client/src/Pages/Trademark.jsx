@@ -39,11 +39,6 @@ const Trademark = () => {
     }));
   };
 
-  
-
-
-
-
   const [selectedOption, setSelectedOption] = useState("Individual & MSME");
 
   const handleChange = (event) => {
@@ -86,7 +81,8 @@ const Trademark = () => {
               <p className="prod_description text-sm text-white mt-2">
                 Drafting and filing of rectification for applications marked
                 Formalities Check Fail by Trademark Examiner. Exclusive pricing
-                for trademark applications filed by House of IP. Inclusive of service tax.
+                for trademark applications filed by House of IP. Inclusive of
+                service tax.
               </p>
               <div className="container mx-auto p-4">
                 {/* Dropdown toggler */}
@@ -146,12 +142,14 @@ const Trademark = () => {
                       Share with friends
                     </button>
                   </RWebShare>
-                  <p className="text-white text-center">* excluding Government fees</p>
+                  <p className="text-white text-center">
+                    * excluding Government fees
+                  </p>
                 </div>
               </div>
             </div>
           </div>
-          <FileUploader formLink="https://forms.gle/dKZi1HWZvrSsskdF6"/>
+          <FileUploader formLink="https://forms.gle/dKZi1HWZvrSsskdF6" />
         </div>
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-5 p-3 bg-slate-900 lg:px-20">
           <NavLink to="/trademarkobjection">
@@ -196,7 +194,7 @@ const Trademark = () => {
               </div>
             </div>
           </NavLink>
-          
+
           <NavLink to="/trademarkrectification">
             <div className="card card-compact bg-base-100 w-72 shadow-xl">
               <figure>

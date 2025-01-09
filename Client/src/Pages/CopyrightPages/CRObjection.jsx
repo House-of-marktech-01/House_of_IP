@@ -136,7 +136,7 @@ const CRObjection = () => {
                         Copyright Objection{" "}
                       </h2>
                       <ul className="list-disc list-inside space-y-1">
-                        <li>Attorney Prepared </li>
+                        <li>Prepared by IPR Professionals </li>
                         <li>Reply to Objection </li>
                         <li>Filing on IPIndia </li>
                       </ul>
@@ -150,7 +150,7 @@ const CRObjection = () => {
                         Copyright Hearing{" "}
                       </h2>
                       <ul className="list-disc list-inside space-y-1">
-                        <li>Attorney Appearance </li>
+                        <li>Professional appearance </li>
                         <li>Attending TM Hearing </li>
                         <li>Representing Client </li>
                       </ul>

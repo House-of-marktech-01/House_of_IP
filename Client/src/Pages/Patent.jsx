@@ -214,7 +214,7 @@ const Patent = () => {
                       <h2 className="font-semibold text-lg mb-2">Regular</h2>
                       <ul className="list-disc list-inside space-y-1">
                         <li>Search report</li>
-                        <li>Attorney Prepared</li>
+                        <li>Prepared by IPR Professionals</li>
                         <li>1 article</li>
                         <li>Full protection</li>
                         <li>Filing on IPINDIA</li>

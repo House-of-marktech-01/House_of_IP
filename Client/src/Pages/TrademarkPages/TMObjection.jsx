@@ -108,7 +108,7 @@ const TMObjection = () => {
                     <div className="border rounded-md p-4 bg-slate-900 text-white">
                       <h2 className="font-semibold text-lg mb-2">Objection </h2>
                       <ul className="list-disc list-inside space-y-1">
-                        <li>Attorney Prepared </li>
+                        <li>Prepared by IPR Professionals </li>
                         <li>Reply to Objection </li>
                         <li>Filing on IPIndia </li>
                       </ul>
@@ -120,7 +120,7 @@ const TMObjection = () => {
                     <div className="border rounded-md p-4 text-white bg-slate-900 ">
                       <h2 className="font-semibold text-lg mb-2">Hearing </h2>
                       <ul className="list-disc list-inside space-y-1">
-                        <li>Attorney Appearance </li>
+                        <li>Professional appearance </li>
                         <li>Attorney TM Hearing </li>
                         <li>Representing Client </li>
                       </ul>

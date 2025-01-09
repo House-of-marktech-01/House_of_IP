@@ -107,7 +107,7 @@ const TMHearing = () => {
                     <div className="border rounded-md p-4 bg-slate-900 text-white">
                       <h2 className="font-semibold text-lg mb-2">Objection</h2>
                       <ul className="list-disc list-inside space-y-1">
-                        <li>Attorney Apperance </li>
+                        <li>Professional appearance </li>
                         <li>ATTENDING Hearing </li>
                         <li>Filing On IPINDIA </li>
                       </ul>
@@ -119,7 +119,7 @@ const TMHearing = () => {
                     <div className="border rounded-md p-4 text-white bg-slate-900 ">
                       <h2 className="font-semibold text-lg mb-2">Opposition</h2>
                       <ul className="list-disc list-inside space-y-1">
-                        <li>Attorney Apperance </li>
+                        <li>Professional appearance </li>
                         <li>ATTENDING Hearing </li>
                         <li>Filing On IPINDIA </li>
                         <li>Attorney Change </li>

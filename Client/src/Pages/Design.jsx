@@ -138,7 +138,7 @@ const Design = () => {
                       <h2 className="font-semibold text-lg mb-2">MSME</h2>
                       <ul className="list-disc list-inside space-y-1">
                         <li>One Article </li>
-                        <li>Attorney Prepared </li>
+                        <li>Prepared by IPR Professionals </li>
                         <li>Representation sheets </li>
                         <li>Power of Attorney format </li>
                         <li>Filings on IPINDIA </li>
@@ -153,7 +153,7 @@ const Design = () => {
                       <h2 className="font-semibold text-lg mb-2">Regular</h2>
                       <ul className="list-disc list-inside space-y-1">
                         <li>One Article </li>
-                        <li>Attorney Prepared </li>
+                        <li>Prepared by IPR Professionals </li>
                         <li>Representation sheets </li>
                         <li>Power of Attorney format </li>
                         <li>Filings on IPINDIA </li>

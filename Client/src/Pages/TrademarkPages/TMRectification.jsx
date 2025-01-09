@@ -108,7 +108,7 @@ const TMRectification = () => {
                     <div className="border rounded-md p-4 bg-slate-900 text-white">
                       <h2 className="font-semibold text-lg mb-2">Basic</h2>
                       <ul className="list-disc list-inside space-y-1">
-                        <li>Attorney Prepared </li>
+                        <li>Prepared by IPR Professionals </li>
                         <li>Filing on IPINDIA </li>
                         <li>Attorney Change </li>
                       </ul>
@@ -120,7 +120,7 @@ const TMRectification = () => {
                     <div className="border rounded-md p-4 text-white bg-slate-900 ">
                       <h2 className="font-semibold text-lg mb-2">Standard</h2>
                       <ul className="list-disc list-inside space-y-1">
-                        <li>Attorney Prepared </li>
+                        <li>Prepared by IPR Professionals </li>
                         <li>Filing on IPINDIA </li>
                         <li>Rectification Filed </li>
                         <li>Attorney Change </li>
