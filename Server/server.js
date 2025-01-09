@@ -9,11 +9,8 @@ import cors from "cors";
 const app = express();
 const PORT = 5000 || process.env.PORT;
 
-const corsOptions = {
-  origin: "https://house-of-ip.vercel.app",
-  credentials: true,
-};
-app.use(cors(corsOptions));
+
+app.use(cors());
 
 // Your routes here
 app.get("/api", (req, res) => {
