@@ -10,7 +10,7 @@ const FileUploader = () => {
 
   const fetchFormContent = async () => {
     try {
-      const response = await fetch(`${BaseUrl}fetch-form`);
+      const response = await fetch(`${BaseUrl}fetchtrademark`);
       console.log(response)
       const data = await response.text();
       setFormContent(data);
