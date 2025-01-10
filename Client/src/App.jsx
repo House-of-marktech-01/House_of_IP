@@ -26,6 +26,9 @@ import DRAssignment from "./Pages/DesignPages/DRAssignment";
 import PExam from "./Pages/PatentPages/PExam";
 import PRenewal from "./Pages/PatentPages/PRenewal";
 import Welcome from "./Components/Welcome";
+import Trademarkfrom from "./Components/Trademarkfrom";
+import CopyrightForm from "./Components/CopyrightForm"
+import DesignForm from "./Components/DesignForm";
 
 // Lazy load the page components
 const Home = lazy(() => import("./Pages/Home"));
@@ -82,6 +85,9 @@ function App() {
             <Route path="/designassignment" element={<DRAssignment/>} />
             <Route path="/patentexam" element={<PExam/>} />
             <Route path="/patentrenewal" element={<PRenewal/>} />
+            <Route path="/TMForm" element={<Trademarkfrom/>} />
+            <Route path="/CRForm" element={<CopyrightForm/>} />
+            <Route path="/DForm" element={<DesignForm/>} />
             <Route />
           </Routes>
           <ScrollToTopButton />

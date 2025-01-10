@@ -149,7 +149,7 @@ const Trademark = () => {
               </div>
             </div>
           </div>
-          <FileUploader formLink="https://docs.google.com/forms/d/e/1FAIpQLScU21_EuxVajsBpYFjK02wvYpewwwLo1-2sMsi6CQkGXTvtwQ/viewform" />
+          <FileUploader formLink="/TMForm" />
         </div>
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-5 p-3 bg-slate-900 lg:px-20">
           <NavLink to="/trademarkobjection">

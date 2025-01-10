@@ -17,19 +17,6 @@ app.get("/api", (req, res) => {
   res.send("update");
 });
 
-app.get("/fetchtrademark", async (req, res) => {
-  const googleFormURL =
-    "https://docs.google.com/forms/d/e/1FAIpQLScU21_EuxVajsBpYFjK02wvYpewwwLo1-2sMsi6CQkGXTvtwQ/viewform";
-
-  try {
-    const response = await axios.get(googleFormURL);
-    res.send(response.data);
-  } catch (error) {
-    console.error("Error fetching Google Form:", error.message);
-    console.error("Error details:", error.response?.data);
-    res.status(500).send(`Failed to fetch Google Form: ${error.message}`);
-  }
-});
 
 app.use(bodyParser.json());
 // Connect to MongoDB
