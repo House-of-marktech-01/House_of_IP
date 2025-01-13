@@ -195,7 +195,7 @@ const Copyright = () => {
                     </div>
                   )}
                 </div>
-                <div className="flex flex-row items-center justify-between mt-4">
+                <div className="flex lg:flex-row flex-col items-center justify-between mt-4">
                   <RWebShare
                     data={{
                       url: "https://house-of-ip.vercel.app/copyright",
@@ -212,12 +212,15 @@ const Copyright = () => {
               </div>
             </div>
           </div>
-
+          <div className="flex justify-center">
+          <div className="flex justify-center">
           <NavLink to="/CRForm">
             <button className="bg-green-500 w-28 text-black p-3 rounded-lg">
               Go to form
             </button>
           </NavLink>
+          </div>
+          </div>
         </div>
 
         <div className="flex lg:flex-row flex-col space-y-5 lg:space-y-0 justify-start lg:space-x-10 bg-slate-900 text-white px-5 lg:px-20">
