@@ -29,6 +29,7 @@ import Welcome from "./Components/Welcome";
 import Trademarkfrom from "./Components/Trademarkfrom";
 import CopyrightForm from "./Components/CopyrightForm"
 import DesignForm from "./Components/DesignForm";
+import PaymentPage from "./Pages/PaymentPage"
 
 // Lazy load the page components
 const Home = lazy(() => import("./Pages/Home"));
@@ -88,6 +89,7 @@ function App() {
             <Route path="/TMForm" element={<Trademarkfrom/>} />
             <Route path="/CRForm" element={<CopyrightForm/>} />
             <Route path="/DForm" element={<DesignForm/>} />
+            <Route path="/payment" element={<PaymentPage/>} />
             <Route />
           </Routes>
           <ScrollToTopButton />

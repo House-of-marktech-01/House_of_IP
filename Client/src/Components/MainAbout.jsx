@@ -39,7 +39,7 @@ const MainAbout = () => {
           <motion.img
             src="https://st2.depositphotos.com/1007283/6930/i/450/depositphotos_69306965-stock-photo-rubber-stamp-printed-with-trademark.jpg"
             alt="leftimage"
-            className="w-[55%] ml-20 h-96"
+            className="w-[55%] ml-20 h-96  lg:relative  opacity-70 brightness-50"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
@@ -91,9 +91,9 @@ const MainAbout = () => {
           viewport={{ once: true, amount: 0.5 }}
         >
           <img
-            src="https://media.istockphoto.com/id/956243400/photo/close-up-lawyer-businessman-working-or-reading-lawbook-in-office-workplace-for-consultant.jpg?s=612x612&w=0&k=20&c=4kefBJNk1H0Y3hDUU_MmAEkqcJavLPlB6IhVB5C7UVk="
+            src="https://www.columbiasouthern.edu/media/e5odwomp/are-certifications-worth-it.jpg"
             alt=""
-            className="w-[70%] h-96 lg:relative left-40"
+            className="w-[70%] h-96 lg:relative left-40 opacity-70 brightness-50"
           />
         </motion.div>
       </div>
@@ -104,7 +104,7 @@ const MainAbout = () => {
           <motion.img
             src="https://media.istockphoto.com/id/1068876946/photo/business-lawyer-team-working-together-of-lawyer-in-the-meeting.jpg?s=612x612&w=0&k=20&c=Jo9c5iPYi_62JLKqGeDXSDVONTu6rmRI9HVh7fSMD6Q="
             alt="leftimage"
-            className="w-[55%] ml-20 h-96"
+            className="w-[55%] ml-20 h-96  lg:relative opacity-70 brightness-50"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
@@ -159,7 +159,7 @@ const MainAbout = () => {
           <img
             src="https://media.istockphoto.com/id/104821087/photo/lawyer-holding-document-and-speaking-to-jury-in-courtroom.jpg?s=612x612&w=0&k=20&c=Ekxjvff0AQtL_e78WtO0e43FOVcM9SZ0hYKY3WjwgLY="
             alt=""
-            className="w-[70%] h-96 lg:relative left-40"
+            className="w-[70%] h-96 lg:relative left-40 opacity-70 brightness-50"
           />
         </motion.div>
       </div>

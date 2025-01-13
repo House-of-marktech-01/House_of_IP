@@ -47,7 +47,7 @@ const ContactForm = () => {
   return (
     <div
       id="consult"
-      className="pt-20 md:pt-28 bg-cover bg-center font-roboto bg-no-repeat parallax-container"
+      className="pt-20 md:pt-28 bg-cover bg-center font-roboto bg-no-repeat parallax-container "
     >
       <h1 className="text-3xl font-serif text-white text-center font-semibold">
         Contact Us

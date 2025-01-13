@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { RWebShare } from "react-web-share";
 import Cookies from "js-cookie";
 import { useDropzone } from "react-dropzone";
@@ -8,6 +8,7 @@ import { toast } from "react-toastify";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet";
 import FileUploader from "../Components/FileUploader";
+import FormfacadeEmbed from "@formfacade/embed-react";
 
 const Trademark = () => {
   const [token, setToken] = useState(Cookies.get("jwtToken"));
@@ -149,7 +150,9 @@ const Trademark = () => {
               </div>
             </div>
           </div>
-          <FileUploader formLink="/TMForm" />
+          <NavLink to="/TMForm">
+            <button className="bg-green-500 w-28 text-black p-3 rounded-lg">Go to form</button>
+          </NavLink>
         </div>
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-5 p-3 bg-slate-900 lg:px-20">
           <NavLink to="/trademarkobjection">

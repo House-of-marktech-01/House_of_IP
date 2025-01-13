@@ -26,7 +26,6 @@ const Copyright = () => {
     },
   };
 
-
   const handleUpload = async () => {
     if (!selectedFile) {
       toast.error("Please select a document to upload!");
@@ -214,7 +213,11 @@ const Copyright = () => {
             </div>
           </div>
 
-          <FileUploader formLink="https://forms.gle/d7PsGBXWrFXBZPVq6"/>
+          <NavLink to="/CRForm">
+            <button className="bg-green-500 w-28 text-black p-3 rounded-lg">
+              Go to form
+            </button>
+          </NavLink>
         </div>
 
         <div className="flex lg:flex-row flex-col space-y-5 lg:space-y-0 justify-start lg:space-x-10 bg-slate-900 text-white px-5 lg:px-20">

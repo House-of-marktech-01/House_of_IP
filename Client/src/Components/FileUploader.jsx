@@ -1,40 +1,15 @@
 import React from "react";
-import PropTypes from "prop-types";
+import FormfacadeEmbed from "@formfacade/embed-react";
 
-const FileUploader = ({ formLink }) => {
-  const handleRedirect = () => {
-    if (formLink) {
-      window.location.href = formLink;
-    } else {
-      alert("Form link is not provided!");
-    }
-  };
-
+const FileUploader = () => {
   return (
-    <div className="lg:w-1/3 bg-slate-800 h-32 flex flex-col justify-center items-center rounded-md shadow-md sticky top-20">
-      <h1 className="text-white mb-5 font-roboto">
-        Upload Your Documents here
-      </h1>
-      <button
-        onClick={handleRedirect}
-        className="h-12 w-32 bg-slate-900-500 font-roboto text-white rounded-md"
-        onMouseEnter={(e) => {
-          e.currentTarget.style.transform = "scale(1.05)";
-          e.currentTarget.style.boxShadow = "0 6px 8px rgba(0, 0, 0, 0.2)";
-        }}
-        onMouseLeave={(e) => {
-          e.currentTarget.style.transform = "scale(1)";
-          e.currentTarget.style.boxShadow = "0 4px 6px rgba(0, 0, 0, 0.1)";
-        }}
-      >
-        Upload
-      </button>
+    <div>
+      <FormfacadeEmbed
+        formFacadeURL="https://formfacade.com/include/110495295342038558588/form/1FAIpQLSeEM92QbUhFE-BDgERQ0WsIQZJR6TVQS6xmrrplZK067qVc6g/classic.js/?div=ff-compose"
+        onSubmitForm={() => console.log("Form submitted")}
+      />
     </div>
   );
-};
-
-FileUploader.propTypes = {
-  formLink: PropTypes.string.isRequired, // Ensures the form link is provided
 };
 
 export default FileUploader;

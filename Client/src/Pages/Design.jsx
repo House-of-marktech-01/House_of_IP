@@ -67,9 +67,6 @@ const Design = () => {
     },
   };
 
-
-
-  
   const [selectedOption, setSelectedOption] = useState("MSME");
 
   const handleChange = (event) => {
@@ -180,7 +177,11 @@ const Design = () => {
             </div>
           </div>
 
-          <FileUploader formLink="https://forms.gle/pT9L3v3jCMMPn2zbA"/>
+          <NavLink to="/DForm">
+            <button className="bg-green-500 w-28 text-black p-3 rounded-lg">
+              Go to form
+            </button>
+          </NavLink>
         </div>
 
         <div className="flex lg:flex-row flex-col space-y-5 lg:space-y-0 justify-start lg:space-x-10 bg-slate-900 text-white px-5 lg:px-20">

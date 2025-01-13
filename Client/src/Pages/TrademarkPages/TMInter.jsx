@@ -251,7 +251,9 @@ const TMInter = () => {
               </div>
             </div>
           </div>
-          <FileUploader formLink="https://forms.gle/dKZi1HWZvrSsskdF6"/>
+          <NavLink to="/TMForm">
+            <button className="bg-green-500 w-28 text-black p-3 rounded-lg">Go to form</button>
+          </NavLink>
         </div>
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-5 p-3 bg-slate-900 lg:px-20">
           <NavLink to="/trademarkobjection">
