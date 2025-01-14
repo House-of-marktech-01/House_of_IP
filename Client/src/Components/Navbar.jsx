@@ -327,12 +327,18 @@ const Navbar = () => {
               <NavLink
                 to="/home"
                 className="block px-4 py-2 text-gray-500 hover:bg-slate-800"
+                onClick={
+                  ()=>{setIsOpen(false)}
+                }
               >
                 Home
               </NavLink>
               <NavLink
                 to="/about"
                 className="block px-4 py-2 text-gray-500 hover:bg-slate-800"
+                onClick={
+                  ()=>{setIsOpen(false)}
+                }
               >
                 About
               </NavLink>
@@ -353,24 +359,36 @@ const Navbar = () => {
                     <NavLink
                       to="/copyright"
                       className="block px-4 py-2 text-gray-500 hover:bg-slate-800"
+                      onClick={
+                        ()=>{setIsOpen(false)}
+                      }
                     >
                       Copyright
                     </NavLink>
                     <NavLink
                       to="/design"
                       className="block px-4 py-2 text-gray-500 hover:bg-slate-800"
+                      onClick={
+                        ()=>{setIsOpen(false)}
+                      }
                     >
                       Design
                     </NavLink>
                     <NavLink
                       to="/patent"
                       className="block px-4 py-2 text-gray-500 hover:bg-slate-800"
+                      onClick={
+                        ()=>{setIsOpen(false)}
+                      }
                     >
                       Patent
                     </NavLink>
                     <NavLink
                       to="/trademark"
                       className="block px-4 py-2 text-gray-500 hover:bg-slate-800"
+                      onClick={
+                        ()=>{setIsOpen(false)}
+                      }
                     >
                       Trademark
                     </NavLink>
@@ -380,12 +398,18 @@ const Navbar = () => {
               <NavLink
                 to="/contact"
                 className="block px-4 py-2 text-gray-500 hover:bg-slate-800"
+                onClick={
+                  ()=>{setIsOpen(false)}
+                }
               >
                 Contact
               </NavLink>
               <NavLink
                 to="/appointment"
                 className="block px-4 py-2 text-gray-500 hover:bg-slate-800"
+                onClick={
+                  ()=>{setIsOpen(false)}
+                }
               >
                 Book an appointment
               </NavLink>
