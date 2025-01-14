@@ -17,8 +17,44 @@ body {
   }
 }
 
+/* Gradient golden background */
+.golden-gradient {
+  background: linear-gradient(90deg, #f5b700, #ffd700, #f5b700);
+  background-size: 200%;
+  background-position: 0%;
+  animation: gradient-shift 3s infinite linear;
+  color: black; /* Text color for contrast */
+  border: none; /* Optional: Remove border for a cleaner look */
+}
+
+/* Gradient shift animation */
+@keyframes gradient-shift {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+
+/* Keyframes for scaling animation */
+@keyframes pulse-scale {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* Apply the animation */
+.pulse-scale {
+  animation: pulse-scale 2s infinite ease-in-out;
+}
+
 .parallax-container {
-  background-image: url("https://img.freepik.com/premium-photo/customer-service-good-cooperation-consultation-businessman-male-lawyer-judge-consult-having-team-meeting-with-client-law-legal-services-concept_265022-54630.jpg"); 
+  background-image: url("https://img.freepik.com/premium-photo/customer-service-good-cooperation-consultation-businessman-male-lawyer-judge-consult-having-team-meeting-with-client-law-legal-services-concept_265022-54630.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -34,7 +70,6 @@ body {
     padding: 20px; /* Add padding for content spacing */
   }
 }
-
 
 /* Media query for extra small devices (phones) */
 @media (max-width: 480px) {
@@ -72,7 +107,7 @@ body {
   width: 245px;
   height: 270px;
   perspective: 1000px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .flip-card-inner {
@@ -84,7 +119,8 @@ body {
   transform-style: preserve-3d;
 }
 
-.flip-card-front, .flip-card-back {
+.flip-card-front,
+.flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -159,7 +195,6 @@ body {
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
-
 
 .modal-overlay {
   position: fixed;

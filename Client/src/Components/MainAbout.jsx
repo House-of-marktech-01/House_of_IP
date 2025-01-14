@@ -102,7 +102,7 @@ const MainAbout = () => {
         {/* Image Section */}
         <div className="hidden lg:block w-full bg-slate-900 pt-10">
           <motion.img
-            src="https://media.istockphoto.com/id/1068876946/photo/business-lawyer-team-working-together-of-lawyer-in-the-meeting.jpg?s=612x612&w=0&k=20&c=Jo9c5iPYi_62JLKqGeDXSDVONTu6rmRI9HVh7fSMD6Q="
+            src="https://media.istockphoto.com/id/1598446907/photo/diverse-people-working-on-financial-paperworks-at-the-office.jpg?s=612x612&w=0&k=20&c=UXbTtHgaYjS_I0iRIlWAlQxzqDdWMxKOwxVEmo2V65U="
             alt="leftimage"
             className="w-[55%] ml-20 h-96  lg:relative opacity-70 brightness-50"
             initial={{ opacity: 0, x: -50 }}
@@ -157,7 +157,7 @@ const MainAbout = () => {
           viewport={{ once: true, amount: 0.5 }}
         >
           <img
-            src="https://media.istockphoto.com/id/104821087/photo/lawyer-holding-document-and-speaking-to-jury-in-courtroom.jpg?s=612x612&w=0&k=20&c=Ekxjvff0AQtL_e78WtO0e43FOVcM9SZ0hYKY3WjwgLY="
+            src="https://img.etimg.com/thumb/width-1200,height-900,imgsize-26108,resizemode-75,msid-115221304/news/india/india-secures-spot-in-global-top-10-for-all-3-major-intellectual-property-rights.jpg"
             alt=""
             className="w-[70%] h-96 lg:relative left-40 opacity-70 brightness-50"
           />

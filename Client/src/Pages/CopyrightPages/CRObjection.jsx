@@ -218,11 +218,11 @@ const CRObjection = () => {
           </div>
 
           <div className="flex justify-center">
-          <NavLink to="/CRForm">
-            <button className="bg-green-500 w-28 text-black p-3 rounded-lg">
-              Go to form
-            </button>
-          </NavLink>
+            <NavLink to="/CRForm">
+              <button className="w-48 text-black p-3 rounded-lg pulse-scale font-serif golden-gradient">
+                Protect Your IP Now
+              </button>
+            </NavLink>
           </div>
         </div>
 

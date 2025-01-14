@@ -69,7 +69,7 @@ const TMOpposition = () => {
             <div className="sticky">
               <img
                 src="https://www.abbayattorneys.co.tz/wp-content/uploads/2019/05/captura-de-pantalla-2017-11-06-a-las-13-15-49-1-750x215.png"
-                className="rounded-lg w-80"
+                className="rounded-lg w-80 h-40"
                 alt="Trademark Rectification"
               />
             </div>
@@ -111,8 +111,8 @@ const TMOpposition = () => {
           </div>
           <div className="flex justify-center">
             <NavLink to="/TMForm">
-              <button className="bg-green-500 w-28 text-black p-3 rounded-lg">
-                Go to form
+              <button className="w-48 text-black p-3 rounded-lg pulse-scale font-serif golden-gradient">
+                Protect Your IP Now
               </button>
             </NavLink>
           </div>

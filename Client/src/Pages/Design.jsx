@@ -94,9 +94,9 @@ const Design = () => {
           <div className="relative w-7/10 shrink-0 flex justify-center items-center h-full lg:sticky lg:top-20">
             <div className="sticky">
               <img
-                src="https://www.bdslegalserv.com/assets/img/design_registration.jpg"
-                className="rounded-lg w-56"
-                alt="Trademark Rectification"
+                src="https://media.licdn.com/dms/image/D5612AQEzBfnfpIQS2A/article-cover_image-shrink_600_2000/0/1699856745668?e=2147483647&v=beta&t=_Aap_0ugnEQEDWfhg7jdKw3RiXQUqhrBypN7upOfAFE"
+                className="rounded-lg w-64 h-48"
+                alt="Design Registration"
               />
             </div>
           </div>
@@ -178,8 +178,8 @@ const Design = () => {
           </div>
           <div className="flex justify-center">
             <NavLink to="/DForm">
-              <button className="bg-green-500 w-28 text-black p-3 rounded-lg">
-                Go to form
+              <button className="w-48 text-black p-3 rounded-lg pulse-scale font-serif golden-gradient">
+              Protect Your IP Now
               </button>
             </NavLink>
           </div>
