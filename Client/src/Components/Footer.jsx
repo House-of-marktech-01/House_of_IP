@@ -112,14 +112,19 @@ const Footer = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="border-t border-gray-200 pt-4 text-white text-sm text-center">
+        <div className="border-t border-gray-200 pt-4 font-roboto text-white text-sm text-center">
           <p>
-            Copyright © 2024 House of IP Private Limited. All rights reserved.
+            Copyright © 2025 House of IP Private Limited. All rights reserved.
           </p>
           <p className="mt-1">
             Unless otherwise indicated, all materials on these pages are
             copyrighted by House of IP. No part of these pages, either text or
             image, may be used for any purpose.
+          </p>
+        </div>
+        <div>
+          <p className="text-center text-white font-roboto text-sm mt-4">
+            Designed and developed by{" "} <span className="text-white">House of MarkTech</span>
           </p>
         </div>
       </div>
