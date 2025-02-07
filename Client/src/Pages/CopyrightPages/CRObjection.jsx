@@ -108,7 +108,7 @@ const CRObjection = () => {
               <p className="prod_description text-sm  mt-2">
                 Drafting and filing of reply for Copyright objection raised by
                 Copyright Office. Exclusive pricing for copyright applications
-                filed throughHouse of IP.
+                filed through House of IP.
               </p>
               <div className="container mx-auto p-4">
                 {/* Dropdown toggler */}

@@ -15,6 +15,22 @@ const ContactForm = () => {
     e.preventDefault();
     setLoading(true);
 
+    // Email Validation
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+      toast.error("Please enter a valid email address.");
+      setLoading(false);
+      return;
+    }
+
+    // Phone Number Validation (Must be exactly 10 digits)
+    const phonePattern = /^[0-9]{10}$/;
+    if (!phonePattern.test(phonenumber)) {
+      toast.error("Phone number must be exactly 10 digits.");
+      setLoading(false);
+      return;
+    }
+
     const templateParams = {
       fullName,
       email,
@@ -35,6 +51,7 @@ const ContactForm = () => {
       setFullName("");
       setEmail("");
       setSubject("");
+      setPhonenumber(""); // Reset phone number
       setMessage("");
     } catch (error) {
       console.error("Error sending email:", error);
@@ -43,6 +60,7 @@ const ContactForm = () => {
       setLoading(false);
     }
   };
+
 
   return (
     <div
@@ -154,7 +172,7 @@ const ContactForm = () => {
                         Submitting...
                       </>
                     ) : (
-                      "Submit Now"  
+                      "Submit Now"
                     )}
                   </span>
                 </button>

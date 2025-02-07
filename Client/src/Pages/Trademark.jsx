@@ -448,15 +448,9 @@ const Trademark = () => {
               </NavLink>
               <NavLink
                 to="/copyright"
-                className="block text-white font-montserrat hover:text-blue-800 hover:underline text-lg font-medium"
+                className="block pb-5 text-white font-montserrat hover:text-blue-800 hover:underline text-lg font-medium"
               >
                 Copyright
-              </NavLink>
-              <NavLink
-                to="#trademark"
-                className="block text-white pb-5 font-montserrat hover:text-blue-800 hover:underline text-lg font-medium"
-              >
-                Trademark
               </NavLink>
             </nav>
           </div>

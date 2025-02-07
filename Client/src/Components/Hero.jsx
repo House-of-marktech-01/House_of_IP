@@ -26,7 +26,7 @@ const Hero = () => {
     <>
       <div className="grid lg:grid-cols-2 grid-cols-1 font-roboto  bg-slate-900 relative">
         {/* Content Div */}
-        <div className="pt-44 lg:w-[80%] text-white">
+        <div className="pt-44 md:px-14 lg:px-0 lg:w-[80%] text-white">
           <h1 className="text-5xl font-semibold font-serif pl-5 lg:pl-20">
             Your Trusted <br /> IPR Agent
           </h1>
@@ -41,7 +41,7 @@ const Hero = () => {
             services.
           </p>
           <button
-            className="ml-20 bg-green-500 p-4 rounded-full my-10 text-black font-semibold flex items-center gap-2 transition-all duration-300 group"
+            className="lg:ml-20 md:ml-5 bg-green-500 p-4 rounded-full my-10 text-black font-semibold flex items-center gap-2 transition-all duration-300 group"
             onClick={handleClick}
           >
             Book an Appointment
