@@ -23,7 +23,6 @@ import CRObjection from "./Pages/CopyrightPages/CRObjection";
 import DRObjection from "./Pages/DesignPages/DRObjection";
 import CRAssignment from "./Pages/CopyrightPages/CRAssignment";
 import DRAssignment from "./Pages/DesignPages/DRAssignment";
-import PExam from "./Pages/PatentPages/PExam";
 import PRenewal from "./Pages/PatentPages/PRenewal";
 import Welcome from "./Components/Welcome";
 import Trademarkfrom from "./Components/Trademarkfrom";
@@ -84,7 +83,6 @@ function App() {
             <Route path="/copyrightassignment" element={<CRAssignment/>} />
             <Route path="/designobjection" element={<DRObjection/>} />
             <Route path="/designassignment" element={<DRAssignment/>} />
-            <Route path="/patentexam" element={<PExam/>} />
             <Route path="/patentrenewal" element={<PRenewal/>} />
             <Route path="/TMForm" element={<Trademarkfrom/>} />
             <Route path="/CRForm" element={<CopyrightForm/>} />

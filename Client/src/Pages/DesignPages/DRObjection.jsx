@@ -126,7 +126,7 @@ const DRObjection = () => {
               <NavLink to="/home">Home</NavLink>
             </li>
             <li>
-              <NavLink to="/practice">Practice Areas</NavLink>
+              <NavLink to="/services"> Services</NavLink>
             </li>
             <li>Design Objection</li>
           </ul>

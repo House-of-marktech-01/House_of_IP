@@ -127,7 +127,7 @@ const PRenewal = () => {
               <NavLink to="/home">Home</NavLink>
             </li>
             <li>
-              <NavLink to="/practice">Practice Areas</NavLink>
+              <NavLink to="/services"> Services</NavLink>
             </li>
             <li>Patent Renewal</li>
           </ul>
@@ -176,20 +176,7 @@ const PRenewal = () => {
           {/* Right Uploader Section */}
         </div>
         <div className="flex lg:flex-row flex-col space-y-5 lg:space-y-0 justify-start lg:space-x-10 bg-slate-900 text-white px-5 lg:px-20">
-          <NavLink to="/patentexam">
-            <div className="card card-compact bg-base-100 w-72 shadow-xl">
-              <figure>
-                <img
-                  src="https://www.intepat.com/wp-content/uploads/2017/01/Patent-Examination-Procedure-in-India.png"
-                  alt="Patent"
-                  className="h-44 w-full"
-                />
-              </figure>
-              <div className="card-body bg-slate-800 rounded-b-xl text-white">
-                <h2 className="card-title">Patent Examination</h2>
-              </div>
-            </div>
-          </NavLink>
+          
           <NavLink to="/patent">
             <div className="card card-compact bg-base-100 w-72 shadow-xl">
               <figure>

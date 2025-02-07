@@ -143,7 +143,7 @@ const About = () => {
             </div>
 
             {/* Text Section */}
-            <div className="w-full lg:w-2/3 lg:pl-6">
+            <div className="w-full px-3 lg:w-2/3 lg:pl-6">
               <h2 className="text-xl font-serif lg:text-2xl font-thin text-white mb-4">
                 The story behind{""}
                 <span className="font-serif font-bold ml-2">House of IP</span>
@@ -166,7 +166,7 @@ const About = () => {
         </div>
       </div>
       <div>
-        <div className="bg-slate-900 py-8 px-4 lg:px-20 ">
+        <div className="bg-slate-900 py-8 px-6 lg:px-20 ">
           <div className="flex flex-col lg:flex-row items-start justify-between space-y-6 lg:space-y-0">
             {/* Left Div (Tariq's story) */}
             <div className="w-full lg:w-1/2 pr-0 lg:pr-6 relative text-white lg:sticky lg:top-16 self-start">

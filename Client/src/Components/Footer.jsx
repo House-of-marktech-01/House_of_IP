@@ -114,7 +114,7 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="border-t border-gray-200 pt-4 font-roboto text-white text-sm text-center">
           <p>
-            Copyright © 2025 House of IP Private Limited. All rights reserved.
+            Copyright © 2025 NextGen House of IP Support LLP. All rights reserved.
           </p>
           <p className="mt-1">
             Unless otherwise indicated, all materials on these pages are

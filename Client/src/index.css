@@ -150,10 +150,11 @@ body {
 }
 
 .name {
-  margin-top: 15px;
-  font-size: 27px;
+  margin-top: 13px;
+  font-size: 21px;
   color: #f1f5f9; /* White */
-  font-weight: bold;
+  font-weight:500;
+  width: 100%;
 }
 
 .flip-card-back {

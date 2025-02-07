@@ -123,7 +123,7 @@ const Navbar = () => {
             </div>
 
             {/* Desktop Menu */}
-            <div className="hidden md:flex space-x-12 items-center text-base">
+            <div className="hidden md:flex md:space-x-6 lg:space-x-12 items-center text-base">
               <NavLink
                 to="/home"
                 className="text-white hover:text-blue-600 font-roboto font-medium"
@@ -312,9 +312,8 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         <div
-          className={`fixed top-0 left-0 h-full bg-slate-900 shadow-md transform ${
-            isOpen ? "translate-x-0" : "-translate-x-full"
-          } transition-transform duration-300 ease-in-out w-3/4 md:hidden`}
+          className={`fixed top-0 left-0 h-full bg-slate-900 shadow-md transform ${isOpen ? "translate-x-0" : "-translate-x-full"
+            } transition-transform duration-300 ease-in-out w-3/4 md:hidden`}
         >
           <div className="p-4">
             <button
@@ -328,7 +327,7 @@ const Navbar = () => {
                 to="/home"
                 className="block px-4 py-2 text-gray-500 hover:bg-slate-800"
                 onClick={
-                  ()=>{setIsOpen(false)}
+                  () => { setIsOpen(false) }
                 }
               >
                 Home
@@ -337,7 +336,7 @@ const Navbar = () => {
                 to="/about"
                 className="block px-4 py-2 text-gray-500 hover:bg-slate-800"
                 onClick={
-                  ()=>{setIsOpen(false)}
+                  () => { setIsOpen(false) }
                 }
               >
                 About
@@ -360,7 +359,7 @@ const Navbar = () => {
                       to="/copyright"
                       className="block px-4 py-2 text-gray-500 hover:bg-slate-800"
                       onClick={
-                        ()=>{setIsOpen(false)}
+                        () => { setIsOpen(false) }
                       }
                     >
                       Copyright
@@ -369,7 +368,7 @@ const Navbar = () => {
                       to="/design"
                       className="block px-4 py-2 text-gray-500 hover:bg-slate-800"
                       onClick={
-                        ()=>{setIsOpen(false)}
+                        () => { setIsOpen(false) }
                       }
                     >
                       Design
@@ -378,7 +377,7 @@ const Navbar = () => {
                       to="/patent"
                       className="block px-4 py-2 text-gray-500 hover:bg-slate-800"
                       onClick={
-                        ()=>{setIsOpen(false)}
+                        () => { setIsOpen(false) }
                       }
                     >
                       Patent
@@ -387,7 +386,7 @@ const Navbar = () => {
                       to="/trademark"
                       className="block px-4 py-2 text-gray-500 hover:bg-slate-800"
                       onClick={
-                        ()=>{setIsOpen(false)}
+                        () => { setIsOpen(false) }
                       }
                     >
                       Trademark
@@ -399,7 +398,7 @@ const Navbar = () => {
                 to="/contact"
                 className="block px-4 py-2 text-gray-500 hover:bg-slate-800"
                 onClick={
-                  ()=>{setIsOpen(false)}
+                  () => { setIsOpen(false) }
                 }
               >
                 Contact
@@ -408,7 +407,7 @@ const Navbar = () => {
                 to="/appointment"
                 className="block px-4 py-2 text-gray-500 hover:bg-slate-800"
                 onClick={
-                  ()=>{setIsOpen(false)}
+                  () => { setIsOpen(false) }
                 }
               >
                 Book an appointment
@@ -416,12 +415,12 @@ const Navbar = () => {
               <div className="flex flex-row">
                 {/* Open Modal Button */}
                 {token ? (
-                  <button className="btn bg-slate-800" onClick={handleLogout}>
+                  <button className="btn bg-slate-800 px-4 py-2 text-sm md:text-base" onClick={handleLogout}>
                     Logout
                   </button>
                 ) : (
                   <button
-                    className="btn bg-slate-800"
+                    className="btn bg-slate-800 px-4 py-2 text-sm md:text-base"
                     onClick={() =>
                       document.getElementById("login_signup_modal").showModal()
                     }

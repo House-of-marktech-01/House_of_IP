@@ -85,7 +85,7 @@ const Design = () => {
               <NavLink to="/home">Home</NavLink>
             </li>
             <li>
-              <NavLink to="/practice">Practice Areas</NavLink>
+              <NavLink to="/services"> Services</NavLink>
             </li>
             <li>Design Registration</li>
           </ul>

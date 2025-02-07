@@ -129,7 +129,7 @@ const Patent = () => {
               <NavLink to="/home">Home</NavLink>
             </li>
             <li>
-              <NavLink to="/practice">Practice Areas</NavLink>
+              <NavLink to="/services">Services</NavLink>
             </li>
             <li>Patent Filing</li>
           </ul>
@@ -161,36 +161,9 @@ const Patent = () => {
               </p>
 
               <div className="container mx-auto p-4">
-                {/* Dropdown toggler */}
-                <div className="mb-4">
-                  <select
-                    className="w-full px-4 py-2 border rounded-md bg-slate-900 focus:outline-none text-white"
-                    value={selectedOption}
-                    onChange={handleChange}
-                  >
-                    <option value="patent-search">Patent search</option>
-                    <option value="Patent-filing">
-                      Patent filing
-                    </option>
-                  </select>
-                </div>
 
                 {/* Grid layout */}
                 <div className="grid grid-cols-1 gap-4">
-                  {/* Patent Search Card */}
-                  {selectedOption === "patent-search" && (
-                    <div className="border rounded-md p-4 text-white bg-slate-900 ">
-                      <h2 className="font-semibold text-lg mb-2">
-                        Patent search
-                      </h2>
-                      <ul className="list-disc list-inside space-y-1">
-                        <li>Application Preparation</li>
-                        <li>Full Protection</li>
-                        <li>Filing on IPINDIA</li>
-                        <li>Patent Search Report</li>
-                      </ul>
-                    </div>
-                  )}
 
                   {/* Provisional Filing Card */}
                   {selectedOption === "Patent-filing" && (
@@ -199,6 +172,7 @@ const Patent = () => {
                         Patent Filing - Complete
                       </h2>
                       <ul className="list-disc list-inside space-y-1">
+                        <li>Patent search</li>
                         <li>FER</li>
                         <li>Opposition</li>
                         <li>Hearing included</li>
@@ -208,19 +182,6 @@ const Patent = () => {
                     </div>
                   )}
 
-                  {/* Regular Card */}
-                  {selectedOption === "regular" && (
-                    <div className="border rounded-md p-4 text-white bg-slate-900 ">
-                      <h2 className="font-semibold text-lg mb-2">Regular</h2>
-                      <ul className="list-disc list-inside space-y-1">
-                        <li>Search report</li>
-                        <li>Prepared by IPR Professionals</li>
-                        <li>1 article</li>
-                        <li>Full protection</li>
-                        <li>Filing on IPINDIA</li>
-                      </ul>
-                    </div>
-                  )}
                 </div>
                 <div className="flex flex-row lg:flex-row justify-between items-center mt-4">
                   <RWebShare
@@ -242,37 +203,7 @@ const Patent = () => {
           </div>
 
           {/* Right Uploader Section */}
-          
-        </div>
-        <div className="flex lg:flex-row flex-col space-y-5 lg:space-y-0 justify-start lg:space-x-10 bg-slate-900 text-white px-5 lg:px-20">
-          <NavLink to="/patentexam">
-            <div className="card card-compact bg-base-100 w-72 shadow-xl">
-              <figure>
-                <img
-                  src="https://www.intepat.com/wp-content/uploads/2017/01/Patent-Examination-Procedure-in-India.png"
-                  alt="Patent"
-                  className="h-44 w-full"
-                />
-              </figure>
-              <div className="card-body bg-slate-800 rounded-b-xl text-white">
-                <h2 className="card-title">Patent Examination</h2>
-              </div>
-            </div>
-          </NavLink>
-          <NavLink to="/patentrenewal">
-            <div className="card card-compact bg-base-100 w-72 shadow-xl">
-              <figure>
-                <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmOMcw6FpptphcwgoIpixiqM4-0cVmR5-opA&s"
-                  alt="Patent"
-                  className="h-44 w-full"
-                />
-              </figure>
-              <div className="card-body bg-slate-800 rounded-b-xl text-white">
-                <h2 className="card-title">Patent Renewal</h2>
-              </div>
-            </div>
-          </NavLink>
+
         </div>
 
         <div className="bg-slate-900 text-white px-5 text-justify lg:px-20">

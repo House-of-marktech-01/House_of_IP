@@ -82,7 +82,7 @@ const Copyright = () => {
               <NavLink to="/home">Home</NavLink>
             </li>
             <li>
-              <NavLink to="/practice">Practice Areas</NavLink>
+              <NavLink to="/services"> Services</NavLink>
             </li>
             <li>Copyright Registration</li>
           </ul>
@@ -91,7 +91,7 @@ const Copyright = () => {
           <div className="relative w-7/10 shrink-0 flex justify-center items-center h-full lg:sticky lg:top-20">
             <div className="sticky">
               <img
-                src="https://blog.ipleaders.in/wp-content/uploads/2021/06/1_copyright-designs-and-patents-act-1988-1.jpg"
+                src="https://img.freepik.com/premium-photo/copyright-concept-author-rights-patented-intellectual-property-copyright-symbol-protection-sign-wooden-table-register-trademark-logo_35148-6976.jpg"
                 className="rounded-lg w-80"
                 alt="Copyright"
               />

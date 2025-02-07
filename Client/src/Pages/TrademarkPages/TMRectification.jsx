@@ -44,7 +44,7 @@ const TMRectification = () => {
 
 
 
-  const [selectedOption, setSelectedOption] = useState("Basic ");
+  const [selectedOption, setSelectedOption] = useState("Standard ");
 
   const handleChange = (event) => {
     setSelectedOption(event.target.value);
@@ -61,7 +61,7 @@ const TMRectification = () => {
               <NavLink to="/home">Home</NavLink>
             </li>
             <li>
-              <NavLink to="/practice">Practice Areas</NavLink>
+              <NavLink to="/services"> Services</NavLink>
             </li>
             <li>Trademark Rectification</li>
           </ul>
@@ -89,31 +89,10 @@ const TMRectification = () => {
                 for trademark applications filed byHouse of IP. Inclusive of service tax.
               </p>
               <div className="container mx-auto p-4">
-                {/* Dropdown toggler */}
-                <div className="mb-4">
-                  <select
-                    className="w-full px-4 py-2 border rounded-md bg-slate-900 focus:outline-none text-white focus:ring focus:ring-blue-300"
-                    value={selectedOption}
-                    onChange={handleChange}
-                  >
-                    <option value="Basic ">Basic </option>
-                    <option value="Standard "> Standard </option>
-                  </select>
-                </div>
 
                 {/* Grid layout */}
                 <div className="grid grid-cols-1 gap-4">
                   {/* Patent Search Card */}
-                  {selectedOption === "Basic " && (
-                    <div className="border rounded-md p-4 bg-slate-900 text-white">
-                      <h2 className="font-semibold text-lg mb-2">Basic</h2>
-                      <ul className="list-disc list-inside space-y-1">
-                        <li>Prepared by IPR Professionals </li>
-                        <li>Filing on IPINDIA </li>
-                        <li>Attorney Change </li>
-                      </ul>
-                    </div>
-                  )}
 
                   {/* Provisional Filing Card */}
                   {selectedOption === "Standard " && (
@@ -153,119 +132,158 @@ const TMRectification = () => {
             </NavLink>
           </div>
         </div>
-        <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-5 p-3 bg-slate-900 lg:px-20">
+        <div className="grid grid-cols-1 gap-4 lg:grid-cols-4 lg:gap-5 p-3 bg-slate-900 lg:px-20 place-items-center">
+
           <NavLink to="/trademarkobjection">
-            <div className="card card-compact bg-base-100 w-72 shadow-xl">
-              <figure>
-                <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzyEMHz465Z22QNVCNiNRbrImjH2qZ-gjYOg&s"
-                  alt="Patent"
-                  className="h-44 w-full"
-                />
-              </figure>
-              <div className="card-body bg-slate-800 rounded-b-xl text-white">
-                <h2 className="card-title">Trademark Objection</h2>
+            <div className="flip-card">
+              <div className="flip-card-inner">
+                <div className="flip-card-front">
+                  <div className="profile-image">
+                    <img src="/trademark.png" className="mt-8 " alt="" />
+                    <div className="name relative right-3">Trademark Objection</div>
+                  </div>
+                </div>
+                <div className="flip-card-back">
+                  <div className="Description">
+                    <p className="description pt-8">
+                      Drafting and filing of reply for objection raised by Trademark Examiner. Exclusive pricing for trademark applications filed by House of IP.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </NavLink>
           <NavLink to="/trademarkopposition">
-            <div className="card card-compact bg-base-100 w-72 shadow-xl">
-              <figure>
-                <img
-                  src="https://www.abbayattorneys.co.tz/wp-content/uploads/2019/05/captura-de-pantalla-2017-11-06-a-las-13-15-49-1-750x215.png"
-                  alt="Patent"
-                  className="h-44 w-full"
-                />
-              </figure>
-              <div className="card-body bg-slate-800 rounded-b-xl text-white">
-                <h2 className="card-title">Trademark Opposition</h2>
+            <div className="flip-card">
+              <div className="flip-card-inner">
+                <div className="flip-card-front">
+                  <div className="profile-image">
+                    <img src="/trademark.png" className="mt-8 " alt="" />
+                    <div className="name relative right-3">Trademark Opposition</div>
+                  </div>
+                </div>
+                <div className="flip-card-back">
+                  <div className="Description">
+                    <p className="description pt-8">
+                      Drafting and filing of opposition notice. Exclusive pricing for trademark applications filed by House of IP.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </NavLink>
           <NavLink to="/trademarkhearing">
-            <div className="card card-compact bg-base-100 w-72 shadow-xl">
-              <figure>
-                <img
-                  src="https://legaldev.in/assets/img/Trademark-Hearing.webp"
-                  alt="Patent"
-                  className="h-44 w-full"
-                />
-              </figure>
-              <div className="card-body bg-slate-800 rounded-b-xl text-white">
-                <h2 className="card-title">Trademark Hearing</h2>
+            <div className="flip-card">
+              <div className="flip-card-inner">
+                <div className="flip-card-front">
+                  <div className="profile-image">
+                    <img src="/trademark.png" className="mt-8 " alt="" />
+                    <div className="name relative right-3">Trademark Hearing </div>
+                  </div>
+                </div>
+                <div className="flip-card-back">
+                  <div className="Description">
+                    <p className="description pt-8">
+                     Trademark hearing appearance by an experienced attorney before the Trademark Register.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </NavLink>
           
           <NavLink to="/trademark">
-            <div className="card card-compact bg-base-100 w-72 shadow-xl">
-              <figure>
-                <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVKc6eE_WPmaSRuSzcabfmXNHoIYn-GoGNAA&s"
-                  alt="Patent"
-                  className="h-44 w-full"
-                />
-              </figure>
-              <div className="card-body bg-slate-800 rounded-b-xl text-white">
-                <h2 className="card-title">Trademark Registration</h2>
+            <div className="flip-card">
+              <div className="flip-card-inner">
+                <div className="flip-card-front">
+                  <div className="profile-image">
+                    <img src="/trademark.png" className="mt-8 " alt="" />
+                    <div className="name relative right-3">Trademark Registration </div>
+                  </div>
+                </div>
+                <div className="flip-card-back">
+                  <div className="Description">
+                    <p className="description pt-8">
+                      Drafting and filing of rectification for applications marked Formalities Check Fail by Trademark Examiner. Exclusive pricing for trademark applications filed by House of IP. Inclusive of service tax.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </NavLink>
           <NavLink to="/trademarkrenewal">
-            <div className="card card-compact bg-base-100 w-72 shadow-xl">
-              <figure>
-                <img
-                  src="https://chithragupta.com/cdn/shop/products/TMrenewal-1280x720_2508be5a-7151-4758-a132-350c7fd39a1a.jpg?v=1594191997"
-                  alt="Patent"
-                  className="h-44 w-full"
-                />
-              </figure>
-              <div className="card-body bg-slate-800 rounded-b-xl text-white">
-                <h2 className="card-title">Trademark Renewal</h2>
+            <div className="flip-card">
+              <div className="flip-card-inner">
+                <div className="flip-card-front">
+                  <div className="profile-image">
+                    <img src="/trademark.png" className="mt-8 " alt="" />
+                    <div className="name relative right-3">Trademark Renewal </div>
+                  </div>
+                </div>
+                <div className="flip-card-back">
+                  <div className="Description">
+                    <p className="description pt-8">
+                     Drafting and filing of trademark renewal application. For individuals, proprietorship's, registered SMEs and registered Startups.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </NavLink>
           <NavLink to="/trademarkassignment">
-            <div className="card card-compact bg-base-100 w-72 shadow-xl">
-              <figure>
-                <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI1i9d-m1W0AMmxXX6lWL0DcpdGNW1WS7BQw&s"
-                  alt="Patent"
-                  className="h-44 w-full"
-                />
-              </figure>
-              <div className="card-body bg-slate-800 rounded-b-xl text-white">
-                <h2 className="card-title">Trademark Assignment</h2>
+            <div className="flip-card">
+              <div className="flip-card-inner">
+                <div className="flip-card-front">
+                  <div className="profile-image">
+                    <img src="/trademark.png" className="mt-8 " alt="" />
+                    <div className="name relative right-3">Trademark Assignment </div>
+                  </div>
+                </div>
+                <div className="flip-card-back">
+                  <div className="Description">
+                    <p className="description pt-8">
+                     Transfer of trademark ownership rights to another party.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </NavLink>
           <NavLink to="/expeditedtm">
-            <div className="card card-compact bg-base-100 w-72 shadow-xl">
-              <figure>
-                <img
-                  src="/expeditedtr.jpeg"
-                  alt="Patent"
-                  className="h-44 w-full"
-                />
-              </figure>
-              <div className="card-body bg-slate-800 rounded-b-xl text-white">
-                <h2 className="card-title text-lg">
-                  Expedited TM Registration
-                </h2>
+           <div className="flip-card">
+              <div className="flip-card-inner">
+                <div className="flip-card-front">
+                  <div className="profile-image">
+                    <img src="/trademark.png" className="mt-8 " alt="" />
+                    <div className="name relative right-3">Expedited Trademark  </div>
+                  </div>
+                </div>
+                <div className="flip-card-back">
+                  <div className="Description">
+                    <p className="description pt-8">
+                    Expedited trademark filing under one class for individuals and small enterprises, inclusive and taxes.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </NavLink>
           <NavLink to="/intertm">
-            <div className="card card-compact bg-base-100 w-72 shadow-xl">
-              <figure>
-                <img
-                  src="https://5.imimg.com/data5/HJ/WL/BV/SELLER-3211152/international-trademark-registration.jpg"
-                  alt="Patent"
-                  className="h-44 w-full"
-                />
-              </figure>
-              <div className="card-body bg-slate-800 rounded-b-xl text-white">
-                <h2 className="card-title">International Trademark</h2>
+            <div className="flip-card">
+              <div className="flip-card-inner">
+                <div className="flip-card-front">
+                  <div className="profile-image">
+                    <img src="/trademark.png" className="mt-8 " alt="" />
+                    <div className="name relative right-3">International Trademark  </div>
+                  </div>
+                </div>
+                <div className="flip-card-back">
+                  <div className="Description">
+                    <p className="description pt-8">
+                 Trademark filing can help protect a brand, business name or logo in a country from being copied by others. File a trademark application in one or more countries online.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </NavLink>

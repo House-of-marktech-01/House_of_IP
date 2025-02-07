@@ -18,38 +18,34 @@ const Practice = () => {
             <li>
               <NavLink to="/home">Home</NavLink>
             </li>
-            <li>Practice Areas</li>
+            <li>Services</li>
           </ul>
         </div>
       </div>
       <h1 className="bg-slate-900 text-center text-3xl text-white pt-9 underline">
-        Practice Areas
+        Services
       </h1>
-      <h1 className="bg-slate-900 text-center text-xl text-white pt-5 ">
-        Our Expertice
-      </h1>
-      <div></div>
-      <p className="bg-slate-900 py-4 pt-10 text-white px-3 text-sm lg:px-24">
-        <span className="text-xl font-bold">House of IP</span> offers a
+      <p className="bg-slate-900 py-4 pt-10 text-white px-5 text-sm lg:px-24">
+        <span className="text-xl font-light">House of IP</span> offers a
         comprehensive suite of services across key areas catering to the
         evolving needs of inventors, creators and businesses. Our core
         specialization lies in Intellectual Property protection, litigation and
         licensing across patents, trademarks, copyrights, designs leveraging
         in-house technical experts
       </p>
-      <p className="bg-slate-900 text-white lg:px-24 px-3 text-sm py-4 ">
+      <p className="bg-slate-900 text-white lg:px-24 px-5 text-sm py-4 ">
         We simplify the IP registration process, ensuring accuracy and
         compliance with regulatory standards, whether for trademarks, industrial
         designs, literary works, or innovative inventions. Our team is dedicated
         to safeguarding your creations and maximizing their commercial value.
       </p>
-      <p className="bg-slate-900 lg:px-24 px-3 text-sm py-4 text-white">
+      <p className="bg-slate-900 lg:px-24 px-5 text-sm py-4 text-white">
         In addition, we provide advisory services for corporate and commercial
         needs, including regulatory compliance, entity structuring, and
         transactional support. We also assist personal clients with inheritance
         matters and immigration needs.
       </p>
-      <p className="bg-slate-900 lg:px-24 px-3 text-sm py-4 text-white">
+      <p className="bg-slate-900 lg:px-24 px-5 text-sm py-4 text-white">
         With a client-first approach and a focus on innovation, House of IP aims
         to deliver excellence in protecting and enhancing intellectual property
         rights, empowering creators and businesses to thrive in a competitive

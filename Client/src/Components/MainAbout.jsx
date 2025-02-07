@@ -55,10 +55,10 @@ const MainAbout = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true, amount: 0.5 }}
         >
-          <h1 className="text-white font-sans text-base lg:text-3xl font-semibold">
+          <h1 className="text-white font-sans text-lg lg:text-3xl font-semibold">
             {whyChooseUsData[0].title}
           </h1>
-          <p className="text-xs lg:text-base text-white">
+          <p className="text-sm lg:text-base text-white">
             {whyChooseUsData[0].details}
           </p>
         </motion.div>
@@ -74,10 +74,10 @@ const MainAbout = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true, amount: 0.5 }}
         >
-          <h1 className="text-white text-base font-sans lg:text-3xl font-semibold">
+          <h1 className="text-white text-lg font-sans lg:text-3xl font-semibold">
             {whyChooseUsData[1].title}
           </h1>
-          <p className="text-xs lg:text-base text-white">
+          <p className="text-sm lg:text-base text-white">
             {whyChooseUsData[1].details}
           </p>
         </motion.div>
@@ -120,10 +120,10 @@ const MainAbout = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true, amount: 0.5 }}
         >
-          <h1 className="text-white font-sans text-base lg:text-3xl font-semibold">
+          <h1 className="text-white font-sans text-lg lg:text-3xl font-semibold">
             {whyChooseUsData[2].title}
           </h1>
-          <p className="text-xs lg:text-base text-white">
+          <p className="text-sm lg:text-base text-white">
             {whyChooseUsData[2].details}
           </p>
         </motion.div>
@@ -140,10 +140,10 @@ const MainAbout = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true, amount: 0.5 }}
         >
-          <h1 className="text-white font-sans text-base lg:text-3xl font-semibold">
+          <h1 className="text-white font-sans text-lg lg:text-3xl font-semibold">
             {whyChooseUsData[3].title}
           </h1>
-          <p className="text-xs lg:text-base text-white">
+          <p className="text-sm lg:text-base text-white">
             {whyChooseUsData[3].details}
           </p>
         </motion.div>

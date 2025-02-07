@@ -5,9 +5,9 @@ import { Helmet } from "react-helmet";
 const Contact = () => {
   return (
     <>
-    <Helmet>
-      <title>House of IP - Contact</title>
-    </Helmet>
+      <Helmet>
+        <title>House of IP - Contact</title>
+      </Helmet>
       <div className="w-full relative ">
         <ContactForm />
         <div className="bg-slate-900 py-10">
@@ -21,7 +21,7 @@ const Contact = () => {
               />
               <h3 className="text-lg font-bold text-white mb-2">Email</h3>
               <p className="text-white text-center">
-              info@houseofip.in
+                info@houseofip.in
               </p>
             </div>
 
@@ -49,7 +49,10 @@ const Contact = () => {
               />
               <h3 className="text-lg font-bold text-white mb-2">Call</h3>
               <p className="text-white text-center">
-              +91 7843814636
+                +91 9354196611
+              </p>
+              <p className="text-white text-center">
+                +91 8090481412
               </p>
             </div>
           </div>
