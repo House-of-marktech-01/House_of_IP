@@ -203,7 +203,7 @@ const DRObjection = () => {
           <div className="flex justify-center">
             <NavLink to="/DForm">
               <button className="w-48 text-black p-3 rounded-lg pulse-scale font-serif golden-gradient">
-              Protect Your IP Now
+                Protect Your IP Now
               </button>
             </NavLink>
           </div>
@@ -211,30 +211,40 @@ const DRObjection = () => {
 
         <div className="flex lg:flex-row flex-col space-y-5 lg:space-y-0 justify-start lg:space-x-10 bg-slate-900 text-white px-5 lg:px-20">
           <NavLink to="/design">
-            <div className="card card-compact bg-base-100 w-72 shadow-xl">
-              <figure>
-                <img
-                  src="https://media.licdn.com/dms/image/D5612AQEzBfnfpIQS2A/article-cover_image-shrink_600_2000/0/1699856745668?e=2147483647&v=beta&t=_Aap_0ugnEQEDWfhg7jdKw3RiXQUqhrBypN7upOfAFE"
-                  alt="Patent"
-                  className="h-44 w-full"
-                />
-              </figure>
-              <div className="card-body bg-slate-800 rounded-b-xl text-white">
-                <h2 className="card-title">Design Registration</h2>
+            <div className="flip-card">
+              <div className="flip-card-inner">
+                <div className="flip-card-front">
+                  <div className="profile-image">
+                    <img src="/trademark.png" className="mt-8 " alt="" />
+                    <div className="name relative right-3">Design Registration</div>
+                  </div>
+                </div>
+                <div className="flip-card-back">
+                  <div className="Description">
+                    <p className="description pt-8">
+                      Drafting and filing of reply for objection raised by Trademark Examiner. Exclusive pricing for trademark applications filed by House of IP.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </NavLink>
           <NavLink to="/designassignment">
-            <div className="card card-compact bg-base-100 w-72 shadow-xl">
-              <figure>
-                <img
-                  src="/designassign.png"
-                  alt="Patent"
-                  className="h-44 w-full"
-                />
-              </figure>
-              <div className="card-body bg-slate-800 rounded-b-xl text-white">
-                <h2 className="card-title">Design Assignment</h2>
+            <div className="flip-card">
+              <div className="flip-card-inner">
+                <div className="flip-card-front">
+                  <div className="profile-image">
+                    <img src="/trademark.png" className="mt-8 " alt="" />
+                    <div className="name relative right-3">Design Assignment</div>
+                  </div>
+                </div>
+                <div className="flip-card-back">
+                  <div className="Description">
+                    <p className="description pt-8">
+                      Drafting and filing of reply for objection raised by Trademark Examiner. Exclusive pricing for trademark applications filed by House of IP.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </NavLink>

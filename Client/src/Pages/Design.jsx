@@ -187,30 +187,40 @@ const Design = () => {
 
         <div className="flex lg:flex-row flex-col space-y-5 lg:space-y-0 justify-start lg:space-x-10 bg-slate-900 text-white px-5 lg:px-20">
           <NavLink to="/designobjection">
-            <div className="card card-compact bg-base-100 w-72 shadow-xl">
-              <figure>
-                <img
-                  src="/designobj.webp"
-                  alt="Patent"
-                  className="h-44 w-full"
-                />
-              </figure>
-              <div className="card-body bg-slate-800 rounded-b-xl text-white">
-                <h2 className="card-title">Design Objection</h2>
+            <div className="flip-card">
+              <div className="flip-card-inner">
+                <div className="flip-card-front">
+                  <div className="profile-image">
+                    <img src="/trademark.png" className="mt-8 " alt="" />
+                    <div className="name relative right-3">Design Objection</div>
+                  </div>
+                </div>
+                <div className="flip-card-back">
+                  <div className="Description">
+                    <p className="description pt-8">
+                    Design registration offers a shield for your unique design, classifying it as intellectual property and ensuring it's safe from imitation. 
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </NavLink>
           <NavLink to="/designassignment">
-            <div className="card card-compact bg-base-100 w-72 shadow-xl">
-              <figure>
-                <img
-                  src="designassign.png"
-                  alt="Patent"
-                  className="h-44 w-full"
-                />
-              </figure>
-              <div className="card-body bg-slate-800 rounded-b-xl text-white">
-                <h2 className="card-title">Design Assignment</h2>
+            <div className="flip-card">
+              <div className="flip-card-inner">
+                <div className="flip-card-front">
+                  <div className="profile-image">
+                    <img src="/trademark.png" className="mt-8 " alt="" />
+                    <div className="name relative right-3">Design  Assignment</div>
+                  </div>
+                </div>
+                <div className="flip-card-back">
+                  <div className="Description">
+                    <p className="description pt-8">
+                    Design registration offers a shield for your unique design, classifying it as intellectual property and ensuring it's safe from imitation. 
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </NavLink>
